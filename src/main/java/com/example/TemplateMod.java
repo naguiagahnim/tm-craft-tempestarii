@@ -22,7 +22,7 @@ public class TemplateMod implements ModInitializer {
 	public static final String MOD_ID = "wantedfeatures";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static final Item CUSTOM_ITEM = new Item(new FabricItemSettings());
+    private static final Item CUSTOM_ITEM = new Item(new FabricItemSettings());
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
 			.icon(() -> new ItemStack(CUSTOM_ITEM))
 			.displayName(Text.translatable("itemGroup.tutorial.test_group"))
@@ -30,7 +30,11 @@ public class TemplateMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		Arrays.stream(MoveTutorItems.values()).forEach(item -> {
+		Arrays.stream(BlankDiscItems.values()).forEach(item -> {
+			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
+		});
+
+		Arrays.stream(TechnicalMachineItems.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
