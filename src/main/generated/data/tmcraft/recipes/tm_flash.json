@@ -3,16 +3,16 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tmcraft:gold_blank_disc"
+      "item": "tmcraft:emerald_blank_disc"
     },
     {
       "item": "cobblemon:normal_gem"
     },
     {
-      "item": "minecraft:ender_eye"
+      "item": "minecraft:lantern"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_hiddenpower"
+    "item": "tmcraft:tm_flash"
   }
 }

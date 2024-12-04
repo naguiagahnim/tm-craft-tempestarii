@@ -12,10 +12,10 @@
       "item": "minecraft:glass_pane"
     },
     {
-      "item": "minecraft:enchanted_book"
+      "item": "minecraft:iron_sword"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_lightscreen"
+    "item": "tmcraft:tm_reflect"
   }
 }

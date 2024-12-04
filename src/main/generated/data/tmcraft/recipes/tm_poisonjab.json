@@ -6,13 +6,13 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:normal_gem"
+      "item": "cobblemon:poison_gem"
     },
     {
-      "item": "minecraft:ender_eye"
+      "item": "cobblemon:black_belt"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_hiddenpower"
+    "item": "tmcraft:tm_poisonjab"
   }
 }

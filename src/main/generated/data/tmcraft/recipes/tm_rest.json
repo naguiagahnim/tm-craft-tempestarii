@@ -3,16 +3,16 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tmcraft:gold_blank_disc"
+      "item": "tmcraft:emerald_blank_disc"
     },
     {
-      "item": "cobblemon:dragon_gem"
+      "item": "cobblemon:psychic_gem"
     },
     {
-      "item": "minecraft:bell"
+      "tag": "minecraft:beds"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_dragonpulse"
+    "item": "tmcraft:tm_rest"
   }
 }

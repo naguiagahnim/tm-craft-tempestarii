@@ -56,6 +56,12 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_LIGHTSCREEN.getItem())
                 .input(Items.GLASS_PANE)
+                .input(Items.ENCHANTED_BOOK)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_REFLECT.getItem())
+                .input(Items.GLASS_PANE)
+                .input(Items.IRON_SWORD)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_PSYCHUP.getItem())
@@ -77,6 +83,26 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_ATTRACT.getItem())
                 .input(CobblemonItems.LOVE_SWEET)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SANDSTORM.getItem())
+                .input(CobblemonItems.SOFT_SAND)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FLASH.getItem())
+                .input(Items.LANTERN)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_WILLOWISP.getItem())
+                .input(Items.SOUL_LANTERN)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_CALMMIND.getItem())
+                .input(Items.TARGET)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_REST.getItem())
+                .input(ItemTags.BEDS)
                 .offerTo(exporter);
     }
 

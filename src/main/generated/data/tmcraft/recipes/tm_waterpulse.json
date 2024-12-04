@@ -6,13 +6,13 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:normal_gem"
+      "item": "cobblemon:water_gem"
     },
     {
-      "item": "minecraft:ender_eye"
+      "item": "minecraft:bell"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_hiddenpower"
+    "item": "tmcraft:tm_waterpulse"
   }
 }

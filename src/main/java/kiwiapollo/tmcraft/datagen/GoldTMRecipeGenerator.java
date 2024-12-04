@@ -21,10 +21,6 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .input(CobblemonItems.DEEP_SEA_TOOTH)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_DRAGONPULSE.getItem())
-                .input(Items.DRAGON_BREATH)
-                .offerTo(exporter);
-
         GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_DRAGONCLAW.getItem())
                 .input(CobblemonItems.RAZOR_CLAW)
                 .offerTo(exporter);
@@ -49,12 +45,20 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .input(Items.ENDER_PEARL)
                 .offerTo(exporter);
 
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_UTURN.getItem())
+                .input(Items.ENDER_PEARL)
+                .offerTo(exporter);
+
         GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_PLUCK.getItem())
                 .input(CobblemonItemTags.BERRIES)
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SHADOWBALL.getItem())
                 .input(Items.SNOWBALL)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SHADOWCLAW.getItem())
+                .input(CobblemonItems.RAZOR_CLAW)
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_AIRSLASH.getItem())
@@ -120,6 +124,46 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .input(ItemTags.FISHES)
                 .input(Items.BLAZE_POWDER)
                 .input(Items.LIGHTNING_ROD)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_BRINE.getItem())
+                .input(Items.GLOWSTONE_DUST)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_AVALANCHE.getItem())
+                .input(Items.POWDER_SNOW_BUCKET)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SKYDROP.getItem())
+                .input(Items.ANVIL)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_DAZZLINGGLEAM.getItem())
+                .input(Items.END_ROD)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_POISONJAB.getItem())
+                .input(CobblemonItems.BLACK_BELT)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_WATERPULSE.getItem())
+                .input(Items.BELL)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_DARKPULSE.getItem())
+                .input(Items.BELL)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_DRAGONPULSE.getItem())
+                .input(Items.BELL)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FROSTBREATH.getItem())
+                .input(Items.DRAGON_BREATH)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_XSCISSOR.getItem())
+                .input(Items.SHEARS)
                 .offerTo(exporter);
     }
 

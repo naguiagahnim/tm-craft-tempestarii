@@ -60,6 +60,18 @@ public class IronTMRecipeGenerator implements RecipeGenerator {
                 .input(CobblemonItems.LOVE_SWEET)
                 .input(Items.SPONGE)
                 .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_CHARGEBEAM.getItem())
+                .input(Items.END_ROD)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_ECHOEDVOICE.getItem())
+                .input(Items.SCULK_SENSOR)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FLING.getItem())
+                .input(Items.CROSSBOW)
+                .offerTo(exporter);
     }
 
     static class IronTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

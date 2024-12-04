@@ -6,16 +6,13 @@
       "item": "tmcraft:emerald_blank_disc"
     },
     {
-      "item": "cobblemon:psychic_gem"
+      "item": "cobblemon:fire_gem"
     },
     {
-      "item": "minecraft:glass_pane"
-    },
-    {
-      "item": "minecraft:enchanted_book"
+      "item": "minecraft:soul_lantern"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_lightscreen"
+    "item": "tmcraft:tm_willowisp"
   }
 }

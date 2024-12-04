@@ -3,16 +3,16 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tmcraft:gold_blank_disc"
+      "item": "tmcraft:diamond_blank_disc"
     },
     {
-      "item": "cobblemon:dragon_gem"
+      "item": "cobblemon:poison_gem"
     },
     {
-      "item": "minecraft:bell"
+      "item": "minecraft:tnt"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_dragonpulse"
+    "item": "tmcraft:tm_sludgebomb"
   }
 }

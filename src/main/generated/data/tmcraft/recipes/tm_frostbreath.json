@@ -6,13 +6,13 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:normal_gem"
+      "item": "cobblemon:ice_gem"
     },
     {
-      "item": "minecraft:ender_eye"
+      "item": "minecraft:dragon_breath"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_hiddenpower"
+    "item": "tmcraft:tm_frostbreath"
   }
 }
