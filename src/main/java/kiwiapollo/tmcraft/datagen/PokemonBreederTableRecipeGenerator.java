@@ -2,16 +2,14 @@ package kiwiapollo.tmcraft.datagen;
 
 import kiwiapollo.tmcraft.block.ModBlock;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 
-import java.util.function.Consumer;
-
 public class PokemonBreederTableRecipeGenerator implements RecipeGenerator {
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlock.POKEMON_BREEDER_TABLE_BLOCK.getItem())
                 .pattern("EE")
                 .pattern("BB")

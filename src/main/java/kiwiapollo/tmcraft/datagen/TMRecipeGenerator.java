@@ -1,11 +1,9 @@
 package kiwiapollo.tmcraft.datagen;
 
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
-
-import java.util.function.Consumer;
+import net.minecraft.data.server.recipe.RecipeExporter;
 
 public class TMRecipeGenerator implements RecipeGenerator {
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
         new CopperTMRecipeGenerator().generate(exporter);
         new IronTMRecipeGenerator().generate(exporter);
         new GoldTMRecipeGenerator().generate(exporter);

@@ -7,15 +7,18 @@ import kiwiapollo.tmcraft.item.eggmove.EggMoveItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.village.TradeOffers;
+import net.minecraft.village.TradedItem;
+
+import java.util.Optional;
 
 public abstract class PokemonBreederTradeOfferFactory implements TradeOffers.Factory {
-    protected ItemStack getEmeraldBuyItem(int count) {
-        return new ItemStack(Items.EMERALD, count);
+    protected TradedItem getEmeraldBuyItem(int count) {
+        return new TradedItem(Items.EMERALD, count);
     }
 
-    protected ItemStack getTypeGemBuyItem(EggMoveItem move, int count) {
+    protected Optional<TradedItem> getTypeGemBuyItem(EggMoveItem move, int count) {
         ElementalType type = ((EggMoveTeachingItem) move.getItem()).getMoveType();
-        return new ItemStack(new TypeGemFactory().create(type), count);
+        return Optional.of(new TradedItem(new TypeGemFactory().create(type), count));
     }
 
     protected ItemStack getEggMoveSellItem(EggMoveItem move) {
