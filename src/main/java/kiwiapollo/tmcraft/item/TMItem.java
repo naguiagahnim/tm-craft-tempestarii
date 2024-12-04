@@ -5,31 +5,35 @@ import com.cobblemon.mod.common.api.moves.BenchedMove;
 import com.cobblemon.mod.common.api.moves.MoveTemplate;
 import com.cobblemon.mod.common.api.moves.Moves;
 import com.cobblemon.mod.common.api.types.ElementalType;
-import com.cobblemon.mod.common.api.types.ElementalTypes;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
+import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 public class TMItem extends Item implements ElementalTypeItem {
     protected final String move;
-    private final String type;
+    private final ElementalType type;
 
-    public TMItem(String move, String type) {
+    public TMItem(String move, ElementalType type) {
         super(new FabricItemSettings());
 
         this.move = move;
@@ -62,6 +66,18 @@ public class TMItem extends Item implements ElementalTypeItem {
         player.sendMessage(Text.translatable("item.tmcraft.success", pokemon.getDisplayName(), getMoveTemplate().getDisplayName()));
         player.getWorld().playSound(null, player.getBlockPos(), CobblemonSounds.PC_CLICK, SoundCategory.PLAYERS, 1.0f, 1.0f);
         return ActionResult.SUCCESS;
+    }
+
+    @Environment(EnvType.CLIENT)
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        stack.setCustomName(Text.empty().append(String.format("TM-%d: ", getMoveTemplate().getNum())).append(getMoveTemplate().getDisplayName()));
+        tooltip.add(type.getDisplayName().setStyle(Style.EMPTY.withColor(type.getHue())));
+    }
+
+    @Override
+    public ElementalType getMoveType() {
+        return type;
     }
 
     private boolean canPokemonLearnMove(PlayerEntity player, Pokemon pokemon) {        
@@ -132,9 +148,5 @@ public class TMItem extends Item implements ElementalTypeItem {
                 .contains(move);
 
         return isLevelUpMove || isTmMove;
-    }
-
-    public ElementalType getMoveType() {
-        return ElementalTypes.INSTANCE.get(type);
     }
 }
