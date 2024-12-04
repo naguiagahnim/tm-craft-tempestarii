@@ -42,7 +42,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"cobblemontrainerbattle" {
+		"tmcraft" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
