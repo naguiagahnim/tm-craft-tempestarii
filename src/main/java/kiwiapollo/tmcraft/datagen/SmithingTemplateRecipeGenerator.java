@@ -3,7 +3,7 @@ package kiwiapollo.tmcraft.datagen;
 import kiwiapollo.tmcraft.TMCraft;
 import kiwiapollo.tmcraft.item.misc.ModSmithingTemplateItem;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -12,7 +12,8 @@ import net.minecraft.util.Identifier;
 import java.util.function.Consumer;
 
 public class SmithingTemplateRecipeGenerator {
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    @Override
+    public void generate(RecipeExporter exporter) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModSmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE)
                 .pattern("GBG")
                 .pattern("GDG")
