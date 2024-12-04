@@ -3,10 +3,16 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tmcraft:iron_blank_disc"
+      "item": "tmcraft:gold_blank_disc"
     },
     {
       "item": "cobblemon:flying_gem"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:iron_sword"
     }
   ],
   "result": {
