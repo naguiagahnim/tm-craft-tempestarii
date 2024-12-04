@@ -9,13 +9,13 @@
       "item": "cobblemon:ice_gem"
     },
     {
-      "item": "cobblemon:black_belt"
+      "item": "cobblemon:razor_fang"
     },
     {
       "item": "minecraft:blue_ice"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_icepunch"
+    "item": "tmcraft:tm_icefang"
   }
 }

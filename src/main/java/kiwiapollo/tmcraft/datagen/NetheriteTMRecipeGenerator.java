@@ -1,5 +1,6 @@
 package kiwiapollo.tmcraft.datagen;
 
+import com.cobblemon.mod.common.CobblemonItems;
 import kiwiapollo.tmcraft.item.BlankDiscItems;
 import kiwiapollo.tmcraft.item.TMItem;
 import kiwiapollo.tmcraft.item.TMItems;
@@ -20,6 +21,15 @@ public class NetheriteTMRecipeGenerator implements RecipeGenerator {
 
         NetheriteTMRecipeJsonBuilder.create((TMItem) TMItems.TM_HYPERBEAM.getItem())
                 .input(Items.CALIBRATED_SCULK_SENSOR)
+                .offerTo(exporter);
+
+        NetheriteTMRecipeJsonBuilder.create((TMItem) TMItems.TM_MEGAKICK.getItem())
+                .input(CobblemonItems.BLACK_BELT)
+                .input(Items.OBSIDIAN)
+                .offerTo(exporter);
+
+        NetheriteTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SELFDESTRUCT.getItem())
+                .input(Items.TNT, 3)
                 .offerTo(exporter);
     }
 

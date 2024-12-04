@@ -45,6 +45,26 @@ public class IronTMRecipeGenerator implements RecipeGenerator {
                 .input(ItemTags.STONE_CRAFTING_MATERIALS)
                 .input(Items.IRON_PICKAXE)
                 .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_STRUGGLEBUG.getItem())
+                .input(Items.COBWEB)
+                .input(Items.IRON_HOE)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_GYROBALL.getItem())
+                .input(Items.IRON_BLOCK)
+                .input(Items.STONECUTTER)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_POWERUPPUNCH.getItem())
+                .input(CobblemonItems.BLACK_BELT)
+                .input(CobblemonItems.PROTEIN)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_DRAININGKISS.getItem())
+                .input(CobblemonItems.DESTINY_KNOT)
+                .input(Items.SPONGE)
+                .offerTo(exporter);
     }
 
     static class IronTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

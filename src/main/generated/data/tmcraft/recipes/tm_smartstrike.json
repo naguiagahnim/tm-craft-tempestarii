@@ -6,16 +6,16 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:ice_gem"
+      "item": "cobblemon:steel_gem"
     },
     {
-      "item": "cobblemon:black_belt"
+      "item": "cobblemon:metal_coat"
     },
     {
-      "item": "minecraft:blue_ice"
+      "item": "minecraft:goat_horn"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_icepunch"
+    "item": "tmcraft:tm_smartstrike"
   }
 }

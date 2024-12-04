@@ -6,16 +6,16 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:ice_gem"
+      "item": "cobblemon:dragon_gem"
     },
     {
-      "item": "cobblemon:black_belt"
+      "item": "cobblemon:razor_claw"
     },
     {
-      "item": "minecraft:blue_ice"
+      "item": "minecraft:iron_hoe"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_icepunch"
+    "item": "tmcraft:tm_dragonclaw"
   }
 }

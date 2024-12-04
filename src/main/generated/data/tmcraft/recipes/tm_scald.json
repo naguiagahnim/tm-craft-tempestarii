@@ -6,16 +6,16 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:ice_gem"
+      "item": "cobblemon:water_gem"
     },
     {
-      "item": "cobblemon:black_belt"
+      "item": "minecraft:water_bucket"
     },
     {
-      "item": "minecraft:blue_ice"
+      "item": "minecraft:blaze_powder"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_icepunch"
+    "item": "tmcraft:tm_scald"
   }
 }

@@ -6,16 +6,16 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:ice_gem"
+      "item": "cobblemon:normal_gem"
     },
     {
-      "item": "cobblemon:black_belt"
+      "item": "minecraft:clock"
     },
     {
-      "item": "minecraft:blue_ice"
+      "item": "minecraft:jukebox"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_icepunch"
+    "item": "tmcraft:tm_metronome"
   }
 }

@@ -50,6 +50,45 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
                 .input(CobblemonItems.RAZOR_CLAW)
                 .input(Items.GRINDSTONE)
                 .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_TOXIC.getItem())
+                .input(CobblemonItems.POISON_BARB)
+                .input(Items.SLIME_BALL)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_TRICKROOM.getItem())
+                .input(Items.ENDER_CHEST)
+                .input(Items.TRIPWIRE_HOOK)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_LIGHTSCREEN.getItem())
+                .input(Items.GLASS_PANE, 3)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_PSYCHUP.getItem())
+                .input(CobblemonItems.MIRROR_HERB, 3)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SWORDSDANCE.getItem())
+                .input(Items.IRON_SWORD)
+                .input(Items.JUKEBOX)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_ROCKPOLISH.getItem())
+                .input(Items.SMOOTH_STONE)
+                .input(Items.GRINDSTONE)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FAKETEARS.getItem())
+                .input(Items.GHAST_TEAR, 3)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_ATTRACT.getItem())
+                .input(Items.WHEAT)
+                .input(Items.WHEAT_SEEDS)
+                .input(Items.CARROT)
+                .input(Items.BONE)
+                .offerTo(exporter);
     }
 
     static class EmeraldTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

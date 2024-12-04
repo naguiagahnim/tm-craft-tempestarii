@@ -6,16 +6,19 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:ice_gem"
+      "item": "cobblemon:flying_gem"
     },
     {
-      "item": "cobblemon:black_belt"
+      "item": "minecraft:slime_block"
     },
     {
-      "item": "minecraft:blue_ice"
+      "item": "minecraft:slime_block"
+    },
+    {
+      "item": "minecraft:slime_block"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_icepunch"
+    "item": "tmcraft:tm_bounce"
   }
 }

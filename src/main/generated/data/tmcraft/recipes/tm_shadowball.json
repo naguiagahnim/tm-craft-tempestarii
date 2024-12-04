@@ -6,16 +6,16 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:ice_gem"
+      "item": "cobblemon:ghost_gem"
     },
     {
-      "item": "cobblemon:black_belt"
+      "item": "cobblemon:life_orb"
     },
     {
-      "item": "minecraft:blue_ice"
+      "item": "cobblemon:reaper_cloth"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_icepunch"
+    "item": "tmcraft:tm_shadowball"
   }
 }

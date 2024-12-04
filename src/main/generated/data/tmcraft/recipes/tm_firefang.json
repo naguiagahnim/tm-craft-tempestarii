@@ -6,16 +6,16 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:ice_gem"
+      "item": "cobblemon:fire_gem"
     },
     {
-      "item": "cobblemon:black_belt"
+      "item": "cobblemon:razor_fang"
     },
     {
-      "item": "minecraft:blue_ice"
+      "item": "minecraft:magma_block"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_icepunch"
+    "item": "tmcraft:tm_firefang"
   }
 }
