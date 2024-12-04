@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "template-mod",
+	"id": "tmcraft",
 	"version": "${version}",
-	"name": "Template Mod",
+	"name": "TM Craft",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Me!"
@@ -11,24 +11,24 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/template-mod/icon.png",
+	"license": "MIT",
+	"icon": "assets/tmcraft/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"fabric-datagen": [
-			"com.example.datagen.DataGenerator"
+			"kiwiapollo.tmcraft.datagen.DataGenerator"
 		],
 		"main": [
-			"com.example.TemplateMod"
+			"kiwiapollo.tmcraft.TMCraft"
 		],
 		"client": [
-			"com.example.TemplateModClient"
+			"kiwiapollo.tmcraft.TMCraftClient"
 		]
 	},
 	"mixins": [
-		"template-mod.mixins.json",
+		"tmcraft.mixins.json",
 		{
-			"config": "template-mod.client.mixins.json",
+			"config": "tmcraft.client.mixins.json",
 			"environment": "client"
 		}
 	],
