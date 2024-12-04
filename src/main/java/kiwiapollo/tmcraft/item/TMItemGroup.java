@@ -10,7 +10,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class TMItemGroup {
-    public static final Identifier ITEM_GROUP_ID = new Identifier(TMCraft.MOD_ID, "tm_item_group");
+    public static final Identifier ITEM_GROUP_ID = Identifier.of(TMCraft.MOD_ID, "tm_item_group");
 
     public static final ItemGroup TM_ITEM_GROUP = FabricItemGroup.builder()
             .icon(() -> new ItemStack(BlankDiscItems.DIAMOND_BLANK_DISC.getItem()))
