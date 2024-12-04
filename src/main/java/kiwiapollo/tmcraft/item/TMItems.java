@@ -381,7 +381,7 @@ public enum TMItems {
     TM_HEAVYSLAM(Identifier.of(TMCraft.MOD_ID, "tm_heavyslam"), new TMItem("heavyslam", "Steel")),
     TM_HELPINGHAND(Identifier.of(TMCraft.MOD_ID, "tm_helpinghand"), new TMItem("helpinghand", "Normal")),
     TM_HEX(Identifier.of(TMCraft.MOD_ID, "tm_hex"), new TMItem("hex", "Ghost")),
-    TM_HIDDENPOWER(Identifier.of(TMCraft.MOD_ID, "tm_hiddenpower"), new TMItem("hiddenpower", "Water")),
+    TM_HIDDENPOWER(Identifier.of(TMCraft.MOD_ID, "tm_hiddenpower"), new TMItem("hiddenpower", "Normal")),
     TM_HIGHHORSEPOWER(Identifier.of(TMCraft.MOD_ID, "tm_highhorsepower"), new TMItem("highhorsepower", "Ground")),
     TM_HIGHJUMPKICK(Identifier.of(TMCraft.MOD_ID, "tm_highjumpkick"), new TMItem("highjumpkick", "Fighting")),
     TM_HOLDBACK(Identifier.of(TMCraft.MOD_ID, "tm_holdback"), new TMItem("holdback", "Normal")),
