@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:gold_block"
+  },
+  "base": {
+    "item": "tmcraft:iron_blank_disc"
+  },
+  "result": {
+    "item": "tmcraft:gold_blank_disc"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  }
+}

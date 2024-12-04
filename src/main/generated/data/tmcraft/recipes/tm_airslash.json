@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tmcraft:iron_blank_disc"
+    },
+    {
+      "item": "cobblemon:flying_gem"
+    }
+  ],
+  "result": {
+    "item": "tmcraft:tm_airslash"
+  }
+}
