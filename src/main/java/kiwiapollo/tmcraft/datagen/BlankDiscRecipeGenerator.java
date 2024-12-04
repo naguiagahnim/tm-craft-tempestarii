@@ -61,5 +61,16 @@ public class BlankDiscRecipeGenerator {
                 )
                 .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.GOLD_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.GOLD_BLANK_DISC.getItem()))
                 .offerTo(exporter, BlankDiscItems.EMERALD_BLANK_DISC.getIdentifier());
+
+        SmithingTransformRecipeJsonBuilder
+                .create(
+                        Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(BlankDiscItems.DIAMOND_BLANK_DISC.getItem()),
+                        Ingredient.ofItems(Items.NETHERITE_BLOCK),
+                        RecipeCategory.MISC,
+                        BlankDiscItems.NETHERITE_BLANK_DISC.getItem()
+                )
+                .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.DIAMOND_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.DIAMOND_BLANK_DISC.getItem()))
+                .offerTo(exporter, BlankDiscItems.NETHERITE_BLANK_DISC.getIdentifier());
     }
 }

@@ -9,7 +9,8 @@ public enum BlankDiscItems {
     IRON_BLANK_DISC(Identifier.of(TMCraft.MOD_ID, "iron_blank_disc"), new Item(new Item.Settings())),
     GOLD_BLANK_DISC(Identifier.of(TMCraft.MOD_ID, "gold_blank_disc"), new Item(new Item.Settings())),
     DIAMOND_BLANK_DISC(Identifier.of(TMCraft.MOD_ID, "diamond_blank_disc"), new Item(new Item.Settings())),
-    EMERALD_BLANK_DISC(Identifier.of(TMCraft.MOD_ID, "emerald_blank_disc"), new Item(new Item.Settings()));
+    EMERALD_BLANK_DISC(Identifier.of(TMCraft.MOD_ID, "emerald_blank_disc"), new Item(new Item.Settings())),
+    NETHERITE_BLANK_DISC(Identifier.of(TMCraft.MOD_ID, "netherite_blank_disc"), new Item(new Item.Settings()));
 
     private final Item item;
     private final Identifier identifier;
