@@ -3,16 +3,16 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tmcraft:copper_blank_disc"
+      "item": "tmcraft:iron_blank_disc"
     },
     {
-      "item": "cobblemon:grass_gem"
+      "item": "cobblemon:normal_gem"
     },
     {
-      "tag": "cobblemon:seeds"
+      "item": "cobblemon:relic_coin"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_bulletseed"
+    "item": "tmcraft:tm_payday"
   }
 }

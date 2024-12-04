@@ -1,6 +1,7 @@
 package kiwiapollo.tmcraft.datagen;
 
 import com.cobblemon.mod.common.CobblemonItems;
+import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
 import kiwiapollo.tmcraft.item.BlankDiscItems;
 import kiwiapollo.tmcraft.item.TMItem;
 import kiwiapollo.tmcraft.item.TMItems;
@@ -102,6 +103,47 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_REST.getItem())
+                .input(ItemTags.BEDS)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_DOUBLETEAM.getItem())
+                .input(CobblemonItems.X_ACCURACY)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_MIMIC.getItem())
+                .input(Items.GLASS_PANE)
+                .input(Items.IRON_INGOT)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SKILLSWAP.getItem())
+                .input(CobblemonItems.ABILITY_CAPSULE)
+                .input(Items.ENDER_PEARL)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_GUARDSWAP.getItem())
+                .input(CobblemonItems.X_DEFENSE)
+                .input(Items.ENDER_PEARL)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_POWERSWAP.getItem())
+                .input(CobblemonItems.X_ATTACK)
+                .input(Items.ENDER_PEARL)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SNATCH.getItem())
+                .input(Items.DIAMOND)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_THUNDERWAVE.getItem())
+                .input(Items.REPEATER)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_TORMENT.getItem())
+                .input(CobblemonItemTags.MINTS)
+                .input(Items.COCOA_BEANS)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_ROOST.getItem())
                 .input(ItemTags.BEDS)
                 .offerTo(exporter);
     }

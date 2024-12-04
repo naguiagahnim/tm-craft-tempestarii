@@ -34,6 +34,19 @@ public class NetheriteTMRecipeGenerator implements RecipeGenerator {
         NetheriteTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SOLARBEAM.getItem())
                 .input(CobblemonItems.SUN_STONE)
                 .offerTo(exporter);
+
+        NetheriteTMRecipeJsonBuilder.create((TMItem) TMItems.TM_DOUBLEEDGE.getItem())
+                .input(Items.IRON_SWORD)
+                .input(Items.IRON_SWORD)
+                .offerTo(exporter);
+
+        NetheriteTMRecipeJsonBuilder.create((TMItem) TMItems.TM_MEGAHORN.getItem())
+                .input(Items.GOAT_HORN)
+                .offerTo(exporter);
+
+        NetheriteTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SUPERPOWER.getItem())
+                .input(CobblemonItems.POWER_BRACER)
+                .offerTo(exporter);
     }
 
     static class NetheriteTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

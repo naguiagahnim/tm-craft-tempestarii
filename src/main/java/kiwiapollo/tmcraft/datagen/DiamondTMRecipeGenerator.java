@@ -67,6 +67,14 @@ public class DiamondTMRecipeGenerator implements RecipeGenerator {
         DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SLUDGEBOMB.getItem())
                 .input(Items.TNT)
                 .offerTo(exporter);
+
+        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FOULPLAY.getItem())
+                .input(Items.TRIPWIRE_HOOK)
+                .offerTo(exporter);
+
+        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_PSYCHIC.getItem())
+                .input(CobblemonItems.TWISTED_SPOON)
+                .offerTo(exporter);
     }
 
     static class DiamondTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

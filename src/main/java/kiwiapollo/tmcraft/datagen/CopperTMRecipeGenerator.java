@@ -1,6 +1,7 @@
 package kiwiapollo.tmcraft.datagen;
 
 import com.cobblemon.mod.common.CobblemonItems;
+import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
 import kiwiapollo.tmcraft.item.BlankDiscItems;
 import kiwiapollo.tmcraft.item.TMItem;
 import kiwiapollo.tmcraft.item.TMItems;
@@ -20,7 +21,11 @@ public class CopperTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         CopperTMRecipeJsonBuilder.create((TMItem) TMItems.TM_BULLETSEED.getItem())
-                .input(Items.WHEAT_SEEDS)
+                .input(CobblemonItemTags.SEEDS)
+                .offerTo(exporter);
+
+        CopperTMRecipeJsonBuilder.create((TMItem) TMItems.TM_ABSORB.getItem())
+                .input(Items.SPONGE)
                 .offerTo(exporter);
     }
 

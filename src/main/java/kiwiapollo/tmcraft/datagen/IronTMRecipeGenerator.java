@@ -72,6 +72,22 @@ public class IronTMRecipeGenerator implements RecipeGenerator {
         IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FLING.getItem())
                 .input(Items.CROSSBOW)
                 .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SEISMICTOSS.getItem())
+                .input(Items.CARTOGRAPHY_TABLE)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_MEGADRAIN.getItem())
+                .input(Items.SPONGE)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_PSYWAVE.getItem())
+                .input(Items.REPEATER)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_PAYDAY.getItem())
+                .input(CobblemonItems.RELIC_COIN)
+                .offerTo(exporter);
     }
 
     static class IronTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

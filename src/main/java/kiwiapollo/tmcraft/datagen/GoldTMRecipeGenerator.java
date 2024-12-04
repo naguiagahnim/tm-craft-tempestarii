@@ -165,6 +165,44 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
         GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_XSCISSOR.getItem())
                 .input(Items.SHEARS)
                 .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_EGGBOMB.getItem())
+                .input(Items.EGG)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_DIG.getItem())
+                .input(Items.IRON_SHOVEL)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SUBMISSION.getItem())
+                .input(Items.LEAD)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_GIGADRAIN.getItem())
+                .input(Items.SPONGE)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_WATERFALL.getItem())
+                .input(Items.ANVIL)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_DRILLRUN.getItem())
+                .input(CobblemonItems.DIRE_HIT)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_HEADBUTT.getItem())
+                .input(CobblemonItems.ROCKY_HELMET)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FACADE.getItem())
+                .input(CobblemonItems.PARALYZE_HEAL)
+                .input(CobblemonItems.BURN_HEAL)
+                .input(CobblemonItems.ICE_HEAL)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SILVERWIND.getItem())
+                .input(Items.FEATHER)
+                .offerTo(exporter);
     }
 
     static class GoldTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

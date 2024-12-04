@@ -3,16 +3,16 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tmcraft:copper_blank_disc"
+      "item": "tmcraft:emerald_blank_disc"
     },
     {
-      "item": "cobblemon:grass_gem"
+      "item": "cobblemon:dark_gem"
     },
     {
-      "tag": "cobblemon:seeds"
+      "item": "minecraft:diamond"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_bulletseed"
+    "item": "tmcraft:tm_snatch"
   }
 }

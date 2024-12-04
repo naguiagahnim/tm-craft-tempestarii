@@ -9,10 +9,10 @@
       "item": "cobblemon:grass_gem"
     },
     {
-      "tag": "cobblemon:seeds"
+      "item": "minecraft:sponge"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_bulletseed"
+    "item": "tmcraft:tm_absorb"
   }
 }
