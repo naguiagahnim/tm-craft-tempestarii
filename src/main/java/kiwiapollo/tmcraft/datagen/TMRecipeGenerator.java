@@ -16,7 +16,7 @@ import net.minecraft.recipe.book.RecipeCategory;
 import java.util.Map;
 import java.util.function.Consumer;
 
-public class TMRecipeGenerator {
+public class TMRecipeGenerator implements RecipeGenerator {
     private static final Map<ElementalType, Item> TO_TYPE_GEM = Map.ofEntries(
             Map.entry(ElementalTypes.INSTANCE.getNORMAL(), CobblemonItems.NORMAL_GEM),
             Map.entry(ElementalTypes.INSTANCE.getFIRE(), CobblemonItems.FIRE_GEM),
@@ -39,20 +39,15 @@ public class TMRecipeGenerator {
     );
 
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, TMItems.TM_AGILITY.getItem())
-                .input(BlankDiscItems.EMERALD_BLANK_DISC.getItem())
-                .input(toTypeGem((TMItem) TMItems.TM_AGILITY.getItem()))
-                .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.EMERALD_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.EMERALD_BLANK_DISC.getItem()))
-                .offerTo(exporter);
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, TMItems.TM_AIRSLASH.getItem())
-                .input(BlankDiscItems.IRON_BLANK_DISC.getItem())
-                .input(toTypeGem((TMItem) TMItems.TM_AIRSLASH.getItem()))
-                .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.IRON_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.IRON_BLANK_DISC.getItem()))
-                .offerTo(exporter);
+        new CopperTMRecipeGenerator().generate(exporter);
+        new IronTMRecipeGenerator().generate(exporter);
+        new GoldTMRecipeGenerator().generate(exporter);
+        new DiamondTMRecipeGenerator().generate(exporter);
+        new EmeraldTMRecipeGenerator().generate(exporter);
+        new NetheriteTMRecipeGenerator().generate(exporter);
     }
 
-    private ItemConvertible toTypeGem(TMItem item) {
+    public static ItemConvertible toTypeGem(TMItem item) {
         ElementalType type = item.getMoveType();
         return TO_TYPE_GEM.get(type);
     }
