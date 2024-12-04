@@ -1,6 +1,9 @@
 {
     "item_group.tmcraft.tm_item_group": "TM Craft",
 
+    "tag.item.tmcraft.blank_discs": "빈 디스크",
+    "tag.item.tmcraft.tms": "기술머신",
+
     "item.tmcraft.error.cannot_learn_move": "%s는 %s을 배울 수 없습니다.",
     "item.tmcraft.error.pokemon_knows_move": "%s는 %s을 이미 알고 있습니다.",
 

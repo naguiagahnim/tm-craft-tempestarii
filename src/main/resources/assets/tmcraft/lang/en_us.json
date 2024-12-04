@@ -1,6 +1,9 @@
 {
     "item_group.tmcraft.tm_item_group": "TM Craft",
 
+    "tag.item.tmcraft.blank_discs": "Blank Discs",
+    "tag.item.tmcraft.tms": "TMs",
+
     "item.tmcraft.error.cannot_learn_move": "%s cannot learn %s",
     "item.tmcraft.error.pokemon_knows_move": "%s already knows %s",
 
