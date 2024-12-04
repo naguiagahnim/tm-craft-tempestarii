@@ -1,6 +1,7 @@
 package kiwiapollo.tmcraft.datagen;
 
 import kiwiapollo.tmcraft.item.BlankDiscItems;
+import kiwiapollo.tmcraft.item.TMItemTagRegistry;
 import kiwiapollo.tmcraft.item.TMItems;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
