@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "simpletms:tr_doubleshock"
+        }
+    ],
+    "result": {
+        "item": "tmcraft:tm_doubleshock"
+    },
+    "fabric:load_conditions": [
+        {
+            "condition": "fabric:all_mods_loaded",
+            "values": [
+                "simpletms"
+            ]
+        }
+    ]
+}

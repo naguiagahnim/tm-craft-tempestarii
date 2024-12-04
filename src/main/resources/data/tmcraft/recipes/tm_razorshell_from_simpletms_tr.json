@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "simpletms:tr_razorshell"
+        }
+    ],
+    "result": {
+        "item": "tmcraft:tm_razorshell"
+    },
+    "fabric:load_conditions": [
+        {
+            "condition": "fabric:all_mods_loaded",
+            "values": [
+                "simpletms"
+            ]
+        }
+    ]
+}

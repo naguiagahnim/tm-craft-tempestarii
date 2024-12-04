@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "simpletms:tm_charge"
+        }
+    ],
+    "result": {
+        "item": "tmcraft:tm_charge"
+    },
+    "fabric:load_conditions": [
+        {
+            "condition": "fabric:all_mods_loaded",
+            "values": [
+                "simpletms"
+            ]
+        }
+    ]
+}

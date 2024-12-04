@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "simpletms:tr_floralhealing"
+        }
+    ],
+    "result": {
+        "item": "tmcraft:tm_floralhealing"
+    },
+    "fabric:load_conditions": [
+        {
+            "condition": "fabric:all_mods_loaded",
+            "values": [
+                "simpletms"
+            ]
+        }
+    ]
+}

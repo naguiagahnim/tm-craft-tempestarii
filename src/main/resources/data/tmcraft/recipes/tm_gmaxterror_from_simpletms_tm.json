@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "simpletms:tm_gmaxterror"
+        }
+    ],
+    "result": {
+        "item": "tmcraft:tm_gmaxterror"
+    },
+    "fabric:load_conditions": [
+        {
+            "condition": "fabric:all_mods_loaded",
+            "values": [
+                "simpletms"
+            ]
+        }
+    ]
+}
