@@ -15,6 +15,9 @@
 	"icon": "assets/template-mod/icon.png",
 	"environment": "*",
 	"entrypoints": {
+		"fabric-datagen": [
+			"com.example.datagen.DataGenerator"
+		],
 		"main": [
 			"com.example.TemplateMod"
 		],
