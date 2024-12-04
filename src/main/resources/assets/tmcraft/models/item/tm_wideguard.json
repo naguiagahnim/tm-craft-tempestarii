@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tmcraft:item/tm_wideguard"
+    "layer0": "tmcraft:item/tm_rock_type"
   }
 }

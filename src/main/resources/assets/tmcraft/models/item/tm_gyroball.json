@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tmcraft:item/tm_gyroball"
+    "layer0": "tmcraft:item/tm_steel_type"
   }
 }

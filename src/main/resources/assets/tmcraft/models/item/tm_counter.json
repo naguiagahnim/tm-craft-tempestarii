@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tmcraft:item/tm_counter"
+    "layer0": "tmcraft:item/tm_fighting_type"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tmcraft:item/tm_lunardance"
+    "layer0": "tmcraft:item/tm_psychic_type"
   }
 }

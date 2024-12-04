@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tmcraft:item/tm_dualchop"
+    "layer0": "tmcraft:item/tm_dragon_type"
   }
 }
