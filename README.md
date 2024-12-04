@@ -5,7 +5,7 @@
 ### MIT License 
 - Source Code
 
-### CC Attribution-NonCommercial-ShareAlike
+### CC BY-NC-SA 4.0
 - Translations
 - TM Item Textures
 
