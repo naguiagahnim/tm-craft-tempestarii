@@ -16,11 +16,13 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
+
 public class TemplateMod implements ModInitializer {
+	public static final String MOD_ID = "wantedfeatures";
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	// an instance of our new item
 	public static final Item CUSTOM_ITEM = new Item(new FabricItemSettings());
-
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
 			.icon(() -> new ItemStack(CUSTOM_ITEM))
 			.displayName(Text.translatable("itemGroup.tutorial.test_group"))
@@ -28,13 +30,14 @@ public class TemplateMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		Registry.register(Registries.ITEM,
-				new Identifier("tutorial", "custom_item"), CUSTOM_ITEM);
-		Registry.register(Registries.ITEM_GROUP,
-				new Identifier("tutorial", "test_group"), ITEM_GROUP);
+		Arrays.stream(MoveTutorItems.values()).forEach(item -> {
+			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
+		});
 
-		var groupRegistryKey = RegistryKey.of(Registries.ITEM_GROUP.getKey(),
-				new Identifier("tutorial", "test_group"));
+		Registry.register(Registries.ITEM, new Identifier("tutorial", "custom_item"), CUSTOM_ITEM);
+		Registry.register(Registries.ITEM_GROUP, new Identifier("tutorial", "test_group"), ITEM_GROUP);
+
+		var groupRegistryKey = RegistryKey.of(Registries.ITEM_GROUP.getKey(), new Identifier("tutorial", "test_group"));
 		ItemGroupEvents.modifyEntriesEvent(groupRegistryKey).register(itemGroup -> {
 			itemGroup.add(CUSTOM_ITEM);
 		});
