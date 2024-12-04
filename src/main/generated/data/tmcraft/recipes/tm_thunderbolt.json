@@ -9,10 +9,7 @@
       "item": "cobblemon:electric_gem"
     },
     {
-      "item": "minecraft:lightning_rod"
-    },
-    {
-      "item": "minecraft:repeater"
+      "item": "cobblemon:electirizer"
     }
   ],
   "result": {

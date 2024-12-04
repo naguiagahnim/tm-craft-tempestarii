@@ -18,32 +18,27 @@ import java.util.function.Consumer;
 public class EmeraldTMRecipeGenerator implements RecipeGenerator {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_AGILITY.getItem())
-                .input(Items.FIREWORK_ROCKET, 3)
+                .input(Items.FIREWORK_ROCKET)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_STEALTHROCK.getItem())
-                .input(Ingredient.fromTag(ItemTags.STONE_CRAFTING_MATERIALS), 3)
+                .input(Items.POINTED_DRIPSTONE)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_RAINDANCE.getItem())
-                .input(Items.WATER_BUCKET)
                 .input(Items.JUKEBOX)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SUNNYDAY.getItem())
                 .input(CobblemonItems.SUN_STONE)
-                .input(Items.JUKEBOX)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SCARYFACE.getItem())
-                .input(Items.ROTTEN_FLESH)
                 .input(Items.SOUL_SAND)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_BULKUP.getItem())
-                .input(Items.CAKE)
-                .input(Items.COOKED_BEEF)
-                .input(Items.MILK_BUCKET)
+                .input(Items.GOLDEN_APPLE)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_HONECLAWS.getItem())
@@ -52,21 +47,19 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_TOXIC.getItem())
-                .input(CobblemonItems.POISON_BARB)
-                .input(Items.SLIME_BALL)
+                .input(CobblemonItems.BLACK_SLUDGE)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_TRICKROOM.getItem())
                 .input(Items.ENDER_CHEST)
-                .input(Items.TRIPWIRE_HOOK)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_LIGHTSCREEN.getItem())
-                .input(Items.GLASS_PANE, 3)
+                .input(Items.GLASS_PANE)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_PSYCHUP.getItem())
-                .input(CobblemonItems.MIRROR_HERB, 3)
+                .input(CobblemonItems.MIRROR_HERB)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SWORDSDANCE.getItem())
@@ -75,19 +68,15 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_ROCKPOLISH.getItem())
-                .input(Items.SMOOTH_STONE)
                 .input(Items.GRINDSTONE)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FAKETEARS.getItem())
-                .input(Items.GHAST_TEAR, 3)
+                .input(Items.GHAST_TEAR)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_ATTRACT.getItem())
-                .input(Items.WHEAT)
-                .input(Items.WHEAT_SEEDS)
-                .input(Items.CARROT)
-                .input(Items.BONE)
+                .input(CobblemonItems.LOVE_SWEET)
                 .offerTo(exporter);
     }
 

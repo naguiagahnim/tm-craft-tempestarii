@@ -9,13 +9,7 @@
       "item": "cobblemon:rock_gem"
     },
     {
-      "tag": "minecraft:stone_crafting_materials"
-    },
-    {
-      "tag": "minecraft:stone_crafting_materials"
-    },
-    {
-      "tag": "minecraft:stone_crafting_materials"
+      "item": "minecraft:pointed_dripstone"
     }
   ],
   "result": {

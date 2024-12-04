@@ -16,14 +16,11 @@ import java.util.function.Consumer;
 public class CopperTMRecipeGenerator implements RecipeGenerator {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         CopperTMRecipeJsonBuilder.create((TMItem) TMItems.TM_PINMISSILE.getItem())
-                .input(Items.CACTUS, 3)
+                .input(Items.CACTUS)
                 .offerTo(exporter);
 
         CopperTMRecipeJsonBuilder.create((TMItem) TMItems.TM_BULLETSEED.getItem())
                 .input(Items.WHEAT_SEEDS)
-                .input(Items.BEETROOT_SEEDS)
-                .input(Items.MELON_SEEDS)
-                .input(Items.PUMPKIN_SEEDS)
                 .offerTo(exporter);
     }
 

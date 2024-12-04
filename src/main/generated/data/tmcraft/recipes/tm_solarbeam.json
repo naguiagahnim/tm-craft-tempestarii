@@ -3,16 +3,13 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tmcraft:diamond_blank_disc"
+      "item": "tmcraft:netherite_blank_disc"
     },
     {
       "item": "cobblemon:grass_gem"
     },
     {
       "item": "cobblemon:sun_stone"
-    },
-    {
-      "item": "cobblemon:leaf_stone"
     }
   ],
   "result": {

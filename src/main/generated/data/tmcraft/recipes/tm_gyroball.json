@@ -9,10 +9,7 @@
       "item": "cobblemon:steel_gem"
     },
     {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "minecraft:stonecutter"
+      "item": "cobblemon:iron_ball"
     }
   ],
   "result": {

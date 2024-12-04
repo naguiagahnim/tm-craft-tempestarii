@@ -17,13 +17,12 @@ import java.util.function.Consumer;
 public class IronTMRecipeGenerator implements RecipeGenerator {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FIRESPIN.getItem())
-                .input(Items.BLAZE_POWDER)
                 .input(Items.IRON_BARS)
                 .offerTo(exporter);
 
         IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_MUDSHOT.getItem())
                 .input(Items.MUD)
-                .input(Items.CROSSBOW)
+                .input(Items.ARROW)
                 .offerTo(exporter);
 
         IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_MAGICALLEAF.getItem())
@@ -32,7 +31,6 @@ public class IronTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_METALCLAW.getItem())
-                .input(Items.IRON_BLOCK)
                 .input(CobblemonItems.RAZOR_CLAW)
                 .offerTo(exporter);
 
@@ -42,18 +40,15 @@ public class IronTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_ROCKSMASH.getItem())
-                .input(ItemTags.STONE_CRAFTING_MATERIALS)
                 .input(Items.IRON_PICKAXE)
                 .offerTo(exporter);
 
         IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_STRUGGLEBUG.getItem())
                 .input(Items.COBWEB)
-                .input(Items.IRON_HOE)
                 .offerTo(exporter);
 
         IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_GYROBALL.getItem())
-                .input(Items.IRON_BLOCK)
-                .input(Items.STONECUTTER)
+                .input(CobblemonItems.IRON_BALL)
                 .offerTo(exporter);
 
         IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_POWERUPPUNCH.getItem())
@@ -62,7 +57,7 @@ public class IronTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_DRAININGKISS.getItem())
-                .input(CobblemonItems.DESTINY_KNOT)
+                .input(CobblemonItems.LOVE_SWEET)
                 .input(Items.SPONGE)
                 .offerTo(exporter);
     }

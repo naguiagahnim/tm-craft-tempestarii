@@ -20,16 +20,19 @@ public class NetheriteTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         NetheriteTMRecipeJsonBuilder.create((TMItem) TMItems.TM_HYPERBEAM.getItem())
-                .input(Items.CALIBRATED_SCULK_SENSOR)
+                .input(Items.SCULK_SHRIEKER)
                 .offerTo(exporter);
 
         NetheriteTMRecipeJsonBuilder.create((TMItem) TMItems.TM_MEGAKICK.getItem())
-                .input(CobblemonItems.BLACK_BELT)
-                .input(Items.OBSIDIAN)
+                .input(CobblemonItems.EXPERT_BELT)
                 .offerTo(exporter);
 
         NetheriteTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SELFDESTRUCT.getItem())
-                .input(Items.TNT, 3)
+                .input(Items.TNT)
+                .offerTo(exporter);
+
+        NetheriteTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SOLARBEAM.getItem())
+                .input(CobblemonItems.SUN_STONE)
                 .offerTo(exporter);
     }
 

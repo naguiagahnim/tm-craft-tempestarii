@@ -9,10 +9,10 @@
       "item": "cobblemon:normal_gem"
     },
     {
-      "item": "minecraft:blue_ice"
+      "tag": "minecraft:fishes"
     },
     {
-      "item": "minecraft:magma_block"
+      "item": "minecraft:blaze_powder"
     },
     {
       "item": "minecraft:lightning_rod"

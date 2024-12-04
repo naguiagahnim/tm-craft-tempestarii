@@ -16,39 +16,44 @@ import java.util.function.Consumer;
 
 public class DiamondTMRecipeGenerator implements RecipeGenerator {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_THUNDERBOLT.getItem())
-                .input(Items.LIGHTNING_ROD)
-                .input(Items.REPEATER)
+        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_BLIZZARD.getItem())
+                .input(Items.POWDER_SNOW_BUCKET)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_BLIZZARD.getItem())
-                .input(Items.POWDER_SNOW_BUCKET, 3)
+        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FIREBLAST.getItem())
+                .input(Items.TNT)
+                .offerTo(exporter);
+
+        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_THUNDER.getItem())
+                .input(Items.LIGHTNING_ROD)
+                .offerTo(exporter);
+
+        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_HYDROPUMP.getItem())
+                .input(Items.WATER_BUCKET)
+                .offerTo(exporter);
+
+        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_ICEBEAM.getItem())
+                .input(Items.END_ROD)
+                .offerTo(exporter);
+
+        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FLAMETHROWER.getItem())
+                .input(Items.DISPENSER)
+                .offerTo(exporter);
+
+        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_THUNDERBOLT.getItem())
+                .input(CobblemonItems.ELECTIRIZER)
+                .offerTo(exporter);
+
+        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SURF.getItem())
+                .input(ItemTags.BOATS)
                 .offerTo(exporter);
 
         DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_DREAMEATER.getItem())
                 .input(ItemTags.BEDS)
-                .input(Items.GOLDEN_APPLE)
-                .offerTo(exporter);
-
-        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SOLARBEAM.getItem())
-                .input(CobblemonItems.SUN_STONE)
-                .input(CobblemonItems.LEAF_STONE)
-                .offerTo(exporter);
-
-        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FIREBLAST.getItem())
-                .input(CobblemonItems.MAGMARIZER)
-                .input(Items.TNT)
-                .offerTo(exporter);
-
-        DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FLAMETHROWER.getItem())
-                .input(Items.LAVA_BUCKET)
-                .input(Items.DISPENSER)
                 .offerTo(exporter);
 
         DiamondTMRecipeJsonBuilder.create((TMItem) TMItems.TM_IRONTAIL.getItem())
-                .input(CobblemonItems.METAL_COAT)
-                .input(Items.EMERALD)
-                .input(Items.SWEET_BERRIES)
+                .input(Items.TWISTING_VINES)
                 .offerTo(exporter);
     }
 

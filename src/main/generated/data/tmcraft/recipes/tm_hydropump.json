@@ -6,13 +6,13 @@
       "item": "tmcraft:diamond_blank_disc"
     },
     {
-      "item": "cobblemon:ice_gem"
+      "item": "cobblemon:water_gem"
     },
     {
-      "item": "minecraft:powder_snow_bucket"
+      "item": "minecraft:water_bucket"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_blizzard"
+    "item": "tmcraft:tm_hydropump"
   }
 }
