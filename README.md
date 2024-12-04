@@ -6,7 +6,8 @@
 - Source Code
 
 ### CC Attribution-NonCommercial-ShareAlike
-- TM Item Textures 
+- Translations
+- TM Item Textures
 
 ## Credits
 - [SimpleTMsFabric](https://github.com/Dragomordor/SimpleTMsFabric)
