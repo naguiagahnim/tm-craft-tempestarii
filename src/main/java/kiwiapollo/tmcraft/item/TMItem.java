@@ -1,5 +1,6 @@
 package kiwiapollo.tmcraft.item;
 
+import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.api.moves.BenchedMove;
 import com.cobblemon.mod.common.api.moves.MoveTemplate;
 import com.cobblemon.mod.common.api.moves.Moves;
@@ -12,6 +13,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
@@ -46,6 +49,7 @@ public class TMItem extends Item implements ElementalTypeItem {
         Pokemon pokemon = ((PokemonEntity) entity).getPokemon();
 
         if (!canPokemonLearnMove(player, pokemon)) {
+            player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
             return ActionResult.PASS;
         }
 
@@ -56,6 +60,7 @@ public class TMItem extends Item implements ElementalTypeItem {
         }
 
         player.sendMessage(Text.translatable("item.tmcraft.success", pokemon.getDisplayName(), getMoveTemplate().getDisplayName()));
+        player.getWorld().playSound(null, player.getBlockPos(), CobblemonSounds.PC_CLICK, SoundCategory.PLAYERS, 1.0f, 1.0f);
         return ActionResult.SUCCESS;
     }
 

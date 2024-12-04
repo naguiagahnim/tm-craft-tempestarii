@@ -8,5 +8,5 @@ import net.minecraft.util.Identifier;
 
 public class TMItemTagRegistry {
     public static final TagKey<Item> TMS = TagKey.of(RegistryKeys.ITEM, Identifier.of(TMCraft.MOD_ID, "tms"));
-    public static final TagKey<Item> BLANK_DISCS = TagKey.of(RegistryKeys.ITEM, Identifier.of(TMCraft.MOD_ID, "blank_discs"));;
+    public static final TagKey<Item> BLANK_DISCS = TagKey.of(RegistryKeys.ITEM, Identifier.of(TMCraft.MOD_ID, "blank_discs"));
 }
