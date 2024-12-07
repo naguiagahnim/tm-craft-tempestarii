@@ -1,6 +1,7 @@
 package kiwiapollo.tmcraft.datagen;
 
 import com.cobblemon.mod.common.CobblemonItems;
+import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
 import kiwiapollo.tmcraft.item.BlankDiscItems;
 import kiwiapollo.tmcraft.item.TMItem;
 import kiwiapollo.tmcraft.item.TMItems;
@@ -87,6 +88,22 @@ public class IronTMRecipeGenerator implements RecipeGenerator {
 
         IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_PAYDAY.getItem())
                 .input(CobblemonItems.RELIC_COIN)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_NATURALGIFT.getItem())
+                .input(CobblemonItemTags.BERRIES)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_RETURN.getItem())
+                .input(CobblemonItemTags.IS_FRIENDSHIP_BOOSTER)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_FLAMECHARGE.getItem())
+                .input(CobblemonItems.X_SPEED)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMItem) TMItems.TM_LOWKICK.getItem())
+                .input(Items.IRON_BOOTS)
                 .offerTo(exporter);
     }
 

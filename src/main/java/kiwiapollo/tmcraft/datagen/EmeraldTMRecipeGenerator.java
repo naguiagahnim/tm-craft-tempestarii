@@ -146,6 +146,18 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
         EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_ROOST.getItem())
                 .input(ItemTags.BEDS)
                 .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SAFEGUARD.getItem())
+                .input(Items.IRON_HELMET)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_SUBSTITUTE.getItem())
+                .input(Items.ARMOR_STAND)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMItem) TMItems.TM_LOWSWEEP.getItem())
+                .input(Items.COBWEB)
+                .offerTo(exporter);
     }
 
     static class EmeraldTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {
