@@ -923,7 +923,22 @@ public enum TMItems {
     TM_ZAPCANNON("zapcannon", ElementalTypes.INSTANCE.getELECTRIC()),
     TM_ZENHEADBUTT("zenheadbutt", ElementalTypes.INSTANCE.getPSYCHIC()),
     TM_ZINGZAP("zingzap", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_ZIPPYZAP("zippyzap", ElementalTypes.INSTANCE.getELECTRIC());
+    TM_ZIPPYZAP("zippyzap", ElementalTypes.INSTANCE.getELECTRIC()),
+
+    TM_TEMPERFLARE("temperflare", ElementalTypes.INSTANCE.getFIRE()),
+    TM_SUPERCELLSLAM("supercellslam", ElementalTypes.INSTANCE.getELECTRIC()),
+    TM_HARDPRESS("hardpress", ElementalTypes.INSTANCE.getSTEEL()),
+    TM_DRAGONCHEER("dragoncheer", ElementalTypes.INSTANCE.getDRAGON()),
+    TM_ALLURINGVOICE("alluringvoice", ElementalTypes.INSTANCE.getFAIRY()),
+    TM_PSYCHICNOISE("psychicnoise", ElementalTypes.INSTANCE.getPSYCHIC()),
+    TM_UPPERHAND("upperhand", ElementalTypes.INSTANCE.getFIGHTING()),
+    TM_ELECTROSHOT("electroshot", ElementalTypes.INSTANCE.getELECTRIC()),
+    TM_FICKLEBEAM("ficklebeam", ElementalTypes.INSTANCE.getDRAGON()),
+    TM_BURNINGBULWARK("burningbulwark", ElementalTypes.INSTANCE.getFIRE()),
+    TM_THUNDERCLAP("thunderclap", ElementalTypes.INSTANCE.getELECTRIC()),
+    TM_MIGHTYCLEAVE("mightycleave", ElementalTypes.INSTANCE.getROCK()),
+    TM_TACHYONCUTTER("tachyoncutter", ElementalTypes.INSTANCE.getSTEEL()),
+    TM_TERASTARSTORM("terastarstorm", ElementalTypes.INSTANCE.getNORMAL());
 
     private final Item item;
     private final Identifier identifier;
