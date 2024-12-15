@@ -71,7 +71,6 @@ public class TMItem extends Item implements ElementalTypeItem {
     @Environment(EnvType.CLIENT)
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        stack.setCustomName(Text.empty().append(String.format("TM-%d: ", getMoveTemplate().getNum())).append(getMoveTemplate().getDisplayName()));
         tooltip.add(type.getDisplayName().setStyle(Style.EMPTY.withColor(type.getHue())));
     }
 
