@@ -9,12 +9,12 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class TMItemGroup {
-    public static final Identifier ITEM_GROUP_ID = Identifier.of(TMCraft.MOD_ID, "tm_item_group");
+public class MoveTutorItemGroup {
+    public static final Identifier ITEM_GROUP_ID = Identifier.of(TMCraft.MOD_ID, "move_tutor_item_group");
 
     public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(BlankDiscItems.DIAMOND_BLANK_DISC.getItem()))
-            .displayName(Text.translatable("item_group.tmcraft.tm"))
+            .icon(() -> new ItemStack(BlankBookItems.EMERALD_BLANK_BOOK.getItem()))
+            .displayName(Text.translatable("item_group.tmcraft.move_tutor"))
             .build();
 
     public static final RegistryKey<ItemGroup> ITEM_GROUP_REGISTRY_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), ITEM_GROUP_ID);

@@ -3,15 +3,10 @@ package kiwiapollo.tmcraft.datagen;
 import com.cobblemon.mod.common.CobblemonItems;
 import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.api.types.ElementalTypes;
-import kiwiapollo.tmcraft.item.BlankDiscItems;
 import kiwiapollo.tmcraft.item.TMItem;
-import kiwiapollo.tmcraft.item.TMItems;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
-import net.minecraft.recipe.book.RecipeCategory;
 
 import java.util.Map;
 import java.util.function.Consumer;

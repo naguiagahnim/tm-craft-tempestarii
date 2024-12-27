@@ -1,6 +1,5 @@
 package kiwiapollo.tmcraft.datagen;
 
-import com.cobblemon.mod.common.CobblemonItems;
 import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
 import kiwiapollo.tmcraft.item.BlankDiscItems;
 import kiwiapollo.tmcraft.item.TMItem;
