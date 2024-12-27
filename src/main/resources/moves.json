@@ -5500,5 +5500,89 @@
     "formatname": "Zippy Zap",
     "typing": "electric",
     "id": "729"
+  },
+  {
+    "move": "temperflare",
+    "formatname": "Temper Flare",
+    "typing": "fire",
+    "id": "915"
+  },
+  {
+    "move": "supercellslam",
+    "formatname": "Supercell Slam",
+    "typing": "electric",
+    "id": "916"
+  },
+  {
+    "move": "hardpress",
+    "formatname": "Hard Press",
+    "typing": "steel",
+    "id": "912"
+  },
+  {
+    "move": "dragoncheer",
+    "formatname": "Dragon Cheer",
+    "typing": "dragon",
+    "id": "913"
+  },
+  {
+    "move": "alluringvoice",
+    "formatname": "Alluring Voice",
+    "typing": "fairy",
+    "id": "914"
+  },
+  {
+    "move": "psychicnoise",
+    "formatname": "Psychic Noise",
+    "typing": "psychic",
+    "id": "917"
+  },
+  {
+    "move": "upperhand",
+    "formatname": "Upper Hand",
+    "typing": "fighting",
+    "id": "918"
+  },
+  {
+    "move": "electroshot",
+    "formatname": "Electro Shot",
+    "typing": "electric",
+    "id": "905"
+  },
+  {
+    "move": "ficklebeam",
+    "formatname": "Fickle Beam",
+    "typing": "dragon",
+    "id": "907"
+  },
+  {
+    "move": "burningbulwark",
+    "formatname": "Burning Bulwark",
+    "typing": "fire",
+    "id": "908"
+  },
+  {
+    "move": "thunderclap",
+    "formatname": "Thunderclap",
+    "typing": "electric",
+    "id": "909"
+  },
+  {
+    "move": "mightycleave",
+    "formatname": "Mighty Cleave",
+    "typing": "rock",
+    "id": "910"
+  },
+  {
+    "move": "tachyoncutter",
+    "formatname": "Tachyon Cutter",
+    "typing": "steel",
+    "id": "911"
+  },
+  {
+    "move": "terastarstorm",
+    "formatname": "Tera Starstorm",
+    "typing": "normal",
+    "id": "906"
   }
 ]
