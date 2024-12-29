@@ -1,15 +1,15 @@
 {
-    "item_group.tmcraft.tm": "TM Craft",
-    "item_group.tmcraft.egg_move": "알 기술",
-    "item_group.tmcraft.move_tutor": "기술 가르침",
+    "item_group.tmcraft.tm": "기술머신",
+    "item_group.tmcraft.egg_move": "교배기술",
+    "item_group.tmcraft.move_tutor": "가르침기술",
 
     "tag.item.tmcraft.blank_discs": "빈 디스크",
     "tag.item.tmcraft.blank_eggs": "빈 알",
     "tag.item.tmcraft.blank_books": "빈 수험서",
 
     "tag.item.tmcraft.tms": "기술머신",
-    "tag.item.tmcraft.egg_moves": "알 기술",
-    "tag.item.tmcraft.move_tutors": "기술 가르침",
+    "tag.item.tmcraft.egg_moves": "교배기술",
+    "tag.item.tmcraft.move_tutors": "가르침기술",
 
     "item.tmcraft.error.cannot_learn_move": "%s는 %s을 배울 수 없습니다.",
     "item.tmcraft.error.pokemon_knows_move": "%s는 %s을 이미 알고 있습니다.",
