@@ -1,5 +1,6 @@
 package kiwiapollo.tmcraft.item;
 
+import com.cobblemon.mod.common.api.moves.Move;
 import com.cobblemon.mod.common.api.moves.MoveTemplate;
 import com.cobblemon.mod.common.api.moves.Moves;
 import com.cobblemon.mod.common.api.types.ElementalType;
@@ -40,7 +41,9 @@ public class EggMoveItem extends MoveTeachingItem {
     }
 
     private boolean isPokemonKnowsMove(Pokemon pokemon) {
-        return pokemon.getAllAccessibleMoves().stream().map(MoveTemplate::getName).anyMatch(name -> name.equals(move));
+        boolean isMoveSetMove = pokemon.getMoveSet().getMoves().stream().map(Move::getName).anyMatch(name -> name.equals(move));
+        boolean isAccessibleMove = pokemon.getAllAccessibleMoves().stream().map(MoveTemplate::getName).anyMatch(name -> name.equals(move));
+        return isMoveSetMove || isAccessibleMove;
     }
 
     private boolean isPokemonOwnedByPlayer(PlayerEntity player, Pokemon pokemon) {
