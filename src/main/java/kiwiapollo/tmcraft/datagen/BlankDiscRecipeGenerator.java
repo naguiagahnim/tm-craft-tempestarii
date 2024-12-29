@@ -22,7 +22,7 @@ public class BlankDiscRecipeGenerator {
                 .create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                         Ingredient.ofItems(BlankDiscItems.COPPER_BLANK_DISC.getItem()),
-                        Ingredient.ofItems(Items.IRON_BLOCK),
+                        Ingredient.ofItems(Items.IRON_INGOT),
                         RecipeCategory.MISC,
                         BlankDiscItems.IRON_BLANK_DISC.getItem()
                 )
@@ -33,7 +33,7 @@ public class BlankDiscRecipeGenerator {
                 .create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                         Ingredient.ofItems(BlankDiscItems.IRON_BLANK_DISC.getItem()),
-                        Ingredient.ofItems(Items.GOLD_BLOCK),
+                        Ingredient.ofItems(Items.GOLD_INGOT),
                         RecipeCategory.MISC,
                         BlankDiscItems.GOLD_BLANK_DISC.getItem()
                 )
@@ -44,7 +44,7 @@ public class BlankDiscRecipeGenerator {
                 .create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                         Ingredient.ofItems(BlankDiscItems.GOLD_BLANK_DISC.getItem()),
-                        Ingredient.ofItems(Items.DIAMOND_BLOCK),
+                        Ingredient.ofItems(Items.DIAMOND),
                         RecipeCategory.MISC,
                         BlankDiscItems.DIAMOND_BLANK_DISC.getItem()
                 )
@@ -55,7 +55,7 @@ public class BlankDiscRecipeGenerator {
                 .create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                         Ingredient.ofItems(BlankDiscItems.GOLD_BLANK_DISC.getItem()),
-                        Ingredient.ofItems(Items.EMERALD_BLOCK),
+                        Ingredient.ofItems(Items.EMERALD),
                         RecipeCategory.MISC,
                         BlankDiscItems.EMERALD_BLANK_DISC.getItem()
                 )
@@ -66,7 +66,7 @@ public class BlankDiscRecipeGenerator {
                 .create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                         Ingredient.ofItems(BlankDiscItems.DIAMOND_BLANK_DISC.getItem()),
-                        Ingredient.ofItems(Items.NETHERITE_BLOCK),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
                         RecipeCategory.MISC,
                         BlankDiscItems.NETHERITE_BLANK_DISC.getItem()
                 )

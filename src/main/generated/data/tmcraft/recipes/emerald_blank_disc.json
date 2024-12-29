@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "minecraft:emerald_block"
+    "item": "minecraft:emerald"
   },
   "base": {
     "item": "tmcraft:gold_blank_disc"
