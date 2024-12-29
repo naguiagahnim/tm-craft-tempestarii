@@ -2,28 +2,21 @@
 
 TMCraft is a Cobblemon side mod that add TMs with recipes. Mods like EMI is highly recommended for viewing recipes. This mod is not a unique work of mine and heavily motivated by SimpleTMs made by Dragomordor. Most of the heavy lifting is done by Dragomordor. Here are few things different from SimpleTMs.
 
-- Removed feature wild Pokemon dropping TMs when fainted
+- Removed feature wild Pokémon dropping TMs when fainted
 - Replaced TM textures with those based on Cobblemon Assets
 
 By the term TM, the mod follows Gen IX. Which means TMs are consumed after being used. Pokemon will not be able to learn egg moves and move tutor moves with TMs.
 
-## Tiered Blank Discs
-
-### Attack Moves
-
-There are five tiered blank discs. Each Blank Discs can be used for crafting TMs with power range of the following:
+## TMs & Blank Discs
 
 - Copper Blank Disc [0, 30)
 - Iron Blank Disc [30, 60)
 - Gold Blank Disc [60, 90)
 - Diamond Blank Disc [90, 120)
 - Netherite Blank Disc 120+
+- Emerald Blank Disc (for status moves)
 
-Netherite Upgrade Smithing Template is used when upgrading tiers.
-
-### Status Moves
-
-Emerald Blank Discs can be crafted from Gold Blank Disc with Netherite Upgrade Smithing Template and Emerald Block.
+Netherite Upgrade Smithing Template is used when upgrading tiers. Blank Discs are used as ingredients for crafting TMs.
 
 ## Egg Moves & Move Tutors
 
