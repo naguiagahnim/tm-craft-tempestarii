@@ -7,6 +7,12 @@ TMCraft is a Cobblemon side mod that add TMs with recipes. Mods like EMI is high
 
 By the term TM, the mod follows Gen IX. Which means TMs are consumed after being used. Pokemon will not be able to learn egg moves and move tutor moves with TMs.
 
+## Recipes
+
+For server admins who prefer TMCraft without recipes, try using `x.x.x+x.x.x-norecipes` version of the mod.
+
+If your favorite TMs do not have recipes and if you have an idea, feel free to contact me and give suggestions.
+
 ## TMs & Blank Discs
 
 - Copper Blank Disc [0, 30)
@@ -16,7 +22,9 @@ By the term TM, the mod follows Gen IX. Which means TMs are consumed after being
 - Netherite Blank Disc 120+
 - Emerald Blank Disc (for status moves)
 
-Netherite Upgrade Smithing Template is used when upgrading tiers. Blank Discs are used as ingredients for crafting TMs.
+Move Upgrade Smithing Template is used when upgrading tiers. Blank Discs are used as ingredients for crafting TMs.
+
+Starting from 1.3.0, Move Upgrade Smithing Template replaces Netherite Upgrade Smithing Template.
 
 ## Egg Moves & Move Tutors
 
@@ -27,9 +35,9 @@ Items corresponding to egg moves and move tutors are added starting from the fol
 
 The items are basically the same as the TM items except that they allow teaching moves only when the Pokémon can learn them via egg moves or move tutors.
 
-## Recipe Ideas
+## Move Recorders
 
-Since there are 900+ moves, it is impossible to add recipes for every single move (I do not intend to do so). If your favorite TMs do not have recipes and if you have an idea, feel free to contact me and give suggestions.
+When used, Move Recorder converts to corresponding TM/Egg/Tutor move item containing Pokémon's first move.
 
 ## LICENSE
 
@@ -43,8 +51,3 @@ Since there are 900+ moves, it is impossible to add recipes for every single mov
 ## Credits
 - [SimpleTMsFabric](https://github.com/Dragomordor/SimpleTMsFabric)
 - [Cobblemon Assets](https://gitlab.com/cable-mc/cobblemon-assets)
-
-## TODOs
-- [ ] TM/TR 아이템을 결정하는 방식은 인첸트와 비슷함
-- [ ] 인첸트 테이블에 디스크를 올리고 타입젬을 소모해서 원하는 기술의 타입을 결정
-- [ ] 기술은 랜덤으로 주어진 선택지에서 골라야 함
