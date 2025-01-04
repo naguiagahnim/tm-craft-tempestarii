@@ -203,6 +203,63 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SILVERWIND.getItem())
                 .input(Items.FEATHER)
                 .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_NIGHTSHADE.getItem())
+                .input(Items.EXPERIENCE_BOTTLE)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SWIFT.getItem())
+                .input(CobblemonItems.X_ACCURACY)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_HEX.getItem())
+                .input(Items.ENDER_EYE)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ZENHEADBUTT.getItem())
+                .input(CobblemonItems.ROCKY_HELMET)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_BODYSLAM.getItem())
+                .input(Items.ANVIL)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_THROATCHOP.getItem())
+                .input(Items.TIPPED_ARROW)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_BREAKINGSWIPE.getItem())
+                .input(Items.FERMENTED_SPIDER_EYE)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SKITTERSMACK.getItem())
+                .input(Items.SCULK_SENSOR)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SCORCHINGSANDS.getItem())
+                .input(Items.BLAZE_POWDER)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_HEATCRASH.getItem())
+                .input(CobblemonItems.FOCUS_BAND)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_BURNINGJEALOUSY.getItem())
+                .input(CobblemonItems.DESTINY_KNOT)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_LASHOUT.getItem())
+                .input(Items.FISHING_ROD)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SEEDBOMB.getItem())
+                .input(CobblemonItemTags.SEEDS)
+                .input(Items.GUNPOWDER)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ROCKTOMB.getItem())
+                .input(Items.OBSIDIAN)
+                .offerTo(exporter);
     }
 
     static class GoldTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

@@ -157,6 +157,41 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
         EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_LOWSWEEP.getItem())
                 .input(Items.COBWEB)
                 .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CONFUSERAY.getItem())
+                .input(Items.SHROOMLIGHT)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ENDURE.getItem())
+                .input(CobblemonItems.FOCUS_BAND)
+                .offerTo(exporter);
+
+        // Snowscape (Japanese: ゆきげしき Snowscape) is a non-damaging Ice-type move introduced in Generation IX,
+        // replacing Hail from earlier generations. It is TM052 in Generation IX.
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_HAIL.getItem())
+                .input(CobblemonItems.IRON_BALL)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SNOWSCAPE.getItem())
+                .input(CobblemonItems.IRON_BALL)
+                .input(CobblemonItems.PROTECTOR)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FEATHERDANCE.getItem())
+                .input(Items.JUKEBOX)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_METALSOUND.getItem())
+                .input(Items.PRISMARINE_SHARD)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SLEEPTALK.getItem())
+                .input(Items.PHANTOM_MEMBRANE)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_PROTECT.getItem())
+                .input(Items.SHIELD)
+                .offerTo(exporter);
     }
 
     static class EmeraldTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

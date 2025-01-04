@@ -105,6 +105,42 @@ public class IronTMRecipeGenerator implements RecipeGenerator {
         IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_LOWKICK.getItem())
                 .input(Items.IRON_BOOTS)
                 .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FALSESWIPE.getItem())
+                .input(Items.WOODEN_SWORD)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ACIDSPRAY.getItem())
+                .input(Items.SPLASH_POTION)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CHILLINGWATER.getItem())
+                .input(Items.ICE)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ELECTROWEB.getItem())
+                .input(Items.COBWEB)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_WEATHERBALL.getItem())
+                .input(CobblemonItems.SKY_TUMBLESTONE)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_TRAILBLAZE.getItem())
+                .input(CobblemonItems.X_SPEED)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DISARMINGVOICE.getItem())
+                .input(CobblemonItems.LOVE_SWEET)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_POUNCE.getItem())
+                .input(Items.IRON_AXE)
+                .offerTo(exporter);
+
+        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ICYWIND.getItem())
+                .input(Items.FEATHER)
+                .offerTo(exporter);
     }
 
     static class IronTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

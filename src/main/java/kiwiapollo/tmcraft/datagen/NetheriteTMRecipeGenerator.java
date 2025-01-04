@@ -33,6 +33,7 @@ public class NetheriteTMRecipeGenerator implements RecipeGenerator {
 
         NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SOLARBEAM.getItem())
                 .input(CobblemonItems.SUN_STONE)
+                .input(Items.END_ROD)
                 .offerTo(exporter);
 
         NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DOUBLEEDGE.getItem())
@@ -50,6 +51,16 @@ public class NetheriteTMRecipeGenerator implements RecipeGenerator {
 
         NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DRACOMETEOR.getItem())
                 .input(Items.FIREWORK_STAR)
+                .offerTo(exporter);
+
+        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FLAREBLITZ.getItem())
+                .input(Items.ELYTRA)
+                .input(Items.FIREWORK_ROCKET)
+                .offerTo(exporter);
+
+        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SOLARBLADE.getItem())
+                .input(CobblemonItems.SUN_STONE)
+                .input(Items.IRON_SWORD)
                 .offerTo(exporter);
     }
 

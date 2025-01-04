@@ -1,5 +1,6 @@
 package kiwiapollo.tmcraft.datagen;
 
+import com.cobblemon.mod.common.CobblemonItems;
 import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
 import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
@@ -25,6 +26,22 @@ public class CopperTMRecipeGenerator implements RecipeGenerator {
 
         CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ABSORB.getItem())
                 .input(Items.SPONGE)
+                .offerTo(exporter);
+
+        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ICICLESPEAR.getItem())
+                .input(Items.POINTED_DRIPSTONE)
+                .offerTo(exporter);
+
+        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SCALESHOT.getItem())
+                .input(CobblemonItems.DRAGON_SCALE)
+                .offerTo(exporter);
+
+        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ROCKBLAST.getItem())
+                .input(Items.DISPENSER)
+                .offerTo(exporter);
+
+        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MUDSLAP.getItem())
+                .input(Items.MUD)
                 .offerTo(exporter);
     }
 
