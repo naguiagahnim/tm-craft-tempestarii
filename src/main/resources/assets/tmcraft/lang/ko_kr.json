@@ -18,7 +18,13 @@
     "item.tmcraft.success.pokemon_learned_move": "%s는 %s를 배웠습니다.",
     "item.tmcraft.success.recorded_move": "%s를 기록했습니다.",
 
-    "item.tmcraft.move_upgrade_smithing_template": "기술강화 형판",
+    "item.tmcraft.move_upgrade_smithing_template": "대장장이 형판",
+    "item.tmcraft.move_upgrade_smithing_template.title": "기술 업그레이드",
+    "item.tmcraft.move_upgrade_smithing_template.applies_to": "기술 저장장치",
+    "item.tmcraft.move_upgrade_smithing_template.ingredients": "주괴, 보석",
+    "item.tmcraft.move_upgrade_smithing_template.base_slot_description": "",
+    "item.tmcraft.move_upgrade_smithing_template.additions_slot_description": "",
+
     "item.tmcraft.tm_move_recorder": "기술머신 기록장치",
     "item.tmcraft.egg_move_recorder": "알기술 기록장치",
     "item.tmcraft.tutor_move_recorder": "가르침기술 기록장치",

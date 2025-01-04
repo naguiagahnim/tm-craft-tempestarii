@@ -18,7 +18,13 @@
     "item.tmcraft.success.pokemon_learned_move": "%s successfully learned %s",
     "item.tmcraft.success.recorded_move": "Successfully recorded %s",
 
-    "item.tmcraft.move_upgrade_smithing_template": "Move Upgrade Smithing Template",
+    "item.tmcraft.move_upgrade_smithing_template": "Smithing Template",
+    "item.tmcraft.move_upgrade_smithing_template.title": "Move Upgrade",
+    "item.tmcraft.move_upgrade_smithing_template.applies_to": "Move Storages",
+    "item.tmcraft.move_upgrade_smithing_template.ingredients": "Ingots, Gems",
+    "item.tmcraft.move_upgrade_smithing_template.base_slot_description": "",
+    "item.tmcraft.move_upgrade_smithing_template.additions_slot_description": "",
+
     "item.tmcraft.tm_move_recorder": "TM Move Recorder",
     "item.tmcraft.egg_move_recorder": "Egg Move Recorder",
     "item.tmcraft.tutor_move_recorder": "Tutor Move Recorder",
