@@ -1,4 +1,4 @@
-package kiwiapollo.tmcraft.item;
+package kiwiapollo.tmcraft.item.tmmove;
 
 import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.api.types.ElementalTypes;
@@ -6,7 +6,7 @@ import kiwiapollo.tmcraft.TMCraft;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
-public enum MoveTutorItems {
+public enum TMMoveItems {
     TM_10000000VOLTTHUNDERBOLT("10000000voltthunderbolt", ElementalTypes.INSTANCE.getELECTRIC()),
     TM_ABSORB("absorb", ElementalTypes.INSTANCE.getGRASS()),
     TM_ACCELEROCK("accelerock", ElementalTypes.INSTANCE.getROCK()),
@@ -943,9 +943,9 @@ public enum MoveTutorItems {
     private final Item item;
     private final Identifier identifier;
 
-    MoveTutorItems(String name, ElementalType type) {
-        this.identifier = Identifier.of(TMCraft.MOD_ID, String.format("tutor_%s", name));
-        this.item = new MoveTutorItem(name, type);
+    TMMoveItems(String name, ElementalType type) {
+        this.identifier = Identifier.of(TMCraft.MOD_ID, String.format("tm_%s", name));
+        this.item = new TMMoveItem(name, type);
     }
 
     public Identifier getIdentifier() {

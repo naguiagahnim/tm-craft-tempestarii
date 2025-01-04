@@ -1,4 +1,4 @@
-package kiwiapollo.tmcraft.item;
+package kiwiapollo.tmcraft.item.misc;
 
 import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.api.moves.Move;
@@ -38,18 +38,18 @@ public abstract class MoveRecorderItem extends Item {
         }
 
         Move move = getFirstMove(pokemon);
-        giveMoveRecorderItem(move, player);
+        giveMoveTeachingItem(move, player);
 
         if (!player.isCreative()) {
             stack.decrement(1);
         }
 
-        player.sendMessage(Text.translatable("", pokemon.getDisplayName(), move.getDisplayName()));
+        player.sendMessage(Text.translatable("item.tmcraft.success.recorded_move", move.getDisplayName()));
         player.getWorld().playSound(null, player.getBlockPos(), CobblemonSounds.PC_CLICK, SoundCategory.PLAYERS, 1.0f, 1.0f);
         return ActionResult.SUCCESS;
     }
 
-    private void giveMoveRecorderItem(Move move, PlayerEntity player) {
+    private void giveMoveTeachingItem(Move move, PlayerEntity player) {
         ItemStack stack = toMoveTeachingItem(move).getDefaultStack();
         if (player.giveItemStack(stack)) {
             player.dropStack(stack);

@@ -1,10 +1,11 @@
-package kiwiapollo.tmcraft.item;
+package kiwiapollo.tmcraft.item.eggmove;
 
 import com.cobblemon.mod.common.api.moves.Move;
 import com.cobblemon.mod.common.api.moves.MoveTemplate;
 import com.cobblemon.mod.common.api.moves.Moves;
 import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import kiwiapollo.tmcraft.item.MoveTeachingItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;

@@ -1,6 +1,12 @@
 package kiwiapollo.tmcraft;
 
-import kiwiapollo.tmcraft.item.*;
+import kiwiapollo.tmcraft.item.eggmove.EggMoveItemGroup;
+import kiwiapollo.tmcraft.item.eggmove.EggMoveItems;
+import kiwiapollo.tmcraft.item.misc.*;
+import kiwiapollo.tmcraft.item.tmmove.TMMoveItemGroup;
+import kiwiapollo.tmcraft.item.tmmove.TMMoveItems;
+import kiwiapollo.tmcraft.item.tutormove.TutorMoveItemGroup;
+import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -29,7 +35,7 @@ public class TMCraft implements ModInitializer {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
-		Arrays.stream(TMItems.values()).forEach(item -> {
+		Arrays.stream(TMMoveItems.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
@@ -45,7 +51,7 @@ public class TMCraft implements ModInitializer {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
-		Arrays.stream(MoveTutorItems.values()).forEach(item -> {
+		Arrays.stream(TutorMoveItems.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
@@ -73,10 +79,10 @@ public class TMCraft implements ModInitializer {
 			});
 		});
 
-		Registry.register(Registries.ITEM_GROUP, TMItemGroup.ITEM_GROUP_REGISTRY_KEY, TMItemGroup.ITEM_GROUP);
+		Registry.register(Registries.ITEM_GROUP, TMMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, TMMoveItemGroup.ITEM_GROUP);
 
-		ItemGroupEvents.modifyEntriesEvent(TMItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(TMItems.values()).forEach(item -> {
+		ItemGroupEvents.modifyEntriesEvent(TMMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
+			Arrays.stream(TMMoveItems.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 		});
@@ -89,10 +95,10 @@ public class TMCraft implements ModInitializer {
 			});
 		});
 
-		Registry.register(Registries.ITEM_GROUP, MoveTutorItemGroup.ITEM_GROUP_REGISTRY_KEY, MoveTutorItemGroup.ITEM_GROUP);
+		Registry.register(Registries.ITEM_GROUP, TutorMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, TutorMoveItemGroup.ITEM_GROUP);
 
-		ItemGroupEvents.modifyEntriesEvent(MoveTutorItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(MoveTutorItems.values()).forEach(item -> {
+		ItemGroupEvents.modifyEntriesEvent(TutorMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
+			Arrays.stream(TutorMoveItems.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 		});

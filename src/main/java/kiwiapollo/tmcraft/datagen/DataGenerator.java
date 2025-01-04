@@ -1,6 +1,12 @@
 package kiwiapollo.tmcraft.datagen;
 
 import kiwiapollo.tmcraft.item.*;
+import kiwiapollo.tmcraft.item.eggmove.EggMoveItems;
+import kiwiapollo.tmcraft.item.misc.BlankBookItems;
+import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
+import kiwiapollo.tmcraft.item.misc.BlankEggItems;
+import kiwiapollo.tmcraft.item.tmmove.TMMoveItems;
+import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -44,9 +50,9 @@ public class DataGenerator implements DataGeneratorEntrypoint {
 
         @Override
         protected void configure(RegistryWrapper.WrapperLookup arg) {
-            Arrays.stream(TMItems.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.TMS).add(item.getItem()));
+            Arrays.stream(TMMoveItems.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.TM_MOVES).add(item.getItem()));
             Arrays.stream(EggMoveItems.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.EGG_MOVES).add(item.getItem()));
-            Arrays.stream(MoveTutorItems.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.MOVE_TUTORS).add(item.getItem()));
+            Arrays.stream(TutorMoveItems.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.TUTOR_MOVES).add(item.getItem()));
 
             Arrays.stream(BlankDiscItems.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_DISCS).add(item.getItem()));
             Arrays.stream(BlankEggItems.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_EGGS).add(item.getItem()));

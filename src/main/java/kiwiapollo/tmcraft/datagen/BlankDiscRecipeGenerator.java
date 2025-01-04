@@ -1,7 +1,7 @@
 package kiwiapollo.tmcraft.datagen;
 
-import kiwiapollo.tmcraft.item.BlankDiscItems;
-import kiwiapollo.tmcraft.item.SmithingTemplateItems;
+import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
+import kiwiapollo.tmcraft.item.misc.SmithingTemplateItems;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;

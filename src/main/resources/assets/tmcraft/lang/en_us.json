@@ -1,26 +1,27 @@
 {
     "item_group.tmcraft.tmcraft": "TM Craft",
-    "item_group.tmcraft.tm": "TM",
+    "item_group.tmcraft.tm_move": "TM Move",
     "item_group.tmcraft.egg_move": "Egg Move",
-    "item_group.tmcraft.move_tutor": "Move Tutor",
+    "item_group.tmcraft.tutor_move": "Tutor Move",
 
     "tag.item.tmcraft.blank_discs": "Blank Discs",
     "tag.item.tmcraft.blank_eggs": "Blank Eggs",
     "tag.item.tmcraft.blank_books": "Blank Books",
 
-    "tag.item.tmcraft.tms": "TMs",
+    "tag.item.tmcraft.tm_moves": "TM Moves",
     "tag.item.tmcraft.egg_moves": "Egg Moves",
-    "tag.item.tmcraft.move_tutors": "Move Tutors",
+    "tag.item.tmcraft.tutor_moves": "Tutor Moves",
 
     "item.tmcraft.error.cannot_learn_move": "%s cannot learn %s",
     "item.tmcraft.error.pokemon_knows_move": "%s already knows %s",
 
-    "item.tmcraft.success": "%s successfully learned %s",
+    "item.tmcraft.success.pokemon_learned_move": "%s successfully learned %s",
+    "item.tmcraft.success.recorded_move": "Successfully recorded %s",
 
     "item.tmcraft.move_upgrade_smithing_template": "Move Upgrade Smithing Template",
-    "item.tmcraft.tm_recorder": "TM Recorder",
+    "item.tmcraft.tm_move_recorder": "TM Move Recorder",
     "item.tmcraft.egg_move_recorder": "Egg Move Recorder",
-    "item.tmcraft.move_tutor_recorder": "Move Tutor Recorder",
+    "item.tmcraft.tutor_move_recorder": "Tutor Move Recorder",
 
     "item.tmcraft.copper_blank_disc": "Copper Blank Disc",
     "item.tmcraft.iron_blank_disc": "Iron Blank Disc",

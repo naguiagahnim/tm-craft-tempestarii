@@ -3,7 +3,7 @@ package kiwiapollo.tmcraft.datagen;
 import com.cobblemon.mod.common.CobblemonItems;
 import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.api.types.ElementalTypes;
-import kiwiapollo.tmcraft.item.TMItem;
+import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
@@ -42,7 +42,7 @@ public class TMRecipeGenerator implements RecipeGenerator {
         new NetheriteTMRecipeGenerator().generate(exporter);
     }
 
-    public static ItemConvertible toTypeGem(TMItem item) {
+    public static ItemConvertible toTypeGem(TMMoveItem item) {
         ElementalType type = item.getMoveType();
         return TO_TYPE_GEM.get(type);
     }

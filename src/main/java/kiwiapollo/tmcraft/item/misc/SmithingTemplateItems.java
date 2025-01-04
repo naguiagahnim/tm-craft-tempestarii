@@ -1,4 +1,4 @@
-package kiwiapollo.tmcraft.item;
+package kiwiapollo.tmcraft.item.misc;
 
 import kiwiapollo.tmcraft.TMCraft;
 import net.minecraft.util.Identifier;

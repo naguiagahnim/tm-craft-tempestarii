@@ -1,10 +1,11 @@
-package kiwiapollo.tmcraft.item;
+package kiwiapollo.tmcraft.item.tmmove;
 
 import com.cobblemon.mod.common.api.moves.Move;
 import com.cobblemon.mod.common.api.moves.MoveTemplate;
 import com.cobblemon.mod.common.api.moves.Moves;
 import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import kiwiapollo.tmcraft.item.MoveTeachingItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -13,11 +14,10 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 import java.util.Objects;
 
-public class MoveTutorItem extends MoveTeachingItem {
-    public MoveTutorItem(String move, ElementalType type) {
+public class TMMoveItem extends MoveTeachingItem {
+    public TMMoveItem(String move, ElementalType type) {
         super(move, type);
     }
-
     protected boolean canPokemonLearnMove(PlayerEntity player, Pokemon pokemon) {
         if (!isMoveExist()) {
             return false;
@@ -73,11 +73,11 @@ public class MoveTutorItem extends MoveTeachingItem {
                 .map(MoveTemplate::getName).toList()
                 .contains(move);
 
-        boolean isTutorMove = pokemon.getForm().getMoves()
-                .getTutorMoves().stream()
+        boolean isTmMove = pokemon.getForm().getMoves()
+                .getTmMoves().stream()
                 .map(MoveTemplate::getName).toList()
                 .contains(move);
 
-        return isLevelUpMove || isTutorMove;
+        return isLevelUpMove || isTmMove;
     }
 }

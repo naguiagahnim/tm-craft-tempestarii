@@ -1,13 +1,13 @@
-package kiwiapollo.tmcraft.item;
+package kiwiapollo.tmcraft.item.misc;
 
 import kiwiapollo.tmcraft.TMCraft;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
 public enum MoveRecorderItems {
-    TM_RECORDER(Identifier.of(TMCraft.MOD_ID, "tm_recorder"), new TMRecorderItem()),
+    TM_MOVE_RECORDER(Identifier.of(TMCraft.MOD_ID, "tm_move_recorder"), new TMMoveRecorderItem()),
     EGG_MOVE_RECORDER(Identifier.of(TMCraft.MOD_ID, "egg_move_recorder"), new EggMoveRecorderItem()),
-    MOVE_TUTOR_RECORDER(Identifier.of(TMCraft.MOD_ID, "move_tutor_recorder"), new MoveTutorRecorderItem());
+    TUTOR_MOVE_RECORDER(Identifier.of(TMCraft.MOD_ID, "tutor_move_recorder"), new TutorMoveRecorderItem());
 
     private final Item item;
     private final Identifier identifier;
