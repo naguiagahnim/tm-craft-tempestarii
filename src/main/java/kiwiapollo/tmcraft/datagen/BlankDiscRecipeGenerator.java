@@ -1,6 +1,7 @@
 package kiwiapollo.tmcraft.datagen;
 
 import kiwiapollo.tmcraft.item.BlankDiscItems;
+import kiwiapollo.tmcraft.item.SmithingTemplateItems;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -20,7 +21,7 @@ public class BlankDiscRecipeGenerator {
 
         SmithingTransformRecipeJsonBuilder
                 .create(
-                        Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(SmithingTemplateItems.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
                         Ingredient.ofItems(BlankDiscItems.COPPER_BLANK_DISC.getItem()),
                         Ingredient.ofItems(Items.IRON_INGOT),
                         RecipeCategory.MISC,
@@ -31,7 +32,7 @@ public class BlankDiscRecipeGenerator {
 
         SmithingTransformRecipeJsonBuilder
                 .create(
-                        Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(SmithingTemplateItems.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
                         Ingredient.ofItems(BlankDiscItems.IRON_BLANK_DISC.getItem()),
                         Ingredient.ofItems(Items.GOLD_INGOT),
                         RecipeCategory.MISC,
@@ -42,7 +43,7 @@ public class BlankDiscRecipeGenerator {
 
         SmithingTransformRecipeJsonBuilder
                 .create(
-                        Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(SmithingTemplateItems.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
                         Ingredient.ofItems(BlankDiscItems.GOLD_BLANK_DISC.getItem()),
                         Ingredient.ofItems(Items.DIAMOND),
                         RecipeCategory.MISC,
@@ -53,7 +54,7 @@ public class BlankDiscRecipeGenerator {
 
         SmithingTransformRecipeJsonBuilder
                 .create(
-                        Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(SmithingTemplateItems.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
                         Ingredient.ofItems(BlankDiscItems.GOLD_BLANK_DISC.getItem()),
                         Ingredient.ofItems(Items.EMERALD),
                         RecipeCategory.MISC,
@@ -64,7 +65,7 @@ public class BlankDiscRecipeGenerator {
 
         SmithingTransformRecipeJsonBuilder
                 .create(
-                        Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(SmithingTemplateItems.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
                         Ingredient.ofItems(BlankDiscItems.DIAMOND_BLANK_DISC.getItem()),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
                         RecipeCategory.MISC,

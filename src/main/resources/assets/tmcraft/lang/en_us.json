@@ -1,5 +1,6 @@
 {
-    "item_group.tmcraft.tm": "TM Craft",
+    "item_group.tmcraft.tmcraft": "TM Craft",
+    "item_group.tmcraft.tm": "TM",
     "item_group.tmcraft.egg_move": "Egg Move",
     "item_group.tmcraft.move_tutor": "Move Tutor",
 
@@ -15,6 +16,11 @@
     "item.tmcraft.error.pokemon_knows_move": "%s already knows %s",
 
     "item.tmcraft.success": "%s successfully learned %s",
+
+    "item.tmcraft.move_upgrade_smithing_template": "Move Upgrade Smithing Template",
+    "item.tmcraft.tm_recorder": "TM Recorder",
+    "item.tmcraft.egg_move_recorder": "Egg Move Recorder",
+    "item.tmcraft.move_tutor_recorder": "Move Tutor Recorder",
 
     "item.tmcraft.copper_blank_disc": "Copper Blank Disc",
     "item.tmcraft.iron_blank_disc": "Iron Blank Disc",

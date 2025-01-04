@@ -33,6 +33,7 @@ public class DataGenerator implements DataGeneratorEntrypoint {
         public void generate(Consumer<RecipeJsonProvider> exporter) {
             new TMRecipeGenerator().generate(exporter);
             new BlankDiscRecipeGenerator().generate(exporter);
+            new SmithingTemplateRecipeGenerator().generate(exporter);
         }
     }
 

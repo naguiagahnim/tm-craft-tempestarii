@@ -1,4 +1,5 @@
 {
+    "item_group.tmcraft.tmcraft": "TM Craft",
     "item_group.tmcraft.tm": "기술머신",
     "item_group.tmcraft.egg_move": "교배기술",
     "item_group.tmcraft.move_tutor": "가르침기술",
@@ -15,6 +16,11 @@
     "item.tmcraft.error.pokemon_knows_move": "%s는 %s을 이미 알고 있습니다.",
 
     "item.tmcraft.success": "%s는 %s을 배웠습니다.",
+
+    "item.tmcraft.move_upgrade_smithing_template": "기술강화 형판",
+    "item.tmcraft.tm_recorder": "기술머신 기록장치",
+    "item.tmcraft.egg_move_recorder": "알기술 기록장치",
+    "item.tmcraft.move_tutor_recorder": "가르침기술 기록장치",
 
     "item.tmcraft.copper_blank_disc": "구리 빈 디스크",
     "item.tmcraft.iron_blank_disc": "철 빈 디스크",

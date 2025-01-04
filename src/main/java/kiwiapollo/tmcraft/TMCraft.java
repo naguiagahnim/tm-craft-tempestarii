@@ -17,6 +17,14 @@ public class TMCraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		Arrays.stream(SmithingTemplateItems.values()).forEach(item -> {
+			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
+		});
+
+		Arrays.stream(MoveRecorderItems.values()).forEach(item -> {
+			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
+		});
+
 		Arrays.stream(BlankDiscItems.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
@@ -41,13 +49,33 @@ public class TMCraft implements ModInitializer {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
-		Registry.register(Registries.ITEM_GROUP, TMItemGroup.ITEM_GROUP_REGISTRY_KEY, TMItemGroup.ITEM_GROUP);
+		Registry.register(Registries.ITEM_GROUP, ModItemGroup.ITEM_GROUP_REGISTRY_KEY, ModItemGroup.ITEM_GROUP);
 
-		ItemGroupEvents.modifyEntriesEvent(TMItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
+		ItemGroupEvents.modifyEntriesEvent(ModItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
+			Arrays.stream(SmithingTemplateItems.values()).forEach(item -> {
+				itemGroup.add(item.getItem());
+			});
+
+			Arrays.stream(MoveRecorderItems.values()).forEach(item -> {
+				itemGroup.add(item.getItem());
+			});
+
 			Arrays.stream(BlankDiscItems.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 
+			Arrays.stream(BlankEggItems.values()).forEach(item -> {
+				itemGroup.add(item.getItem());
+			});
+
+			Arrays.stream(BlankBookItems.values()).forEach(item -> {
+				itemGroup.add(item.getItem());
+			});
+		});
+
+		Registry.register(Registries.ITEM_GROUP, TMItemGroup.ITEM_GROUP_REGISTRY_KEY, TMItemGroup.ITEM_GROUP);
+
+		ItemGroupEvents.modifyEntriesEvent(TMItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
 			Arrays.stream(TMItems.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
@@ -56,10 +84,6 @@ public class TMCraft implements ModInitializer {
 		Registry.register(Registries.ITEM_GROUP, EggMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, EggMoveItemGroup.ITEM_GROUP);
 
 		ItemGroupEvents.modifyEntriesEvent(EggMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(BlankEggItems.values()).forEach(item -> {
-				itemGroup.add(item.getItem());
-			});
-
 			Arrays.stream(EggMoveItems.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
@@ -68,10 +92,6 @@ public class TMCraft implements ModInitializer {
 		Registry.register(Registries.ITEM_GROUP, MoveTutorItemGroup.ITEM_GROUP_REGISTRY_KEY, MoveTutorItemGroup.ITEM_GROUP);
 
 		ItemGroupEvents.modifyEntriesEvent(MoveTutorItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(BlankBookItems.values()).forEach(item -> {
-				itemGroup.add(item.getItem());
-			});
-
 			Arrays.stream(MoveTutorItems.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
