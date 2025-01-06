@@ -9,7 +9,13 @@ By the term TM, the mod follows Gen IX. Which means TMs are consumed after being
 
 ## Recipes
 
+- [TM Recipe Progress - Google Spreadsheet](https://docs.google.com/spreadsheets/d/1dSF5yGApMBniT_dNG_7rBsOzZgVQqpY8qVZWKixdT1Y/edit?usp=sharing)
+
 For server admins who prefer TMCraft without recipes, try using `x.x.x+x.x.x-norecipes` version of the mod.
+
+- [TMCraft Missing Recipes](https://github.com/KiwiFlavoredApollo/tmcraft-missing-recipes)
+
+TMCraft Missing Recipes is a data pack that adds recipes which are not meant to be included in the mod. Server admins can use this as a template.
 
 If your favorite TMs do not have recipes and if you have an idea, feel free to contact me and give suggestions.
 
@@ -26,22 +32,25 @@ Move Upgrade Smithing Template is used when upgrading tiers. Blank Discs are use
 
 Starting from 1.3.0, Move Upgrade Smithing Template replaces Netherite Upgrade Smithing Template.
 
-## Egg Moves & Move Tutors
+## Egg Move Items
 
-Items corresponding to egg moves and move tutors are added starting from the following versions.    
+Egg Move Items teach moves that are supposed to be learned via breeding.
 
-- 1.2.1 (for Cobblemon 1.6)
-- 1.1.2 (for Cobblemon 1.5.2)
+## Tutor Move Items
 
-The items are basically the same as the TM items except that they allow teaching moves only when the Pokémon can learn them via egg moves or move tutors.
+Tutor Move Items teach moves that are learned by Move Tutors.
+
+## Star Move Items
+
+Star Move Items teach moves even if the Pokémon are not supposed to learn them. These are basically cheating so use them at your own risk. With great power comes great responsibility.
 
 ## Move Recorders
 
-When used, Move Recorder converts to corresponding TM/Egg/Tutor move item containing Pokémon's first move.
+When used, Move Recorder converts to corresponding TM/Egg/Tutor/Star move item containing Pokémon's first move.
 
 ## LICENSE
 
-### MIT License 
+### MIT License
 - Source Code
 
 ### CC BY-NC-SA 4.0
