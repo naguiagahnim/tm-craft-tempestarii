@@ -3,6 +3,8 @@ package kiwiapollo.tmcraft;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItemGroup;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItems;
 import kiwiapollo.tmcraft.item.misc.*;
+import kiwiapollo.tmcraft.item.starmove.StarMoveItemGroup;
+import kiwiapollo.tmcraft.item.starmove.StarMoveItems;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItemGroup;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItems;
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItemGroup;
@@ -31,6 +33,7 @@ public class TMCraft implements ModInitializer {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
+
 		Arrays.stream(BlankDiscItems.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
@@ -38,6 +41,7 @@ public class TMCraft implements ModInitializer {
 		Arrays.stream(TMMoveItems.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
+
 
 		Arrays.stream(BlankEggItems.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
@@ -47,6 +51,7 @@ public class TMCraft implements ModInitializer {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
+
 		Arrays.stream(BlankBookItems.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
@@ -54,6 +59,16 @@ public class TMCraft implements ModInitializer {
 		Arrays.stream(TutorMoveItems.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
+
+
+		Arrays.stream(BlankStarItems.values()).forEach(item -> {
+			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
+		});
+
+		Arrays.stream(StarMoveItems.values()).forEach(item -> {
+			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
+		});
+
 
 		Registry.register(Registries.ITEM_GROUP, ModItemGroup.ITEM_GROUP_REGISTRY_KEY, ModItemGroup.ITEM_GROUP);
 
@@ -77,7 +92,12 @@ public class TMCraft implements ModInitializer {
 			Arrays.stream(BlankBookItems.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
+
+			Arrays.stream(BlankStarItems.values()).forEach(item -> {
+				itemGroup.add(item.getItem());
+			});
 		});
+
 
 		Registry.register(Registries.ITEM_GROUP, TMMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, TMMoveItemGroup.ITEM_GROUP);
 
@@ -87,6 +107,7 @@ public class TMCraft implements ModInitializer {
 			});
 		});
 
+
 		Registry.register(Registries.ITEM_GROUP, EggMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, EggMoveItemGroup.ITEM_GROUP);
 
 		ItemGroupEvents.modifyEntriesEvent(EggMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
@@ -95,10 +116,20 @@ public class TMCraft implements ModInitializer {
 			});
 		});
 
+
 		Registry.register(Registries.ITEM_GROUP, TutorMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, TutorMoveItemGroup.ITEM_GROUP);
 
 		ItemGroupEvents.modifyEntriesEvent(TutorMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
 			Arrays.stream(TutorMoveItems.values()).forEach(item -> {
+				itemGroup.add(item.getItem());
+			});
+		});
+
+
+		Registry.register(Registries.ITEM_GROUP, StarMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, StarMoveItemGroup.ITEM_GROUP);
+
+		ItemGroupEvents.modifyEntriesEvent(StarMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
+			Arrays.stream(StarMoveItems.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 		});
