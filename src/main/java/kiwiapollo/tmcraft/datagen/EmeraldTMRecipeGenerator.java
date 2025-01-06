@@ -115,8 +115,7 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SKILLSWAP.getItem())
-                .input(CobblemonItems.ABILITY_CAPSULE)
-                .input(Items.ENDER_PEARL)
+                .input(CobblemonItems.LINK_CABLE)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_GUARDSWAP.getItem())
@@ -191,6 +190,119 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
 
         EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_PROTECT.getItem())
                 .input(Items.SHIELD)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SPIKES.getItem())
+                .input(Items.POINTED_DRIPSTONE)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_TOXICSPIKES.getItem())
+                .input(Items.POINTED_DRIPSTONE)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_IMPRISON.getItem())
+                .input(Items.IRON_BARS)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_EERIEIMPULSE.getItem())
+                .input(Items.SUSPICIOUS_STEW)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ELECTRICTERRAIN.getItem())
+                .input(Items.GRASS_BLOCK)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_GRASSYTERRAIN.getItem())
+                .input(Items.GRASS_BLOCK)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_PSYCHICTERRAIN.getItem())
+                .input(Items.GRASS_BLOCK)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MISTYTERRAIN.getItem())
+                .input(Items.GRASS_BLOCK)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_NASTYPLOT.getItem())
+                .input(Items.WARPED_ROOTS)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CURSE.getItem())
+                .input(Items.WITHER_ROSE)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DRAGONCHEER.getItem())
+                .input(CobblemonItems.DIRE_HIT)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DRAGONDANCE.getItem())
+                .input(Items.JUKEBOX)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_COACHING.getItem())
+                .input(CobblemonItems.POWER_BRACER)
+                .input(CobblemonItems.POWER_BELT)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ENCORE.getItem())
+                .input(Items.REPEATER)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_BATONPASS.getItem())
+                .input(Items.ENDER_PEARL)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_AMNESIA.getItem())
+                .input(CobblemonItems.ENIGMA_BERRY)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_HELPINGHAND.getItem())
+                .input(Items.BRUSH)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ROAR.getItem())
+                .input(Items.GOAT_HORN)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CHARGE.getItem())
+                .input(CobblemonItems.CELL_BATTERY)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_HAZE.getItem())
+                .input(Items.MILK_BUCKET)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SPITE.getItem())
+                .input(CobblemonItems.ETHER)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_GRAVITY.getItem())
+                .input(Items.SOUL_SAND)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_PAINSPLIT.getItem())
+                .input(Items.CACTUS)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_IRONDEFENSE.getItem())
+                .input(Items.SHIELD)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_TRICK.getItem())
+                .input(CobblemonItems.LINK_CABLE)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_TAILWIND.getItem())
+                .input(Items.ELYTRA)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_TAUNT.getItem())
+                .input(CobblemonItems.MAGNET)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CHARM.getItem())
+                .input(CobblemonItems.WHIPPED_DREAM)
                 .offerTo(exporter);
     }
 

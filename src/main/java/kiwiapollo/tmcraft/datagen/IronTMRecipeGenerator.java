@@ -165,6 +165,18 @@ public class IronTMRecipeGenerator implements RecipeGenerator {
         IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_VACUUMWAVE.getItem())
                 .input(Items.CROSSBOW)
                 .offerTo(exporter);
+
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ACROBATICS.getItem())
+                .input(Items.ELYTRA)
+                .offerTo(exporter);
+
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_POISONTAIL.getItem())
+                .input(Items.TWISTING_VINES)
+                .offerTo(exporter);
+
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SNARL.getItem())
+                .input(Items.AMETHYST_SHARD)
+                .offerTo(exporter);
     }
 
     static class IronTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {
