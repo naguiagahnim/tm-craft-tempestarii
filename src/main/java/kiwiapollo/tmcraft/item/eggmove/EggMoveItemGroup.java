@@ -14,7 +14,7 @@ public class EggMoveItemGroup {
     public static final Identifier ITEM_GROUP_ID = Identifier.of(TMCraft.MOD_ID, "egg_move_item_group");
 
     public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(BlankEggItems.GOLD_BLANK_EGG.getItem()))
+            .icon(() -> new ItemStack(BlankEggItems.IRON_BLANK_EGG.getItem()))
             .displayName(Text.translatable("item_group.tmcraft.egg_move"))
             .build();
 
