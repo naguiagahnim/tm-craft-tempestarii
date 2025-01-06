@@ -6,16 +6,16 @@
       "item": "tmcraft:netherite_blank_disc"
     },
     {
-      "item": "cobblemon:grass_gem"
+      "item": "cobblemon:fire_gem"
     },
     {
-      "item": "cobblemon:sun_stone"
+      "item": "minecraft:elytra"
     },
     {
-      "item": "minecraft:end_rod"
+      "item": "minecraft:firework_rocket"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_solarbeam"
+    "item": "tmcraft:tm_flareblitz"
   }
 }

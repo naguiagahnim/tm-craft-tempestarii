@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tmcraft:gold_blank_disc"
+    },
+    {
+      "item": "cobblemon:psychic_gem"
+    },
+    {
+      "item": "cobblemon:rocky_helmet"
+    }
+  ],
+  "result": {
+    "item": "tmcraft:tm_zenheadbutt"
+  }
+}

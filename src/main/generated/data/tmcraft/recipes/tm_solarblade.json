@@ -12,10 +12,10 @@
       "item": "cobblemon:sun_stone"
     },
     {
-      "item": "minecraft:end_rod"
+      "item": "minecraft:iron_sword"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_solarbeam"
+    "item": "tmcraft:tm_solarblade"
   }
 }
