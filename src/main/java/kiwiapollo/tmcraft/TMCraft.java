@@ -13,8 +13,13 @@ import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
+import net.minecraft.village.TradeOffer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,6 +31,16 @@ public class TMCraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		Registry.register(Registries.POINT_OF_INTEREST_TYPE, Identifier.of(TMCraft.MOD_ID, MoveTutorVillagerProfession.ID), MoveTutorVillagerProfession.POINT_OF_INTEREST);
+		Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(TMCraft.MOD_ID, MoveTutorVillagerProfession.ID), MoveTutorVillagerProfession.PROFESSION);
+		TradeOfferHelper.registerVillagerOffers(MoveTutorVillagerProfession.PROFESSION, 1,
+				factories -> factories.add((entity, random) -> new TradeOffer(
+						new ItemStack(Items.EMERALD, 2),
+						new ItemStack(Items.DIAMOND),
+						10, 8, 0.05F
+				))
+		);
+
 		Arrays.stream(SmithingTemplateItems.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
