@@ -405,7 +405,7 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_AIRCUTTER.getItem())
-                .input(Items.IRON_SWORD)
+                .input(Items.IRON_AXE)
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DRAGONTAIL.getItem())
