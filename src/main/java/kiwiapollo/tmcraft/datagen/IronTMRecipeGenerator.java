@@ -17,129 +17,153 @@ import java.util.function.Consumer;
 
 public class IronTMRecipeGenerator implements RecipeGenerator {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FIRESPIN.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FIRESPIN.getItem())
                 .input(Items.IRON_BARS)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MUDSHOT.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MUDSHOT.getItem())
                 .input(Items.MUD)
                 .input(Items.ARROW)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MAGICALLEAF.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MAGICALLEAF.getItem())
                 .input(ItemTags.LEAVES)
                 .input(Items.ARROW)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_METALCLAW.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_METALCLAW.getItem())
                 .input(CobblemonItems.RAZOR_CLAW)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_POWERGEM.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_POWERGEM.getItem())
                 .input(Items.DIAMOND)
                 .input(Items.EMERALD)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ROCKSMASH.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ROCKSMASH.getItem())
                 .input(Items.IRON_PICKAXE)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_STRUGGLEBUG.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_STRUGGLEBUG.getItem())
                 .input(Items.COBWEB)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_GYROBALL.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_GYROBALL.getItem())
                 .input(CobblemonItems.IRON_BALL)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_POWERUPPUNCH.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_POWERUPPUNCH.getItem())
                 .input(CobblemonItems.BLACK_BELT)
                 .input(CobblemonItems.PROTEIN)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DRAININGKISS.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DRAININGKISS.getItem())
                 .input(CobblemonItems.LOVE_SWEET)
                 .input(Items.SPONGE)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CHARGEBEAM.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CHARGEBEAM.getItem())
                 .input(Items.END_ROD)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ECHOEDVOICE.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ECHOEDVOICE.getItem())
                 .input(Items.SCULK_SENSOR)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FLING.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FLING.getItem())
                 .input(Items.CROSSBOW)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SEISMICTOSS.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SEISMICTOSS.getItem())
                 .input(Items.CARTOGRAPHY_TABLE)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MEGADRAIN.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MEGADRAIN.getItem())
                 .input(Items.SPONGE)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_PSYWAVE.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_PSYWAVE.getItem())
                 .input(Items.REPEATER)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_PAYDAY.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_PAYDAY.getItem())
                 .input(CobblemonItems.RELIC_COIN)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_NATURALGIFT.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_NATURALGIFT.getItem())
                 .input(CobblemonItemTags.BERRIES)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_RETURN.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_RETURN.getItem())
                 .input(CobblemonItemTags.IS_FRIENDSHIP_BOOSTER)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FLAMECHARGE.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FLAMECHARGE.getItem())
                 .input(CobblemonItems.X_SPEED)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_LOWKICK.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_LOWKICK.getItem())
                 .input(Items.IRON_BOOTS)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FALSESWIPE.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FALSESWIPE.getItem())
                 .input(Items.WOODEN_SWORD)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ACIDSPRAY.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ACIDSPRAY.getItem())
                 .input(Items.SPLASH_POTION)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CHILLINGWATER.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CHILLINGWATER.getItem())
                 .input(Items.ICE)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ELECTROWEB.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ELECTROWEB.getItem())
                 .input(Items.COBWEB)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_WEATHERBALL.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_WEATHERBALL.getItem())
                 .input(CobblemonItems.SKY_TUMBLESTONE)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_TRAILBLAZE.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_TRAILBLAZE.getItem())
                 .input(CobblemonItems.X_SPEED)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DISARMINGVOICE.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DISARMINGVOICE.getItem())
                 .input(CobblemonItems.LOVE_SWEET)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_POUNCE.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_POUNCE.getItem())
                 .input(Items.IRON_AXE)
                 .offerTo(exporter);
 
-        IronTMRecipeGenerator.IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ICYWIND.getItem())
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ICYWIND.getItem())
                 .input(Items.FEATHER)
+                .offerTo(exporter);
+
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_WHIRLPOOL.getItem())
+                .input(Items.NAUTILUS_SHELL)
+                .offerTo(exporter);
+
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SANDTOMB.getItem())
+                .input(Items.SAND, 2)
+                .offerTo(exporter);
+
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SMACKDOWN.getItem())
+                .input(Items.ANVIL)
+                .offerTo(exporter);
+
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_GRASSYGLIDE.getItem())
+                .input(Items.PHANTOM_MEMBRANE)
+                .offerTo(exporter);
+
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DUALWINGBEAT.getItem())
+                .input(Items.PHANTOM_MEMBRANE)
+                .offerTo(exporter);
+
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_VACUUMWAVE.getItem())
+                .input(Items.CROSSBOW)
                 .offerTo(exporter);
     }
 
