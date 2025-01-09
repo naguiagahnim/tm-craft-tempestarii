@@ -6,13 +6,16 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:bug_gem"
+      "item": "cobblemon:normal_gem"
     },
     {
-      "item": "cobblemon:eject_button"
+      "item": "cobblemon:x_attack"
+    },
+    {
+      "item": "cobblemon:x_special_attack"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_uturn"
+    "item": "tmcraft:tm_terablast"
   }
 }

@@ -6,13 +6,13 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:bug_gem"
+      "item": "cobblemon:water_gem"
     },
     {
-      "item": "cobblemon:eject_button"
+      "item": "minecraft:iron_pickaxe"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_uturn"
+    "item": "tmcraft:tm_liquidation"
   }
 }

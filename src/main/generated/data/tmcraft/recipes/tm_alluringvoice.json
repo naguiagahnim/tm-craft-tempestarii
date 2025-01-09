@@ -6,13 +6,16 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:bug_gem"
+      "item": "cobblemon:fairy_gem"
     },
     {
-      "item": "cobblemon:eject_button"
+      "item": "cobblemon:love_sweet"
+    },
+    {
+      "item": "minecraft:goat_horn"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_uturn"
+    "item": "tmcraft:tm_alluringvoice"
   }
 }

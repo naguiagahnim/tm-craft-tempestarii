@@ -6,13 +6,13 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:bug_gem"
+      "item": "cobblemon:fighting_gem"
     },
     {
-      "item": "cobblemon:eject_button"
+      "item": "cobblemon:kings_rock"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_uturn"
+    "item": "tmcraft:tm_upperhand"
   }
 }

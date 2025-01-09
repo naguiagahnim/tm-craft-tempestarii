@@ -6,13 +6,13 @@
       "item": "tmcraft:emerald_blank_disc"
     },
     {
-      "item": "cobblemon:psychic_gem"
+      "item": "cobblemon:electric_gem"
     },
     {
-      "item": "cobblemon:link_cable"
+      "item": "minecraft:suspicious_stew"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_skillswap"
+    "item": "tmcraft:tm_eerieimpulse"
   }
 }

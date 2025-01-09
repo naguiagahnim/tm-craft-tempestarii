@@ -9,10 +9,10 @@
       "item": "cobblemon:psychic_gem"
     },
     {
-      "item": "cobblemon:link_cable"
+      "item": "cobblemon:enigma_berry"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_skillswap"
+    "item": "tmcraft:tm_amnesia"
   }
 }

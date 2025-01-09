@@ -3,16 +3,16 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tmcraft:emerald_blank_disc"
+      "item": "tmcraft:gold_blank_disc"
     },
     {
       "item": "cobblemon:psychic_gem"
     },
     {
-      "item": "cobblemon:link_cable"
+      "item": "minecraft:piston"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_skillswap"
+    "item": "tmcraft:tm_expandingforce"
   }
 }

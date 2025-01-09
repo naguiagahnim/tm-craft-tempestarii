@@ -6,13 +6,16 @@
       "item": "tmcraft:emerald_blank_disc"
     },
     {
-      "item": "cobblemon:psychic_gem"
+      "item": "cobblemon:fighting_gem"
     },
     {
-      "item": "cobblemon:link_cable"
+      "item": "cobblemon:power_bracer"
+    },
+    {
+      "item": "cobblemon:power_belt"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_skillswap"
+    "item": "tmcraft:tm_coaching"
   }
 }

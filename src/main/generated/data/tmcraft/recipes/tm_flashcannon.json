@@ -6,13 +6,16 @@
       "item": "tmcraft:gold_blank_disc"
     },
     {
-      "item": "cobblemon:bug_gem"
+      "item": "cobblemon:steel_gem"
     },
     {
-      "item": "cobblemon:eject_button"
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "minecraft:dispenser"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_uturn"
+    "item": "tmcraft:tm_flashcannon"
   }
 }

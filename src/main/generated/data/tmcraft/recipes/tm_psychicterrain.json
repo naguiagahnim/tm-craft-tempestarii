@@ -9,10 +9,10 @@
       "item": "cobblemon:psychic_gem"
     },
     {
-      "item": "cobblemon:link_cable"
+      "item": "minecraft:grass_block"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_skillswap"
+    "item": "tmcraft:tm_psychicterrain"
   }
 }

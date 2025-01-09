@@ -9,10 +9,10 @@
       "item": "cobblemon:bug_gem"
     },
     {
-      "item": "cobblemon:eject_button"
+      "item": "minecraft:golden_apple"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_uturn"
+    "item": "tmcraft:tm_leechlife"
   }
 }

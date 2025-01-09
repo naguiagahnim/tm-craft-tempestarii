@@ -6,13 +6,13 @@
       "item": "tmcraft:emerald_blank_disc"
     },
     {
-      "item": "cobblemon:psychic_gem"
+      "item": "cobblemon:ghost_gem"
     },
     {
-      "item": "cobblemon:link_cable"
+      "item": "minecraft:wither_rose"
     }
   ],
   "result": {
-    "item": "tmcraft:tm_skillswap"
+    "item": "tmcraft:tm_curse"
   }
 }
