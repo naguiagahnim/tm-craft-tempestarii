@@ -5,7 +5,7 @@ TMCraft is a Cobblemon side mod that add TMs with recipes. Mods like EMI is high
 - Removed feature wild Pokémon dropping TMs when fainted
 - Replaced TM textures with those based on Cobblemon Assets
 
-By the term TM, the mod follows Gen IX. Which means TMs are consumed after being used. Pokemon will not be able to learn egg moves and move tutor moves with TMs.
+By the term TM, the mod follows Gen IX. Which means TMs are consumed after being used. Pokémon will not be able to learn egg moves and tutor moves with TMs.
 
 ## Recipes
 
