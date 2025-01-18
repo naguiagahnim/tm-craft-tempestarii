@@ -322,6 +322,31 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
         EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SCREECH.getItem())
                 .input(Items.SCULK_SHRIEKER)
                 .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_EMBARGO.getItem())
+                .input(Items.CHAIN)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CONFIDE.getItem())
+                .input(Items.WRITTEN_BOOK)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_QUASH.getItem())
+                .input(Items.SOUL_SAND)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_AURORAVEIL.getItem())
+                .input(Items.SHIELD)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_WORKUP.getItem())
+                .input(CobblemonItems.X_ATTACK)
+                .input(CobblemonItems.X_SP_ATK)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_RECYCLE.getItem())
+                .input(Items.BUCKET)
+                .offerTo(exporter);
     }
 
     static class EmeraldTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

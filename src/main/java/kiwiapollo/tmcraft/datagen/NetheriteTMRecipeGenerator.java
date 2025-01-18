@@ -125,6 +125,10 @@ public class NetheriteTMRecipeGenerator implements RecipeGenerator {
         NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_GUNKSHOT.getItem())
                 .input(Items.DISPENSER)
                 .offerTo(exporter);
+
+        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_EXPLOSION.getItem())
+                .input(Items.END_CRYSTAL, 3)
+                .offerTo(exporter);
     }
 
     static class NetheriteTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

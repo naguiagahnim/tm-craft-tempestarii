@@ -51,6 +51,10 @@ public class CopperTMRecipeGenerator implements RecipeGenerator {
         CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_STOREDPOWER.getItem())
                 .input(Items.BARREL)
                 .offerTo(exporter);
+
+        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_INFESTATION.getItem())
+                .input(Items.COBWEB)
+                .offerTo(exporter);
     }
 
     static class CopperTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

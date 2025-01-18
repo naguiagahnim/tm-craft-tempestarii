@@ -437,6 +437,43 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .input(Items.BONE)
                 .input(Items.GUNPOWDER)
                 .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_NATUREPOWER.getItem())
+                .input(Items.GRASS_BLOCK)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_RETURN.getItem())
+                .input(CobblemonItemTags.IS_FRIENDSHIP_BOOSTER)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FRUSTRATION.getItem())
+                .input(CobblemonItems.ENERGY_ROOT)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CROSSPOISON.getItem())
+                .input(CobblemonItems.DIRE_HIT)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ROUND.getItem())
+                .input(ItemTags.MUSIC_DISCS)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SHOCKWAVE.getItem())
+                .input(CobblemonItems.X_ACCURACY)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_BRUTALSWING.getItem())
+                .input(Items.FISHING_ROD)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MYSTICALFIRE.getItem())
+                .input(Items.SOUL_CAMPFIRE)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_RETALIATE.getItem())
+                .input(Items.BLAZE_POWDER)
+                .input(Items.IRON_SWORD)
+                .offerTo(exporter);
     }
 
     static class GoldTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {
