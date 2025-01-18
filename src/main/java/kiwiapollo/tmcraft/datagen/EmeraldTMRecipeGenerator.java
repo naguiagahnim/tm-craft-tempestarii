@@ -115,17 +115,23 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SKILLSWAP.getItem())
+                .input(Items.ENCHANTED_BOOK)
                 .input(CobblemonItems.LINK_CABLE)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_GUARDSWAP.getItem())
                 .input(CobblemonItems.X_DEFENSE)
-                .input(Items.ENDER_PEARL)
+                .input(CobblemonItems.LINK_CABLE)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_POWERSWAP.getItem())
                 .input(CobblemonItems.X_ATTACK)
-                .input(Items.ENDER_PEARL)
+                .input(CobblemonItems.LINK_CABLE)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SPEEDSWAP.getItem())
+                .input(CobblemonItems.X_SPEED)
+                .input(CobblemonItems.LINK_CABLE)
                 .offerTo(exporter);
 
         EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SNATCH.getItem())
@@ -303,6 +309,18 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
 
         EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CHARM.getItem())
                 .input(CobblemonItems.WHIPPED_DREAM)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_WONDERROOM.getItem())
+                .input(Items.MAGENTA_GLAZED_TERRACOTTA)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MAGICROOM.getItem())
+                .input(Items.BLACK_GLAZED_TERRACOTTA)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SCREECH.getItem())
+                .input(Items.SCULK_SHRIEKER)
                 .offerTo(exporter);
     }
 
