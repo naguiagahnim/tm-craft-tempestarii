@@ -9,6 +9,8 @@ By the term TM, the mod follows Gen IX. Which means TMs are consumed after being
 
 ## Recipes
 
+As of 1.4.2, all TM recipes for all generation have been added.
+
 - [TM Recipe Progress - Google Spreadsheet](https://docs.google.com/spreadsheets/d/1dSF5yGApMBniT_dNG_7rBsOzZgVQqpY8qVZWKixdT1Y/edit?usp=sharing)
 
 For server admins who prefer TMCraft without recipes, try using `x.x.x+x.x.x-norecipes` version of the mod.
