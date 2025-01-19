@@ -189,6 +189,23 @@ public class IronTMRecipeGenerator implements RecipeGenerator {
         IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CUT.getItem())
                 .input(Items.IRON_SWORD)
                 .offerTo(exporter);
+
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FURYCUTTER.getItem())
+                .input(Items.IRON_HOE)
+                .offerTo(exporter);
+
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ROLLOUT.getItem())
+                .input(Items.CROSSBOW)
+                .input(CobblemonItems.X_ATTACK)
+                .offerTo(exporter);
+
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_WATERGUN.getItem())
+                .input(Items.CROSSBOW)
+                .offerTo(exporter);
+
+        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DRAGONRAGE.getItem())
+                .input(Items.DRAGON_HEAD)
+                .offerTo(exporter);
     }
 
     static class IronTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

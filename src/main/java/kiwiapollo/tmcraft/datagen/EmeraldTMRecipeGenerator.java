@@ -374,6 +374,38 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
                 .input(CobblemonItems.FIGY_BERRY)
                 .input(CobblemonItems.X_ATTACK)
                 .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_NIGHTMARE.getItem())
+                .input(ItemTags.BEDS)
+                .input(Items.PHANTOM_MEMBRANE)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SOFTBOILED.getItem())
+                .input(Items.EGG)
+                .input(CobblemonItems.HYPER_POTION)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DEFENSECURL.getItem())
+                .input(CobblemonItems.X_DEFENSE)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MIMIC.getItem())
+                .input(Items.OAK_SAPLING)
+                .input(Items.FLOWER_POT)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DETECT.getItem())
+                .input(Items.SPYGLASS)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_WHIRLWIND.getItem())
+                .input(Items.FEATHER, 3)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SWEETSCENT.getItem())
+                .input(ItemTags.SMALL_FLOWERS)
+                .input(Items.HONEY_BOTTLE)
+                .offerTo(exporter);
     }
 
     static class EmeraldTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {
