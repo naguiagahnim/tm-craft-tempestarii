@@ -347,6 +347,33 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
         EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_RECYCLE.getItem())
                 .input(Items.BUCKET)
                 .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CAPTIVATE.getItem())
+                .input(Items.LEAD)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_TELEPORT.getItem())
+                .input(Items.ENDER_PEARL)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_TELEKINESIS.getItem())
+                .input(Items.SHULKER_SHELL)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DEFOG.getItem())
+                .input(Items.GOLDEN_CARROT)
+                .input(Items.NETHER_WART)
+                .input(Items.POTION)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ALLYSWITCH.getItem())
+                .input(Items.LEVER)
+                .offerTo(exporter);
+
+        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SWAGGER.getItem())
+                .input(CobblemonItems.FIGY_BERRY)
+                .input(CobblemonItems.X_ATTACK)
+                .offerTo(exporter);
     }
 
     static class EmeraldTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {

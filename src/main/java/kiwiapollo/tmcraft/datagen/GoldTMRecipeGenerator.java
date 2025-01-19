@@ -474,6 +474,28 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .input(Items.BLAZE_POWDER)
                 .input(Items.IRON_SWORD)
                 .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_NATURALGIFT.getItem())
+                .input(CobblemonItemTags.BERRIES)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SEISMICTOSS.getItem())
+                .input(Items.CARTOGRAPHY_TABLE)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_INCINERATE.getItem())
+                .input(Items.CAMPFIRE)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SECRETPOWER.getItem())
+                .input(Items.GRASS_BLOCK)
+                .offerTo(exporter);
+
+        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_STRENGTH.getItem())
+                .input(Items.BLAZE_POWDER)
+                .input(Items.NETHER_WART)
+                .input(Items.POTION)
+                .offerTo(exporter);
     }
 
     static class GoldTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {
