@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tmcraft:emerald_blank_disc"
+    },
+    {
+      "item": "cobblemon:normal_gem"
+    },
+    {
+      "item": "cobblemon:x_defence"
+    }
+  ],
+  "result": {
+    "item": "tmcraft:tm_defensecurl"
+  }
+}

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_iron_blank_disc": {
+    "has_gold_blank_disc": {
       "conditions": {
         "items": [
           {
             "items": [
-              "tmcraft:iron_blank_disc"
+              "tmcraft:gold_blank_disc"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_iron_blank_disc",
+      "has_gold_blank_disc",
       "has_the_recipe"
     ]
   ],

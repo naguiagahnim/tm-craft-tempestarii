@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tmcraft:gold_blank_disc"
+    },
+    {
+      "item": "cobblemon:electric_gem"
+    },
+    {
+      "item": "cobblemon:x_accuracy"
+    }
+  ],
+  "result": {
+    "item": "tmcraft:tm_shockwave"
+  }
+}

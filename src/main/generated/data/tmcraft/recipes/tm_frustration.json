@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tmcraft:gold_blank_disc"
+    },
+    {
+      "item": "cobblemon:normal_gem"
+    },
+    {
+      "item": "cobblemon:energy_root"
+    }
+  ],
+  "result": {
+    "item": "tmcraft:tm_frustration"
+  }
+}

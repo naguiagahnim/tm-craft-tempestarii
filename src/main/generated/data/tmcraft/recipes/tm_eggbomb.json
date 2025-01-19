@@ -3,13 +3,16 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tmcraft:gold_blank_disc"
+      "item": "tmcraft:diamond_blank_disc"
     },
     {
       "item": "cobblemon:normal_gem"
     },
     {
       "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:tnt"
     }
   ],
   "result": {
