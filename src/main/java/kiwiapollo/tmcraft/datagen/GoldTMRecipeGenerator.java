@@ -162,10 +162,6 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .input(Items.SHEARS)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_EGGBOMB.getItem())
-                .input(Items.EGG)
-                .offerTo(exporter);
-
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DIG.getItem())
                 .input(Items.IRON_SHOVEL)
                 .offerTo(exporter);
@@ -424,10 +420,6 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .input(CobblemonItems.RED_CARD)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_STEELWING.getItem())
-                .input(Items.PHANTOM_MEMBRANE)
-                .offerTo(exporter);
-
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_PSYCHOCUT.getItem())
                 .input(Items.IRON_SWORD)
                 .offerTo(exporter);
@@ -506,7 +498,7 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_PSYWAVE.getItem())
-                .input(Items.BELL)
+                .input(Items.REPEATER)
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DRAGONBREATH.getItem())

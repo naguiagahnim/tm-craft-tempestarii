@@ -389,11 +389,6 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
                 .input(CobblemonItems.X_DEFENSE)
                 .offerTo(exporter);
 
-        EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MIMIC.getItem())
-                .input(Items.OAK_SAPLING)
-                .input(Items.FLOWER_POT)
-                .offerTo(exporter);
-
         EmeraldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DETECT.getItem())
                 .input(Items.SPYGLASS)
                 .offerTo(exporter);

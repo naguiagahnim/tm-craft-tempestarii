@@ -74,28 +74,12 @@ public class IronTMRecipeGenerator implements RecipeGenerator {
                 .input(Items.CROSSBOW)
                 .offerTo(exporter);
 
-        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SEISMICTOSS.getItem())
-                .input(Items.CARTOGRAPHY_TABLE)
-                .offerTo(exporter);
-
         IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MEGADRAIN.getItem())
                 .input(Items.SPONGE)
                 .offerTo(exporter);
 
-        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_PSYWAVE.getItem())
-                .input(Items.REPEATER)
-                .offerTo(exporter);
-
         IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_PAYDAY.getItem())
                 .input(CobblemonItems.RELIC_COIN)
-                .offerTo(exporter);
-
-        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_NATURALGIFT.getItem())
-                .input(CobblemonItemTags.BERRIES)
-                .offerTo(exporter);
-
-        IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_RETURN.getItem())
-                .input(CobblemonItemTags.IS_FRIENDSHIP_BOOSTER)
                 .offerTo(exporter);
 
         IronTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FLAMECHARGE.getItem())
