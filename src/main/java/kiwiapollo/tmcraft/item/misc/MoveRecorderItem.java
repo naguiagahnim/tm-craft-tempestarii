@@ -1,52 +1,60 @@
 package kiwiapollo.tmcraft.item.misc;
 
 import com.cobblemon.mod.common.CobblemonSounds;
+import com.cobblemon.mod.common.api.battles.model.actor.BattleActor;
+import com.cobblemon.mod.common.api.item.PokemonAndMoveSelectingItem;
 import com.cobblemon.mod.common.api.moves.Move;
-import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
+import com.cobblemon.mod.common.battles.pokemon.BattlePokemon;
+import com.cobblemon.mod.common.item.battle.BagItem;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-public abstract class MoveRecorderItem extends Item {
+public abstract class MoveRecorderItem extends Item implements PokemonAndMoveSelectingItem {
     public MoveRecorderItem() {
         super(new Item.Settings());
     }
 
     @Override
-    public ActionResult useOnEntity(ItemStack stack, PlayerEntity player, LivingEntity entity, Hand hand) {
-        if (player.getWorld().isClient()) {
-            return ActionResult.PASS;
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
+        ItemStack itemStack = player.getStackInHand(hand);
+
+        if (world.isClient()) {
+            return TypedActionResult.pass(itemStack);
         }
 
-        if (!(entity instanceof PokemonEntity)) {
-            return ActionResult.PASS;
-        }
+        return use((ServerPlayerEntity) player, itemStack);
+    }
 
-        Pokemon pokemon = ((PokemonEntity) entity).getPokemon();
+    @Override
+    public @Nullable BagItem getBagItem() {
+        return null;
+    }
 
-        if (!canRecordMove(player, pokemon)) {
-            player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
-            return ActionResult.PASS;
-        }
+    @Override
+    public @Nullable TypedActionResult<ItemStack> use(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack) {
+        return PokemonAndMoveSelectingItem.DefaultImpls.use(this, player, itemStack);
+    }
 
-        Move move = getFirstMove(pokemon);
+    @Override
+    public void applyToPokemon(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack, @NotNull Pokemon pokemon, @NotNull Move move) {
         giveMoveTeachingItem(move, player);
 
         if (!player.isCreative()) {
-            stack.decrement(1);
+            itemStack.decrement(1);
         }
 
         player.sendMessage(Text.translatable("item.tmcraft.success.recorded_move", move.getDisplayName()));
         player.getWorld().playSound(null, player.getBlockPos(), CobblemonSounds.PC_CLICK, SoundCategory.PLAYERS, 1.0f, 1.0f);
-        return ActionResult.SUCCESS;
     }
 
     private void giveMoveTeachingItem(Move move, PlayerEntity player) {
@@ -58,36 +66,48 @@ public abstract class MoveRecorderItem extends Item {
 
     protected abstract Item toMoveTeachingItem(Move move);
 
-    protected boolean canRecordMove(PlayerEntity player, Pokemon pokemon) {
-        if (!isPokemonOwnedByPlayer(player, pokemon)) {
-            return false;
-        }
+    @Override
+    public void applyToBattlePokemon(@NotNull ServerPlayerEntity serverPlayerEntity, @NotNull ItemStack itemStack, @NotNull BattlePokemon battlePokemon, @NotNull Move move) {
 
-        if (isMoveSetEmpty(pokemon)) {
-            return false;
-        }
+    }
 
-        Move move = getFirstMove(pokemon);
-        if (!isMoveTeachingItemExist(move)) {
-            return false;
-        }
-
+    @Override
+    public boolean canUseOnPokemon(@NotNull Pokemon pokemon) {
         return true;
     }
 
-    private boolean isPokemonOwnedByPlayer(PlayerEntity player, Pokemon pokemon) {
-        return player.equals(pokemon.getOwnerPlayer());
+    @Override
+    public boolean canUseOnBattlePokemon(@NotNull BattlePokemon battlePokemon) {
+        return false;
     }
 
-    private boolean isMoveSetEmpty(Pokemon pokemon) {
-        return pokemon.getMoveSet().getMoves().isEmpty();
+    @Override
+    public boolean canUseOnMove(@NotNull Pokemon pokemon, @NotNull Move move) {
+        return true;
     }
 
-    private Move getFirstMove(Pokemon pokemon) {
-        return pokemon.getMoveSet().getMoves().get(0);
+    @Override
+    public boolean canUseOnMove(@NotNull Move move) {
+        return true;
     }
 
-    private boolean isMoveTeachingItemExist(Move move) {
-        return !toMoveTeachingItem(move).equals(Items.AIR);
+    @Override
+    public @Nullable TypedActionResult<ItemStack> interactWithSpecific(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack, @NotNull Pokemon pokemon) {
+        return PokemonAndMoveSelectingItem.DefaultImpls.interactWithSpecific(this, player, itemStack, pokemon);
+    }
+
+    @Override
+    public @Nullable TypedActionResult<ItemStack> interactWithSpecificBattle(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack, @NotNull BattlePokemon battlePokemon) {
+        return PokemonAndMoveSelectingItem.DefaultImpls.interactWithSpecificBattle(this, player, itemStack, battlePokemon);
+    }
+
+    @Override
+    public @Nullable TypedActionResult<ItemStack> interactGeneral(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack) {
+        return PokemonAndMoveSelectingItem.DefaultImpls.interactGeneral(this, player, itemStack);
+    }
+
+    @Override
+    public @Nullable TypedActionResult<ItemStack> interactGeneralBattle(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack, @NotNull BattleActor battleActor) {
+        return PokemonAndMoveSelectingItem.DefaultImpls.interactGeneralBattle(this, player, itemStack, battleActor);
     }
 }
