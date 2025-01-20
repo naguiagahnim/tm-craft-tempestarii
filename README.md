@@ -48,7 +48,7 @@ Star Move Items teach moves even if the Pokémon are not supposed to learn them.
 
 ## Move Recorders
 
-When used, Move Recorder converts to corresponding TM/Egg/Tutor/Star move item containing Pokémon's first move.
+When used, Move Recorder converts to corresponding TM/Egg/Tutor/Star move item.
 
 ## LICENSE
 
