@@ -1,4 +1,4 @@
-package kiwiapollo.tmcraft.item.misc;
+package kiwiapollo.tmcraft.item.moverecorder;
 
 import kiwiapollo.tmcraft.TMCraft;
 import net.minecraft.item.Item;

@@ -3,6 +3,7 @@ package kiwiapollo.tmcraft;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItemGroup;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItems;
 import kiwiapollo.tmcraft.item.misc.*;
+import kiwiapollo.tmcraft.item.moverecorder.MoveRecorderItems;
 import kiwiapollo.tmcraft.item.starmove.StarMoveItemGroup;
 import kiwiapollo.tmcraft.item.starmove.StarMoveItems;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItemGroup;
