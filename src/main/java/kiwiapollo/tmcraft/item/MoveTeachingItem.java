@@ -6,10 +6,13 @@ import com.cobblemon.mod.common.api.item.PokemonSelectingItem;
 import com.cobblemon.mod.common.api.moves.BenchedMove;
 import com.cobblemon.mod.common.api.moves.MoveTemplate;
 import com.cobblemon.mod.common.api.moves.Moves;
+import com.cobblemon.mod.common.api.moves.categories.DamageCategories;
+import com.cobblemon.mod.common.api.moves.categories.DamageCategory;
 import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.battles.pokemon.BattlePokemon;
 import com.cobblemon.mod.common.item.battle.BagItem;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import kiwiapollo.tmcraft.common.DamageCategoryTextColorFactory;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -22,6 +25,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -58,7 +62,30 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
     @Environment(EnvType.CLIENT)
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(type.getDisplayName().setStyle(Style.EMPTY.withColor(type.getHue())));
+        if (getMoveTemplate().getDamageCategory() == DamageCategories.INSTANCE.getSTATUS()) {
+            tooltip.add(getMoveTypeTooltipText());
+            tooltip.add(getMoveDamageCategoryTooltipText());
+
+        } else {
+            tooltip.add(getMoveTypeTooltipText());
+            tooltip.add(getMoveDamageCategoryTooltipText());
+            tooltip.add(getMovePowerTooltipText());
+        }
+    }
+
+    private Text getMoveTypeTooltipText() {
+        return type.getDisplayName().setStyle(Style.EMPTY.withColor(type.getHue()));
+    }
+
+    private Text getMoveDamageCategoryTooltipText() {
+        DamageCategory category = getMoveTemplate().getDamageCategory();
+        Style style = Style.EMPTY.withColor(new DamageCategoryTextColorFactory().create(category));
+        return category.getDisplayName().copy().setStyle(style);
+    }
+
+    private Text getMovePowerTooltipText() {
+        Style style = Style.EMPTY.withColor(Formatting.YELLOW);
+        return Text.literal(String.valueOf(getMoveTemplate().getPower())).setStyle(style);
     }
 
     @Override
