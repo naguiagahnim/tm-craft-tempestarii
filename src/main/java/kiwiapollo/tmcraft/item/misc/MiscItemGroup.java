@@ -9,7 +9,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class ModItemGroup {
+public class MiscItemGroup {
     public static final Identifier ITEM_GROUP_ID = Identifier.of(TMCraft.MOD_ID, "tmcraft_item_group");
 
     public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()

@@ -15,6 +15,8 @@
     "tag.item.tmcraft.tutor_moves": "가르침기술",
     "tag.item.tmcraft.star_moves": "별기술",
 
+    "block.tmcraft.move_tutor_table": "가르침기술작업대",
+
     "item.tmcraft.error.cannot_learn_move": "%s는 %s를 배울 수 없습니다.",
     "item.tmcraft.error.pokemon_knows_move": "%s는 %s를 이미 알고 있습니다.",
 

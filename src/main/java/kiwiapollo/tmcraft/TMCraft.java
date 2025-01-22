@@ -1,5 +1,6 @@
 package kiwiapollo.tmcraft;
 
+import kiwiapollo.tmcraft.block.ModBlocks;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItemGroup;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItems;
 import kiwiapollo.tmcraft.item.misc.*;
@@ -31,6 +32,11 @@ public class TMCraft implements ModInitializer {
 	public void onInitialize() {
 		Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(TMCraft.MOD_ID, MoveTutorVillager.PROFESSION_ID), MoveTutorVillager.PROFESSION);
 		new MoveTutorTradeOffer().register();
+
+		Arrays.stream(ModBlocks.values()).forEach(block -> {
+			Registry.register(Registries.BLOCK, block.getIdentifier(), block.getBlock());
+			Registry.register(Registries.ITEM, block.getIdentifier(), block.getItem());
+		});
 
 		Arrays.stream(SmithingTemplateItems.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
@@ -77,9 +83,13 @@ public class TMCraft implements ModInitializer {
 		});
 
 
-		Registry.register(Registries.ITEM_GROUP, ModItemGroup.ITEM_GROUP_REGISTRY_KEY, ModItemGroup.ITEM_GROUP);
+		Registry.register(Registries.ITEM_GROUP, MiscItemGroup.ITEM_GROUP_REGISTRY_KEY, MiscItemGroup.ITEM_GROUP);
 
-		ItemGroupEvents.modifyEntriesEvent(ModItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
+		ItemGroupEvents.modifyEntriesEvent(MiscItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
+			Arrays.stream(ModBlocks.values()).forEach(block -> {
+				itemGroup.add(block.getItem());
+			});
+
 			Arrays.stream(SmithingTemplateItems.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
