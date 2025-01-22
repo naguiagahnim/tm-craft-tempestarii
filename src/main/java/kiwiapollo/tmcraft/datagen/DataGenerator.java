@@ -27,7 +27,8 @@ public class DataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
         pack.addProvider(RecipeProvider::new);
-        pack.addProvider(TagProvider::new);
+        pack.addProvider(ItemTagProvider::new);
+        pack.addProvider(PoiTagProvider::new);
     }
 
     private static class RecipeProvider extends FabricRecipeProvider {
@@ -43,8 +44,8 @@ public class DataGenerator implements DataGeneratorEntrypoint {
         }
     }
 
-    private static class TagProvider extends FabricTagProvider<Item> {
-        public TagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+    private static class ItemTagProvider extends FabricTagProvider<Item> {
+        public ItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
             super(output, RegistryKeys.ITEM, registriesFuture);
         }
 
