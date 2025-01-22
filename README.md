@@ -52,7 +52,7 @@ When used, Move Recorder converts to corresponding TM/Egg/Tutor/Star move item.
 
 ## LICENSE
 
-### MIT License
+### GPL 3.0
 - Source Code
 
 ### CC BY-NC-SA 4.0
