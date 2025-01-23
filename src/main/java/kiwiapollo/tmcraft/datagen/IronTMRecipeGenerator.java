@@ -2,6 +2,7 @@ package kiwiapollo.tmcraft.datagen;
 
 import com.cobblemon.mod.common.CobblemonItems;
 import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
+import kiwiapollo.tmcraft.common.TypeGemFactory;
 import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItems;
@@ -200,7 +201,7 @@ public class IronTMRecipeGenerator implements RecipeGenerator {
         public static IronTMRecipeJsonBuilder create(TMMoveItem item) {
             return (IronTMRecipeJsonBuilder) new IronTMRecipeJsonBuilder(item)
                     .input(BlankDiscItems.IRON_BLANK_DISC.getItem())
-                    .input(TMRecipeGenerator.toTypeGem(item))
+                    .input(new TypeGemFactory().create(item.getMoveType()))
                     .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.IRON_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.IRON_BLANK_DISC.getItem()));
         }
     }

@@ -1,6 +1,7 @@
 package kiwiapollo.tmcraft.datagen;
 
 import com.cobblemon.mod.common.CobblemonItems;
+import kiwiapollo.tmcraft.common.TypeGemFactory;
 import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItems;
@@ -161,7 +162,7 @@ public class NetheriteTMRecipeGenerator implements RecipeGenerator {
         public static NetheriteTMRecipeJsonBuilder create(TMMoveItem item) {
             return (NetheriteTMRecipeJsonBuilder) new NetheriteTMRecipeJsonBuilder(item)
                     .input(BlankDiscItems.NETHERITE_BLANK_DISC.getItem())
-                    .input(TMRecipeGenerator.toTypeGem(item))
+                    .input(new TypeGemFactory().create(item.getMoveType()))
                     .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.NETHERITE_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.NETHERITE_BLANK_DISC.getItem()));
         }
     }

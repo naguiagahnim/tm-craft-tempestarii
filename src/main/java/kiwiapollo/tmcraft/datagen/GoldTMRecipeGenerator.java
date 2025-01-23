@@ -2,6 +2,7 @@ package kiwiapollo.tmcraft.datagen;
 
 import com.cobblemon.mod.common.CobblemonItems;
 import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
+import kiwiapollo.tmcraft.common.TypeGemFactory;
 import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItems;
@@ -524,7 +525,7 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
         public static GoldTMRecipeJsonBuilder create(TMMoveItem item) {
             return (GoldTMRecipeJsonBuilder) new GoldTMRecipeJsonBuilder(item)
                     .input(BlankDiscItems.GOLD_BLANK_DISC.getItem())
-                    .input(TMRecipeGenerator.toTypeGem(item))
+                    .input(new TypeGemFactory().create(item.getMoveType()))
                     .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.GOLD_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.GOLD_BLANK_DISC.getItem()));
         }
     }
