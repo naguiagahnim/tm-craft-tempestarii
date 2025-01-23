@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class ExpertMoveTutorTradeOfferFactory extends MoveTutorTradeOfferFactory {
-    private static final int EMERALD_COUNT = 26;
+    private static final int EMERALD_COUNT = 16;
     private static final int TYPE_GEM_COUNT = 1;
 
     private static final List<TutorMoveItems> MOVES = List.of(

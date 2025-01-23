@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class ApprenticeMoveTutorTradeOfferFactory extends MoveTutorTradeOfferFactory{
-    private static final int EMERALD_COUNT = 18;
+    private static final int EMERALD_COUNT = 10;
     private static final int TYPE_GEM_COUNT = 1;
 
     private static final List<TutorMoveItems> MOVES = List.of(
@@ -36,7 +36,7 @@ public class ApprenticeMoveTutorTradeOfferFactory extends MoveTutorTradeOfferFac
                 getEmeraldBuyItem(EMERALD_COUNT),
                 getTypeGemBuyItem(move, TYPE_GEM_COUNT),
                 getTutorMoveSellItem(move),
-                10, 5, 0.05F
+                10, 6, 0.05F
         );
     }
 }
