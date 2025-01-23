@@ -5,23 +5,27 @@ import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 public class MoveTutorTradeOffer {
     public void register() {
         TradeOfferHelper.registerVillagerOffers(MoveTutorVillager.PROFESSION, TradeLevel.NOVICE.getLevel(),
-                factories -> factories.add((entity, random) -> new NoviceTradeOffers.Random().create())
+                factories -> factories.add(new NoviceMoveTutorTradeOfferFactory())
         );
 
         TradeOfferHelper.registerVillagerOffers(MoveTutorVillager.PROFESSION, TradeLevel.APPRENTICE.getLevel(),
-                factories -> factories.add((entity, random) -> new ApprenticeTradeOffers.Random().create())
+                factories -> factories.add(new ApprenticeMoveTutorTradeOfferFactory())
         );
 
         TradeOfferHelper.registerVillagerOffers(MoveTutorVillager.PROFESSION, TradeLevel.JOURNEYMAN.getLevel(),
-                factories -> factories.add((entity, random) -> new JourneymanTradeOffers.Random().create())
+                factories -> factories.add(new JourneymanMoveTutorTradeOfferFactory())
+        );
+
+        TradeOfferHelper.registerVillagerOffers(MoveTutorVillager.PROFESSION, TradeLevel.JOURNEYMAN.getLevel(),
+                factories -> factories.add(new MoveUpgradeSmithingTemplateTradeOfferFactory())
         );
 
         TradeOfferHelper.registerVillagerOffers(MoveTutorVillager.PROFESSION, TradeLevel.EXPERT.getLevel(),
-                factories -> factories.add((entity, random) -> new ExpertTradeOffers.Random().create())
+                factories -> factories.add(new ExpertMoveTutorTradeOfferFactory())
         );
 
         TradeOfferHelper.registerVillagerOffers(MoveTutorVillager.PROFESSION, TradeLevel.MASTER.getLevel(),
-                factories -> factories.add((entity, random) -> new MasterTradeOffers.Random().create())
+                factories -> factories.add(new MasterMoveTutorTradeOfferFactory())
         );
     }
 }

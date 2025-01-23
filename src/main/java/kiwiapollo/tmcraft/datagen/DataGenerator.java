@@ -29,6 +29,8 @@ public class DataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(RecipeProvider::new);
         pack.addProvider(ItemTagProvider::new);
         pack.addProvider(PoiTagProvider::new);
+        pack.addProvider(BlockTagProvider::new);
+        pack.addProvider(LootTableProvider::new);
     }
 
     private static class RecipeProvider extends FabricRecipeProvider {
@@ -41,6 +43,7 @@ public class DataGenerator implements DataGeneratorEntrypoint {
             new TMRecipeGenerator().generate(exporter);
             new BlankDiscRecipeGenerator().generate(exporter);
             new SmithingTemplateRecipeGenerator().generate(exporter);
+            new MoveTutorTableRecipeGenerator().generate(exporter);
         }
     }
 
