@@ -50,6 +50,10 @@ Star Move Items teach moves even if the Pokémon are not supposed to learn them.
 
 When used, Move Recorder converts to corresponding TM/Egg/Tutor/Star move item.
 
+## Move Tutor Villager
+
+Starting from 1.4.4 Move Tutor villager profession has been added. They sell Tutor Moves Items that corresponding TM Item recipes do not exist.
+
 ## LICENSE
 
 ### GPL 3.0
