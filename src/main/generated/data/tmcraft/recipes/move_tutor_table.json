@@ -3,19 +3,19 @@
   "category": "misc",
   "key": {
     "B": {
-      "item": "minecraft:iron_ingot"
-    },
-    "C": {
-      "item": "tmcraft:copper_blank_disc"
+      "item": "minecraft:black_stained_glass"
     },
     "G": {
       "item": "minecraft:green_concrete"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [
-    "BBB",
-    "GCG",
-    "GGG"
+    "II",
+    "BB",
+    "GG"
   ],
   "result": {
     "item": "tmcraft:move_tutor_table"
