@@ -2,6 +2,7 @@ package kiwiapollo.tmcraft.item.moverecorder;
 
 import com.cobblemon.mod.common.api.moves.Move;
 import kiwiapollo.tmcraft.TMCraft;
+import kiwiapollo.tmcraft.item.MoveRecorderItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;

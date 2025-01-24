@@ -1,4 +1,4 @@
-package kiwiapollo.tmcraft.item.moverecorder;
+package kiwiapollo.tmcraft.item;
 
 import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.api.battles.model.actor.BattleActor;
