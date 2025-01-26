@@ -23,7 +23,8 @@ public class ApprenticeMoveTutorTradeOfferFactory extends MoveTutorTradeOfferFac
             TutorMoveItems.TUTOR_RELICSONG,
             TutorMoveItems.TUTOR_SECRETSWORD,
             TutorMoveItems.TUTOR_COVET,
-            TutorMoveItems.TUTOR_RISINGVOLTAGE
+            TutorMoveItems.TUTOR_RISINGVOLTAGE,
+            TutorMoveItems.TUTOR_KNOCKOFF
     );
 
     @Override
