@@ -1,4 +1,4 @@
-package kiwiapollo.tmcraft.villager;
+package kiwiapollo.tmcraft.villager.movetutor;
 
 import com.cobblemon.mod.common.api.types.ElementalType;
 import kiwiapollo.tmcraft.common.TypeGemFactory;

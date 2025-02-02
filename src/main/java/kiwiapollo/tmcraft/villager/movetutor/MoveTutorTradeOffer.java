@@ -1,5 +1,7 @@
-package kiwiapollo.tmcraft.villager;
+package kiwiapollo.tmcraft.villager.movetutor;
 
+import kiwiapollo.tmcraft.villager.MoveUpgradeSmithingTemplateTradeOfferFactory;
+import kiwiapollo.tmcraft.villager.TradeLevel;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 
 public class MoveTutorTradeOffer {

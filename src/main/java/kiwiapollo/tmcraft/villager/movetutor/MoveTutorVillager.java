@@ -1,10 +1,9 @@
-package kiwiapollo.tmcraft.villager;
+package kiwiapollo.tmcraft.villager.movetutor;
 
 import com.google.common.collect.ImmutableSet;
 import kiwiapollo.tmcraft.TMCraft;
 import kiwiapollo.tmcraft.block.ModBlocks;
 import net.fabricmc.fabric.api.object.builder.v1.world.poi.PointOfInterestHelper;
-import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;

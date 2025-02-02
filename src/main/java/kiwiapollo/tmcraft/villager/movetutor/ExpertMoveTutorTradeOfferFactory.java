@@ -1,4 +1,4 @@
-package kiwiapollo.tmcraft.villager;
+package kiwiapollo.tmcraft.villager.movetutor;
 
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
 import net.minecraft.entity.Entity;
@@ -10,15 +10,24 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MasterMoveTutorTradeOfferFactory extends MoveTutorTradeOfferFactory {
-    private static final int EMERALD_COUNT = 22;
-    private static final int TYPE_GEM_COUNT = 3;
+public class ExpertMoveTutorTradeOfferFactory extends MoveTutorTradeOfferFactory {
+    private static final int EMERALD_COUNT = 16;
+    private static final int TYPE_GEM_COUNT = 1;
 
     private static final List<TutorMoveItems> MOVES = List.of(
-            TutorMoveItems.TUTOR_LASTRESORT,
-            TutorMoveItems.TUTOR_DRAGONASCENT,
-            TutorMoveItems.TUTOR_VOLTTACKLE,
-            TutorMoveItems.TUTOR_STEELROLLER
+            TutorMoveItems.TUTOR_HYPNOSIS,
+            TutorMoveItems.TUTOR_ROLEPLAY,
+            TutorMoveItems.TUTOR_MAGNETRISE,
+            TutorMoveItems.TUTOR_SYNTHESIS,
+            TutorMoveItems.TUTOR_GASTROACID,
+            TutorMoveItems.TUTOR_BLOCK,
+            TutorMoveItems.TUTOR_HEALBELL,
+            TutorMoveItems.TUTOR_MAGICCOAT,
+            TutorMoveItems.TUTOR_STRINGSHOT,
+            TutorMoveItems.TUTOR_WORRYSEED,
+            TutorMoveItems.TUTOR_AFTERYOU,
+            TutorMoveItems.TUTOR_LASERFOCUS,
+            TutorMoveItems.TUTOR_CORROSIVEGAS
     );
 
     @Override

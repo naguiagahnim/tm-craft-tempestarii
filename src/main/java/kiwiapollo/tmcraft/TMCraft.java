@@ -11,8 +11,8 @@ import kiwiapollo.tmcraft.item.tmmove.TMMoveItemGroup;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItems;
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItemGroup;
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
-import kiwiapollo.tmcraft.villager.MoveTutorTradeOffer;
-import kiwiapollo.tmcraft.villager.MoveTutorVillager;
+import kiwiapollo.tmcraft.villager.movetutor.MoveTutorTradeOffer;
+import kiwiapollo.tmcraft.villager.movetutor.MoveTutorVillager;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;

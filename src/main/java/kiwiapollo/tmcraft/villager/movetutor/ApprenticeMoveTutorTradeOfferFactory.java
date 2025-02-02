@@ -1,4 +1,4 @@
-package kiwiapollo.tmcraft.villager;
+package kiwiapollo.tmcraft.villager.movetutor;
 
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
 import net.minecraft.entity.Entity;

@@ -1,4 +1,4 @@
-package kiwiapollo.tmcraft.villager;
+package kiwiapollo.tmcraft.villager.movetutor;
 
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
 import net.minecraft.entity.Entity;
@@ -10,21 +10,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class JourneymanMoveTutorTradeOfferFactory extends MoveTutorTradeOfferFactory {
-    private static final int EMERALD_COUNT = 16;
-    private static final int TYPE_GEM_COUNT = 1;
+public class MasterMoveTutorTradeOfferFactory extends MoveTutorTradeOfferFactory {
+    private static final int EMERALD_COUNT = 22;
+    private static final int TYPE_GEM_COUNT = 3;
 
     private static final List<TutorMoveItems> MOVES = List.of(
-            TutorMoveItems.TUTOR_AQUATAIL,
-            TutorMoveItems.TUTOR_FLOATYFALL,
-            TutorMoveItems.TUTOR_SPLISHYSPLASH,
-            TutorMoveItems.TUTOR_BOUNCYBUBBLE,
-            TutorMoveItems.TUTOR_BUZZYBUZZ,
-            TutorMoveItems.TUTOR_SIZZLYSLIDE,
-            TutorMoveItems.TUTOR_BADDYBAD,
-            TutorMoveItems.TUTOR_SAPPYSEED,
-            TutorMoveItems.TUTOR_FREEZYFROST,
-            TutorMoveItems.TUTOR_SPARKLYSWIRL
+            TutorMoveItems.TUTOR_LASTRESORT,
+            TutorMoveItems.TUTOR_DRAGONASCENT,
+            TutorMoveItems.TUTOR_VOLTTACKLE,
+            TutorMoveItems.TUTOR_STEELROLLER
     );
 
     @Override
