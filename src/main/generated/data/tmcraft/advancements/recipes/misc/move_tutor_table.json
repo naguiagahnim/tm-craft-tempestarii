@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_copper_blank_disc": {
+    "has_iron_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "tmcraft:copper_blank_disc"
+              "minecraft:iron_ingot"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_copper_blank_disc",
+      "has_iron_ingot",
       "has_the_recipe"
     ]
   ],

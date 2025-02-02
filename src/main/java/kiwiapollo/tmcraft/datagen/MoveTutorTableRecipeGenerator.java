@@ -1,7 +1,6 @@
 package kiwiapollo.tmcraft.datagen;
 
 import kiwiapollo.tmcraft.block.ModBlocks;
-import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -20,7 +19,7 @@ public class MoveTutorTableRecipeGenerator implements RecipeGenerator {
                 .input('I', Items.IRON_INGOT)
                 .input('B', Items.BLACK_STAINED_GLASS)
                 .input('G', Items.GREEN_CONCRETE)
-                .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.COPPER_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.COPPER_BLANK_DISC.getItem()))
+                .criterion(FabricRecipeProvider.hasItem(Items.IRON_INGOT), FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter, ModBlocks.MOVE_TUTOR_TABLE_BLOCK.getIdentifier());
     }
 }
