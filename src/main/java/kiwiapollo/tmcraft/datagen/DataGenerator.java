@@ -43,6 +43,7 @@ public class DataGenerator implements DataGeneratorEntrypoint {
             new BlankDiscRecipeGenerator().generate(exporter);
             new SmithingTemplateRecipeGenerator().generate(exporter);
             new MoveTutorTableRecipeGenerator().generate(exporter);
+            new PokemonBreederTableRecipeGenerator().generate(exporter);
         }
     }
 
