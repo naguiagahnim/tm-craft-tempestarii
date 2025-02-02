@@ -13,6 +13,8 @@ import kiwiapollo.tmcraft.item.tutormove.TutorMoveItemGroup;
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
 import kiwiapollo.tmcraft.villager.movetutor.MoveTutorTradeOffer;
 import kiwiapollo.tmcraft.villager.movetutor.MoveTutorVillager;
+import kiwiapollo.tmcraft.villager.pokemonbreeder.PokemonBreederTradeOffer;
+import kiwiapollo.tmcraft.villager.pokemonbreeder.PokemonBreederVillager;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -32,6 +34,9 @@ public class TMCraft implements ModInitializer {
 	public void onInitialize() {
 		Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(TMCraft.MOD_ID, MoveTutorVillager.PROFESSION_ID), MoveTutorVillager.PROFESSION);
 		new MoveTutorTradeOffer().register();
+
+		Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(TMCraft.MOD_ID, PokemonBreederVillager.PROFESSION_ID), PokemonBreederVillager.PROFESSION);
+		new PokemonBreederTradeOffer().register();
 
 		Arrays.stream(ModBlocks.values()).forEach(block -> {
 			Registry.register(Registries.BLOCK, block.getIdentifier(), block.getBlock());

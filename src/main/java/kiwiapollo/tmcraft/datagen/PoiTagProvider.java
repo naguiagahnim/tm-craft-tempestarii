@@ -2,6 +2,7 @@ package kiwiapollo.tmcraft.datagen;
 
 import kiwiapollo.tmcraft.villager.movetutor.MoveTutorVillager;
 import kiwiapollo.tmcraft.TMCraft;
+import kiwiapollo.tmcraft.villager.pokemonbreeder.PokemonBreederVillager;
 import net.minecraft.data.DataOutput;
 import net.minecraft.data.server.tag.TagProvider;
 import net.minecraft.registry.RegistryKeys;
@@ -20,5 +21,6 @@ public class PoiTagProvider extends TagProvider<PointOfInterestType> {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup lookup) {
         this.getOrCreateTagBuilder(PointOfInterestTypeTags.ACQUIRABLE_JOB_SITE).addOptional(Identifier.of(TMCraft.MOD_ID, MoveTutorVillager.POI_ID));
+        this.getOrCreateTagBuilder(PointOfInterestTypeTags.ACQUIRABLE_JOB_SITE).addOptional(Identifier.of(TMCraft.MOD_ID, PokemonBreederVillager.POI_ID));
     }
 }

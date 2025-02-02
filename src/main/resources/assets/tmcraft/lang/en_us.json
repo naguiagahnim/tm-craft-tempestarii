@@ -16,6 +16,7 @@
     "tag.item.tmcraft.star_moves": "Star Moves",
 
     "block.tmcraft.move_tutor_table": "Move Tutor Table",
+    "block.tmcraft.pokemon_breeder_table": "Pokémon Breeder Table",
 
     "item.tmcraft.error.cannot_learn_move": "%s cannot learn %s",
     "item.tmcraft.error.pokemon_knows_move": "%s already knows %s",

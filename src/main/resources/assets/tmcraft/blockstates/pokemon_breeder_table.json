@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "tmcraft:block/pokemon_breeder_table" }
+    }
+}

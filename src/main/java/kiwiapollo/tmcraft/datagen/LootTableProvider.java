@@ -12,5 +12,6 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.MOVE_TUTOR_TABLE_BLOCK.getBlock(), drops(ModBlocks.MOVE_TUTOR_TABLE_BLOCK.getItem()));
+        addDrop(ModBlocks.POKEMON_BREEDER_TABLE_BLOCK.getBlock(), drops(ModBlocks.POKEMON_BREEDER_TABLE_BLOCK.getItem()));
     }
 }

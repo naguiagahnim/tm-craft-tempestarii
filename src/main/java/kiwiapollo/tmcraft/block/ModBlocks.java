@@ -7,7 +7,8 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
 public enum ModBlocks {
-    MOVE_TUTOR_TABLE_BLOCK(new MoveTutorTableBlock(), "move_tutor_table");
+    MOVE_TUTOR_TABLE_BLOCK(new MoveTutorTableBlock(), "move_tutor_table"),
+    POKEMON_BREEDER_TABLE_BLOCK(new PokemonBreederTableBlock(), "pokemon_breeder_table");
 
     private final Block block;
     private final Identifier identifier;
