@@ -436,7 +436,7 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_RETURN.getItem())
-                .input(CobblemonItemTags.IS_FRIENDSHIP_BOOSTER)
+                .input(CobblemonItems.SOOTHE_BELL)
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FRUSTRATION.getItem())
