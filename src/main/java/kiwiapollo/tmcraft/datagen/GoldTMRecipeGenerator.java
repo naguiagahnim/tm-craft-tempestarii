@@ -242,7 +242,7 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_LASHOUT.getItem())
-                .input(Items.FISHING_ROD)
+                .input(Items.EGG)
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SEEDBOMB.getItem())
@@ -456,7 +456,7 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_BRUTALSWING.getItem())
-                .input(Items.FISHING_ROD)
+                .input(CobblemonItems.MEDICINAL_LEEK)
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MYSTICALFIRE.getItem())
