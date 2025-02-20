@@ -52,7 +52,11 @@ When used, Move Recorder converts to corresponding TM/Egg/Tutor/Star move item.
 
 ## Move Tutor Villager
 
-Starting from 1.4.4 Move Tutor villager profession has been added. They sell Tutor Moves Items that corresponding TM Item recipes do not exist.
+Move Tutor villagers sell Tutor Moves Items. (>=1.4.4)
+
+## Pokémon Breeder Villager
+
+Pokémon Breeder villagers sell Egg Move Items. (>=1.4.6)
 
 ## LICENSE
 
