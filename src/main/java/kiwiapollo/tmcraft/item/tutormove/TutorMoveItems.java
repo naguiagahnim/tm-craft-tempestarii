@@ -706,7 +706,7 @@ public enum TutorMoveItems {
     TUTOR_SHADOWFORCE("shadowforce", ElementalTypes.INSTANCE.getGHOST()),
     TUTOR_SHADOWPUNCH("shadowpunch", ElementalTypes.INSTANCE.getGHOST()),
     TUTOR_SHADOWSNEAK("shadowsneak", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_SHADOWSTRIKE("shadowstrike", ElementalTypes.INSTANCE.getGHOST()),
+    //TUTOR_SHADOWSTRIKE("shadowstrike", ElementalTypes.INSTANCE.getGHOST()), // Signature move for Kitsunoh, Smogon's custom Pokémon
     TUTOR_SHARPEN("sharpen", ElementalTypes.INSTANCE.getNORMAL()),
     TUTOR_SHATTEREDPSYCHE("shatteredpsyche", ElementalTypes.INSTANCE.getPSYCHIC()),
     TUTOR_SHEDTAIL("shedtail", ElementalTypes.INSTANCE.getNORMAL()),

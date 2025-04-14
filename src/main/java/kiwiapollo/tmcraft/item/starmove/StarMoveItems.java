@@ -706,7 +706,7 @@ public enum StarMoveItems {
     STAR_SHADOWFORCE("shadowforce", ElementalTypes.INSTANCE.getGHOST()),
     STAR_SHADOWPUNCH("shadowpunch", ElementalTypes.INSTANCE.getGHOST()),
     STAR_SHADOWSNEAK("shadowsneak", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_SHADOWSTRIKE("shadowstrike", ElementalTypes.INSTANCE.getGHOST()),
+    //STAR_SHADOWSTRIKE("shadowstrike", ElementalTypes.INSTANCE.getGHOST()), // Signature move for Kitsunoh, Smogon's custom Pokémon
     STAR_SHARPEN("sharpen", ElementalTypes.INSTANCE.getNORMAL()),
     STAR_SHATTEREDPSYCHE("shatteredpsyche", ElementalTypes.INSTANCE.getPSYCHIC()),
     STAR_SHEDTAIL("shedtail", ElementalTypes.INSTANCE.getNORMAL()),

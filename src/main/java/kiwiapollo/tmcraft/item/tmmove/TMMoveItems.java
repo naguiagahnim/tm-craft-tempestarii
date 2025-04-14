@@ -706,7 +706,7 @@ public enum TMMoveItems {
     TM_SHADOWFORCE("shadowforce", ElementalTypes.INSTANCE.getGHOST()),
     TM_SHADOWPUNCH("shadowpunch", ElementalTypes.INSTANCE.getGHOST()),
     TM_SHADOWSNEAK("shadowsneak", ElementalTypes.INSTANCE.getGHOST()),
-    TM_SHADOWSTRIKE("shadowstrike", ElementalTypes.INSTANCE.getGHOST()),
+    //TM_SHADOWSTRIKE("shadowstrike", ElementalTypes.INSTANCE.getGHOST()), // Signature move for Kitsunoh, Smogon's custom Pokémon
     TM_SHARPEN("sharpen", ElementalTypes.INSTANCE.getNORMAL()),
     TM_SHATTEREDPSYCHE("shatteredpsyche", ElementalTypes.INSTANCE.getPSYCHIC()),
     TM_SHEDTAIL("shedtail", ElementalTypes.INSTANCE.getNORMAL()),
