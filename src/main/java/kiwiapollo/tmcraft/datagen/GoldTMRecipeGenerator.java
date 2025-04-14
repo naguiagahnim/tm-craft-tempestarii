@@ -276,7 +276,7 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_HARDPRESS.getItem())
-                .input(Items.ANVIL)
+                .input(Items.SMITHING_TABLE)
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ALLURINGVOICE.getItem())
