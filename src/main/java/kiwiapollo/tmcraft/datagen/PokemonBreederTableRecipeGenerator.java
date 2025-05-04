@@ -1,6 +1,6 @@
 package kiwiapollo.tmcraft.datagen;
 
-import kiwiapollo.tmcraft.block.ModBlocks;
+import kiwiapollo.tmcraft.block.ModBlock;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 public class PokemonBreederTableRecipeGenerator implements RecipeGenerator {
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.POKEMON_BREEDER_TABLE_BLOCK.getItem())
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlock.POKEMON_BREEDER_TABLE_BLOCK.getItem())
                 .pattern("EE")
                 .pattern("BB")
                 .pattern("GG")
@@ -20,6 +20,6 @@ public class PokemonBreederTableRecipeGenerator implements RecipeGenerator {
                 .input('B', Items.BLACK_STAINED_GLASS)
                 .input('G', Items.RED_CONCRETE)
                 .criterion(FabricRecipeProvider.hasItem(Items.EGG), FabricRecipeProvider.conditionsFromItem(Items.EGG))
-                .offerTo(exporter, ModBlocks.POKEMON_BREEDER_TABLE_BLOCK.getIdentifier());
+                .offerTo(exporter, ModBlock.POKEMON_BREEDER_TABLE_BLOCK.getIdentifier());
     }
 }

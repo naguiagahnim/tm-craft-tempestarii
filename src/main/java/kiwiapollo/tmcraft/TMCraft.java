@@ -1,6 +1,6 @@
 package kiwiapollo.tmcraft;
 
-import kiwiapollo.tmcraft.block.ModBlocks;
+import kiwiapollo.tmcraft.block.ModBlock;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItemGroup;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItems;
 import kiwiapollo.tmcraft.item.misc.*;
@@ -38,7 +38,7 @@ public class TMCraft implements ModInitializer {
 		Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(TMCraft.MOD_ID, PokemonBreederVillager.PROFESSION_ID), PokemonBreederVillager.PROFESSION);
 		new PokemonBreederTradeOffer().register();
 
-		Arrays.stream(ModBlocks.values()).forEach(block -> {
+		Arrays.stream(ModBlock.values()).forEach(block -> {
 			Registry.register(Registries.BLOCK, block.getIdentifier(), block.getBlock());
 			Registry.register(Registries.ITEM, block.getIdentifier(), block.getItem());
 		});
@@ -91,7 +91,7 @@ public class TMCraft implements ModInitializer {
 		Registry.register(Registries.ITEM_GROUP, MiscItemGroup.ITEM_GROUP_REGISTRY_KEY, MiscItemGroup.ITEM_GROUP);
 
 		ItemGroupEvents.modifyEntriesEvent(MiscItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(ModBlocks.values()).forEach(block -> {
+			Arrays.stream(ModBlock.values()).forEach(block -> {
 				itemGroup.add(block.getItem());
 			});
 

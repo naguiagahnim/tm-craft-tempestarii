@@ -1,6 +1,6 @@
 package kiwiapollo.tmcraft.datagen;
 
-import kiwiapollo.tmcraft.block.ModBlocks;
+import kiwiapollo.tmcraft.block.ModBlock;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -15,7 +15,7 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup lookup) {
-        this.getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(ModBlocks.MOVE_TUTOR_TABLE_BLOCK.getBlock()).setReplace(false);
-        this.getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(ModBlocks.POKEMON_BREEDER_TABLE_BLOCK.getBlock()).setReplace(false);
+        this.getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(ModBlock.MOVE_TUTOR_TABLE_BLOCK.getBlock()).setReplace(false);
+        this.getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(ModBlock.POKEMON_BREEDER_TABLE_BLOCK.getBlock()).setReplace(false);
     }
 }
