@@ -4,7 +4,7 @@ import kiwiapollo.tmcraft.block.ModBlock;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItemGroup;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItem;
 import kiwiapollo.tmcraft.item.misc.*;
-import kiwiapollo.tmcraft.item.moverecorder.MoveRecorderItems;
+import kiwiapollo.tmcraft.item.moverecorder.MoveRecorderItem;
 import kiwiapollo.tmcraft.item.starmove.StarMoveItemGroup;
 import kiwiapollo.tmcraft.item.starmove.StarMoveItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItemGroup;
@@ -47,7 +47,7 @@ public class TMCraft implements ModInitializer {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
-		Arrays.stream(MoveRecorderItems.values()).forEach(item -> {
+		Arrays.stream(MoveRecorderItem.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
@@ -99,7 +99,7 @@ public class TMCraft implements ModInitializer {
 				itemGroup.add(item.getItem());
 			});
 
-			Arrays.stream(MoveRecorderItems.values()).forEach(item -> {
+			Arrays.stream(MoveRecorderItem.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 

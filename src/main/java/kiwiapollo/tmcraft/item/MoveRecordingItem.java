@@ -19,8 +19,8 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public abstract class MoveRecorderItem extends Item implements PokemonAndMoveSelectingItem {
-    public MoveRecorderItem() {
+public abstract class MoveRecordingItem extends Item implements PokemonAndMoveSelectingItem {
+    public MoveRecordingItem() {
         super(new Item.Settings());
     }
 
