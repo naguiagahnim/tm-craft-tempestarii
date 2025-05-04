@@ -1,15 +1,14 @@
 package kiwiapollo.tmcraft.item.misc;
 
 import kiwiapollo.tmcraft.TMCraft;
-import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
 
-public enum SmithingTemplateItems {
-    MOVE_UPGRADE_SMITHING_TEMPLATE("move_upgrade_smithing_template", new SmithingTemplateItem(
+public enum SmithingTemplateItem {
+    MOVE_UPGRADE_SMITHING_TEMPLATE("move_upgrade_smithing_template", new net.minecraft.item.SmithingTemplateItem(
             Text.translatable("item.tmcraft.move_upgrade_smithing_template.applies_to").formatted(Formatting.BLUE),
             Text.translatable("item.tmcraft.move_upgrade_smithing_template.ingredients").formatted(Formatting.BLUE),
             Text.translatable("item.tmcraft.move_upgrade_smithing_template.title").formatted(Formatting.GRAY),
@@ -28,9 +27,9 @@ public enum SmithingTemplateItems {
     ));
 
     private final Identifier identifier;
-    private final SmithingTemplateItem item;
+    private final net.minecraft.item.SmithingTemplateItem item;
 
-    SmithingTemplateItems(String path, SmithingTemplateItem item) {
+    SmithingTemplateItem(String path, net.minecraft.item.SmithingTemplateItem item) {
         this.identifier = Identifier.of(TMCraft.MOD_ID, path);
         this.item = item;
     }
@@ -39,7 +38,7 @@ public enum SmithingTemplateItems {
         return identifier;
     }
 
-    public SmithingTemplateItem getItem() {
+    public net.minecraft.item.SmithingTemplateItem getItem() {
         return item;
     }
 }

@@ -13,7 +13,7 @@ public class MiscItemGroup {
     public static final Identifier ITEM_GROUP_ID = Identifier.of(TMCraft.MOD_ID, "tmcraft_item_group");
 
     public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(SmithingTemplateItems.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()))
+            .icon(() -> new ItemStack(SmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()))
             .displayName(Text.translatable("item_group.tmcraft.tmcraft"))
             .build();
 

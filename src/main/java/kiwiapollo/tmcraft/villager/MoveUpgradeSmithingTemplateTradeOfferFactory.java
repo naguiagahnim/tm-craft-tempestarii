@@ -1,6 +1,6 @@
 package kiwiapollo.tmcraft.villager;
 
-import kiwiapollo.tmcraft.item.misc.SmithingTemplateItems;
+import kiwiapollo.tmcraft.item.misc.SmithingTemplateItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -16,7 +16,7 @@ public class MoveUpgradeSmithingTemplateTradeOfferFactory implements TradeOffers
     public @Nullable TradeOffer create(Entity entity, Random random) {
         return new TradeOffer(
                 new ItemStack(Items.EMERALD, EMERALD_COUNT),
-                SmithingTemplateItems.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem().getDefaultStack(),
+                SmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem().getDefaultStack(),
                 10, 8, 0.05F
         );
     }

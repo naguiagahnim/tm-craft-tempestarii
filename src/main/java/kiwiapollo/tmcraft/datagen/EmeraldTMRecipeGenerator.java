@@ -3,7 +3,7 @@ package kiwiapollo.tmcraft.datagen;
 import com.cobblemon.mod.common.CobblemonItems;
 import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
 import kiwiapollo.tmcraft.common.TypeGemFactory;
-import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
+import kiwiapollo.tmcraft.item.misc.BlankDiscItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveTeachingItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -411,9 +411,9 @@ public class EmeraldTMRecipeGenerator implements RecipeGenerator {
 
         public static EmeraldTMRecipeJsonBuilder create(TMMoveTeachingItem item) {
             return (EmeraldTMRecipeJsonBuilder) new EmeraldTMRecipeJsonBuilder(item)
-                    .input(BlankDiscItems.EMERALD_BLANK_DISC.getItem())
+                    .input(BlankDiscItem.EMERALD_BLANK_DISC.getItem())
                     .input(new TypeGemFactory().create(item.getMoveType()))
-                    .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.EMERALD_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.EMERALD_BLANK_DISC.getItem()));
+                    .criterion(FabricRecipeProvider.hasItem(BlankDiscItem.EMERALD_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItem.EMERALD_BLANK_DISC.getItem()));
         }
     }
 }

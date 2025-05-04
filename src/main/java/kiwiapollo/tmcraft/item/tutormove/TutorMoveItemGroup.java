@@ -1,7 +1,7 @@
 package kiwiapollo.tmcraft.item.tutormove;
 
 import kiwiapollo.tmcraft.TMCraft;
-import kiwiapollo.tmcraft.item.misc.BlankBookItems;
+import kiwiapollo.tmcraft.item.misc.BlankBookItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -14,7 +14,7 @@ public class TutorMoveItemGroup {
     public static final Identifier ITEM_GROUP_ID = Identifier.of(TMCraft.MOD_ID, "tutor_move_item_group");
 
     public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(BlankBookItems.EMERALD_BLANK_BOOK.getItem()))
+            .icon(() -> new ItemStack(BlankBookItem.EMERALD_BLANK_BOOK.getItem()))
             .displayName(Text.translatable("item_group.tmcraft.tutor_move"))
             .build();
 

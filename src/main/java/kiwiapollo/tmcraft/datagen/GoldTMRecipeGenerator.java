@@ -3,7 +3,7 @@ package kiwiapollo.tmcraft.datagen;
 import com.cobblemon.mod.common.CobblemonItems;
 import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
 import kiwiapollo.tmcraft.common.TypeGemFactory;
-import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
+import kiwiapollo.tmcraft.item.misc.BlankDiscItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveTeachingItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -524,9 +524,9 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
 
         public static GoldTMRecipeJsonBuilder create(TMMoveTeachingItem item) {
             return (GoldTMRecipeJsonBuilder) new GoldTMRecipeJsonBuilder(item)
-                    .input(BlankDiscItems.GOLD_BLANK_DISC.getItem())
+                    .input(BlankDiscItem.GOLD_BLANK_DISC.getItem())
                     .input(new TypeGemFactory().create(item.getMoveType()))
-                    .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.GOLD_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.GOLD_BLANK_DISC.getItem()));
+                    .criterion(FabricRecipeProvider.hasItem(BlankDiscItem.GOLD_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItem.GOLD_BLANK_DISC.getItem()));
         }
     }
 }

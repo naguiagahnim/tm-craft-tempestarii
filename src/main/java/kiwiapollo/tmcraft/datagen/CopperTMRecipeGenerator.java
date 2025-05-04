@@ -3,7 +3,7 @@ package kiwiapollo.tmcraft.datagen;
 import com.cobblemon.mod.common.CobblemonItems;
 import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
 import kiwiapollo.tmcraft.common.TypeGemFactory;
-import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
+import kiwiapollo.tmcraft.item.misc.BlankDiscItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveTeachingItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -70,9 +70,9 @@ public class CopperTMRecipeGenerator implements RecipeGenerator {
 
         public static CopperTMRecipeJsonBuilder create(TMMoveTeachingItem item) {
             return (CopperTMRecipeJsonBuilder) new CopperTMRecipeJsonBuilder(item)
-                    .input(BlankDiscItems.COPPER_BLANK_DISC.getItem())
+                    .input(BlankDiscItem.COPPER_BLANK_DISC.getItem())
                     .input(new TypeGemFactory().create(item.getMoveType()))
-                    .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.COPPER_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.COPPER_BLANK_DISC.getItem()));
+                    .criterion(FabricRecipeProvider.hasItem(BlankDiscItem.COPPER_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItem.COPPER_BLANK_DISC.getItem()));
         }
     }
 }

@@ -4,7 +4,7 @@ import kiwiapollo.tmcraft.TMCraft;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
-public enum BlankStarItems {
+public enum BlankStarItem {
     COPPER_BLANK_STAR(Identifier.of(TMCraft.MOD_ID, "copper_blank_star"), new Item(new Item.Settings())),
     IRON_BLANK_STAR(Identifier.of(TMCraft.MOD_ID, "iron_blank_star"), new Item(new Item.Settings())),
     GOLD_BLANK_STAR(Identifier.of(TMCraft.MOD_ID, "gold_blank_star"), new Item(new Item.Settings())),
@@ -15,7 +15,7 @@ public enum BlankStarItems {
     private final Item item;
     private final Identifier identifier;
 
-    BlankStarItems(Identifier identifier, Item item) {
+    BlankStarItem(Identifier identifier, Item item) {
         this.identifier = identifier;
         this.item = item;
     }

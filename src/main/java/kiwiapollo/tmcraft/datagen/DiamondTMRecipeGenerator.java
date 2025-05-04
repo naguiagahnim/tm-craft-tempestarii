@@ -2,7 +2,7 @@ package kiwiapollo.tmcraft.datagen;
 
 import com.cobblemon.mod.common.CobblemonItems;
 import kiwiapollo.tmcraft.common.TypeGemFactory;
-import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
+import kiwiapollo.tmcraft.item.misc.BlankDiscItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveTeachingItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -178,9 +178,9 @@ public class DiamondTMRecipeGenerator implements RecipeGenerator {
 
         public static DiamondTMRecipeJsonBuilder create(TMMoveTeachingItem item) {
             return (DiamondTMRecipeJsonBuilder) new DiamondTMRecipeJsonBuilder(item)
-                    .input(BlankDiscItems.DIAMOND_BLANK_DISC.getItem())
+                    .input(BlankDiscItem.DIAMOND_BLANK_DISC.getItem())
                     .input(new TypeGemFactory().create(item.getMoveType()))
-                    .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.DIAMOND_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.DIAMOND_BLANK_DISC.getItem()));
+                    .criterion(FabricRecipeProvider.hasItem(BlankDiscItem.DIAMOND_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItem.DIAMOND_BLANK_DISC.getItem()));
         }
     }
 }

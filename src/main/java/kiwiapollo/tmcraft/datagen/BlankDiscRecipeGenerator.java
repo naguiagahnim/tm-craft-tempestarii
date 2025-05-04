@@ -1,7 +1,7 @@
 package kiwiapollo.tmcraft.datagen;
 
-import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
-import kiwiapollo.tmcraft.item.misc.SmithingTemplateItems;
+import kiwiapollo.tmcraft.item.misc.BlankDiscItem;
+import kiwiapollo.tmcraft.item.misc.SmithingTemplateItem;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -14,64 +14,64 @@ import java.util.function.Consumer;
 
 public class BlankDiscRecipeGenerator {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlankDiscItems.COPPER_BLANK_DISC.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlankDiscItem.COPPER_BLANK_DISC.getItem())
                 .input(Items.COPPER_INGOT)
                 .criterion(FabricRecipeProvider.hasItem(Items.COPPER_INGOT), FabricRecipeProvider.conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter);
 
         SmithingTransformRecipeJsonBuilder
                 .create(
-                        Ingredient.ofItems(SmithingTemplateItems.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
-                        Ingredient.ofItems(BlankDiscItems.COPPER_BLANK_DISC.getItem()),
+                        Ingredient.ofItems(SmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
+                        Ingredient.ofItems(BlankDiscItem.COPPER_BLANK_DISC.getItem()),
                         Ingredient.ofItems(Items.IRON_INGOT),
                         RecipeCategory.MISC,
-                        BlankDiscItems.IRON_BLANK_DISC.getItem()
+                        BlankDiscItem.IRON_BLANK_DISC.getItem()
                 )
-                .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.COPPER_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.COPPER_BLANK_DISC.getItem()))
-                .offerTo(exporter, BlankDiscItems.IRON_BLANK_DISC.getIdentifier());
+                .criterion(FabricRecipeProvider.hasItem(BlankDiscItem.COPPER_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItem.COPPER_BLANK_DISC.getItem()))
+                .offerTo(exporter, BlankDiscItem.IRON_BLANK_DISC.getIdentifier());
 
         SmithingTransformRecipeJsonBuilder
                 .create(
-                        Ingredient.ofItems(SmithingTemplateItems.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
-                        Ingredient.ofItems(BlankDiscItems.IRON_BLANK_DISC.getItem()),
+                        Ingredient.ofItems(SmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
+                        Ingredient.ofItems(BlankDiscItem.IRON_BLANK_DISC.getItem()),
                         Ingredient.ofItems(Items.GOLD_INGOT),
                         RecipeCategory.MISC,
-                        BlankDiscItems.GOLD_BLANK_DISC.getItem()
+                        BlankDiscItem.GOLD_BLANK_DISC.getItem()
                 )
-                .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.IRON_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.IRON_BLANK_DISC.getItem()))
-                .offerTo(exporter, BlankDiscItems.GOLD_BLANK_DISC.getIdentifier());
+                .criterion(FabricRecipeProvider.hasItem(BlankDiscItem.IRON_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItem.IRON_BLANK_DISC.getItem()))
+                .offerTo(exporter, BlankDiscItem.GOLD_BLANK_DISC.getIdentifier());
 
         SmithingTransformRecipeJsonBuilder
                 .create(
-                        Ingredient.ofItems(SmithingTemplateItems.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
-                        Ingredient.ofItems(BlankDiscItems.GOLD_BLANK_DISC.getItem()),
+                        Ingredient.ofItems(SmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
+                        Ingredient.ofItems(BlankDiscItem.GOLD_BLANK_DISC.getItem()),
                         Ingredient.ofItems(Items.DIAMOND),
                         RecipeCategory.MISC,
-                        BlankDiscItems.DIAMOND_BLANK_DISC.getItem()
+                        BlankDiscItem.DIAMOND_BLANK_DISC.getItem()
                 )
-                .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.GOLD_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.GOLD_BLANK_DISC.getItem()))
-                .offerTo(exporter, BlankDiscItems.DIAMOND_BLANK_DISC.getIdentifier());
+                .criterion(FabricRecipeProvider.hasItem(BlankDiscItem.GOLD_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItem.GOLD_BLANK_DISC.getItem()))
+                .offerTo(exporter, BlankDiscItem.DIAMOND_BLANK_DISC.getIdentifier());
 
         SmithingTransformRecipeJsonBuilder
                 .create(
-                        Ingredient.ofItems(SmithingTemplateItems.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
-                        Ingredient.ofItems(BlankDiscItems.GOLD_BLANK_DISC.getItem()),
+                        Ingredient.ofItems(SmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
+                        Ingredient.ofItems(BlankDiscItem.GOLD_BLANK_DISC.getItem()),
                         Ingredient.ofItems(Items.EMERALD),
                         RecipeCategory.MISC,
-                        BlankDiscItems.EMERALD_BLANK_DISC.getItem()
+                        BlankDiscItem.EMERALD_BLANK_DISC.getItem()
                 )
-                .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.GOLD_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.GOLD_BLANK_DISC.getItem()))
-                .offerTo(exporter, BlankDiscItems.EMERALD_BLANK_DISC.getIdentifier());
+                .criterion(FabricRecipeProvider.hasItem(BlankDiscItem.GOLD_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItem.GOLD_BLANK_DISC.getItem()))
+                .offerTo(exporter, BlankDiscItem.EMERALD_BLANK_DISC.getIdentifier());
 
         SmithingTransformRecipeJsonBuilder
                 .create(
-                        Ingredient.ofItems(SmithingTemplateItems.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
-                        Ingredient.ofItems(BlankDiscItems.DIAMOND_BLANK_DISC.getItem()),
+                        Ingredient.ofItems(SmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem()),
+                        Ingredient.ofItems(BlankDiscItem.DIAMOND_BLANK_DISC.getItem()),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
                         RecipeCategory.MISC,
-                        BlankDiscItems.NETHERITE_BLANK_DISC.getItem()
+                        BlankDiscItem.NETHERITE_BLANK_DISC.getItem()
                 )
-                .criterion(FabricRecipeProvider.hasItem(BlankDiscItems.DIAMOND_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItems.DIAMOND_BLANK_DISC.getItem()))
-                .offerTo(exporter, BlankDiscItems.NETHERITE_BLANK_DISC.getIdentifier());
+                .criterion(FabricRecipeProvider.hasItem(BlankDiscItem.DIAMOND_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItem.DIAMOND_BLANK_DISC.getItem()))
+                .offerTo(exporter, BlankDiscItem.NETHERITE_BLANK_DISC.getIdentifier());
     }
 }

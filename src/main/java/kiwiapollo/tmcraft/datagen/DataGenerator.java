@@ -1,9 +1,9 @@
 package kiwiapollo.tmcraft.datagen;
 
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItem;
-import kiwiapollo.tmcraft.item.misc.BlankBookItems;
-import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
-import kiwiapollo.tmcraft.item.misc.BlankEggItems;
+import kiwiapollo.tmcraft.item.misc.BlankBookItem;
+import kiwiapollo.tmcraft.item.misc.BlankDiscItem;
+import kiwiapollo.tmcraft.item.misc.BlankEggItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItem;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -59,10 +59,10 @@ public class DataGenerator implements DataGeneratorEntrypoint {
             Arrays.stream(TutorMoveItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.TUTOR_MOVES).add(item.getItem()));
             Arrays.stream(TutorMoveItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.STAR_MOVES).add(item.getItem()));
 
-            Arrays.stream(BlankDiscItems.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_DISCS).add(item.getItem()));
-            Arrays.stream(BlankEggItems.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_EGGS).add(item.getItem()));
-            Arrays.stream(BlankBookItems.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_BOOKS).add(item.getItem()));
-            Arrays.stream(BlankBookItems.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_STARS).add(item.getItem()));
+            Arrays.stream(BlankDiscItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_DISCS).add(item.getItem()));
+            Arrays.stream(BlankEggItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_EGGS).add(item.getItem()));
+            Arrays.stream(BlankBookItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_BOOKS).add(item.getItem()));
+            Arrays.stream(BlankBookItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_STARS).add(item.getItem()));
         }
     }
 }

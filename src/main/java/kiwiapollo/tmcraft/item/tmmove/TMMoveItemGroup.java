@@ -1,7 +1,7 @@
 package kiwiapollo.tmcraft.item.tmmove;
 
 import kiwiapollo.tmcraft.TMCraft;
-import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
+import kiwiapollo.tmcraft.item.misc.BlankDiscItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -14,7 +14,7 @@ public class TMMoveItemGroup {
     public static final Identifier ITEM_GROUP_ID = Identifier.of(TMCraft.MOD_ID, "tm_move_item_group");
 
     public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(BlankDiscItems.DIAMOND_BLANK_DISC.getItem()))
+            .icon(() -> new ItemStack(BlankDiscItem.DIAMOND_BLANK_DISC.getItem()))
             .displayName(Text.translatable("item_group.tmcraft.tm_move"))
             .build();
 

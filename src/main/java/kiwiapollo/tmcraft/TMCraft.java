@@ -43,7 +43,7 @@ public class TMCraft implements ModInitializer {
 			Registry.register(Registries.ITEM, block.getIdentifier(), block.getItem());
 		});
 
-		Arrays.stream(SmithingTemplateItems.values()).forEach(item -> {
+		Arrays.stream(SmithingTemplateItem.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
@@ -52,7 +52,7 @@ public class TMCraft implements ModInitializer {
 		});
 
 
-		Arrays.stream(BlankDiscItems.values()).forEach(item -> {
+		Arrays.stream(BlankDiscItem.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
@@ -61,7 +61,7 @@ public class TMCraft implements ModInitializer {
 		});
 
 
-		Arrays.stream(BlankEggItems.values()).forEach(item -> {
+		Arrays.stream(BlankEggItem.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
@@ -70,7 +70,7 @@ public class TMCraft implements ModInitializer {
 		});
 
 
-		Arrays.stream(BlankBookItems.values()).forEach(item -> {
+		Arrays.stream(BlankBookItem.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
@@ -79,7 +79,7 @@ public class TMCraft implements ModInitializer {
 		});
 
 
-		Arrays.stream(BlankStarItems.values()).forEach(item -> {
+		Arrays.stream(BlankStarItem.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
@@ -95,7 +95,7 @@ public class TMCraft implements ModInitializer {
 				itemGroup.add(block.getItem());
 			});
 
-			Arrays.stream(SmithingTemplateItems.values()).forEach(item -> {
+			Arrays.stream(SmithingTemplateItem.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 
@@ -103,19 +103,19 @@ public class TMCraft implements ModInitializer {
 				itemGroup.add(item.getItem());
 			});
 
-			Arrays.stream(BlankDiscItems.values()).forEach(item -> {
+			Arrays.stream(BlankDiscItem.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 
-			Arrays.stream(BlankEggItems.values()).forEach(item -> {
+			Arrays.stream(BlankEggItem.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 
-			Arrays.stream(BlankBookItems.values()).forEach(item -> {
+			Arrays.stream(BlankBookItem.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 
-			Arrays.stream(BlankStarItems.values()).forEach(item -> {
+			Arrays.stream(BlankStarItem.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 		});
