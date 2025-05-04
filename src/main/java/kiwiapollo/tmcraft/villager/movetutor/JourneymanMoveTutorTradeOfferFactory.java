@@ -1,6 +1,6 @@
 package kiwiapollo.tmcraft.villager.movetutor;
 
-import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
+import kiwiapollo.tmcraft.item.tutormove.TutorMoveItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.village.TradeOffer;
@@ -14,24 +14,24 @@ public class JourneymanMoveTutorTradeOfferFactory extends MoveTutorTradeOfferFac
     private static final int EMERALD_COUNT = 16;
     private static final int TYPE_GEM_COUNT = 1;
 
-    private static final List<TutorMoveItems> MOVES = List.of(
-            TutorMoveItems.TUTOR_AQUATAIL,
-            TutorMoveItems.TUTOR_FLOATYFALL,
-            TutorMoveItems.TUTOR_SPLISHYSPLASH,
-            TutorMoveItems.TUTOR_BOUNCYBUBBLE,
-            TutorMoveItems.TUTOR_BUZZYBUZZ,
-            TutorMoveItems.TUTOR_SIZZLYSLIDE,
-            TutorMoveItems.TUTOR_BADDYBAD,
-            TutorMoveItems.TUTOR_SAPPYSEED,
-            TutorMoveItems.TUTOR_FREEZYFROST,
-            TutorMoveItems.TUTOR_SPARKLYSWIRL
+    private static final List<TutorMoveItem> MOVES = List.of(
+            TutorMoveItem.TUTOR_AQUATAIL,
+            TutorMoveItem.TUTOR_FLOATYFALL,
+            TutorMoveItem.TUTOR_SPLISHYSPLASH,
+            TutorMoveItem.TUTOR_BOUNCYBUBBLE,
+            TutorMoveItem.TUTOR_BUZZYBUZZ,
+            TutorMoveItem.TUTOR_SIZZLYSLIDE,
+            TutorMoveItem.TUTOR_BADDYBAD,
+            TutorMoveItem.TUTOR_SAPPYSEED,
+            TutorMoveItem.TUTOR_FREEZYFROST,
+            TutorMoveItem.TUTOR_SPARKLYSWIRL
     );
 
     @Override
     public @Nullable TradeOffer create(Entity entity, Random random) {
-        List<TutorMoveItems> offers = new ArrayList<>(MOVES);
+        List<TutorMoveItem> offers = new ArrayList<>(MOVES);
         Collections.shuffle(offers);
-        TutorMoveItems move = offers.get(0);
+        TutorMoveItem move = offers.get(0);
 
         return new TradeOffer(
                 getEmeraldBuyItem(EMERALD_COUNT),

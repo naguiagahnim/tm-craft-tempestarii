@@ -4,8 +4,8 @@ import com.cobblemon.mod.common.CobblemonItems;
 import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
 import kiwiapollo.tmcraft.common.TypeGemFactory;
 import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
+import kiwiapollo.tmcraft.item.tmmove.TMMoveTeachingItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
-import kiwiapollo.tmcraft.item.tmmove.TMMoveItems;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -17,47 +17,47 @@ import java.util.function.Consumer;
 
 public class CopperTMRecipeGenerator implements RecipeGenerator {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_PINMISSILE.getItem())
+        CopperTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PINMISSILE.getItem())
                 .input(Items.CACTUS)
                 .offerTo(exporter);
 
-        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_BULLETSEED.getItem())
+        CopperTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BULLETSEED.getItem())
                 .input(CobblemonItemTags.SEEDS)
                 .offerTo(exporter);
 
-        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ABSORB.getItem())
+        CopperTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ABSORB.getItem())
                 .input(Items.SPONGE)
                 .offerTo(exporter);
 
-        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ICICLESPEAR.getItem())
+        CopperTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ICICLESPEAR.getItem())
                 .input(Items.POINTED_DRIPSTONE)
                 .offerTo(exporter);
 
-        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SCALESHOT.getItem())
+        CopperTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SCALESHOT.getItem())
                 .input(CobblemonItems.DRAGON_SCALE)
                 .offerTo(exporter);
 
-        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ROCKBLAST.getItem())
+        CopperTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ROCKBLAST.getItem())
                 .input(Items.DISPENSER)
                 .offerTo(exporter);
 
-        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MUDSLAP.getItem())
+        CopperTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_MUDSLAP.getItem())
                 .input(Items.MUD)
                 .offerTo(exporter);
 
-        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_TRIPLEAXEL.getItem())
+        CopperTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_TRIPLEAXEL.getItem())
                 .input(CobblemonItems.HEAVY_DUTY_BOOTS)
                 .offerTo(exporter);
 
-        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_STOREDPOWER.getItem())
+        CopperTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_STOREDPOWER.getItem())
                 .input(Items.BARREL)
                 .offerTo(exporter);
 
-        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_INFESTATION.getItem())
+        CopperTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_INFESTATION.getItem())
                 .input(Items.COBWEB)
                 .offerTo(exporter);
 
-        CopperTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_RAGE.getItem())
+        CopperTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_RAGE.getItem())
                 .input(Items.EMERALD)
                 .input(Items.IRON_SWORD)
                 .offerTo(exporter);
@@ -68,7 +68,7 @@ public class CopperTMRecipeGenerator implements RecipeGenerator {
             super(RecipeCategory.MISC, output, 1);
         }
 
-        public static CopperTMRecipeJsonBuilder create(TMMoveItem item) {
+        public static CopperTMRecipeJsonBuilder create(TMMoveTeachingItem item) {
             return (CopperTMRecipeJsonBuilder) new CopperTMRecipeJsonBuilder(item)
                     .input(BlankDiscItems.COPPER_BLANK_DISC.getItem())
                     .input(new TypeGemFactory().create(item.getMoveType()))

@@ -1,6 +1,6 @@
 package kiwiapollo.tmcraft.villager.movetutor;
 
-import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
+import kiwiapollo.tmcraft.item.tutormove.TutorMoveItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.village.TradeOffer;
@@ -14,24 +14,24 @@ public class ApprenticeMoveTutorTradeOfferFactory extends MoveTutorTradeOfferFac
     private static final int EMERALD_COUNT = 10;
     private static final int TYPE_GEM_COUNT = 1;
 
-    private static final List<TutorMoveItems> MOVES = List.of(
-            TutorMoveItems.TUTOR_FEINTATTACK,
-            TutorMoveItems.TUTOR_OMINOUSWIND,
-            TutorMoveItems.TUTOR_SUCKERPUNCH,
-            TutorMoveItems.TUTOR_ANCIENTPOWER,
-            TutorMoveItems.TUTOR_SIGNALBEAM,
-            TutorMoveItems.TUTOR_RELICSONG,
-            TutorMoveItems.TUTOR_SECRETSWORD,
-            TutorMoveItems.TUTOR_COVET,
-            TutorMoveItems.TUTOR_RISINGVOLTAGE,
-            TutorMoveItems.TUTOR_KNOCKOFF
+    private static final List<TutorMoveItem> MOVES = List.of(
+            TutorMoveItem.TUTOR_FEINTATTACK,
+            TutorMoveItem.TUTOR_OMINOUSWIND,
+            TutorMoveItem.TUTOR_SUCKERPUNCH,
+            TutorMoveItem.TUTOR_ANCIENTPOWER,
+            TutorMoveItem.TUTOR_SIGNALBEAM,
+            TutorMoveItem.TUTOR_RELICSONG,
+            TutorMoveItem.TUTOR_SECRETSWORD,
+            TutorMoveItem.TUTOR_COVET,
+            TutorMoveItem.TUTOR_RISINGVOLTAGE,
+            TutorMoveItem.TUTOR_KNOCKOFF
     );
 
     @Override
     public @Nullable TradeOffer create(Entity entity, Random random) {
-        List<TutorMoveItems> offers = new ArrayList<>(MOVES);
+        List<TutorMoveItem> offers = new ArrayList<>(MOVES);
         Collections.shuffle(offers);
-        TutorMoveItems move = offers.get(0);
+        TutorMoveItem move = offers.get(0);
 
         return new TradeOffer(
                 getEmeraldBuyItem(EMERALD_COUNT),

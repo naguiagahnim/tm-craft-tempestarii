@@ -3,8 +3,8 @@ package kiwiapollo.tmcraft.datagen;
 import com.cobblemon.mod.common.CobblemonItems;
 import kiwiapollo.tmcraft.common.TypeGemFactory;
 import kiwiapollo.tmcraft.item.misc.BlankDiscItems;
+import kiwiapollo.tmcraft.item.tmmove.TMMoveTeachingItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
-import kiwiapollo.tmcraft.item.tmmove.TMMoveItems;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -17,138 +17,138 @@ import java.util.function.Consumer;
 
 public class NetheriteTMRecipeGenerator implements RecipeGenerator {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_GIGAIMPACT.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_GIGAIMPACT.getItem())
                 .input(Items.END_CRYSTAL)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_HYPERBEAM.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HYPERBEAM.getItem())
                 .input(Items.SCULK_SHRIEKER)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MEGAKICK.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_MEGAKICK.getItem())
                 .input(CobblemonItems.EXPERT_BELT)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SELFDESTRUCT.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SELFDESTRUCT.getItem())
                 .input(Items.TNT)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SOLARBEAM.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SOLARBEAM.getItem())
                 .input(CobblemonItems.SUN_STONE)
                 .input(Items.END_ROD)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DOUBLEEDGE.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DOUBLEEDGE.getItem())
                 .input(Items.IRON_SWORD)
                 .input(Items.IRON_SWORD)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_MEGAHORN.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_MEGAHORN.getItem())
                 .input(Items.GOAT_HORN)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SUPERPOWER.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SUPERPOWER.getItem())
                 .input(CobblemonItems.POWER_BRACER)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_DRACOMETEOR.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DRACOMETEOR.getItem())
                 .input(Items.FIREWORK_STAR)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FLAREBLITZ.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FLAREBLITZ.getItem())
                 .input(Items.ELYTRA)
                 .input(Items.FIREWORK_ROCKET)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SOLARBLADE.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SOLARBLADE.getItem())
                 .input(CobblemonItems.SUN_STONE)
                 .input(Items.IRON_SWORD)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_BLASTBURN.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BLASTBURN.getItem())
                 .input(Items.END_CRYSTAL)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_HYDROCANNON.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HYDROCANNON.getItem())
                 .input(Items.END_CRYSTAL)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FRENZYPLANT.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FRENZYPLANT.getItem())
                 .input(Items.END_CRYSTAL)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_OUTRAGE.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_OUTRAGE.getItem())
                 .input(CobblemonItems.DRAGON_SCALE)
                 .input(CobblemonItems.DRAGON_FANG)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_OVERHEAT.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_OVERHEAT.getItem())
                 .input(Items.LAVA_BUCKET)
                 .input(Items.LAVA_BUCKET)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FOCUSBLAST.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FOCUSBLAST.getItem())
                 .input(Items.BOW)
                 .input(Items.CROSSBOW)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_LEAFSTORM.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_LEAFSTORM.getItem())
                 .input(ItemTags.LEAVES)
                 .input(Items.FEATHER)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_METEORBEAM.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_METEORBEAM.getItem())
                 .input(Items.END_ROD)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FUTURESIGHT.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FUTURESIGHT.getItem())
                 .input(Items.SPYGLASS)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_BRAVEBIRD.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BRAVEBIRD.getItem())
                 .input(CobblemonItems.SHARP_BEAK)
                 .input(Items.FEATHER)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_CLOSECOMBAT.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_CLOSECOMBAT.getItem())
                 .input(CobblemonItems.FOCUS_BAND)
                 .input(CobblemonItems.FOCUS_SASH)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_STEELBEAM.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_STEELBEAM.getItem())
                 .input(Items.END_ROD)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FOCUSPUNCH.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FOCUSPUNCH.getItem())
                 .input(CobblemonItems.CELL_BATTERY)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_GUNKSHOT.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_GUNKSHOT.getItem())
                 .input(Items.DISPENSER)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_EXPLOSION.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_EXPLOSION.getItem())
                 .input(Items.END_CRYSTAL, 3)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_HORNDRILL.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HORNDRILL.getItem())
                 .input(Items.NETHERITE_PICKAXE)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_FISSURE.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FISSURE.getItem())
                 .input(Items.NETHERITE_SHOVEL)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SKULLBASH.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SKULLBASH.getItem())
                 .input(Items.WITHER_SKELETON_SKULL)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_ZAPCANNON.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ZAPCANNON.getItem())
                 .input(Items.LIGHTNING_ROD)
                 .input(Items.DISPENSER)
                 .offerTo(exporter);
 
-        NetheriteTMRecipeJsonBuilder.create((TMMoveItem) TMMoveItems.TM_SKYATTACK.getItem())
+        NetheriteTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SKYATTACK.getItem())
                 .input(Items.ELYTRA)
                 .input(Items.FIREWORK_ROCKET)
                 .offerTo(exporter);
@@ -159,7 +159,7 @@ public class NetheriteTMRecipeGenerator implements RecipeGenerator {
             super(RecipeCategory.MISC, output, 1);
         }
 
-        public static NetheriteTMRecipeJsonBuilder create(TMMoveItem item) {
+        public static NetheriteTMRecipeJsonBuilder create(TMMoveTeachingItem item) {
             return (NetheriteTMRecipeJsonBuilder) new NetheriteTMRecipeJsonBuilder(item)
                     .input(BlankDiscItems.NETHERITE_BLANK_DISC.getItem())
                     .input(new TypeGemFactory().create(item.getMoveType()))

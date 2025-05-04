@@ -1,7 +1,6 @@
 package kiwiapollo.tmcraft.villager.pokemonbreeder;
 
-import kiwiapollo.tmcraft.item.eggmove.EggMoveItems;
-import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
+import kiwiapollo.tmcraft.item.eggmove.EggMoveItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.village.TradeOffer;
@@ -15,24 +14,24 @@ public class MasterPokemonBreederTradeOfferFactory extends PokemonBreederTradeOf
     private static final int EMERALD_COUNT = 22;
     private static final int TYPE_GEM_COUNT = 3;
 
-    private static final List<EggMoveItems> MOVES = List.of(
-            EggMoveItems.EGG_PETALDANCE,
-            EggMoveItems.EGG_POWERWHIP,
-            EggMoveItems.EGG_THRASH,
-            EggMoveItems.EGG_SYNCHRONOISE,
-            EggMoveItems.EGG_RAGINGFURY,
-            EggMoveItems.EGG_BURNUP,
-            EggMoveItems.EGG_LASTRESORT,
-            EggMoveItems.EGG_BOOMBURST,
-            EggMoveItems.EGG_WATERSPOUT,
-            EggMoveItems.EGG_HEADSMASH
+    private static final List<EggMoveItem> MOVES = List.of(
+            EggMoveItem.EGG_PETALDANCE,
+            EggMoveItem.EGG_POWERWHIP,
+            EggMoveItem.EGG_THRASH,
+            EggMoveItem.EGG_SYNCHRONOISE,
+            EggMoveItem.EGG_RAGINGFURY,
+            EggMoveItem.EGG_BURNUP,
+            EggMoveItem.EGG_LASTRESORT,
+            EggMoveItem.EGG_BOOMBURST,
+            EggMoveItem.EGG_WATERSPOUT,
+            EggMoveItem.EGG_HEADSMASH
     );
 
     @Override
     public @Nullable TradeOffer create(Entity entity, Random random) {
-        List<EggMoveItems> offers = new ArrayList<>(MOVES);
+        List<EggMoveItem> offers = new ArrayList<>(MOVES);
         Collections.shuffle(offers);
-        EggMoveItems move = offers.get(0);
+        EggMoveItem move = offers.get(0);
 
         return new TradeOffer(
                 getEmeraldBuyItem(EMERALD_COUNT),

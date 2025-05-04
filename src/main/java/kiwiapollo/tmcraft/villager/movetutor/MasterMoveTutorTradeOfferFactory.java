@@ -1,6 +1,6 @@
 package kiwiapollo.tmcraft.villager.movetutor;
 
-import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
+import kiwiapollo.tmcraft.item.tutormove.TutorMoveItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.village.TradeOffer;
@@ -14,18 +14,18 @@ public class MasterMoveTutorTradeOfferFactory extends MoveTutorTradeOfferFactory
     private static final int EMERALD_COUNT = 22;
     private static final int TYPE_GEM_COUNT = 3;
 
-    private static final List<TutorMoveItems> MOVES = List.of(
-            TutorMoveItems.TUTOR_LASTRESORT,
-            TutorMoveItems.TUTOR_DRAGONASCENT,
-            TutorMoveItems.TUTOR_VOLTTACKLE,
-            TutorMoveItems.TUTOR_STEELROLLER
+    private static final List<TutorMoveItem> MOVES = List.of(
+            TutorMoveItem.TUTOR_LASTRESORT,
+            TutorMoveItem.TUTOR_DRAGONASCENT,
+            TutorMoveItem.TUTOR_VOLTTACKLE,
+            TutorMoveItem.TUTOR_STEELROLLER
     );
 
     @Override
     public @Nullable TradeOffer create(Entity entity, Random random) {
-        List<TutorMoveItems> offers = new ArrayList<>(MOVES);
+        List<TutorMoveItem> offers = new ArrayList<>(MOVES);
         Collections.shuffle(offers);
-        TutorMoveItems move = offers.get(0);
+        TutorMoveItem move = offers.get(0);
 
         return new TradeOffer(
                 getEmeraldBuyItem(EMERALD_COUNT),

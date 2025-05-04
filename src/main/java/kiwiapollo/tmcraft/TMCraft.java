@@ -2,15 +2,15 @@ package kiwiapollo.tmcraft;
 
 import kiwiapollo.tmcraft.block.ModBlock;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItemGroup;
-import kiwiapollo.tmcraft.item.eggmove.EggMoveItems;
+import kiwiapollo.tmcraft.item.eggmove.EggMoveItem;
 import kiwiapollo.tmcraft.item.misc.*;
 import kiwiapollo.tmcraft.item.moverecorder.MoveRecorderItems;
 import kiwiapollo.tmcraft.item.starmove.StarMoveItemGroup;
-import kiwiapollo.tmcraft.item.starmove.StarMoveItems;
+import kiwiapollo.tmcraft.item.starmove.StarMoveItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItemGroup;
-import kiwiapollo.tmcraft.item.tmmove.TMMoveItems;
+import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItemGroup;
-import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
+import kiwiapollo.tmcraft.item.tutormove.TutorMoveItem;
 import kiwiapollo.tmcraft.villager.movetutor.MoveTutorTradeOffer;
 import kiwiapollo.tmcraft.villager.movetutor.MoveTutorVillager;
 import kiwiapollo.tmcraft.villager.pokemonbreeder.PokemonBreederTradeOffer;
@@ -56,7 +56,7 @@ public class TMCraft implements ModInitializer {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
-		Arrays.stream(TMMoveItems.values()).forEach(item -> {
+		Arrays.stream(TMMoveItem.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
@@ -65,7 +65,7 @@ public class TMCraft implements ModInitializer {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
-		Arrays.stream(EggMoveItems.values()).forEach(item -> {
+		Arrays.stream(EggMoveItem.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
@@ -74,7 +74,7 @@ public class TMCraft implements ModInitializer {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
-		Arrays.stream(TutorMoveItems.values()).forEach(item -> {
+		Arrays.stream(TutorMoveItem.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
@@ -83,7 +83,7 @@ public class TMCraft implements ModInitializer {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
-		Arrays.stream(StarMoveItems.values()).forEach(item -> {
+		Arrays.stream(StarMoveItem.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
@@ -124,7 +124,7 @@ public class TMCraft implements ModInitializer {
 		Registry.register(Registries.ITEM_GROUP, TMMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, TMMoveItemGroup.ITEM_GROUP);
 
 		ItemGroupEvents.modifyEntriesEvent(TMMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(TMMoveItems.values()).forEach(item -> {
+			Arrays.stream(TMMoveItem.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 		});
@@ -133,7 +133,7 @@ public class TMCraft implements ModInitializer {
 		Registry.register(Registries.ITEM_GROUP, EggMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, EggMoveItemGroup.ITEM_GROUP);
 
 		ItemGroupEvents.modifyEntriesEvent(EggMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(EggMoveItems.values()).forEach(item -> {
+			Arrays.stream(EggMoveItem.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 		});
@@ -142,7 +142,7 @@ public class TMCraft implements ModInitializer {
 		Registry.register(Registries.ITEM_GROUP, TutorMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, TutorMoveItemGroup.ITEM_GROUP);
 
 		ItemGroupEvents.modifyEntriesEvent(TutorMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(TutorMoveItems.values()).forEach(item -> {
+			Arrays.stream(TutorMoveItem.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 		});
@@ -151,7 +151,7 @@ public class TMCraft implements ModInitializer {
 		Registry.register(Registries.ITEM_GROUP, StarMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, StarMoveItemGroup.ITEM_GROUP);
 
 		ItemGroupEvents.modifyEntriesEvent(StarMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(StarMoveItems.values()).forEach(item -> {
+			Arrays.stream(StarMoveItem.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 		});

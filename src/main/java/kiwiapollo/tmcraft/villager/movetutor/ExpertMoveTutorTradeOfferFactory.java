@@ -1,6 +1,6 @@
 package kiwiapollo.tmcraft.villager.movetutor;
 
-import kiwiapollo.tmcraft.item.tutormove.TutorMoveItems;
+import kiwiapollo.tmcraft.item.tutormove.TutorMoveItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.village.TradeOffer;
@@ -14,27 +14,27 @@ public class ExpertMoveTutorTradeOfferFactory extends MoveTutorTradeOfferFactory
     private static final int EMERALD_COUNT = 16;
     private static final int TYPE_GEM_COUNT = 1;
 
-    private static final List<TutorMoveItems> MOVES = List.of(
-            TutorMoveItems.TUTOR_HYPNOSIS,
-            TutorMoveItems.TUTOR_ROLEPLAY,
-            TutorMoveItems.TUTOR_MAGNETRISE,
-            TutorMoveItems.TUTOR_SYNTHESIS,
-            TutorMoveItems.TUTOR_GASTROACID,
-            TutorMoveItems.TUTOR_BLOCK,
-            TutorMoveItems.TUTOR_HEALBELL,
-            TutorMoveItems.TUTOR_MAGICCOAT,
-            TutorMoveItems.TUTOR_STRINGSHOT,
-            TutorMoveItems.TUTOR_WORRYSEED,
-            TutorMoveItems.TUTOR_AFTERYOU,
-            TutorMoveItems.TUTOR_LASERFOCUS,
-            TutorMoveItems.TUTOR_CORROSIVEGAS
+    private static final List<TutorMoveItem> MOVES = List.of(
+            TutorMoveItem.TUTOR_HYPNOSIS,
+            TutorMoveItem.TUTOR_ROLEPLAY,
+            TutorMoveItem.TUTOR_MAGNETRISE,
+            TutorMoveItem.TUTOR_SYNTHESIS,
+            TutorMoveItem.TUTOR_GASTROACID,
+            TutorMoveItem.TUTOR_BLOCK,
+            TutorMoveItem.TUTOR_HEALBELL,
+            TutorMoveItem.TUTOR_MAGICCOAT,
+            TutorMoveItem.TUTOR_STRINGSHOT,
+            TutorMoveItem.TUTOR_WORRYSEED,
+            TutorMoveItem.TUTOR_AFTERYOU,
+            TutorMoveItem.TUTOR_LASERFOCUS,
+            TutorMoveItem.TUTOR_CORROSIVEGAS
     );
 
     @Override
     public @Nullable TradeOffer create(Entity entity, Random random) {
-        List<TutorMoveItems> offers = new ArrayList<>(MOVES);
+        List<TutorMoveItem> offers = new ArrayList<>(MOVES);
         Collections.shuffle(offers);
-        TutorMoveItems move = offers.get(0);
+        TutorMoveItem move = offers.get(0);
 
         return new TradeOffer(
                 getEmeraldBuyItem(EMERALD_COUNT),
