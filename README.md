@@ -67,6 +67,10 @@ Pokémon Breeder villagers sell Egg Move Items. (>=1.4.6)
 - Translations
 - TM Item Textures
 
+## Translation
+
+- [Voldir](https://discordapp.com/users/291233979196243968) (French)
+
 ## Credits
 - [SimpleTMsFabric](https://github.com/Dragomordor/SimpleTMsFabric)
 - [Cobblemon Assets](https://gitlab.com/cable-mc/cobblemon-assets)
