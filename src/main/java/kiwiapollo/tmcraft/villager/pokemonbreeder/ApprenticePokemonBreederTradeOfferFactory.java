@@ -38,7 +38,8 @@ public class ApprenticePokemonBreederTradeOfferFactory extends PokemonBreederTra
             EggMoveItem.EGG_CHIPAWAY,
             EggMoveItem.EGG_SMELLINGSALTS,
             EggMoveItem.EGG_FREEZEDRY,
-            EggMoveItem.EGG_CRUSHCLAW
+            EggMoveItem.EGG_CRUSHCLAW,
+            EggMoveItem.EGG_PARTINGSHOT
     );
 
     @Override
