@@ -24,7 +24,8 @@ public class JourneymanMoveTutorTradeOfferFactory extends MoveTutorTradeOfferFac
             TutorMoveItem.TUTOR_BADDYBAD,
             TutorMoveItem.TUTOR_SAPPYSEED,
             TutorMoveItem.TUTOR_FREEZYFROST,
-            TutorMoveItem.TUTOR_SPARKLYSWIRL
+            TutorMoveItem.TUTOR_SPARKLYSWIRL,
+            TutorMoveItem.TUTOR_GLITZYGLOW
     );
 
     @Override
