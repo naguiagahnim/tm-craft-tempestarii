@@ -938,8 +938,24 @@ public enum TutorMoveItem {
     TUTOR_THUNDERCLAP("thunderclap", ElementalTypes.INSTANCE.getELECTRIC()),
     TUTOR_MIGHTYCLEAVE("mightycleave", ElementalTypes.INSTANCE.getROCK()),
     TUTOR_TACHYONCUTTER("tachyoncutter", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_TERASTARSTORM("terastarstorm", ElementalTypes.INSTANCE.getNORMAL());
-
+    TUTOR_TERASTARSTORM("terastarstorm", ElementalTypes.INSTANCE.getNORMAL()),
+	TUTOR_BENEDICTION("benediction", ElementalTypes.INSTANCE.getFAIRY()),
+	TUTOR_BLADESFLURRY("bladesflurry", ElementalTypes.INSTANCE.getSTEEL()),
+	TUTOR_CLEANCUT("cleancut", ElementalTypes.INSTANCE.getSTEEL()),
+	TUTOR_CRAGGYSHOULDERBASH("craggyshoulderbash", ElementalTypes.INSTANCE.getROCK()),
+	TUTOR_CUNNINGSTRIKE("cunningstrike", ElementalTypes.INSTANCE.getDARK()),
+	TUTOR_FLASHFREEZE("flashfreeze", ElementalTypes.INSTANCE.getICE()),
+	TUTOR_FRIGIDVAULT("frigidvault", ElementalTypes.INSTANCE.getICE()),
+	TUTOR_HEAVYARTILLERY("heavyartillery", ElementalTypes.INSTANCE.getSTEEL()),
+	TUTOR_HOARFROSTCRUSH("hoarfrostcrush", ElementalTypes.INSTANCE.getICE()),
+	TUTOR_ICEBREAKER("icebreaker", ElementalTypes.INSTANCE.getICE()),
+	TUTOR_JOLTRUSH("joltrush", ElementalTypes.INSTANCE.getELECTRIC()),
+	TUTOR_NOSEDIVE("nosedive", ElementalTypes.INSTANCE.getFLYING()),
+	TUTOR_PILEUP("pileup", ElementalTypes.INSTANCE.getELECTRIC()),
+	TUTOR_QUICKSHOT("quickshot", ElementalTypes.INSTANCE.getSTEEL()),
+	TUTOR_SHADOWSPLINTERS("shadowsplinters", ElementalTypes.INSTANCE.getGHOST()),
+	TUTOR_VICIOUSIRE("viciousire", ElementalTypes.INSTANCE.getDARK());
+	
     private final Item item;
     private final Identifier identifier;
 
