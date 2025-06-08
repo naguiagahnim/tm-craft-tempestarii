@@ -939,6 +939,7 @@ public enum TutorMoveItem {
     TUTOR_MIGHTYCLEAVE("mightycleave", ElementalTypes.INSTANCE.getROCK()),
     TUTOR_TACHYONCUTTER("tachyoncutter", ElementalTypes.INSTANCE.getSTEEL()),
     TUTOR_TERASTARSTORM("terastarstorm", ElementalTypes.INSTANCE.getNORMAL()),
+    
 	TUTOR_BENEDICTION("benediction", ElementalTypes.INSTANCE.getFAIRY()),
 	TUTOR_BLADESFLURRY("bladesflurry", ElementalTypes.INSTANCE.getSTEEL()),
 	TUTOR_CLEANCUT("cleancut", ElementalTypes.INSTANCE.getSTEEL()),
@@ -954,6 +955,7 @@ public enum TutorMoveItem {
 	TUTOR_PILEUP("pileup", ElementalTypes.INSTANCE.getELECTRIC()),
 	TUTOR_QUICKSHOT("quickshot", ElementalTypes.INSTANCE.getSTEEL()),
 	TUTOR_SHADOWSPLINTERS("shadowsplinters", ElementalTypes.INSTANCE.getGHOST()),
+	TUTOR_NEEDLEICE("needleice", ElementalTypes.INSTANCE.getICE()),
 	TUTOR_VICIOUSIRE("viciousire", ElementalTypes.INSTANCE.getDARK());
 	
     private final Item item;

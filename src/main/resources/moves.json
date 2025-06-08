@@ -5584,5 +5584,107 @@
     "formatname": "Tera Starstorm",
     "typing": "normal",
     "id": "906"
+  },
+  {
+    "move": "benediction",
+    "formatname": "Bénédiction",
+    "typing": "fairy",
+    "id": "2508"
+  },
+  {
+	"move": "bladesflurry",
+	"formatname": "Blade's Flurry",
+	"typing": "steel",
+	"id": "2502"
+  },
+  {
+  "move": "cleancut",
+  "formatname": "Clean Cut",
+  "typing": "steel",
+  "id": "2503"
+  },
+  {
+  "move": "craggyshoulderbash",
+  "formatname": "Craggy Shoulderbash",
+  "typing": "rock",
+  "id": "2514"
+  },
+  {
+  "move": "cunningstrike",
+  "formatname": "Cunning Strike",
+  "typing": "dark",
+  "id": "2501"
+  },
+  {
+  "move": "flashfreeze",
+  "formatname": "Flash Freeze",
+  "typing": "ice",
+  "id": "2509"
+  },
+  {
+  "move": "frigidvault",
+  "formatname": "Frigid Vault",
+  "typing": "ice",
+  "id": "2520"
+  },
+  {
+  "move": "heavyartillery",
+  "formatname": "Heavy Artillery",
+  "typing": "steel",
+  "id": "2505"
+  },
+  {
+  "move": "hoarfrostcrush",
+  "formatname": "Hoarfrost Crush",
+  "typing": "ice",
+  "id": "2519"
+  },
+  {
+  "move": "icebreaker",
+  "formatname": "Ice Breaker",
+  "typing": "ice",
+  "id": "2515"
+  },
+  {
+  "move": "joltrush",
+  "formatname": "Jolt Rush",
+  "typing": "electric",
+  "id": "2507"
+  },
+  {
+  "move": "nosedive",
+  "formatname": "Nosedive",
+  "typing": "flying",
+  "id": "2517"
+  },
+  {
+  "move": "pileup",
+  "formatname": "Pile Up",
+  "typing": "ice",
+  "id": "2518"
+  },
+  {
+  "move": "quickshot",
+  "formatname": "Quickshot",
+  "typing": "steel",
+  "id": "2510"
+  },
+  {
+  "move": "shadowsplinters",
+  "formatname": "Shadow Splinters",
+  "typing": "ghost",
+  "id": "2504"
+  },
+  {
+  "move": "viciousire",
+  "formatname": "Vicious Ire",
+  "typing": "dark",
+  "id": "2506"
+  },
+  {
+  "move": "needleice",
+  "formatname": "Needle Ice",
+  "typing": "ice",
+  "id": "2551"
   }
 ]
