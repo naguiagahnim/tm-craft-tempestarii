@@ -301,7 +301,7 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_TEMPERFLARE.getItem())
-                .input(Items.SOUL_CAMPFIRE)
+                .input(Items.FLINT_AND_STEEL)
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ENDEAVOR.getItem())
