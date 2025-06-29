@@ -1,6 +1,7 @@
 package kiwiapollo.tmcraft.item.tmmove;
 
 import com.cobblemon.mod.common.api.types.ElementalType;
+import com.cobblemon.mod.common.battles.pokemon.BattlePokemon;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import kiwiapollo.tmcraft.item.MoveTeachingItem;
 

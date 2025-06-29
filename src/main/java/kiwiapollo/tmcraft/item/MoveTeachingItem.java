@@ -166,7 +166,7 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
             itemStack.decrement(1);
         }
 
-        player.sendMessage(Text.translatable("item.tmcraft.success.pokemon_learned_move", pokemon.getDisplayName(), getMoveTemplate().getDisplayName()));
+        player.sendMessage(Text.translatable("item.tmcraft.success.pokemon_learned_move", pokemon.getDisplayName(false), getMoveTemplate().getDisplayName()));
         player.getWorld().playSound(null, player.getBlockPos(), CobblemonSounds.PC_CLICK, SoundCategory.PLAYERS, 1.0f, 1.0f);
 
         return ActionResult.SUCCESS;
