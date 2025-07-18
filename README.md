@@ -63,9 +63,8 @@ Pokémon Breeder villagers sell Egg Move Items. (>=1.4.6)
 ### GPL 3.0
 - Source Code
 
-### CC BY-NC-SA 4.0
-- Translations
-- TM Item Textures
+### CC BY-NC-SA 4.0 International
+- Assets
 
 ## Translation
 
