@@ -17,7 +17,8 @@ public enum SmithingTemplateItem {
             List.of(
                     Identifier.of(TMCraft.MOD_ID, "item/empty_slot_disc"),
                     Identifier.of(TMCraft.MOD_ID, "item/empty_slot_egg"),
-                    Identifier.of(TMCraft.MOD_ID, "item/empty_slot_book")
+                    Identifier.of(TMCraft.MOD_ID, "item/empty_slot_book"),
+                    Identifier.of(TMCraft.MOD_ID, "item/empty_slot_star")
             ),
             List.of(
                     Identifier.of(Identifier.DEFAULT_NAMESPACE, "item/empty_slot_ingot"),
