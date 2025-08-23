@@ -111,7 +111,7 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
             return TypedActionResult.pass(itemStack);
         }
 
-        teachPokemonMove(pokemon, move);
+        teachPokemonMove(pokemon);
 
         if (shouldConsumeItemByGameRule(player.getServerWorld()) && !player.isCreative()) {
             itemStack.decrement(1);
@@ -160,7 +160,7 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
         return Objects.requireNonNull(Moves.INSTANCE.getByName(move));
     }
 
-    protected void teachPokemonMove(Pokemon pokemon, String move) {
+    protected void teachPokemonMove(Pokemon pokemon) {
         if (pokemon.getMoveSet().hasSpace()) {
             pokemon.getMoveSet().add(getMoveTemplate().create());
 
