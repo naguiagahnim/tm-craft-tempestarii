@@ -69,17 +69,17 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (getMoveTemplate().getDamageCategory() == DamageCategories.INSTANCE.getSTATUS()) {
-            tooltip.add(getMoveTypeTooltipText(type));
+            tooltip.add(getMoveTypeTooltipText());
             tooltip.add(getMoveDamageCategoryTooltipText());
 
         } else {
-            tooltip.add(getMoveTypeTooltipText(type));
+            tooltip.add(getMoveTypeTooltipText());
             tooltip.add(getMoveDamageCategoryTooltipText());
             tooltip.add(getMovePowerTooltipText());
         }
     }
 
-    protected Text getMoveTypeTooltipText(ElementalType type) {
+    protected Text getMoveTypeTooltipText() {
         return type.getDisplayName().setStyle(Style.EMPTY.withColor(type.getHue()));
     }
 
