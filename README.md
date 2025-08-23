@@ -58,6 +58,12 @@ Move Tutor villagers sell Tutor Moves Items. (>=1.4.4)
 
 Pokémon Breeder villagers sell Egg Move Items. (>=1.4.6)
 
+## Game Rule
+
+### `consumeMoveItemOnUse`
+
+If set to `true` (default), Move Items are consumed when used. Affects globally to TM Move Items, Egg Move Items, Tutor Move Items and Star Move Items. 
+
 ## LICENSE
 
 ### GPL 3.0
