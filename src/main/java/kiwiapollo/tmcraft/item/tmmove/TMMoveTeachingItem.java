@@ -1,24 +1,21 @@
 package kiwiapollo.tmcraft.item.tmmove;
 
-import com.cobblemon.mod.common.api.moves.Move;
-import com.cobblemon.mod.common.api.moves.MoveTemplate;
-import com.cobblemon.mod.common.api.moves.Moves;
+import com.cobblemon.mod.common.api.item.PokemonSelectingItem;
 import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import kiwiapollo.tmcraft.item.ElementalTypeItem;
 import kiwiapollo.tmcraft.item.MoveTeachingItem;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
-import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
-import java.util.Objects;
-
-public class TMMoveTeachingItem extends MoveTeachingItem {
+public class TMMoveTeachingItem extends MoveTeachingItem implements ElementalTypeItem, PokemonSelectingItem {
     public TMMoveTeachingItem(String move, ElementalType type) {
         super(move, type);
     }
-    protected boolean canPokemonLearnMove(PlayerEntity player, Pokemon pokemon) {
+
+    protected boolean canPokemonLearnMove(ServerPlayerEntity player, Pokemon pokemon) {
         if (!isMoveExist()) {
             return false;
         }
@@ -40,44 +37,11 @@ public class TMMoveTeachingItem extends MoveTeachingItem {
         return true;
     }
 
-    private boolean isPokemonKnowsMove(Pokemon pokemon) {
-        boolean isMoveSetMove = pokemon.getMoveSet().getMoves().stream().map(Move::getName).anyMatch(name -> name.equals(move));
-        boolean isAccessibleMove = pokemon.getAllAccessibleMoves().stream().map(MoveTemplate::getName).anyMatch(name -> name.equals(move));
-        return isMoveSetMove || isAccessibleMove;
-    }
-
     private boolean isPokemonOwnedByPlayer(PlayerEntity player, Pokemon pokemon) {
         return player.equals(pokemon.getOwnerPlayer());
     }
 
-    private boolean isMoveExist() {
-        try {
-            getMoveTemplate();
-            return true;
-
-        } catch (NullPointerException e) {
-            return false;
-        }
-    }
-
-    @NotNull
-    private MoveTemplate getMoveTemplate() {
-        Objects.requireNonNull(move);
-        return Objects.requireNonNull(Moves.INSTANCE.getByName(move));
-    }
-
     private boolean isPokemonLearnsetContainsMove(Pokemon pokemon) {
-        boolean isLevelUpMove = pokemon.getForm().getMoves()
-                .getLevelUpMoves().values().stream()
-                .flatMap(List::stream)
-                .map(MoveTemplate::getName).toList()
-                .contains(move);
-
-        boolean isTmMove = pokemon.getForm().getMoves()
-                .getTmMoves().stream()
-                .map(MoveTemplate::getName).toList()
-                .contains(move);
-
-        return isLevelUpMove || isTmMove;
+        return isLearnedByLevelUp(pokemon) || isLearnedByTM(pokemon);
     }
 }

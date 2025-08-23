@@ -4,6 +4,7 @@ import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.api.battles.model.actor.BattleActor;
 import com.cobblemon.mod.common.api.item.PokemonSelectingItem;
 import com.cobblemon.mod.common.api.moves.BenchedMove;
+import com.cobblemon.mod.common.api.moves.Move;
 import com.cobblemon.mod.common.api.moves.MoveTemplate;
 import com.cobblemon.mod.common.api.moves.Moves;
 import com.cobblemon.mod.common.api.moves.categories.DamageCategories;
@@ -13,6 +14,7 @@ import com.cobblemon.mod.common.battles.pokemon.BattlePokemon;
 import com.cobblemon.mod.common.item.battle.BagItem;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import kiwiapollo.tmcraft.common.DamageCategoryTextColorFactory;
+import kiwiapollo.tmcraft.gamerule.ModGameRule;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -21,6 +23,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Style;
@@ -36,7 +39,7 @@ import java.util.List;
 import java.util.Objects;
 
 public abstract class MoveTeachingItem extends Item implements ElementalTypeItem, PokemonSelectingItem {
-    protected final String move;
+    private final String move;
     private final ElementalType type;
 
     public MoveTeachingItem(String move, ElementalType type) {
@@ -57,46 +60,38 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
         return use((ServerPlayerEntity) player, itemStack);
     }
 
-    protected abstract boolean canPokemonLearnMove(PlayerEntity player, Pokemon pokemon);
-
-    @Environment(EnvType.CLIENT)
-    @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        if (getMoveTemplate().getDamageCategory() == DamageCategories.INSTANCE.getSTATUS()) {
-            tooltip.add(getMoveTypeTooltipText());
-            tooltip.add(getMoveDamageCategoryTooltipText());
-
-        } else {
-            tooltip.add(getMoveTypeTooltipText());
-            tooltip.add(getMoveDamageCategoryTooltipText());
-            tooltip.add(getMovePowerTooltipText());
-        }
-    }
-
-    private Text getMoveTypeTooltipText() {
-        return type.getDisplayName().setStyle(Style.EMPTY.withColor(type.getHue()));
-    }
-
-    private Text getMoveDamageCategoryTooltipText() {
-        DamageCategory category = getMoveTemplate().getDamageCategory();
-        Style style = Style.EMPTY.withColor(new DamageCategoryTextColorFactory().create(category));
-        return category.getDisplayName().copy().setStyle(style);
-    }
-
-    private Text getMovePowerTooltipText() {
-        Style style = Style.EMPTY.withColor(Formatting.YELLOW);
-        return Text.literal(String.valueOf(getMoveTemplate().getPower())).setStyle(style);
-    }
-
     @Override
     public ElementalType getMoveType() {
         return type;
     }
 
-    @NotNull
-    private MoveTemplate getMoveTemplate() {
-        Objects.requireNonNull(move);
-        return Objects.requireNonNull(Moves.INSTANCE.getByName(move));
+    @Environment(EnvType.CLIENT)
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        if (getMoveTemplate().getDamageCategory() == DamageCategories.INSTANCE.getSTATUS()) {
+            tooltip.add(getMoveTypeTooltipText(type));
+            tooltip.add(getMoveDamageCategoryTooltipText());
+
+        } else {
+            tooltip.add(getMoveTypeTooltipText(type));
+            tooltip.add(getMoveDamageCategoryTooltipText());
+            tooltip.add(getMovePowerTooltipText());
+        }
+    }
+
+    protected Text getMoveTypeTooltipText(ElementalType type) {
+        return type.getDisplayName().setStyle(Style.EMPTY.withColor(type.getHue()));
+    }
+
+    protected Text getMoveDamageCategoryTooltipText() {
+        DamageCategory category = getMoveTemplate().getDamageCategory();
+        Style style = Style.EMPTY.withColor(new DamageCategoryTextColorFactory().create(category));
+        return category.getDisplayName().copy().setStyle(style);
+    }
+
+    protected Text getMovePowerTooltipText() {
+        Style style = Style.EMPTY.withColor(Formatting.YELLOW);
+        return Text.literal(String.valueOf(getMoveTemplate().getPower())).setStyle(style);
     }
 
     @Override
@@ -116,9 +111,9 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
             return TypedActionResult.pass(itemStack);
         }
 
-        teachPokemonMove(pokemon);
+        teachPokemonMove(pokemon, move);
 
-        if (!player.isCreative()) {
+        if (shouldConsumeItemByGameRule(player.getServerWorld()) && !player.isCreative()) {
             itemStack.decrement(1);
         }
 
@@ -128,14 +123,7 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
         return TypedActionResult.success(itemStack);
     }
 
-    private void teachPokemonMove(Pokemon pokemon) {
-        if (pokemon.getMoveSet().hasSpace()) {
-            pokemon.getMoveSet().add(getMoveTemplate().create());
-
-        } else {
-            pokemon.getBenchedMoves().add(new BenchedMove(getMoveTemplate(), 0));
-        }
-    }
+    protected abstract boolean canPokemonLearnMove(ServerPlayerEntity player, Pokemon pokemon);
 
     @Override
     public void applyToBattlePokemon(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack, @NotNull BattlePokemon battlePokemon) {
@@ -165,5 +153,83 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
     @Override
     public @NotNull TypedActionResult<ItemStack> interactGeneralBattle(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack, @NotNull BattleActor battleActor) {
         return PokemonSelectingItem.DefaultImpls.interactGeneralBattle(this, player, itemStack, battleActor);
+    }
+
+    @NotNull
+    protected MoveTemplate getMoveTemplate() {
+        return Objects.requireNonNull(Moves.INSTANCE.getByName(move));
+    }
+
+    protected void teachPokemonMove(Pokemon pokemon, String move) {
+        if (pokemon.getMoveSet().hasSpace()) {
+            pokemon.getMoveSet().add(getMoveTemplate().create());
+
+        } else {
+            pokemon.getBenchedMoves().add(new BenchedMove(getMoveTemplate(), 0));
+        }
+    }
+
+    protected boolean isMoveExist() {
+        try {
+            getMoveTemplate();
+            return true;
+
+        } catch (NullPointerException e) {
+            return false;
+        }
+    }
+
+    protected boolean isPokemonKnowsMove(Pokemon pokemon) {
+        return isMoveSetMove(pokemon) || isAccessibleMove(pokemon);
+    }
+
+    private boolean isMoveSetMove(Pokemon pokemon) {
+        return pokemon.getMoveSet().getMoves().stream()
+                .map(Move::getName)
+                .anyMatch(name -> name.equals(move));
+    }
+
+    private boolean isAccessibleMove(Pokemon pokemon) {
+        return pokemon.getAllAccessibleMoves().stream()
+                .map(MoveTemplate::getName)
+                .anyMatch(name -> name.equals(move));
+    }
+
+    protected boolean isLearnedByLevelUp(Pokemon pokemon) {
+        return pokemon.getForm().getMoves()
+                .getLevelUpMoves().values().stream()
+                .flatMap(List::stream)
+                .map(MoveTemplate::getName).toList()
+                .contains(move);
+    }
+
+    protected boolean isLearnedByTM(Pokemon pokemon) {
+        return pokemon.getForm().getMoves()
+                .getTmMoves().stream()
+                .map(MoveTemplate::getName).toList()
+                .contains(move);
+    }
+
+    protected boolean isLearnedByMoveTutor(Pokemon pokemon) {
+        return pokemon.getForm().getMoves()
+                .getTutorMoves().stream()
+                .map(MoveTemplate::getName).toList()
+                .contains(move);
+    }
+
+    protected boolean isLearnedByBreeding(Pokemon pokemon) {
+        return pokemon.getForm().getMoves()
+                .getEggMoves().stream()
+                .map(MoveTemplate::getName).toList()
+                .contains(move);
+    }
+
+    protected boolean shouldConsumeItemByGameRule(ServerWorld world) {
+        try {
+            return world.getGameRules().get(ModGameRule.CONSUME_MOVE_ITEM_ON_USE).get();
+
+        } catch (NullPointerException e) {
+            return true;
+        }
     }
 }

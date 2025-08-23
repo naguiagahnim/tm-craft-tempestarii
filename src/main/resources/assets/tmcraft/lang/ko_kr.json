@@ -64,6 +64,8 @@
     "item.tmcraft.emerald_blank_star": "에메랄드 빈 별",
     "item.tmcraft.netherite_blank_star": "네더라이트 빈 별",
 
+    "gamerule.consumeMoveItemOnUse": "기술 아이템이 사용되면 소모됩니다",
+
     "item.tmcraft.tm_10000000voltthunderbolt": "TM-719: 1000만볼트",
     "item.tmcraft.tm_absorb": "TM-71: 흡수",
     "item.tmcraft.tm_accelerock": "TM-709: 액셀록",

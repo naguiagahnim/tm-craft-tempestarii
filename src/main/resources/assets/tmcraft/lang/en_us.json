@@ -64,6 +64,8 @@
     "item.tmcraft.emerald_blank_star": "Emerald Blank Star",
     "item.tmcraft.netherite_blank_star": "Netherite Blank Star",
 
+    "gamerule.consumeMoveItemOnUse": "Move items are consumed on use",
+
     "item.tmcraft.tm_10000000voltthunderbolt": "TM-719: 10,000,000 Volt Thunderbolt",
     "item.tmcraft.tm_absorb": "TM-71: Absorb",
     "item.tmcraft.tm_accelerock": "TM-709: Accelerock",

@@ -1,6 +1,7 @@
 package kiwiapollo.tmcraft;
 
 import kiwiapollo.tmcraft.block.ModBlock;
+import kiwiapollo.tmcraft.gamerule.ModGameRule;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItemGroup;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItem;
 import kiwiapollo.tmcraft.item.misc.*;
@@ -28,10 +29,12 @@ import java.util.Arrays;
 
 public class TMCraft implements ModInitializer {
 	public static final String MOD_ID = "tmcraft";
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final Logger LOGGER = LoggerFactory.getLogger("TMCraft");
 
 	@Override
 	public void onInitialize() {
+		ModGameRule.register();
+
 		Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(TMCraft.MOD_ID, MoveTutorVillager.PROFESSION_ID), MoveTutorVillager.PROFESSION);
 		new MoveTutorTradeOffer().register();
 
