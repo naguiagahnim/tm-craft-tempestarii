@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_inferno"
+        "id": "tmcraft:tm_inferno"
     },
     "fabric:load_conditions": [
         {

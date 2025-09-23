@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_eternabeam"
+        "id": "tmcraft:tm_eternabeam"
     },
     "fabric:load_conditions": [
         {

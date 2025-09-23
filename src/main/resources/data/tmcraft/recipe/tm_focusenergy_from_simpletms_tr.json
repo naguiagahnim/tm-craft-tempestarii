@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_focusenergy"
+        "id": "tmcraft:tm_focusenergy"
     },
     "fabric:load_conditions": [
         {

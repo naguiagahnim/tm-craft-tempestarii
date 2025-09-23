@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_finalgambit"
+        "id": "tmcraft:tm_finalgambit"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_spore"
+        "id": "tmcraft:tm_spore"
     },
     "fabric:load_conditions": [
         {

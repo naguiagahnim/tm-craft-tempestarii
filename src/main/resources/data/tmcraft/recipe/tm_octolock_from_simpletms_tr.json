@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_octolock"
+        "id": "tmcraft:tm_octolock"
     },
     "fabric:load_conditions": [
         {

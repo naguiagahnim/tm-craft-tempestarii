@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_spite"
+        "id": "tmcraft:tm_spite"
     },
     "fabric:load_conditions": [
         {

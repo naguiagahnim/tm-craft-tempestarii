@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_veeveevolley"
+        "id": "tmcraft:tm_veeveevolley"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_flameburst"
+        "id": "tmcraft:tm_flameburst"
     },
     "fabric:load_conditions": [
         {

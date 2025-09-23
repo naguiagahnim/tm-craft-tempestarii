@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_razorshell"
+        "id": "tmcraft:tm_razorshell"
     },
     "fabric:load_conditions": [
         {

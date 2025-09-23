@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mountaingale"
+        "id": "tmcraft:tm_mountaingale"
     },
     "fabric:load_conditions": [
         {

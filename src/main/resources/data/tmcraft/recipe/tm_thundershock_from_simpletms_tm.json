@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_thundershock"
+        "id": "tmcraft:tm_thundershock"
     },
     "fabric:load_conditions": [
         {

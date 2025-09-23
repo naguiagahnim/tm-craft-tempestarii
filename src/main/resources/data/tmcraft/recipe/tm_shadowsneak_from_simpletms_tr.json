@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_shadowsneak"
+        "id": "tmcraft:tm_shadowsneak"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_magicroom"
+        "id": "tmcraft:tm_magicroom"
     },
     "fabric:load_conditions": [
         {

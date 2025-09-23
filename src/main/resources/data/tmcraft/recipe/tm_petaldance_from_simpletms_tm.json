@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_petaldance"
+        "id": "tmcraft:tm_petaldance"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxtartness"
+        "id": "tmcraft:tm_gmaxtartness"
     },
     "fabric:load_conditions": [
         {

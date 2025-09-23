@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_aurasphere"
+        "id": "tmcraft:tm_aurasphere"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_uturn"
+        "id": "tmcraft:tm_uturn"
     },
     "fabric:load_conditions": [
         {

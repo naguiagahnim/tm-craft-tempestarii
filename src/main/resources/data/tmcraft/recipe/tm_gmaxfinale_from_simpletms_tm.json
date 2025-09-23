@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxfinale"
+        "id": "tmcraft:tm_gmaxfinale"
     },
     "fabric:load_conditions": [
         {

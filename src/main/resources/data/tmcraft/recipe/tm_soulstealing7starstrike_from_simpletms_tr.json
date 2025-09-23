@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_soulstealing7starstrike"
+        "id": "tmcraft:tm_soulstealing7starstrike"
     },
     "fabric:load_conditions": [
         {

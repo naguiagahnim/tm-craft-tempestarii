@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_psystrike"
+        "id": "tmcraft:tm_psystrike"
     },
     "fabric:load_conditions": [
         {

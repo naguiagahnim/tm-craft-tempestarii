@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_surf"
+        "id": "tmcraft:tm_surf"
     },
     "fabric:load_conditions": [
         {

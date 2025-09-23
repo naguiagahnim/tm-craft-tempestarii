@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_falseswipe"
+        "id": "tmcraft:tm_falseswipe"
     },
     "fabric:load_conditions": [
         {

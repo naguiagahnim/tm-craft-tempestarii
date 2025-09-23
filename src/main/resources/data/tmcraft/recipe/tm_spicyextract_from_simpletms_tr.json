@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_spicyextract"
+        "id": "tmcraft:tm_spicyextract"
     },
     "fabric:load_conditions": [
         {

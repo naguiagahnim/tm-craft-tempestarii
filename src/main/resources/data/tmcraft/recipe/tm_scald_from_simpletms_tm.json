@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_scald"
+        "id": "tmcraft:tm_scald"
     },
     "fabric:load_conditions": [
         {

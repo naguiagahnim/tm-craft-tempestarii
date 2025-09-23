@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_flowershield"
+        "id": "tmcraft:tm_flowershield"
     },
     "fabric:load_conditions": [
         {

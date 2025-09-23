@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_confide"
+        "id": "tmcraft:tm_confide"
     },
     "fabric:load_conditions": [
         {

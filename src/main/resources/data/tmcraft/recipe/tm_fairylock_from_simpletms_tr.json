@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_fairylock"
+        "id": "tmcraft:tm_fairylock"
     },
     "fabric:load_conditions": [
         {

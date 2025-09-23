@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxstunshock"
+        "id": "tmcraft:tm_gmaxstunshock"
     },
     "fabric:load_conditions": [
         {

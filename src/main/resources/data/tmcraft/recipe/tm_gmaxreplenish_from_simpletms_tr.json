@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxreplenish"
+        "id": "tmcraft:tm_gmaxreplenish"
     },
     "fabric:load_conditions": [
         {

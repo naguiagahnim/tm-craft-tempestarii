@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_strengthsap"
+        "id": "tmcraft:tm_strengthsap"
     },
     "fabric:load_conditions": [
         {

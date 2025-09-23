@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_twinkletackle"
+        "id": "tmcraft:tm_twinkletackle"
     },
     "fabric:load_conditions": [
         {

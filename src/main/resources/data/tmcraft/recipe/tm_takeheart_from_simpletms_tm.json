@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_takeheart"
+        "id": "tmcraft:tm_takeheart"
     },
     "fabric:load_conditions": [
         {

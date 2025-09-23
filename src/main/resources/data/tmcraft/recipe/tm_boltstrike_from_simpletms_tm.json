@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_boltstrike"
+        "id": "tmcraft:tm_boltstrike"
     },
     "fabric:load_conditions": [
         {

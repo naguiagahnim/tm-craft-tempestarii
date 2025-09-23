@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mirrorshot"
+        "id": "tmcraft:tm_mirrorshot"
     },
     "fabric:load_conditions": [
         {

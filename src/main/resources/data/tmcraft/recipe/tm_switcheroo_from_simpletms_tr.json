@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_switcheroo"
+        "id": "tmcraft:tm_switcheroo"
     },
     "fabric:load_conditions": [
         {

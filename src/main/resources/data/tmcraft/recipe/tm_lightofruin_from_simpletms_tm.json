@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_lightofruin"
+        "id": "tmcraft:tm_lightofruin"
     },
     "fabric:load_conditions": [
         {

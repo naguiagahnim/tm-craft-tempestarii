@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_eerieimpulse"
+        "id": "tmcraft:tm_eerieimpulse"
     },
     "fabric:load_conditions": [
         {

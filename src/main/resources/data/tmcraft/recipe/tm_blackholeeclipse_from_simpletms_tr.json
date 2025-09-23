@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_blackholeeclipse"
+        "id": "tmcraft:tm_blackholeeclipse"
     },
     "fabric:load_conditions": [
         {

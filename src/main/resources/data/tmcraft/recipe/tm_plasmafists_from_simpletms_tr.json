@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_plasmafists"
+        "id": "tmcraft:tm_plasmafists"
     },
     "fabric:load_conditions": [
         {

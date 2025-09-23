@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_diamondstorm"
+        "id": "tmcraft:tm_diamondstorm"
     },
     "fabric:load_conditions": [
         {

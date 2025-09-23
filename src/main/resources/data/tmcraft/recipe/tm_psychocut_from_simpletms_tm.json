@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_psychocut"
+        "id": "tmcraft:tm_psychocut"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_psyshieldbash"
+        "id": "tmcraft:tm_psyshieldbash"
     },
     "fabric:load_conditions": [
         {

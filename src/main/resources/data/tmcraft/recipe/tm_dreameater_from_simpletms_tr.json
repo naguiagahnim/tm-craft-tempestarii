@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dreameater"
+        "id": "tmcraft:tm_dreameater"
     },
     "fabric:load_conditions": [
         {

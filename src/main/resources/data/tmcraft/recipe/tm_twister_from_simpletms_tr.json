@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_twister"
+        "id": "tmcraft:tm_twister"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_crabhammer"
+        "id": "tmcraft:tm_crabhammer"
     },
     "fabric:load_conditions": [
         {

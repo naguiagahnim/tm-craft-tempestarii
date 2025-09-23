@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_telekinesis"
+        "id": "tmcraft:tm_telekinesis"
     },
     "fabric:load_conditions": [
         {

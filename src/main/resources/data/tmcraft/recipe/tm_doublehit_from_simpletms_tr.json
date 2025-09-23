@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_doublehit"
+        "id": "tmcraft:tm_doublehit"
     },
     "fabric:load_conditions": [
         {

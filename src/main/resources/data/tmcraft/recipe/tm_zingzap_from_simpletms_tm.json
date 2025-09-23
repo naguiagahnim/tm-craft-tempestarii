@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_zingzap"
+        "id": "tmcraft:tm_zingzap"
     },
     "fabric:load_conditions": [
         {

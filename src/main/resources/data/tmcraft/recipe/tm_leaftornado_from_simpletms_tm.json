@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_leaftornado"
+        "id": "tmcraft:tm_leaftornado"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hypnosis"
+        "id": "tmcraft:tm_hypnosis"
     },
     "fabric:load_conditions": [
         {

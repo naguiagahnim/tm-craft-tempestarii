@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_shoreup"
+        "id": "tmcraft:tm_shoreup"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sandsearstorm"
+        "id": "tmcraft:tm_sandsearstorm"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_cosmicpower"
+        "id": "tmcraft:tm_cosmicpower"
     },
     "fabric:load_conditions": [
         {

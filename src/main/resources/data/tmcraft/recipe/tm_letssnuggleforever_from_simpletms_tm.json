@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_letssnuggleforever"
+        "id": "tmcraft:tm_letssnuggleforever"
     },
     "fabric:load_conditions": [
         {

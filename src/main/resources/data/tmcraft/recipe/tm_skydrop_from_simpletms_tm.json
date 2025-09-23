@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_skydrop"
+        "id": "tmcraft:tm_skydrop"
     },
     "fabric:load_conditions": [
         {

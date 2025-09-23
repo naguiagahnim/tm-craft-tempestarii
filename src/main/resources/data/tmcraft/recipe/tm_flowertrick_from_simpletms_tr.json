@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_flowertrick"
+        "id": "tmcraft:tm_flowertrick"
     },
     "fabric:load_conditions": [
         {

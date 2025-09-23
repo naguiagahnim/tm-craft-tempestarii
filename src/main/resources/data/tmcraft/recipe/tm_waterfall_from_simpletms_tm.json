@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_waterfall"
+        "id": "tmcraft:tm_waterfall"
     },
     "fabric:load_conditions": [
         {

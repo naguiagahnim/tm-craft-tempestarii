@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_iceshard"
+        "id": "tmcraft:tm_iceshard"
     },
     "fabric:load_conditions": [
         {

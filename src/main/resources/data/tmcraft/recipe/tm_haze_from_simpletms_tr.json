@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_haze"
+        "id": "tmcraft:tm_haze"
     },
     "fabric:load_conditions": [
         {

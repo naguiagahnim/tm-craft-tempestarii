@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dragonenergy"
+        "id": "tmcraft:tm_dragonenergy"
     },
     "fabric:load_conditions": [
         {

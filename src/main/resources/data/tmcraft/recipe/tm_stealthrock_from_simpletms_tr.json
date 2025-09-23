@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_stealthrock"
+        "id": "tmcraft:tm_stealthrock"
     },
     "fabric:load_conditions": [
         {

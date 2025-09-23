@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_kingsshield"
+        "id": "tmcraft:tm_kingsshield"
     },
     "fabric:load_conditions": [
         {

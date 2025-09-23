@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_supersonicskystrike"
+        "id": "tmcraft:tm_supersonicskystrike"
     },
     "fabric:load_conditions": [
         {

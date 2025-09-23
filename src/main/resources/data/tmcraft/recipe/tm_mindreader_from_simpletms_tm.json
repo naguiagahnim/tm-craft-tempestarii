@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mindreader"
+        "id": "tmcraft:tm_mindreader"
     },
     "fabric:load_conditions": [
         {

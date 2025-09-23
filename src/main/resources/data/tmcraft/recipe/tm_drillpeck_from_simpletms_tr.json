@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_drillpeck"
+        "id": "tmcraft:tm_drillpeck"
     },
     "fabric:load_conditions": [
         {

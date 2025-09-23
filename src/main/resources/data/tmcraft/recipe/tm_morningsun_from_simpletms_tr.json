@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_morningsun"
+        "id": "tmcraft:tm_morningsun"
     },
     "fabric:load_conditions": [
         {

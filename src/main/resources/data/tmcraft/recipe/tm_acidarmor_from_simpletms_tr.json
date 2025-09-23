@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_acidarmor"
+        "id": "tmcraft:tm_acidarmor"
     },
     "fabric:load_conditions": [
         {

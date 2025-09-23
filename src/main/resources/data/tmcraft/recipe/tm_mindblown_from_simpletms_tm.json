@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mindblown"
+        "id": "tmcraft:tm_mindblown"
     },
     "fabric:load_conditions": [
         {

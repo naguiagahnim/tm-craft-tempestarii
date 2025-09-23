@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_ember"
+        "id": "tmcraft:tm_ember"
     },
     "fabric:load_conditions": [
         {

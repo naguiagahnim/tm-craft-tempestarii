@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dig"
+        "id": "tmcraft:tm_dig"
     },
     "fabric:load_conditions": [
         {

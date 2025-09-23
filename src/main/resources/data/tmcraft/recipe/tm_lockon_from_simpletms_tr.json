@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_lockon"
+        "id": "tmcraft:tm_lockon"
     },
     "fabric:load_conditions": [
         {

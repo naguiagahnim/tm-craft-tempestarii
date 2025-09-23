@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxdepletion"
+        "id": "tmcraft:tm_gmaxdepletion"
     },
     "fabric:load_conditions": [
         {

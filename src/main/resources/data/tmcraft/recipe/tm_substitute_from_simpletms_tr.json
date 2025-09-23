@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_substitute"
+        "id": "tmcraft:tm_substitute"
     },
     "fabric:load_conditions": [
         {

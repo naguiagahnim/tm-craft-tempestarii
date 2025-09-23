@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_recover"
+        "id": "tmcraft:tm_recover"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_extrasensory"
+        "id": "tmcraft:tm_extrasensory"
     },
     "fabric:load_conditions": [
         {

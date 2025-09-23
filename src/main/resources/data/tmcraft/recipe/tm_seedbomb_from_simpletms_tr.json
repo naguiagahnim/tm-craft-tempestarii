@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_seedbomb"
+        "id": "tmcraft:tm_seedbomb"
     },
     "fabric:load_conditions": [
         {

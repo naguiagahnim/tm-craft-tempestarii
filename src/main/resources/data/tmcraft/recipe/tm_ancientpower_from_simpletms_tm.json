@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_ancientpower"
+        "id": "tmcraft:tm_ancientpower"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_lowsweep"
+        "id": "tmcraft:tm_lowsweep"
     },
     "fabric:load_conditions": [
         {

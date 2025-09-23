@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_corkscrewcrash"
+        "id": "tmcraft:tm_corkscrewcrash"
     },
     "fabric:load_conditions": [
         {

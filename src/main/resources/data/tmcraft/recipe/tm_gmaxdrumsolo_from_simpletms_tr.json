@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxdrumsolo"
+        "id": "tmcraft:tm_gmaxdrumsolo"
     },
     "fabric:load_conditions": [
         {

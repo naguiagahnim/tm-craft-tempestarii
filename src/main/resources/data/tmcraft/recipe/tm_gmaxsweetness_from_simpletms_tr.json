@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxsweetness"
+        "id": "tmcraft:tm_gmaxsweetness"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_photongeyser"
+        "id": "tmcraft:tm_photongeyser"
     },
     "fabric:load_conditions": [
         {

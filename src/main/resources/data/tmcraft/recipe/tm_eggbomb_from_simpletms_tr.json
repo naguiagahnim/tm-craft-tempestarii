@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_eggbomb"
+        "id": "tmcraft:tm_eggbomb"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_screech"
+        "id": "tmcraft:tm_screech"
     },
     "fabric:load_conditions": [
         {

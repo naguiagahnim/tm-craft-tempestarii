@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_soak"
+        "id": "tmcraft:tm_soak"
     },
     "fabric:load_conditions": [
         {

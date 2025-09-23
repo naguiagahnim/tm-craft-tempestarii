@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_barrage"
+        "id": "tmcraft:tm_barrage"
     },
     "fabric:load_conditions": [
         {

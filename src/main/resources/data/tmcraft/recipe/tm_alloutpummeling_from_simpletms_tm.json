@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_alloutpummeling"
+        "id": "tmcraft:tm_alloutpummeling"
     },
     "fabric:load_conditions": [
         {

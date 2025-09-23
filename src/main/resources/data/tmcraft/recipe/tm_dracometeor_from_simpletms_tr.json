@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dracometeor"
+        "id": "tmcraft:tm_dracometeor"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_wringout"
+        "id": "tmcraft:tm_wringout"
     },
     "fabric:load_conditions": [
         {

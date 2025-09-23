@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_psyblade"
+        "id": "tmcraft:tm_psyblade"
     },
     "fabric:load_conditions": [
         {

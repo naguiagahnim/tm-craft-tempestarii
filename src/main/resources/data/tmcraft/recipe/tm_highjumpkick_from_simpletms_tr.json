@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_highjumpkick"
+        "id": "tmcraft:tm_highjumpkick"
     },
     "fabric:load_conditions": [
         {

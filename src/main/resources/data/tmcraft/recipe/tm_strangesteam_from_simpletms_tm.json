@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_strangesteam"
+        "id": "tmcraft:tm_strangesteam"
     },
     "fabric:load_conditions": [
         {

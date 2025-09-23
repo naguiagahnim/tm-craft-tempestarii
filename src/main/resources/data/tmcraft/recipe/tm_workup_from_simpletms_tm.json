@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_workup"
+        "id": "tmcraft:tm_workup"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_aquaring"
+        "id": "tmcraft:tm_aquaring"
     },
     "fabric:load_conditions": [
         {

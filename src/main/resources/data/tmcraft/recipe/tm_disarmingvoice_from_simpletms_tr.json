@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_disarmingvoice"
+        "id": "tmcraft:tm_disarmingvoice"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_burnup"
+        "id": "tmcraft:tm_burnup"
     },
     "fabric:load_conditions": [
         {

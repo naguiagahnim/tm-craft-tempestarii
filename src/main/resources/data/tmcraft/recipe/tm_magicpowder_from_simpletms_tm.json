@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_magicpowder"
+        "id": "tmcraft:tm_magicpowder"
     },
     "fabric:load_conditions": [
         {

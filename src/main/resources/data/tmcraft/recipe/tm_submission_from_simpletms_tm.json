@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_submission"
+        "id": "tmcraft:tm_submission"
     },
     "fabric:load_conditions": [
         {

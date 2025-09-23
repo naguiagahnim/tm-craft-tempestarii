@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_metalsound"
+        "id": "tmcraft:tm_metalsound"
     },
     "fabric:load_conditions": [
         {

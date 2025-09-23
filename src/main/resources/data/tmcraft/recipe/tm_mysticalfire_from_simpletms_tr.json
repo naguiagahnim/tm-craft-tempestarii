@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mysticalfire"
+        "id": "tmcraft:tm_mysticalfire"
     },
     "fabric:load_conditions": [
         {

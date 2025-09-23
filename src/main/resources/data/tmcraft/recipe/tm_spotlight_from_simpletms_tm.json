@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_spotlight"
+        "id": "tmcraft:tm_spotlight"
     },
     "fabric:load_conditions": [
         {

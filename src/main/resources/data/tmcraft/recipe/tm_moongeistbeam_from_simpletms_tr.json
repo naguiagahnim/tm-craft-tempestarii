@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_moongeistbeam"
+        "id": "tmcraft:tm_moongeistbeam"
     },
     "fabric:load_conditions": [
         {

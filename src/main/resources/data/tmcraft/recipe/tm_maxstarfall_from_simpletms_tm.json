@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxstarfall"
+        "id": "tmcraft:tm_maxstarfall"
     },
     "fabric:load_conditions": [
         {

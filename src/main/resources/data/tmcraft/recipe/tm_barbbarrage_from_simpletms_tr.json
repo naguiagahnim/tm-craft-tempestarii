@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_barbbarrage"
+        "id": "tmcraft:tm_barbbarrage"
     },
     "fabric:load_conditions": [
         {

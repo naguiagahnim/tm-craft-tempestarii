@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxwildfire"
+        "id": "tmcraft:tm_gmaxwildfire"
     },
     "fabric:load_conditions": [
         {

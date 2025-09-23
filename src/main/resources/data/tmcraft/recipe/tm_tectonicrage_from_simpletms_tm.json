@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_tectonicrage"
+        "id": "tmcraft:tm_tectonicrage"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_landswrath"
+        "id": "tmcraft:tm_landswrath"
     },
     "fabric:load_conditions": [
         {

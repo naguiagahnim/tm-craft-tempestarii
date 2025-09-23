@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_muddywater"
+        "id": "tmcraft:tm_muddywater"
     },
     "fabric:load_conditions": [
         {

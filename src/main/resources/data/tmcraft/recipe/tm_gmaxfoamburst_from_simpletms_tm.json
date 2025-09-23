@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxfoamburst"
+        "id": "tmcraft:tm_gmaxfoamburst"
     },
     "fabric:load_conditions": [
         {

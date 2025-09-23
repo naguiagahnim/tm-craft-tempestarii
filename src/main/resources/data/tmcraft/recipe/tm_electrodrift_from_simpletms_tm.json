@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_electrodrift"
+        "id": "tmcraft:tm_electrodrift"
     },
     "fabric:load_conditions": [
         {

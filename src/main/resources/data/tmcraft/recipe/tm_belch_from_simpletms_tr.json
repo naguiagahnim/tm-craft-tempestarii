@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_belch"
+        "id": "tmcraft:tm_belch"
     },
     "fabric:load_conditions": [
         {

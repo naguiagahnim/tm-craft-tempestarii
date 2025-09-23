@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_tidyup"
+        "id": "tmcraft:tm_tidyup"
     },
     "fabric:load_conditions": [
         {

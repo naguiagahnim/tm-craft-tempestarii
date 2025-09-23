@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxphantasm"
+        "id": "tmcraft:tm_maxphantasm"
     },
     "fabric:load_conditions": [
         {

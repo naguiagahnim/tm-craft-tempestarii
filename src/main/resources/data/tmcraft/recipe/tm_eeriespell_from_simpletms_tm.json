@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_eeriespell"
+        "id": "tmcraft:tm_eeriespell"
     },
     "fabric:load_conditions": [
         {

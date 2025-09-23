@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_rockclimb"
+        "id": "tmcraft:tm_rockclimb"
     },
     "fabric:load_conditions": [
         {

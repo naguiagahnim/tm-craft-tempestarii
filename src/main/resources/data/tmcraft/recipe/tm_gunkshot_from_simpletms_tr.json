@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gunkshot"
+        "id": "tmcraft:tm_gunkshot"
     },
     "fabric:load_conditions": [
         {

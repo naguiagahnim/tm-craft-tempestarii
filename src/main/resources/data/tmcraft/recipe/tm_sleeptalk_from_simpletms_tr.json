@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sleeptalk"
+        "id": "tmcraft:tm_sleeptalk"
     },
     "fabric:load_conditions": [
         {

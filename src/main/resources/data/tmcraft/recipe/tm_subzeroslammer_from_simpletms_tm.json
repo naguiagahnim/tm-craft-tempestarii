@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_subzeroslammer"
+        "id": "tmcraft:tm_subzeroslammer"
     },
     "fabric:load_conditions": [
         {

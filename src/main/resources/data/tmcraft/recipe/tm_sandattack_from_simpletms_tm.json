@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sandattack"
+        "id": "tmcraft:tm_sandattack"
     },
     "fabric:load_conditions": [
         {

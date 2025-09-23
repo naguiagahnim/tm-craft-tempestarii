@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_nobleroar"
+        "id": "tmcraft:tm_nobleroar"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_corrosivegas"
+        "id": "tmcraft:tm_corrosivegas"
     },
     "fabric:load_conditions": [
         {

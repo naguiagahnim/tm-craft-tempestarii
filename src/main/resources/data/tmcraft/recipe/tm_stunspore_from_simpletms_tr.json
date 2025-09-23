@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_stunspore"
+        "id": "tmcraft:tm_stunspore"
     },
     "fabric:load_conditions": [
         {

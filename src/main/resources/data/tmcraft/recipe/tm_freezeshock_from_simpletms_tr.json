@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_freezeshock"
+        "id": "tmcraft:tm_freezeshock"
     },
     "fabric:load_conditions": [
         {

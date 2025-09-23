@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_visegrip"
+        "id": "tmcraft:tm_visegrip"
     },
     "fabric:load_conditions": [
         {

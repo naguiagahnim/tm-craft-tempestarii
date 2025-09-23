@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_armthrust"
+        "id": "tmcraft:tm_armthrust"
     },
     "fabric:load_conditions": [
         {

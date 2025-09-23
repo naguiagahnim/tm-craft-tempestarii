@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_watergun"
+        "id": "tmcraft:tm_watergun"
     },
     "fabric:load_conditions": [
         {

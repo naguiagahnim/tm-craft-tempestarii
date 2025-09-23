@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_endeavor"
+        "id": "tmcraft:tm_endeavor"
     },
     "fabric:load_conditions": [
         {

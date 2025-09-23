@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_entrainment"
+        "id": "tmcraft:tm_entrainment"
     },
     "fabric:load_conditions": [
         {

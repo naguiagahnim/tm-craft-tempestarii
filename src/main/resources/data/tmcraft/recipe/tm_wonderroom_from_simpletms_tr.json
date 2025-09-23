@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_wonderroom"
+        "id": "tmcraft:tm_wonderroom"
     },
     "fabric:load_conditions": [
         {

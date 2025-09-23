@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_barrier"
+        "id": "tmcraft:tm_barrier"
     },
     "fabric:load_conditions": [
         {

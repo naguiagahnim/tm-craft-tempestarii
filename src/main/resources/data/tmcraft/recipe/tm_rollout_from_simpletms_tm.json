@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_rollout"
+        "id": "tmcraft:tm_rollout"
     },
     "fabric:load_conditions": [
         {

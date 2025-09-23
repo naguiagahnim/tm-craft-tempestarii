@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_doubleslap"
+        "id": "tmcraft:tm_doubleslap"
     },
     "fabric:load_conditions": [
         {

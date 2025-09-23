@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_neverendingnightmare"
+        "id": "tmcraft:tm_neverendingnightmare"
     },
     "fabric:load_conditions": [
         {

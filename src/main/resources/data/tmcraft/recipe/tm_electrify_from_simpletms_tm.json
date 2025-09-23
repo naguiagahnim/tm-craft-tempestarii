@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_electrify"
+        "id": "tmcraft:tm_electrify"
     },
     "fabric:load_conditions": [
         {

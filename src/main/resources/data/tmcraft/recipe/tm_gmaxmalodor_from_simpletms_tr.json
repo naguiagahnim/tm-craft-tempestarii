@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxmalodor"
+        "id": "tmcraft:tm_gmaxmalodor"
     },
     "fabric:load_conditions": [
         {

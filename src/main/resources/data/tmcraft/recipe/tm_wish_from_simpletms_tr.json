@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_wish"
+        "id": "tmcraft:tm_wish"
     },
     "fabric:load_conditions": [
         {

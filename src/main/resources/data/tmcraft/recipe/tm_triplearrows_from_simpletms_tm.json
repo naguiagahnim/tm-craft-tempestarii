@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_triplearrows"
+        "id": "tmcraft:tm_triplearrows"
     },
     "fabric:load_conditions": [
         {

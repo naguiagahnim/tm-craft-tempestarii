@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxfireball"
+        "id": "tmcraft:tm_gmaxfireball"
     },
     "fabric:load_conditions": [
         {

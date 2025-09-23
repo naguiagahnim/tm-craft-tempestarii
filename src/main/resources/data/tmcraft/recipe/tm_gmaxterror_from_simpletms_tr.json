@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxterror"
+        "id": "tmcraft:tm_gmaxterror"
     },
     "fabric:load_conditions": [
         {

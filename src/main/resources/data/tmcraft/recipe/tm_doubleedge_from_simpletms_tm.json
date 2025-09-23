@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_doubleedge"
+        "id": "tmcraft:tm_doubleedge"
     },
     "fabric:load_conditions": [
         {

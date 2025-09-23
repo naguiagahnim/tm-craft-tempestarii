@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_spiritbreak"
+        "id": "tmcraft:tm_spiritbreak"
     },
     "fabric:load_conditions": [
         {

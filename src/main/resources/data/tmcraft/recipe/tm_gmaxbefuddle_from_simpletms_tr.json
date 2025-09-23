@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxbefuddle"
+        "id": "tmcraft:tm_gmaxbefuddle"
     },
     "fabric:load_conditions": [
         {

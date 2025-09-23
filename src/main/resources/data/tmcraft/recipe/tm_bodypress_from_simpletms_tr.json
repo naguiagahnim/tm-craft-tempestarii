@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bodypress"
+        "id": "tmcraft:tm_bodypress"
     },
     "fabric:load_conditions": [
         {

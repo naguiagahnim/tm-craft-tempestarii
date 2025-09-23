@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_defog"
+        "id": "tmcraft:tm_defog"
     },
     "fabric:load_conditions": [
         {

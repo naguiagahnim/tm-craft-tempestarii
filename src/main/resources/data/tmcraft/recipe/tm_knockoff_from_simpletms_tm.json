@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_knockoff"
+        "id": "tmcraft:tm_knockoff"
     },
     "fabric:load_conditions": [
         {

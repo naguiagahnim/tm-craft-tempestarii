@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_twinbeam"
+        "id": "tmcraft:tm_twinbeam"
     },
     "fabric:load_conditions": [
         {

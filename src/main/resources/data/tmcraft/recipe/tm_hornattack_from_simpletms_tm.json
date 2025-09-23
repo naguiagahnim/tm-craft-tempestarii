@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hornattack"
+        "id": "tmcraft:tm_hornattack"
     },
     "fabric:load_conditions": [
         {

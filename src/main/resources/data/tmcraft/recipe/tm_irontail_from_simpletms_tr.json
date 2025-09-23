@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_irontail"
+        "id": "tmcraft:tm_irontail"
     },
     "fabric:load_conditions": [
         {

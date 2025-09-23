@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_waterpulse"
+        "id": "tmcraft:tm_waterpulse"
     },
     "fabric:load_conditions": [
         {

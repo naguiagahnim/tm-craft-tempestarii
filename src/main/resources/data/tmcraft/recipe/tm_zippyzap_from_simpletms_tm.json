@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_zippyzap"
+        "id": "tmcraft:tm_zippyzap"
     },
     "fabric:load_conditions": [
         {

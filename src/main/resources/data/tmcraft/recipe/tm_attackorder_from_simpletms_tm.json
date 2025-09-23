@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_attackorder"
+        "id": "tmcraft:tm_attackorder"
     },
     "fabric:load_conditions": [
         {

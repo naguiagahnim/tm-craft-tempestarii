@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_jetpunch"
+        "id": "tmcraft:tm_jetpunch"
     },
     "fabric:load_conditions": [
         {

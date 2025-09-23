@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bubble"
+        "id": "tmcraft:tm_bubble"
     },
     "fabric:load_conditions": [
         {

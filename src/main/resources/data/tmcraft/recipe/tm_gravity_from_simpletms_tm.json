@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gravity"
+        "id": "tmcraft:tm_gravity"
     },
     "fabric:load_conditions": [
         {

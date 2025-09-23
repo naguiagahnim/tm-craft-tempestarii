@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_furycutter"
+        "id": "tmcraft:tm_furycutter"
     },
     "fabric:load_conditions": [
         {

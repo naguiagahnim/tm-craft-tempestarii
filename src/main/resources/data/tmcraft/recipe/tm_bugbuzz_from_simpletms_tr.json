@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bugbuzz"
+        "id": "tmcraft:tm_bugbuzz"
     },
     "fabric:load_conditions": [
         {

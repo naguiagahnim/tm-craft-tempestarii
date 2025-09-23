@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_powerwhip"
+        "id": "tmcraft:tm_powerwhip"
     },
     "fabric:load_conditions": [
         {

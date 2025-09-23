@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_shatteredpsyche"
+        "id": "tmcraft:tm_shatteredpsyche"
     },
     "fabric:load_conditions": [
         {

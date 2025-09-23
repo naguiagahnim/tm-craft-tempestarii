@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_xscissor"
+        "id": "tmcraft:tm_xscissor"
     },
     "fabric:load_conditions": [
         {

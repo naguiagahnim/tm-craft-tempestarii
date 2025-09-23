@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_snaptrap"
+        "id": "tmcraft:tm_snaptrap"
     },
     "fabric:load_conditions": [
         {

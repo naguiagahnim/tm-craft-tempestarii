@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_meteorbeam"
+        "id": "tmcraft:tm_meteorbeam"
     },
     "fabric:load_conditions": [
         {

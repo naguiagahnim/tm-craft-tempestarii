@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_pinmissile"
+        "id": "tmcraft:tm_pinmissile"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_poisonsting"
+        "id": "tmcraft:tm_poisonsting"
     },
     "fabric:load_conditions": [
         {

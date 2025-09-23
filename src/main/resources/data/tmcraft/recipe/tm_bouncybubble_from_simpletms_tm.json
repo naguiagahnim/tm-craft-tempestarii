@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bouncybubble"
+        "id": "tmcraft:tm_bouncybubble"
     },
     "fabric:load_conditions": [
         {

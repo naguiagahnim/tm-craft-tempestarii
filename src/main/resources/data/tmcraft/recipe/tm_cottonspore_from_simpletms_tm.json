@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_cottonspore"
+        "id": "tmcraft:tm_cottonspore"
     },
     "fabric:load_conditions": [
         {

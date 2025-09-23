@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hydrovortex"
+        "id": "tmcraft:tm_hydrovortex"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_toxicspikes"
+        "id": "tmcraft:tm_toxicspikes"
     },
     "fabric:load_conditions": [
         {

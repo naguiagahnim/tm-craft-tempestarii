@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_strugglebug"
+        "id": "tmcraft:tm_strugglebug"
     },
     "fabric:load_conditions": [
         {

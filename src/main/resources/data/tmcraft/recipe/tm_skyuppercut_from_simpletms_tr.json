@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_skyuppercut"
+        "id": "tmcraft:tm_skyuppercut"
     },
     "fabric:load_conditions": [
         {

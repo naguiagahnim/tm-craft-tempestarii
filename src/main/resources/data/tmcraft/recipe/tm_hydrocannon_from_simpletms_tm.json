@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hydrocannon"
+        "id": "tmcraft:tm_hydrocannon"
     },
     "fabric:load_conditions": [
         {

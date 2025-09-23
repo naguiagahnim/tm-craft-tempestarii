@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_babydolleyes"
+        "id": "tmcraft:tm_babydolleyes"
     },
     "fabric:load_conditions": [
         {

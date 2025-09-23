@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_drainingkiss"
+        "id": "tmcraft:tm_drainingkiss"
     },
     "fabric:load_conditions": [
         {

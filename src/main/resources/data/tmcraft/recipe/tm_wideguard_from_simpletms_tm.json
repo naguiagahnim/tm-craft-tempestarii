@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_wideguard"
+        "id": "tmcraft:tm_wideguard"
     },
     "fabric:load_conditions": [
         {

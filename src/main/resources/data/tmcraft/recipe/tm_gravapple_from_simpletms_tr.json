@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gravapple"
+        "id": "tmcraft:tm_gravapple"
     },
     "fabric:load_conditions": [
         {

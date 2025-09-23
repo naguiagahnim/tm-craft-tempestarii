@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_holdback"
+        "id": "tmcraft:tm_holdback"
     },
     "fabric:load_conditions": [
         {

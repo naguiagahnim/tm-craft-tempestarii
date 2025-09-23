@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_extremespeed"
+        "id": "tmcraft:tm_extremespeed"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mirrormove"
+        "id": "tmcraft:tm_mirrormove"
     },
     "fabric:load_conditions": [
         {

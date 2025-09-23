@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bubblebeam"
+        "id": "tmcraft:tm_bubblebeam"
     },
     "fabric:load_conditions": [
         {

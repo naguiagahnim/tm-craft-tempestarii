@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_encore"
+        "id": "tmcraft:tm_encore"
     },
     "fabric:load_conditions": [
         {

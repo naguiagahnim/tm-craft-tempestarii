@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_tripleaxel"
+        "id": "tmcraft:tm_tripleaxel"
     },
     "fabric:load_conditions": [
         {

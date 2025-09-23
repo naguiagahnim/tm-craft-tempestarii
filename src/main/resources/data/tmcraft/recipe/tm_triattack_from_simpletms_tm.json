@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_triattack"
+        "id": "tmcraft:tm_triattack"
     },
     "fabric:load_conditions": [
         {

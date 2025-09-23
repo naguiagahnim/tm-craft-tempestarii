@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_boneclub"
+        "id": "tmcraft:tm_boneclub"
     },
     "fabric:load_conditions": [
         {

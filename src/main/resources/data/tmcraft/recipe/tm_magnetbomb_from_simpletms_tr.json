@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_magnetbomb"
+        "id": "tmcraft:tm_magnetbomb"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_megadrain"
+        "id": "tmcraft:tm_megadrain"
     },
     "fabric:load_conditions": [
         {

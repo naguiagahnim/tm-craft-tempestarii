@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_outrage"
+        "id": "tmcraft:tm_outrage"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_miracleeye"
+        "id": "tmcraft:tm_miracleeye"
     },
     "fabric:load_conditions": [
         {

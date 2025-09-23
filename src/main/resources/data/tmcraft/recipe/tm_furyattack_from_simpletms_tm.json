@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_furyattack"
+        "id": "tmcraft:tm_furyattack"
     },
     "fabric:load_conditions": [
         {

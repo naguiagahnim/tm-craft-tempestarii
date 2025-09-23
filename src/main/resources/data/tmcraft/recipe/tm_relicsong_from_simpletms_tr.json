@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_relicsong"
+        "id": "tmcraft:tm_relicsong"
     },
     "fabric:load_conditions": [
         {

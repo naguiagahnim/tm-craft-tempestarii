@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_flamethrower"
+        "id": "tmcraft:tm_flamethrower"
     },
     "fabric:load_conditions": [
         {

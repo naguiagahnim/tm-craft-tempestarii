@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_glitzyglow"
+        "id": "tmcraft:tm_glitzyglow"
     },
     "fabric:load_conditions": [
         {

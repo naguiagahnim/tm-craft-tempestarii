@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dive"
+        "id": "tmcraft:tm_dive"
     },
     "fabric:load_conditions": [
         {

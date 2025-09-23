@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxmeltdown"
+        "id": "tmcraft:tm_gmaxmeltdown"
     },
     "fabric:load_conditions": [
         {

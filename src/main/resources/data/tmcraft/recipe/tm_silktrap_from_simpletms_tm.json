@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_silktrap"
+        "id": "tmcraft:tm_silktrap"
     },
     "fabric:load_conditions": [
         {

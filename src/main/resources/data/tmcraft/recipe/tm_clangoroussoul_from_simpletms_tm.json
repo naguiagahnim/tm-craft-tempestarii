@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_clangoroussoul"
+        "id": "tmcraft:tm_clangoroussoul"
     },
     "fabric:load_conditions": [
         {

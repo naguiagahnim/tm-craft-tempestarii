@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_punishment"
+        "id": "tmcraft:tm_punishment"
     },
     "fabric:load_conditions": [
         {

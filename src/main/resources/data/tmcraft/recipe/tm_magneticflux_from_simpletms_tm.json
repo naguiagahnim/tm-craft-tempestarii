@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_magneticflux"
+        "id": "tmcraft:tm_magneticflux"
     },
     "fabric:load_conditions": [
         {

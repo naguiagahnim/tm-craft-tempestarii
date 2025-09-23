@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_luckychant"
+        "id": "tmcraft:tm_luckychant"
     },
     "fabric:load_conditions": [
         {

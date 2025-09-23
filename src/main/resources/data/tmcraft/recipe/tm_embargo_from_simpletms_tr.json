@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_embargo"
+        "id": "tmcraft:tm_embargo"
     },
     "fabric:load_conditions": [
         {

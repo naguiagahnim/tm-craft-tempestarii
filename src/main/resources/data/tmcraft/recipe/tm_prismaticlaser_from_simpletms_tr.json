@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_prismaticlaser"
+        "id": "tmcraft:tm_prismaticlaser"
     },
     "fabric:load_conditions": [
         {

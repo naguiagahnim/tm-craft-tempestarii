@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hyperbeam"
+        "id": "tmcraft:tm_hyperbeam"
     },
     "fabric:load_conditions": [
         {

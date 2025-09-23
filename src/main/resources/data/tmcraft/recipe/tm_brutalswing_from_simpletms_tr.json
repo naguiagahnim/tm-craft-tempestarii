@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_brutalswing"
+        "id": "tmcraft:tm_brutalswing"
     },
     "fabric:load_conditions": [
         {

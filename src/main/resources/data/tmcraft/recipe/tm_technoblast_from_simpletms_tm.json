@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_technoblast"
+        "id": "tmcraft:tm_technoblast"
     },
     "fabric:load_conditions": [
         {

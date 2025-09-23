@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_aeroblast"
+        "id": "tmcraft:tm_aeroblast"
     },
     "fabric:load_conditions": [
         {

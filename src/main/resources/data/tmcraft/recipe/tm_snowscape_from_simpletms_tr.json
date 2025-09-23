@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_snowscape"
+        "id": "tmcraft:tm_snowscape"
     },
     "fabric:load_conditions": [
         {

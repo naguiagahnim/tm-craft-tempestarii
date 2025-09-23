@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_leechseed"
+        "id": "tmcraft:tm_leechseed"
     },
     "fabric:load_conditions": [
         {

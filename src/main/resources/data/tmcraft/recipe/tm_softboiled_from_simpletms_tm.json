@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_softboiled"
+        "id": "tmcraft:tm_softboiled"
     },
     "fabric:load_conditions": [
         {

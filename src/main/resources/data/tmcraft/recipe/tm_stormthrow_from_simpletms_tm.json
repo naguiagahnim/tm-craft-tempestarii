@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_stormthrow"
+        "id": "tmcraft:tm_stormthrow"
     },
     "fabric:load_conditions": [
         {

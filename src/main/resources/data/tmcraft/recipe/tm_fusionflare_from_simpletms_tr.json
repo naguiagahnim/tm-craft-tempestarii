@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_fusionflare"
+        "id": "tmcraft:tm_fusionflare"
     },
     "fabric:load_conditions": [
         {

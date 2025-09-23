@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_aerialace"
+        "id": "tmcraft:tm_aerialace"
     },
     "fabric:load_conditions": [
         {

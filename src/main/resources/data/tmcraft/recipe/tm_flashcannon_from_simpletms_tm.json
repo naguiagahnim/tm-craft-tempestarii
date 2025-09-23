@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_flashcannon"
+        "id": "tmcraft:tm_flashcannon"
     },
     "fabric:load_conditions": [
         {

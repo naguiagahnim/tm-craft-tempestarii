@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_decorate"
+        "id": "tmcraft:tm_decorate"
     },
     "fabric:load_conditions": [
         {

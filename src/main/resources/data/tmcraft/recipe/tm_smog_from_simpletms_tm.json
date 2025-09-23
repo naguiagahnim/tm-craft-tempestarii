@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_smog"
+        "id": "tmcraft:tm_smog"
     },
     "fabric:load_conditions": [
         {

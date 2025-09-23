@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_speedswap"
+        "id": "tmcraft:tm_speedswap"
     },
     "fabric:load_conditions": [
         {

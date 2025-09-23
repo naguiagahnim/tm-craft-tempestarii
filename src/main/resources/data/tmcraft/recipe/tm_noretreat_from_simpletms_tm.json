@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_noretreat"
+        "id": "tmcraft:tm_noretreat"
     },
     "fabric:load_conditions": [
         {

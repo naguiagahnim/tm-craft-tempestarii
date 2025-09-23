@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_10000000voltthunderbolt"
+        "id": "tmcraft:tm_10000000voltthunderbolt"
     },
     "fabric:load_conditions": [
         {

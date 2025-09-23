@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_stickyweb"
+        "id": "tmcraft:tm_stickyweb"
     },
     "fabric:load_conditions": [
         {

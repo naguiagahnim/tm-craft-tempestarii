@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bulldoze"
+        "id": "tmcraft:tm_bulldoze"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_collisioncourse"
+        "id": "tmcraft:tm_collisioncourse"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_swallow"
+        "id": "tmcraft:tm_swallow"
     },
     "fabric:load_conditions": [
         {

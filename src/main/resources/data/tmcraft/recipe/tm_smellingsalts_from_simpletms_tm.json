@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_smellingsalts"
+        "id": "tmcraft:tm_smellingsalts"
     },
     "fabric:load_conditions": [
         {

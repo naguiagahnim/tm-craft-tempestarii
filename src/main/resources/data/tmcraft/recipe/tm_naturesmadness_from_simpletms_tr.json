@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_naturesmadness"
+        "id": "tmcraft:tm_naturesmadness"
     },
     "fabric:load_conditions": [
         {

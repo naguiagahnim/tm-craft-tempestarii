@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxrapidflow"
+        "id": "tmcraft:tm_gmaxrapidflow"
     },
     "fabric:load_conditions": [
         {

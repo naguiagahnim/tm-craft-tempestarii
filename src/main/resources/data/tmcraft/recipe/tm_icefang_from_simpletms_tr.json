@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_icefang"
+        "id": "tmcraft:tm_icefang"
     },
     "fabric:load_conditions": [
         {

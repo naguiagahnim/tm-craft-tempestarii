@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_flamewheel"
+        "id": "tmcraft:tm_flamewheel"
     },
     "fabric:load_conditions": [
         {

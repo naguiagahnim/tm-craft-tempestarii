@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_beatup"
+        "id": "tmcraft:tm_beatup"
     },
     "fabric:load_conditions": [
         {

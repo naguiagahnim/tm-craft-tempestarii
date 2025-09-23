@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_trickroom"
+        "id": "tmcraft:tm_trickroom"
     },
     "fabric:load_conditions": [
         {

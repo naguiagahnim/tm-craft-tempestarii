@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxdarkness"
+        "id": "tmcraft:tm_maxdarkness"
     },
     "fabric:load_conditions": [
         {

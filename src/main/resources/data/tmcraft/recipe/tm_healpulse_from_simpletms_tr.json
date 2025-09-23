@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_healpulse"
+        "id": "tmcraft:tm_healpulse"
     },
     "fabric:load_conditions": [
         {

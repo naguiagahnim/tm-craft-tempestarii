@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sweetscent"
+        "id": "tmcraft:tm_sweetscent"
     },
     "fabric:load_conditions": [
         {

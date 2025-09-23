@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_heatcrash"
+        "id": "tmcraft:tm_heatcrash"
     },
     "fabric:load_conditions": [
         {

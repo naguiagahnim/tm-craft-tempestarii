@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_faketears"
+        "id": "tmcraft:tm_faketears"
     },
     "fabric:load_conditions": [
         {

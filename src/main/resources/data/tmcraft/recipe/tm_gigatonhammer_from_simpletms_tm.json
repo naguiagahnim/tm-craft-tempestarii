@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gigatonhammer"
+        "id": "tmcraft:tm_gigatonhammer"
     },
     "fabric:load_conditions": [
         {

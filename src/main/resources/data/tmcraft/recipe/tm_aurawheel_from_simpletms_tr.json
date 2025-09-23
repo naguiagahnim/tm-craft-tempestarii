@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_aurawheel"
+        "id": "tmcraft:tm_aurawheel"
     },
     "fabric:load_conditions": [
         {

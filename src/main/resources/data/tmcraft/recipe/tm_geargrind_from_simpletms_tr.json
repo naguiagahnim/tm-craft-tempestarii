@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_geargrind"
+        "id": "tmcraft:tm_geargrind"
     },
     "fabric:load_conditions": [
         {

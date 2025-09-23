@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_skillswap"
+        "id": "tmcraft:tm_skillswap"
     },
     "fabric:load_conditions": [
         {

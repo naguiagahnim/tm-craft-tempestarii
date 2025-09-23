@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_ragefist"
+        "id": "tmcraft:tm_ragefist"
     },
     "fabric:load_conditions": [
         {

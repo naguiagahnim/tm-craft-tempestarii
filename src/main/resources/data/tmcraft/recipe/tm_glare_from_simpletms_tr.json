@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_glare"
+        "id": "tmcraft:tm_glare"
     },
     "fabric:load_conditions": [
         {

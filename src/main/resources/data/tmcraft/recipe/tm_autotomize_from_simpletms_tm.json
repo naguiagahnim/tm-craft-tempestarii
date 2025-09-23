@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_autotomize"
+        "id": "tmcraft:tm_autotomize"
     },
     "fabric:load_conditions": [
         {

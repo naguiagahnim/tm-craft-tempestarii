@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_thunderouskick"
+        "id": "tmcraft:tm_thunderouskick"
     },
     "fabric:load_conditions": [
         {

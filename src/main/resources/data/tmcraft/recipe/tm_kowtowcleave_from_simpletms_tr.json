@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_kowtowcleave"
+        "id": "tmcraft:tm_kowtowcleave"
     },
     "fabric:load_conditions": [
         {

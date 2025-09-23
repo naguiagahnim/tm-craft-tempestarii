@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_splash"
+        "id": "tmcraft:tm_splash"
     },
     "fabric:load_conditions": [
         {

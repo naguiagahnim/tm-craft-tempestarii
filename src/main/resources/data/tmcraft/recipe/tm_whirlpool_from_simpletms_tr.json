@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_whirlpool"
+        "id": "tmcraft:tm_whirlpool"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxwyrmwind"
+        "id": "tmcraft:tm_maxwyrmwind"
     },
     "fabric:load_conditions": [
         {

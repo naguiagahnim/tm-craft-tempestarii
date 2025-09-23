@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sandtomb"
+        "id": "tmcraft:tm_sandtomb"
     },
     "fabric:load_conditions": [
         {

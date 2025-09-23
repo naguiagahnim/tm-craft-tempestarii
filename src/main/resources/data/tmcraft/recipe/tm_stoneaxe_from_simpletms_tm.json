@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_stoneaxe"
+        "id": "tmcraft:tm_stoneaxe"
     },
     "fabric:load_conditions": [
         {

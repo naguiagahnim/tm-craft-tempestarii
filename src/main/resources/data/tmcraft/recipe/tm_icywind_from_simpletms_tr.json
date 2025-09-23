@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_icywind"
+        "id": "tmcraft:tm_icywind"
     },
     "fabric:load_conditions": [
         {

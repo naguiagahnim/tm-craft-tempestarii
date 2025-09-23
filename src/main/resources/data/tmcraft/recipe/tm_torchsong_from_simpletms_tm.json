@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_torchsong"
+        "id": "tmcraft:tm_torchsong"
     },
     "fabric:load_conditions": [
         {

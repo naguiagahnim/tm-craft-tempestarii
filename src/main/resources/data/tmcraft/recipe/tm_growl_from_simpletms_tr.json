@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_growl"
+        "id": "tmcraft:tm_growl"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_magnitude"
+        "id": "tmcraft:tm_magnitude"
     },
     "fabric:load_conditions": [
         {

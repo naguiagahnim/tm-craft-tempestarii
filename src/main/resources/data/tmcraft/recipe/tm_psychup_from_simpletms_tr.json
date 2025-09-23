@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_psychup"
+        "id": "tmcraft:tm_psychup"
     },
     "fabric:load_conditions": [
         {

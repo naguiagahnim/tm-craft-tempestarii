@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_lovelykiss"
+        "id": "tmcraft:tm_lovelykiss"
     },
     "fabric:load_conditions": [
         {

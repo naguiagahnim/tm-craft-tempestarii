@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_airslash"
+        "id": "tmcraft:tm_airslash"
     },
     "fabric:load_conditions": [
         {

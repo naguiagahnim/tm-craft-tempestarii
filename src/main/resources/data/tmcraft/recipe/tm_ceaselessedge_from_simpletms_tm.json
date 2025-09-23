@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_ceaselessedge"
+        "id": "tmcraft:tm_ceaselessedge"
     },
     "fabric:load_conditions": [
         {

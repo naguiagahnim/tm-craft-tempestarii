@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_continentalcrush"
+        "id": "tmcraft:tm_continentalcrush"
     },
     "fabric:load_conditions": [
         {

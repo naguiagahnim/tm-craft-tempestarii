@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_captivate"
+        "id": "tmcraft:tm_captivate"
     },
     "fabric:load_conditions": [
         {

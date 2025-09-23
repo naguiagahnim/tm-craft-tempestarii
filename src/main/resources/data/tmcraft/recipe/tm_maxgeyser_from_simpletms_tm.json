@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxgeyser"
+        "id": "tmcraft:tm_maxgeyser"
     },
     "fabric:load_conditions": [
         {

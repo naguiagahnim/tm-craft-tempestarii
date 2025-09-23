@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxovergrowth"
+        "id": "tmcraft:tm_maxovergrowth"
     },
     "fabric:load_conditions": [
         {

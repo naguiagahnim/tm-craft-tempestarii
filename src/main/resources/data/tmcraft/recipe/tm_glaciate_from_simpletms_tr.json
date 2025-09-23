@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_glaciate"
+        "id": "tmcraft:tm_glaciate"
     },
     "fabric:load_conditions": [
         {

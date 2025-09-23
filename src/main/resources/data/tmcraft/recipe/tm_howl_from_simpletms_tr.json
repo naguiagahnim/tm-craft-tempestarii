@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_howl"
+        "id": "tmcraft:tm_howl"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_drainpunch"
+        "id": "tmcraft:tm_drainpunch"
     },
     "fabric:load_conditions": [
         {

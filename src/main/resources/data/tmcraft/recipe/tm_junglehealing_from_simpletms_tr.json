@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_junglehealing"
+        "id": "tmcraft:tm_junglehealing"
     },
     "fabric:load_conditions": [
         {

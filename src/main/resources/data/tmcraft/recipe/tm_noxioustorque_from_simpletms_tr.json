@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_noxioustorque"
+        "id": "tmcraft:tm_noxioustorque"
     },
     "fabric:load_conditions": [
         {

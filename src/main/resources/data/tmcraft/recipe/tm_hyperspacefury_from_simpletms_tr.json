@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hyperspacefury"
+        "id": "tmcraft:tm_hyperspacefury"
     },
     "fabric:load_conditions": [
         {

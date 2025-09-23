@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxcentiferno"
+        "id": "tmcraft:tm_gmaxcentiferno"
     },
     "fabric:load_conditions": [
         {

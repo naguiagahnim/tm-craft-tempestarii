@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bittermalice"
+        "id": "tmcraft:tm_bittermalice"
     },
     "fabric:load_conditions": [
         {

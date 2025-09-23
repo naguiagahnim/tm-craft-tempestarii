@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sludgebomb"
+        "id": "tmcraft:tm_sludgebomb"
     },
     "fabric:load_conditions": [
         {

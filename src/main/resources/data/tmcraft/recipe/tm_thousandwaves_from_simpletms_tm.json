@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_thousandwaves"
+        "id": "tmcraft:tm_thousandwaves"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_risingvoltage"
+        "id": "tmcraft:tm_risingvoltage"
     },
     "fabric:load_conditions": [
         {

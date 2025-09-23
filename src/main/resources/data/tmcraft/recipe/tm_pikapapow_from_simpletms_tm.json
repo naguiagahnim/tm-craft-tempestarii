@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_pikapapow"
+        "id": "tmcraft:tm_pikapapow"
     },
     "fabric:load_conditions": [
         {

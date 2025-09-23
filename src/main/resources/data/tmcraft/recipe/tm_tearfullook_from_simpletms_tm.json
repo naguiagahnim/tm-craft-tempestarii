@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_tearfullook"
+        "id": "tmcraft:tm_tearfullook"
     },
     "fabric:load_conditions": [
         {

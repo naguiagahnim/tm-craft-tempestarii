@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bloomdoom"
+        "id": "tmcraft:tm_bloomdoom"
     },
     "fabric:load_conditions": [
         {

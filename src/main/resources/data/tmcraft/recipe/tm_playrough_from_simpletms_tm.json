@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_playrough"
+        "id": "tmcraft:tm_playrough"
     },
     "fabric:load_conditions": [
         {

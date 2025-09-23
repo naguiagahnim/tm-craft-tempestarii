@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_earthpower"
+        "id": "tmcraft:tm_earthpower"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hydrosteam"
+        "id": "tmcraft:tm_hydrosteam"
     },
     "fabric:load_conditions": [
         {

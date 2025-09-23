@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_aromatherapy"
+        "id": "tmcraft:tm_aromatherapy"
     },
     "fabric:load_conditions": [
         {

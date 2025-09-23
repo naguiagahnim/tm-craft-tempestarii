@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sludgewave"
+        "id": "tmcraft:tm_sludgewave"
     },
     "fabric:load_conditions": [
         {

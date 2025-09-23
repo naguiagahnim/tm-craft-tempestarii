@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_grassyterrain"
+        "id": "tmcraft:tm_grassyterrain"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_stompingtantrum"
+        "id": "tmcraft:tm_stompingtantrum"
     },
     "fabric:load_conditions": [
         {

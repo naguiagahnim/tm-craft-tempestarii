@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_aciddownpour"
+        "id": "tmcraft:tm_aciddownpour"
     },
     "fabric:load_conditions": [
         {

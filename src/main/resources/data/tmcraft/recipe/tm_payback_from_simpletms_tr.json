@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_payback"
+        "id": "tmcraft:tm_payback"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_flipturn"
+        "id": "tmcraft:tm_flipturn"
     },
     "fabric:load_conditions": [
         {

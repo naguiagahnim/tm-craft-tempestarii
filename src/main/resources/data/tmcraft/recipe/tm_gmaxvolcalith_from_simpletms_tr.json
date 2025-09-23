@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxvolcalith"
+        "id": "tmcraft:tm_gmaxvolcalith"
     },
     "fabric:load_conditions": [
         {

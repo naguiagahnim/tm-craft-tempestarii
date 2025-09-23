@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_confuseray"
+        "id": "tmcraft:tm_confuseray"
     },
     "fabric:load_conditions": [
         {

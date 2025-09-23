@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_magicalleaf"
+        "id": "tmcraft:tm_magicalleaf"
     },
     "fabric:load_conditions": [
         {

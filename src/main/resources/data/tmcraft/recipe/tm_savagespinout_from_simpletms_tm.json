@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_savagespinout"
+        "id": "tmcraft:tm_savagespinout"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_foresight"
+        "id": "tmcraft:tm_foresight"
     },
     "fabric:load_conditions": [
         {

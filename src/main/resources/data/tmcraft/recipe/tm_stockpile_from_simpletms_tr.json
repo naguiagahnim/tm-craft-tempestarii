@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_stockpile"
+        "id": "tmcraft:tm_stockpile"
     },
     "fabric:load_conditions": [
         {

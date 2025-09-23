@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_trumpcard"
+        "id": "tmcraft:tm_trumpcard"
     },
     "fabric:load_conditions": [
         {

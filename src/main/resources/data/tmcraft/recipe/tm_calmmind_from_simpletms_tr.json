@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_calmmind"
+        "id": "tmcraft:tm_calmmind"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_overdrive"
+        "id": "tmcraft:tm_overdrive"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_skullbash"
+        "id": "tmcraft:tm_skullbash"
     },
     "fabric:load_conditions": [
         {

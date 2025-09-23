@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_firefang"
+        "id": "tmcraft:tm_firefang"
     },
     "fabric:load_conditions": [
         {

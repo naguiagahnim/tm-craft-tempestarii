@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_seedflare"
+        "id": "tmcraft:tm_seedflare"
     },
     "fabric:load_conditions": [
         {

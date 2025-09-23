@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_pounce"
+        "id": "tmcraft:tm_pounce"
     },
     "fabric:load_conditions": [
         {

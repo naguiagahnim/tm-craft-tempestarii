@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dragontail"
+        "id": "tmcraft:tm_dragontail"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_jawlock"
+        "id": "tmcraft:tm_jawlock"
     },
     "fabric:load_conditions": [
         {

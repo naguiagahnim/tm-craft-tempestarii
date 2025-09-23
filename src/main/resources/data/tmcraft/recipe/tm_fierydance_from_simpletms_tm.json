@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_fierydance"
+        "id": "tmcraft:tm_fierydance"
     },
     "fabric:load_conditions": [
         {

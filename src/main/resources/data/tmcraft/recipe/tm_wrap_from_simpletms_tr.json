@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_wrap"
+        "id": "tmcraft:tm_wrap"
     },
     "fabric:load_conditions": [
         {

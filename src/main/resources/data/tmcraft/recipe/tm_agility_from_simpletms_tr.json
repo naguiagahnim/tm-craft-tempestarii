@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_agility"
+        "id": "tmcraft:tm_agility"
     },
     "fabric:load_conditions": [
         {

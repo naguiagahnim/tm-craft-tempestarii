@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_snipeshot"
+        "id": "tmcraft:tm_snipeshot"
     },
     "fabric:load_conditions": [
         {

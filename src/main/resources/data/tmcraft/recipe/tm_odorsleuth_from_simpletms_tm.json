@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_odorsleuth"
+        "id": "tmcraft:tm_odorsleuth"
     },
     "fabric:load_conditions": [
         {

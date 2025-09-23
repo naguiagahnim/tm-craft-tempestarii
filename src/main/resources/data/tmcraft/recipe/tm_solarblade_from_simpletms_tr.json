@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_solarblade"
+        "id": "tmcraft:tm_solarblade"
     },
     "fabric:load_conditions": [
         {

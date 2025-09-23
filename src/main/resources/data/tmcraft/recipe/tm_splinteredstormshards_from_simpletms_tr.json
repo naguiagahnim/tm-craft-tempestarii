@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_splinteredstormshards"
+        "id": "tmcraft:tm_splinteredstormshards"
     },
     "fabric:load_conditions": [
         {

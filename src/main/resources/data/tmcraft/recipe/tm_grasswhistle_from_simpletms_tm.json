@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_grasswhistle"
+        "id": "tmcraft:tm_grasswhistle"
     },
     "fabric:load_conditions": [
         {

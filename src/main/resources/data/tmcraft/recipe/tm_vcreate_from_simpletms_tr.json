@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_vcreate"
+        "id": "tmcraft:tm_vcreate"
     },
     "fabric:load_conditions": [
         {

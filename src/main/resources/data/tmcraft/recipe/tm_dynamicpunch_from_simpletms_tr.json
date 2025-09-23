@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dynamicpunch"
+        "id": "tmcraft:tm_dynamicpunch"
     },
     "fabric:load_conditions": [
         {

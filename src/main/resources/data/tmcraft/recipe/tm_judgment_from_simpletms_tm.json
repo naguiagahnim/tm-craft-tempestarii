@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_judgment"
+        "id": "tmcraft:tm_judgment"
     },
     "fabric:load_conditions": [
         {

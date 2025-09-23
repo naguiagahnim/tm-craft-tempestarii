@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hydropump"
+        "id": "tmcraft:tm_hydropump"
     },
     "fabric:load_conditions": [
         {

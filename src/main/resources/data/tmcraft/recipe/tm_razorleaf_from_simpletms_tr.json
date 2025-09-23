@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_razorleaf"
+        "id": "tmcraft:tm_razorleaf"
     },
     "fabric:load_conditions": [
         {

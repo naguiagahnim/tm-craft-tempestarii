@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_vacuumwave"
+        "id": "tmcraft:tm_vacuumwave"
     },
     "fabric:load_conditions": [
         {

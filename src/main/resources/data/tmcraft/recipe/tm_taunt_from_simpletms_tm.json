@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_taunt"
+        "id": "tmcraft:tm_taunt"
     },
     "fabric:load_conditions": [
         {

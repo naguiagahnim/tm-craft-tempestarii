@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_zenheadbutt"
+        "id": "tmcraft:tm_zenheadbutt"
     },
     "fabric:load_conditions": [
         {

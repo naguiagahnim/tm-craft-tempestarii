@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_shelltrap"
+        "id": "tmcraft:tm_shelltrap"
     },
     "fabric:load_conditions": [
         {

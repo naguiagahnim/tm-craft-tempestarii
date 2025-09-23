@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_catastropika"
+        "id": "tmcraft:tm_catastropika"
     },
     "fabric:load_conditions": [
         {

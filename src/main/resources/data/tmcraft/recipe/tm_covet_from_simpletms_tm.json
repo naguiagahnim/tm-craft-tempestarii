@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_covet"
+        "id": "tmcraft:tm_covet"
     },
     "fabric:load_conditions": [
         {

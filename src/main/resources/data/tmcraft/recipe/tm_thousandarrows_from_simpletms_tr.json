@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_thousandarrows"
+        "id": "tmcraft:tm_thousandarrows"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_leafblade"
+        "id": "tmcraft:tm_leafblade"
     },
     "fabric:load_conditions": [
         {

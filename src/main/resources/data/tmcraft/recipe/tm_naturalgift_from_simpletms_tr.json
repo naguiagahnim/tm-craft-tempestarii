@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_naturalgift"
+        "id": "tmcraft:tm_naturalgift"
     },
     "fabric:load_conditions": [
         {

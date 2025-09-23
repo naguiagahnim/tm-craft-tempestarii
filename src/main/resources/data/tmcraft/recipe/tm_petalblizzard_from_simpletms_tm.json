@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_petalblizzard"
+        "id": "tmcraft:tm_petalblizzard"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_spikes"
+        "id": "tmcraft:tm_spikes"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_closecombat"
+        "id": "tmcraft:tm_closecombat"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_precipiceblades"
+        "id": "tmcraft:tm_precipiceblades"
     },
     "fabric:load_conditions": [
         {

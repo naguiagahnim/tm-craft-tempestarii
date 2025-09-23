@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dizzypunch"
+        "id": "tmcraft:tm_dizzypunch"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxguard"
+        "id": "tmcraft:tm_maxguard"
     },
     "fabric:load_conditions": [
         {

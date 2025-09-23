@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_shedtail"
+        "id": "tmcraft:tm_shedtail"
     },
     "fabric:load_conditions": [
         {

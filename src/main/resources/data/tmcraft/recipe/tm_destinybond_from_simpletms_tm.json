@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_destinybond"
+        "id": "tmcraft:tm_destinybond"
     },
     "fabric:load_conditions": [
         {

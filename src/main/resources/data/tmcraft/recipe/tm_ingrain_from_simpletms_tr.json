@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_ingrain"
+        "id": "tmcraft:tm_ingrain"
     },
     "fabric:load_conditions": [
         {

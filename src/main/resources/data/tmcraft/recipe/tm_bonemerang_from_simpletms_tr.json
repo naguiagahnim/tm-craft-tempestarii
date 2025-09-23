@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bonemerang"
+        "id": "tmcraft:tm_bonemerang"
     },
     "fabric:load_conditions": [
         {

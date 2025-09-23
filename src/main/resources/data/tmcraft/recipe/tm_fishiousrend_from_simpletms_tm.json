@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_fishiousrend"
+        "id": "tmcraft:tm_fishiousrend"
     },
     "fabric:load_conditions": [
         {

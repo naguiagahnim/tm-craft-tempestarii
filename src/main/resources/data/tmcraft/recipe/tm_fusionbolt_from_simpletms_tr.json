@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_fusionbolt"
+        "id": "tmcraft:tm_fusionbolt"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sizzlyslide"
+        "id": "tmcraft:tm_sizzlyslide"
     },
     "fabric:load_conditions": [
         {

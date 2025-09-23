@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxhydrosnipe"
+        "id": "tmcraft:tm_gmaxhydrosnipe"
     },
     "fabric:load_conditions": [
         {

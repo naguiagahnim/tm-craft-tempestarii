@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hiddenpower"
+        "id": "tmcraft:tm_hiddenpower"
     },
     "fabric:load_conditions": [
         {

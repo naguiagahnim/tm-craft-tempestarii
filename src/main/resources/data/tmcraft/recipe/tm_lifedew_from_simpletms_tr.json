@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_lifedew"
+        "id": "tmcraft:tm_lifedew"
     },
     "fabric:load_conditions": [
         {

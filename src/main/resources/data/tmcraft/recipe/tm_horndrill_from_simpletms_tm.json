@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_horndrill"
+        "id": "tmcraft:tm_horndrill"
     },
     "fabric:load_conditions": [
         {

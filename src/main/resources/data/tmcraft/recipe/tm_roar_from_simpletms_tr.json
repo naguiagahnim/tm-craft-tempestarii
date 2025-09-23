@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_roar"
+        "id": "tmcraft:tm_roar"
     },
     "fabric:load_conditions": [
         {

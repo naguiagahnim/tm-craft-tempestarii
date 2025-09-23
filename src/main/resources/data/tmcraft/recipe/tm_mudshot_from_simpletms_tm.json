@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mudshot"
+        "id": "tmcraft:tm_mudshot"
     },
     "fabric:load_conditions": [
         {

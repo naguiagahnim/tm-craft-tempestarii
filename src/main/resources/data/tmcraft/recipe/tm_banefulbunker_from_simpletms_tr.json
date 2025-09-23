@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_banefulbunker"
+        "id": "tmcraft:tm_banefulbunker"
     },
     "fabric:load_conditions": [
         {

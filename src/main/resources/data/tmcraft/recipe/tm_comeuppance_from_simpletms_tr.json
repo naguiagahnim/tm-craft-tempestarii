@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_comeuppance"
+        "id": "tmcraft:tm_comeuppance"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_holdhands"
+        "id": "tmcraft:tm_holdhands"
     },
     "fabric:load_conditions": [
         {

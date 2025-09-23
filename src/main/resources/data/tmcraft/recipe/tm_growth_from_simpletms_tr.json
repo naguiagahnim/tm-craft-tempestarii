@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_growth"
+        "id": "tmcraft:tm_growth"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_shockwave"
+        "id": "tmcraft:tm_shockwave"
     },
     "fabric:load_conditions": [
         {

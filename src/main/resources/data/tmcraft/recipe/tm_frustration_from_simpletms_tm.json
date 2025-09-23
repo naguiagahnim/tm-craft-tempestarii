@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_frustration"
+        "id": "tmcraft:tm_frustration"
     },
     "fabric:load_conditions": [
         {

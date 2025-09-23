@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_teeterdance"
+        "id": "tmcraft:tm_teeterdance"
     },
     "fabric:load_conditions": [
         {

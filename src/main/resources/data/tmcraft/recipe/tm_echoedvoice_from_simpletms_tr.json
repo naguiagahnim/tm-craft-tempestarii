@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_echoedvoice"
+        "id": "tmcraft:tm_echoedvoice"
     },
     "fabric:load_conditions": [
         {

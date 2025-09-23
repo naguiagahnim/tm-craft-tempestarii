@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_anchorshot"
+        "id": "tmcraft:tm_anchorshot"
     },
     "fabric:load_conditions": [
         {

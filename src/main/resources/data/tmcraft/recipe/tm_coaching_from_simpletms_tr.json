@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_coaching"
+        "id": "tmcraft:tm_coaching"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_springtidestorm"
+        "id": "tmcraft:tm_springtidestorm"
     },
     "fabric:load_conditions": [
         {

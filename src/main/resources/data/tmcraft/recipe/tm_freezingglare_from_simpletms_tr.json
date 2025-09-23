@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_freezingglare"
+        "id": "tmcraft:tm_freezingglare"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_naturepower"
+        "id": "tmcraft:tm_naturepower"
     },
     "fabric:load_conditions": [
         {

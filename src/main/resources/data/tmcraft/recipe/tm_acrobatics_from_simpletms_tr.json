@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_acrobatics"
+        "id": "tmcraft:tm_acrobatics"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_guardsplit"
+        "id": "tmcraft:tm_guardsplit"
     },
     "fabric:load_conditions": [
         {

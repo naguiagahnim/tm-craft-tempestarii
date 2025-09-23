@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_boltbeak"
+        "id": "tmcraft:tm_boltbeak"
     },
     "fabric:load_conditions": [
         {

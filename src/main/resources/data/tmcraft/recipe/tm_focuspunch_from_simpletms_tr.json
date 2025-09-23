@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_focuspunch"
+        "id": "tmcraft:tm_focuspunch"
     },
     "fabric:load_conditions": [
         {

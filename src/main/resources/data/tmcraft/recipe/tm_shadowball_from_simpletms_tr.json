@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_shadowball"
+        "id": "tmcraft:tm_shadowball"
     },
     "fabric:load_conditions": [
         {

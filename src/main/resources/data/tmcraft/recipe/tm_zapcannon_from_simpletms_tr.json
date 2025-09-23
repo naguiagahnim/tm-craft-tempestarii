@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_zapcannon"
+        "id": "tmcraft:tm_zapcannon"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dazzlinggleam"
+        "id": "tmcraft:tm_dazzlinggleam"
     },
     "fabric:load_conditions": [
         {

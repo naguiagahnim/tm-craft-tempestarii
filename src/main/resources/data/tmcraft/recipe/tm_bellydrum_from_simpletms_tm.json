@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bellydrum"
+        "id": "tmcraft:tm_bellydrum"
     },
     "fabric:load_conditions": [
         {

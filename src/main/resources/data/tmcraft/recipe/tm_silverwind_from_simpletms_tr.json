@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_silverwind"
+        "id": "tmcraft:tm_silverwind"
     },
     "fabric:load_conditions": [
         {

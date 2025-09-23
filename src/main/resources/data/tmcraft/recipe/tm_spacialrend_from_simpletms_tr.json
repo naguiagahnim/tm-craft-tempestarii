@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_spacialrend"
+        "id": "tmcraft:tm_spacialrend"
     },
     "fabric:load_conditions": [
         {

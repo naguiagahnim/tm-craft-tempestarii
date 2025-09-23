@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_electricterrain"
+        "id": "tmcraft:tm_electricterrain"
     },
     "fabric:load_conditions": [
         {

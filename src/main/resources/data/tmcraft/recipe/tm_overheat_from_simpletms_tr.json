@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_overheat"
+        "id": "tmcraft:tm_overheat"
     },
     "fabric:load_conditions": [
         {

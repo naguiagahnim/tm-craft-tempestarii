@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dragonpulse"
+        "id": "tmcraft:tm_dragonpulse"
     },
     "fabric:load_conditions": [
         {

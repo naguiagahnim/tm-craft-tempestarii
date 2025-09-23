@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_guillotine"
+        "id": "tmcraft:tm_guillotine"
     },
     "fabric:load_conditions": [
         {

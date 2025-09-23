@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxlightning"
+        "id": "tmcraft:tm_maxlightning"
     },
     "fabric:load_conditions": [
         {

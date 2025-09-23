@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_aquatail"
+        "id": "tmcraft:tm_aquatail"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_combattorque"
+        "id": "tmcraft:tm_combattorque"
     },
     "fabric:load_conditions": [
         {

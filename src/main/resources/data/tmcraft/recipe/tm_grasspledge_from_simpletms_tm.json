@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_grasspledge"
+        "id": "tmcraft:tm_grasspledge"
     },
     "fabric:load_conditions": [
         {

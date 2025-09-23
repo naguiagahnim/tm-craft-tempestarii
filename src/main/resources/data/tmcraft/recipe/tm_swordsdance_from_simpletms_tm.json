@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_swordsdance"
+        "id": "tmcraft:tm_swordsdance"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dragonascent"
+        "id": "tmcraft:tm_dragonascent"
     },
     "fabric:load_conditions": [
         {

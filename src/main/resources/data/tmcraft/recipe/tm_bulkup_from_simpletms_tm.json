@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bulkup"
+        "id": "tmcraft:tm_bulkup"
     },
     "fabric:load_conditions": [
         {

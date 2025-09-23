@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_toxicthread"
+        "id": "tmcraft:tm_toxicthread"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_rockpolish"
+        "id": "tmcraft:tm_rockpolish"
     },
     "fabric:load_conditions": [
         {

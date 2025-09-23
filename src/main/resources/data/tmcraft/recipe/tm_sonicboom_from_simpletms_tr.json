@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sonicboom"
+        "id": "tmcraft:tm_sonicboom"
     },
     "fabric:load_conditions": [
         {

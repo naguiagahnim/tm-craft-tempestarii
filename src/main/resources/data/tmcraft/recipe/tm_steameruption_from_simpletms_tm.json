@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_steameruption"
+        "id": "tmcraft:tm_steameruption"
     },
     "fabric:load_conditions": [
         {

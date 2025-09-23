@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sinisterarrowraid"
+        "id": "tmcraft:tm_sinisterarrowraid"
     },
     "fabric:load_conditions": [
         {

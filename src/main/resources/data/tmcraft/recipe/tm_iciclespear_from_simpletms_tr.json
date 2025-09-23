@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_iciclespear"
+        "id": "tmcraft:tm_iciclespear"
     },
     "fabric:load_conditions": [
         {

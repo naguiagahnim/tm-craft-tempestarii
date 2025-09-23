@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dynamaxcannon"
+        "id": "tmcraft:tm_dynamaxcannon"
     },
     "fabric:load_conditions": [
         {

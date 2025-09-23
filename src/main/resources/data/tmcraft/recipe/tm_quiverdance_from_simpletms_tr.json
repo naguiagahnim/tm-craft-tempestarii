@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_quiverdance"
+        "id": "tmcraft:tm_quiverdance"
     },
     "fabric:load_conditions": [
         {

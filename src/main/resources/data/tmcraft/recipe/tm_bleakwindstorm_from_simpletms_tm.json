@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bleakwindstorm"
+        "id": "tmcraft:tm_bleakwindstorm"
     },
     "fabric:load_conditions": [
         {

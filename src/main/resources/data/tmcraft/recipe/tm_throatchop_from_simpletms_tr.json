@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_throatchop"
+        "id": "tmcraft:tm_throatchop"
     },
     "fabric:load_conditions": [
         {

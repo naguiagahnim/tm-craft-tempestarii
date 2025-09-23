@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_cometpunch"
+        "id": "tmcraft:tm_cometpunch"
     },
     "fabric:load_conditions": [
         {

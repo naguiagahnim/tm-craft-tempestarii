@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_perishsong"
+        "id": "tmcraft:tm_perishsong"
     },
     "fabric:load_conditions": [
         {

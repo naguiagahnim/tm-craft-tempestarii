@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_aquajet"
+        "id": "tmcraft:tm_aquajet"
     },
     "fabric:load_conditions": [
         {

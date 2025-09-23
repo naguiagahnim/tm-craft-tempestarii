@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_wickedblow"
+        "id": "tmcraft:tm_wickedblow"
     },
     "fabric:load_conditions": [
         {

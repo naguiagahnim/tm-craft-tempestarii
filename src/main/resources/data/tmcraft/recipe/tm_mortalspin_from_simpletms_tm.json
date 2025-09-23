@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mortalspin"
+        "id": "tmcraft:tm_mortalspin"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_menacingmoonrazemaelstrom"
+        "id": "tmcraft:tm_menacingmoonrazemaelstrom"
     },
     "fabric:load_conditions": [
         {

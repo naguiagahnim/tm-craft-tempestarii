@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_guardswap"
+        "id": "tmcraft:tm_guardswap"
     },
     "fabric:load_conditions": [
         {

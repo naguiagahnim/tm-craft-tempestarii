@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_stokedsparksurfer"
+        "id": "tmcraft:tm_stokedsparksurfer"
     },
     "fabric:load_conditions": [
         {

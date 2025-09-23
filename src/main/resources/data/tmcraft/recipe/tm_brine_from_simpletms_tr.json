@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_brine"
+        "id": "tmcraft:tm_brine"
     },
     "fabric:load_conditions": [
         {

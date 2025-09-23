@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_branchpoke"
+        "id": "tmcraft:tm_branchpoke"
     },
     "fabric:load_conditions": [
         {

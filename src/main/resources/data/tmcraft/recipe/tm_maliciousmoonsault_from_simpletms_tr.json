@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maliciousmoonsault"
+        "id": "tmcraft:tm_maliciousmoonsault"
     },
     "fabric:load_conditions": [
         {

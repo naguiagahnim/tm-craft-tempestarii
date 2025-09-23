@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxknuckle"
+        "id": "tmcraft:tm_maxknuckle"
     },
     "fabric:load_conditions": [
         {

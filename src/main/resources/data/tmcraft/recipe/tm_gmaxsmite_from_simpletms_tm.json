@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxsmite"
+        "id": "tmcraft:tm_gmaxsmite"
     },
     "fabric:load_conditions": [
         {

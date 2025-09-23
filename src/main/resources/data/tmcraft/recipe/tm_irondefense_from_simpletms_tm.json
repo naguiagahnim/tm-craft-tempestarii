@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_irondefense"
+        "id": "tmcraft:tm_irondefense"
     },
     "fabric:load_conditions": [
         {

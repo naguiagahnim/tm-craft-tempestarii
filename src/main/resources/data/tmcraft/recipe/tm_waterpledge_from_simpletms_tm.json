@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_waterpledge"
+        "id": "tmcraft:tm_waterpledge"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_steelbeam"
+        "id": "tmcraft:tm_steelbeam"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_grudge"
+        "id": "tmcraft:tm_grudge"
     },
     "fabric:load_conditions": [
         {

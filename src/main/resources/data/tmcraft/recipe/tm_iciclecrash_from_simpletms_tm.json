@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_iciclecrash"
+        "id": "tmcraft:tm_iciclecrash"
     },
     "fabric:load_conditions": [
         {

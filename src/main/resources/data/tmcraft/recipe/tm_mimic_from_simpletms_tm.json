@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mimic"
+        "id": "tmcraft:tm_mimic"
     },
     "fabric:load_conditions": [
         {

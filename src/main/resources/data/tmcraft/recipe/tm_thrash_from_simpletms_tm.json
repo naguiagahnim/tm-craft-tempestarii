@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_thrash"
+        "id": "tmcraft:tm_thrash"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_crushclaw"
+        "id": "tmcraft:tm_crushclaw"
     },
     "fabric:load_conditions": [
         {

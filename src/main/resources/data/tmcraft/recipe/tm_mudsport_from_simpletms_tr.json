@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mudsport"
+        "id": "tmcraft:tm_mudsport"
     },
     "fabric:load_conditions": [
         {

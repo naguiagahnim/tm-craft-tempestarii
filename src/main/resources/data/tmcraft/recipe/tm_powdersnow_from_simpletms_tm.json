@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_powdersnow"
+        "id": "tmcraft:tm_powdersnow"
     },
     "fabric:load_conditions": [
         {

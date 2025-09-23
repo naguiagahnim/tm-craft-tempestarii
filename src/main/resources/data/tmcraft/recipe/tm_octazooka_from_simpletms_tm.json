@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_octazooka"
+        "id": "tmcraft:tm_octazooka"
     },
     "fabric:load_conditions": [
         {

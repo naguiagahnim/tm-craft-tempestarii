@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_discharge"
+        "id": "tmcraft:tm_discharge"
     },
     "fabric:load_conditions": [
         {

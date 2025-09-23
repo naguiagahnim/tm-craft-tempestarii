@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_electroweb"
+        "id": "tmcraft:tm_electroweb"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_charge"
+        "id": "tmcraft:tm_charge"
     },
     "fabric:load_conditions": [
         {

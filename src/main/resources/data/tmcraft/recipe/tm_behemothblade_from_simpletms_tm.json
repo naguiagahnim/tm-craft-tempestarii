@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_behemothblade"
+        "id": "tmcraft:tm_behemothblade"
     },
     "fabric:load_conditions": [
         {

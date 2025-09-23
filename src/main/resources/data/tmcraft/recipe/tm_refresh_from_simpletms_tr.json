@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_refresh"
+        "id": "tmcraft:tm_refresh"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_trickortreat"
+        "id": "tmcraft:tm_trickortreat"
     },
     "fabric:load_conditions": [
         {

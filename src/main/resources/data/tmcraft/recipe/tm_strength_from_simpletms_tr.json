@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_strength"
+        "id": "tmcraft:tm_strength"
     },
     "fabric:load_conditions": [
         {

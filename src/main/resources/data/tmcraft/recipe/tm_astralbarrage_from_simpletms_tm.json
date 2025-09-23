@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_astralbarrage"
+        "id": "tmcraft:tm_astralbarrage"
     },
     "fabric:load_conditions": [
         {

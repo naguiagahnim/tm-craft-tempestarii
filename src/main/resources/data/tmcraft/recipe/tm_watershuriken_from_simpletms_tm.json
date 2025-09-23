@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_watershuriken"
+        "id": "tmcraft:tm_watershuriken"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_steelwing"
+        "id": "tmcraft:tm_steelwing"
     },
     "fabric:load_conditions": [
         {

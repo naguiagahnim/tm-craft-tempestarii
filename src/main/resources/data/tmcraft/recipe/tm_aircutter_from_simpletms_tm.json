@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_aircutter"
+        "id": "tmcraft:tm_aircutter"
     },
     "fabric:load_conditions": [
         {

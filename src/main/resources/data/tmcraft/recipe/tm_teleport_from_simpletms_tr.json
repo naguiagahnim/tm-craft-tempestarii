@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_teleport"
+        "id": "tmcraft:tm_teleport"
     },
     "fabric:load_conditions": [
         {

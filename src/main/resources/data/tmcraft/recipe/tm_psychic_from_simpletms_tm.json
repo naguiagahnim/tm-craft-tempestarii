@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_psychic"
+        "id": "tmcraft:tm_psychic"
     },
     "fabric:load_conditions": [
         {

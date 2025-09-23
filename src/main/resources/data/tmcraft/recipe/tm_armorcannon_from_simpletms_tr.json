@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_armorcannon"
+        "id": "tmcraft:tm_armorcannon"
     },
     "fabric:load_conditions": [
         {

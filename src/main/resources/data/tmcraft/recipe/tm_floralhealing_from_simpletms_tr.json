@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_floralhealing"
+        "id": "tmcraft:tm_floralhealing"
     },
     "fabric:load_conditions": [
         {

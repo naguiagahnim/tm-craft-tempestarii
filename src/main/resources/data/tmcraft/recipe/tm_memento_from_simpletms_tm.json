@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_memento"
+        "id": "tmcraft:tm_memento"
     },
     "fabric:load_conditions": [
         {

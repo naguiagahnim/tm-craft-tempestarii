@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_firespin"
+        "id": "tmcraft:tm_firespin"
     },
     "fabric:load_conditions": [
         {

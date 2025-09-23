@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_chillyreception"
+        "id": "tmcraft:tm_chillyreception"
     },
     "fabric:load_conditions": [
         {

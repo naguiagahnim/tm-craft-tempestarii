@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sheercold"
+        "id": "tmcraft:tm_sheercold"
     },
     "fabric:load_conditions": [
         {

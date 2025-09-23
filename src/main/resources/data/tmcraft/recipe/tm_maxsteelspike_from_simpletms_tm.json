@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxsteelspike"
+        "id": "tmcraft:tm_maxsteelspike"
     },
     "fabric:load_conditions": [
         {

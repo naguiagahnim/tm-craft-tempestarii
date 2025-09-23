@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_heartswap"
+        "id": "tmcraft:tm_heartswap"
     },
     "fabric:load_conditions": [
         {

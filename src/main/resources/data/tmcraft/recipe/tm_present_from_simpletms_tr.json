@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_present"
+        "id": "tmcraft:tm_present"
     },
     "fabric:load_conditions": [
         {

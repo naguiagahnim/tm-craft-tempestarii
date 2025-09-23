@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_poweruppunch"
+        "id": "tmcraft:tm_poweruppunch"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mistball"
+        "id": "tmcraft:tm_mistball"
     },
     "fabric:load_conditions": [
         {

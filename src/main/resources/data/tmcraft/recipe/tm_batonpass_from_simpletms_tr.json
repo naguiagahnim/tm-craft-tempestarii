@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_batonpass"
+        "id": "tmcraft:tm_batonpass"
     },
     "fabric:load_conditions": [
         {

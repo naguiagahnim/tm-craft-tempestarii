@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxoneblow"
+        "id": "tmcraft:tm_gmaxoneblow"
     },
     "fabric:load_conditions": [
         {

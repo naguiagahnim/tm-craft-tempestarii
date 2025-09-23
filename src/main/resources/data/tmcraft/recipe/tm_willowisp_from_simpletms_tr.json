@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_willowisp"
+        "id": "tmcraft:tm_willowisp"
     },
     "fabric:load_conditions": [
         {

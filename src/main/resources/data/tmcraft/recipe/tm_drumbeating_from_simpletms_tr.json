@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_drumbeating"
+        "id": "tmcraft:tm_drumbeating"
     },
     "fabric:load_conditions": [
         {

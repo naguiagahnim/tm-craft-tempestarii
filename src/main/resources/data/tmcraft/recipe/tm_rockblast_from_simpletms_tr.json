@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_rockblast"
+        "id": "tmcraft:tm_rockblast"
     },
     "fabric:load_conditions": [
         {

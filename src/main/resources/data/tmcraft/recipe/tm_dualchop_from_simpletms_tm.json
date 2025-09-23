@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dualchop"
+        "id": "tmcraft:tm_dualchop"
     },
     "fabric:load_conditions": [
         {

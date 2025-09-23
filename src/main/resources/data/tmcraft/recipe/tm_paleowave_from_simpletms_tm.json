@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_paleowave"
+        "id": "tmcraft:tm_paleowave"
     },
     "fabric:load_conditions": [
         {

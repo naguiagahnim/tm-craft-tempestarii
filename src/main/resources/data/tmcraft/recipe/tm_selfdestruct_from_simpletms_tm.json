@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_selfdestruct"
+        "id": "tmcraft:tm_selfdestruct"
     },
     "fabric:load_conditions": [
         {

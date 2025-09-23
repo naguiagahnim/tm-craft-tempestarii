@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_lastrespects"
+        "id": "tmcraft:tm_lastrespects"
     },
     "fabric:load_conditions": [
         {

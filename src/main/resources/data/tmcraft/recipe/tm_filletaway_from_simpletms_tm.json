@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_filletaway"
+        "id": "tmcraft:tm_filletaway"
     },
     "fabric:load_conditions": [
         {

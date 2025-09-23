@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sappyseed"
+        "id": "tmcraft:tm_sappyseed"
     },
     "fabric:load_conditions": [
         {

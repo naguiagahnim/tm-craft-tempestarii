@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_chillingwater"
+        "id": "tmcraft:tm_chillingwater"
     },
     "fabric:load_conditions": [
         {

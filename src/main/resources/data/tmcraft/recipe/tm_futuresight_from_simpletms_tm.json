@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_futuresight"
+        "id": "tmcraft:tm_futuresight"
     },
     "fabric:load_conditions": [
         {

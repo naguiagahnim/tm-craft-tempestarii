@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_drillrun"
+        "id": "tmcraft:tm_drillrun"
     },
     "fabric:load_conditions": [
         {

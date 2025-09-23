@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_terrainpulse"
+        "id": "tmcraft:tm_terrainpulse"
     },
     "fabric:load_conditions": [
         {

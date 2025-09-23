@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_laserfocus"
+        "id": "tmcraft:tm_laserfocus"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_chloroblast"
+        "id": "tmcraft:tm_chloroblast"
     },
     "fabric:load_conditions": [
         {

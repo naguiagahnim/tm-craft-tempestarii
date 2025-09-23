@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dragonrush"
+        "id": "tmcraft:tm_dragonrush"
     },
     "fabric:load_conditions": [
         {

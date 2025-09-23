@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hex"
+        "id": "tmcraft:tm_hex"
     },
     "fabric:load_conditions": [
         {

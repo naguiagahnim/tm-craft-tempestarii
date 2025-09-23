@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_purify"
+        "id": "tmcraft:tm_purify"
     },
     "fabric:load_conditions": [
         {

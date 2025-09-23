@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_firepledge"
+        "id": "tmcraft:tm_firepledge"
     },
     "fabric:load_conditions": [
         {

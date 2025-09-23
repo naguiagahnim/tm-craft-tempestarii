@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_tailwhip"
+        "id": "tmcraft:tm_tailwhip"
     },
     "fabric:load_conditions": [
         {

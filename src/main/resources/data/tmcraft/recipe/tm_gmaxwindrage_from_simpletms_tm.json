@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxwindrage"
+        "id": "tmcraft:tm_gmaxwindrage"
     },
     "fabric:load_conditions": [
         {

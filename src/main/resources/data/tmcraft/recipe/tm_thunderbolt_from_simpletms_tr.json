@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_thunderbolt"
+        "id": "tmcraft:tm_thunderbolt"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_poisontail"
+        "id": "tmcraft:tm_poisontail"
     },
     "fabric:load_conditions": [
         {

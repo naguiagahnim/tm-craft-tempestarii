@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_pursuit"
+        "id": "tmcraft:tm_pursuit"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_ragingfury"
+        "id": "tmcraft:tm_ragingfury"
     },
     "fabric:load_conditions": [
         {

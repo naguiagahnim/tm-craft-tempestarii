@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gigaimpact"
+        "id": "tmcraft:tm_gigaimpact"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_scaleshot"
+        "id": "tmcraft:tm_scaleshot"
     },
     "fabric:load_conditions": [
         {

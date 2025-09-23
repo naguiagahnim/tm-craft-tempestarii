@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_phantomforce"
+        "id": "tmcraft:tm_phantomforce"
     },
     "fabric:load_conditions": [
         {

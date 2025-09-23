@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_wildboltstorm"
+        "id": "tmcraft:tm_wildboltstorm"
     },
     "fabric:load_conditions": [
         {

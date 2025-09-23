@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bide"
+        "id": "tmcraft:tm_bide"
     },
     "fabric:load_conditions": [
         {

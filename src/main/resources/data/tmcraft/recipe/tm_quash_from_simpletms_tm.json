@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_quash"
+        "id": "tmcraft:tm_quash"
     },
     "fabric:load_conditions": [
         {

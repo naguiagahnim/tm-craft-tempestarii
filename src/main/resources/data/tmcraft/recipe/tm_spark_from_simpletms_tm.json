@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_spark"
+        "id": "tmcraft:tm_spark"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hypervoice"
+        "id": "tmcraft:tm_hypervoice"
     },
     "fabric:load_conditions": [
         {

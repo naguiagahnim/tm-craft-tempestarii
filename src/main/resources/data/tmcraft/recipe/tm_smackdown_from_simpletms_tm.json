@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_smackdown"
+        "id": "tmcraft:tm_smackdown"
     },
     "fabric:load_conditions": [
         {

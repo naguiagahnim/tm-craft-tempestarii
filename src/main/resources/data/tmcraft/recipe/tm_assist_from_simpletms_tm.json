@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_assist"
+        "id": "tmcraft:tm_assist"
     },
     "fabric:load_conditions": [
         {

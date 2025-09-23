@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_frostbreath"
+        "id": "tmcraft:tm_frostbreath"
     },
     "fabric:load_conditions": [
         {

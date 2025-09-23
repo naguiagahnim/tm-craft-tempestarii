@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_aquastep"
+        "id": "tmcraft:tm_aquastep"
     },
     "fabric:load_conditions": [
         {

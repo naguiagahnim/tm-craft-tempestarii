@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_crosschop"
+        "id": "tmcraft:tm_crosschop"
     },
     "fabric:load_conditions": [
         {

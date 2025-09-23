@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_firstimpression"
+        "id": "tmcraft:tm_firstimpression"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_aromaticmist"
+        "id": "tmcraft:tm_aromaticmist"
     },
     "fabric:load_conditions": [
         {

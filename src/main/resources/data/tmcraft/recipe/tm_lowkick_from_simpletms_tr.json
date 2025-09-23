@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_lowkick"
+        "id": "tmcraft:tm_lowkick"
     },
     "fabric:load_conditions": [
         {

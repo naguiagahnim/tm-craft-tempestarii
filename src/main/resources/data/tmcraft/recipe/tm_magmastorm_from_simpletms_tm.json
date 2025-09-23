@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_magmastorm"
+        "id": "tmcraft:tm_magmastorm"
     },
     "fabric:load_conditions": [
         {

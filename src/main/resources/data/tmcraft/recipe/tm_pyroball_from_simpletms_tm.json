@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_pyroball"
+        "id": "tmcraft:tm_pyroball"
     },
     "fabric:load_conditions": [
         {

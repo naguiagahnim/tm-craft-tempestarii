@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_tailglow"
+        "id": "tmcraft:tm_tailglow"
     },
     "fabric:load_conditions": [
         {

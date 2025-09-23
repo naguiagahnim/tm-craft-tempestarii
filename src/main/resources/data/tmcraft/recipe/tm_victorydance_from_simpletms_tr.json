@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_victorydance"
+        "id": "tmcraft:tm_victorydance"
     },
     "fabric:load_conditions": [
         {

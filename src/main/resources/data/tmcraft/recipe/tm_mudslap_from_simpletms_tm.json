@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mudslap"
+        "id": "tmcraft:tm_mudslap"
     },
     "fabric:load_conditions": [
         {

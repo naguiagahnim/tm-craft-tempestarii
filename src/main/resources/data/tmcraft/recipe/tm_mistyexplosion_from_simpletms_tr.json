@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mistyexplosion"
+        "id": "tmcraft:tm_mistyexplosion"
     },
     "fabric:load_conditions": [
         {

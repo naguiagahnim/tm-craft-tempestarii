@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_confusion"
+        "id": "tmcraft:tm_confusion"
     },
     "fabric:load_conditions": [
         {

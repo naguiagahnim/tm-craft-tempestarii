@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_spiritshackle"
+        "id": "tmcraft:tm_spiritshackle"
     },
     "fabric:load_conditions": [
         {

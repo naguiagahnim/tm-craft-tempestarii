@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_dragonbreath"
+        "id": "tmcraft:tm_dragonbreath"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_slackoff"
+        "id": "tmcraft:tm_slackoff"
     },
     "fabric:load_conditions": [
         {

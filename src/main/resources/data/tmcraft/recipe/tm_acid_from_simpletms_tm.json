@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_acid"
+        "id": "tmcraft:tm_acid"
     },
     "fabric:load_conditions": [
         {

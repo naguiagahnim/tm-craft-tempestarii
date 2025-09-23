@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gearup"
+        "id": "tmcraft:tm_gearup"
     },
     "fabric:load_conditions": [
         {

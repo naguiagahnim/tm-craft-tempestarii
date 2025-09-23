@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_honeclaws"
+        "id": "tmcraft:tm_honeclaws"
     },
     "fabric:load_conditions": [
         {

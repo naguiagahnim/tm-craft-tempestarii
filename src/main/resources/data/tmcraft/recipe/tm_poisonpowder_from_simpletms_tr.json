@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_poisonpowder"
+        "id": "tmcraft:tm_poisonpowder"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_cut"
+        "id": "tmcraft:tm_cut"
     },
     "fabric:load_conditions": [
         {

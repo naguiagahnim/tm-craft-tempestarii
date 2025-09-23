@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_oblivionwing"
+        "id": "tmcraft:tm_oblivionwing"
     },
     "fabric:load_conditions": [
         {

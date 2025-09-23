@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_blazekick"
+        "id": "tmcraft:tm_blazekick"
     },
     "fabric:load_conditions": [
         {

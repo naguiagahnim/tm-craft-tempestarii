@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sparklingaria"
+        "id": "tmcraft:tm_sparklingaria"
     },
     "fabric:load_conditions": [
         {

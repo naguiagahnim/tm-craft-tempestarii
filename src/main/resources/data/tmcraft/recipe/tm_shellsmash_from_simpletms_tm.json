@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_shellsmash"
+        "id": "tmcraft:tm_shellsmash"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_mist"
+        "id": "tmcraft:tm_mist"
     },
     "fabric:load_conditions": [
         {

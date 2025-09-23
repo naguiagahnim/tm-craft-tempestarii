@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_vinewhip"
+        "id": "tmcraft:tm_vinewhip"
     },
     "fabric:load_conditions": [
         {

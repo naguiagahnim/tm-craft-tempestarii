@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_playnice"
+        "id": "tmcraft:tm_playnice"
     },
     "fabric:load_conditions": [
         {

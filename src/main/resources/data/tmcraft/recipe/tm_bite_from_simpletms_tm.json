@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bite"
+        "id": "tmcraft:tm_bite"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_payday"
+        "id": "tmcraft:tm_payday"
     },
     "fabric:load_conditions": [
         {

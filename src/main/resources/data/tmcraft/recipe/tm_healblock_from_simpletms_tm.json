@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_healblock"
+        "id": "tmcraft:tm_healblock"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_flareblitz"
+        "id": "tmcraft:tm_flareblitz"
     },
     "fabric:load_conditions": [
         {

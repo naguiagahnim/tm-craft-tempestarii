@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxquake"
+        "id": "tmcraft:tm_maxquake"
     },
     "fabric:load_conditions": [
         {

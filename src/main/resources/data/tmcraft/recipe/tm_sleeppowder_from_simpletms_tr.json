@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sleeppowder"
+        "id": "tmcraft:tm_sleeppowder"
     },
     "fabric:load_conditions": [
         {

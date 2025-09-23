@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_absorb"
+        "id": "tmcraft:tm_absorb"
     },
     "fabric:load_conditions": [
         {

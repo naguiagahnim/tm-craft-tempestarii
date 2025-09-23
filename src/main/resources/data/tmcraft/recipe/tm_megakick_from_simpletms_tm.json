@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_megakick"
+        "id": "tmcraft:tm_megakick"
     },
     "fabric:load_conditions": [
         {

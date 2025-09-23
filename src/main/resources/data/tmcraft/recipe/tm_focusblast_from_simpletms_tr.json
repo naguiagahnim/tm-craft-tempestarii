@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_focusblast"
+        "id": "tmcraft:tm_focusblast"
     },
     "fabric:load_conditions": [
         {

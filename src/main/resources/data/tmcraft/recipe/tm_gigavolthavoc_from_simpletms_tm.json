@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gigavolthavoc"
+        "id": "tmcraft:tm_gigavolthavoc"
     },
     "fabric:load_conditions": [
         {

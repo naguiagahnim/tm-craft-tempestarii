@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_rototiller"
+        "id": "tmcraft:tm_rototiller"
     },
     "fabric:load_conditions": [
         {

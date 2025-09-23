@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_swagger"
+        "id": "tmcraft:tm_swagger"
     },
     "fabric:load_conditions": [
         {

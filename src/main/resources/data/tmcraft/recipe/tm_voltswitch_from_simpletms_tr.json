@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_voltswitch"
+        "id": "tmcraft:tm_voltswitch"
     },
     "fabric:load_conditions": [
         {

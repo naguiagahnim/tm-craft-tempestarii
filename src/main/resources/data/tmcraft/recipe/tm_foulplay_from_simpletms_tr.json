@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_foulplay"
+        "id": "tmcraft:tm_foulplay"
     },
     "fabric:load_conditions": [
         {

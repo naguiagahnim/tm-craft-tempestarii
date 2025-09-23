@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_circlethrow"
+        "id": "tmcraft:tm_circlethrow"
     },
     "fabric:load_conditions": [
         {

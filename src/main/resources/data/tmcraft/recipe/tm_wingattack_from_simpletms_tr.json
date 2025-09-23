@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_wingattack"
+        "id": "tmcraft:tm_wingattack"
     },
     "fabric:load_conditions": [
         {

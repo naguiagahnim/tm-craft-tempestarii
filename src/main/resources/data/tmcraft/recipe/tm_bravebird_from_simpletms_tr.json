@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bravebird"
+        "id": "tmcraft:tm_bravebird"
     },
     "fabric:load_conditions": [
         {

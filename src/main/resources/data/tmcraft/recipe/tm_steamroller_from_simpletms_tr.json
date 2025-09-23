@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_steamroller"
+        "id": "tmcraft:tm_steamroller"
     },
     "fabric:load_conditions": [
         {

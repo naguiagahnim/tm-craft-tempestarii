@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_fly"
+        "id": "tmcraft:tm_fly"
     },
     "fabric:load_conditions": [
         {

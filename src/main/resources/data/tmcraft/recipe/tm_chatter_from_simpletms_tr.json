@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_chatter"
+        "id": "tmcraft:tm_chatter"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_safeguard"
+        "id": "tmcraft:tm_safeguard"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_defendorder"
+        "id": "tmcraft:tm_defendorder"
     },
     "fabric:load_conditions": [
         {

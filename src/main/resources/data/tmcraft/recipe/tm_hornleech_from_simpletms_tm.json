@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hornleech"
+        "id": "tmcraft:tm_hornleech"
     },
     "fabric:load_conditions": [
         {

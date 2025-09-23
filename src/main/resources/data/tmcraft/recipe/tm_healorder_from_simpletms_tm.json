@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_healorder"
+        "id": "tmcraft:tm_healorder"
     },
     "fabric:load_conditions": [
         {

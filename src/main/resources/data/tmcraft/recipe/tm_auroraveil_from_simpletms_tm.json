@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_auroraveil"
+        "id": "tmcraft:tm_auroraveil"
     },
     "fabric:load_conditions": [
         {

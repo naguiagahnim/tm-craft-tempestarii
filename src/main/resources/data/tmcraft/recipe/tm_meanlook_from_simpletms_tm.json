@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_meanlook"
+        "id": "tmcraft:tm_meanlook"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_amnesia"
+        "id": "tmcraft:tm_amnesia"
     },
     "fabric:load_conditions": [
         {

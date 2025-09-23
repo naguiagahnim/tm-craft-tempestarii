@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sunsteelstrike"
+        "id": "tmcraft:tm_sunsteelstrike"
     },
     "fabric:load_conditions": [
         {

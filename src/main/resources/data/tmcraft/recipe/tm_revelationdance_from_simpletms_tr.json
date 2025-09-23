@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_revelationdance"
+        "id": "tmcraft:tm_revelationdance"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_fierywrath"
+        "id": "tmcraft:tm_fierywrath"
     },
     "fabric:load_conditions": [
         {

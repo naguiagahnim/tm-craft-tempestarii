@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_aurorabeam"
+        "id": "tmcraft:tm_aurorabeam"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_powertrick"
+        "id": "tmcraft:tm_powertrick"
     },
     "fabric:load_conditions": [
         {

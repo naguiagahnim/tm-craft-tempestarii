@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_geomancy"
+        "id": "tmcraft:tm_geomancy"
     },
     "fabric:load_conditions": [
         {

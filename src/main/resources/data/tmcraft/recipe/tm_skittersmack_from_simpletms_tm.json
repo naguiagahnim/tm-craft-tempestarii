@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_skittersmack"
+        "id": "tmcraft:tm_skittersmack"
     },
     "fabric:load_conditions": [
         {

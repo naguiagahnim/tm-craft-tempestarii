@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_esperwing"
+        "id": "tmcraft:tm_esperwing"
     },
     "fabric:load_conditions": [
         {

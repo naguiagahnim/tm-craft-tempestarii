@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxstonesurge"
+        "id": "tmcraft:tm_gmaxstonesurge"
     },
     "fabric:load_conditions": [
         {

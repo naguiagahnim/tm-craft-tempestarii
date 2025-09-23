@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_saltcure"
+        "id": "tmcraft:tm_saltcure"
     },
     "fabric:load_conditions": [
         {

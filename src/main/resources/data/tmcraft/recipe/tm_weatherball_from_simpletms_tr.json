@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_weatherball"
+        "id": "tmcraft:tm_weatherball"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_lick"
+        "id": "tmcraft:tm_lick"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_shiftgear"
+        "id": "tmcraft:tm_shiftgear"
     },
     "fabric:load_conditions": [
         {

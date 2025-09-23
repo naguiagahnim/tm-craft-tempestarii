@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_megahorn"
+        "id": "tmcraft:tm_megahorn"
     },
     "fabric:load_conditions": [
         {

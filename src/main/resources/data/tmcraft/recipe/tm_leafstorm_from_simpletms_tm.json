@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_leafstorm"
+        "id": "tmcraft:tm_leafstorm"
     },
     "fabric:load_conditions": [
         {

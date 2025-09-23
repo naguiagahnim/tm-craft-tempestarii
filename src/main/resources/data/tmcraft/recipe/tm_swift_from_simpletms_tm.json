@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_swift"
+        "id": "tmcraft:tm_swift"
     },
     "fabric:load_conditions": [
         {

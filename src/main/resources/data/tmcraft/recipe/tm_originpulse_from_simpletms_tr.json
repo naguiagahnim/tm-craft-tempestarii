@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_originpulse"
+        "id": "tmcraft:tm_originpulse"
     },
     "fabric:load_conditions": [
         {

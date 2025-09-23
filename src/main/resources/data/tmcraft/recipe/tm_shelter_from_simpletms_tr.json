@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_shelter"
+        "id": "tmcraft:tm_shelter"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_tripledive"
+        "id": "tmcraft:tm_tripledive"
     },
     "fabric:load_conditions": [
         {

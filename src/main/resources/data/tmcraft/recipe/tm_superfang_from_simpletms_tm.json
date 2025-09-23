@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_superfang"
+        "id": "tmcraft:tm_superfang"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_genesissupernova"
+        "id": "tmcraft:tm_genesissupernova"
     },
     "fabric:load_conditions": [
         {

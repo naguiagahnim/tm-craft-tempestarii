@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_accelerock"
+        "id": "tmcraft:tm_accelerock"
     },
     "fabric:load_conditions": [
         {

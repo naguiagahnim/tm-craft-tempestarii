@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_tarshot"
+        "id": "tmcraft:tm_tarshot"
     },
     "fabric:load_conditions": [
         {

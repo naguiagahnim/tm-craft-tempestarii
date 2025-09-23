@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_avalanche"
+        "id": "tmcraft:tm_avalanche"
     },
     "fabric:load_conditions": [
         {

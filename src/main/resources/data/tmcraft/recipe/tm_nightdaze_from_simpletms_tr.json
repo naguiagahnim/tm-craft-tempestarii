@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_nightdaze"
+        "id": "tmcraft:tm_nightdaze"
     },
     "fabric:load_conditions": [
         {

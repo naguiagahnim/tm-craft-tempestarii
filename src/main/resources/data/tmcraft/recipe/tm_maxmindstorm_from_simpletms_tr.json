@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxmindstorm"
+        "id": "tmcraft:tm_maxmindstorm"
     },
     "fabric:load_conditions": [
         {

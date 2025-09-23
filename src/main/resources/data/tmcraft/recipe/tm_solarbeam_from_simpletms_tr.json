@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_solarbeam"
+        "id": "tmcraft:tm_solarbeam"
     },
     "fabric:load_conditions": [
         {

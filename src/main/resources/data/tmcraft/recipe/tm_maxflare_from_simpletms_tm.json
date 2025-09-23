@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxflare"
+        "id": "tmcraft:tm_maxflare"
     },
     "fabric:load_conditions": [
         {

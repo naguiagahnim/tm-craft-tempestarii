@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_yawn"
+        "id": "tmcraft:tm_yawn"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_paraboliccharge"
+        "id": "tmcraft:tm_paraboliccharge"
     },
     "fabric:load_conditions": [
         {

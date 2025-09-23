@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_populationbomb"
+        "id": "tmcraft:tm_populationbomb"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_icespinner"
+        "id": "tmcraft:tm_icespinner"
     },
     "fabric:load_conditions": [
         {

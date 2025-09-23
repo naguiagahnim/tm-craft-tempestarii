@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_shadowbone"
+        "id": "tmcraft:tm_shadowbone"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_heatwave"
+        "id": "tmcraft:tm_heatwave"
     },
     "fabric:load_conditions": [
         {

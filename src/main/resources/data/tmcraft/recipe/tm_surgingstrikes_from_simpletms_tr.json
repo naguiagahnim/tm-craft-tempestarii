@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_surgingstrikes"
+        "id": "tmcraft:tm_surgingstrikes"
     },
     "fabric:load_conditions": [
         {

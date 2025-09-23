@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_magiccoat"
+        "id": "tmcraft:tm_magiccoat"
     },
     "fabric:load_conditions": [
         {

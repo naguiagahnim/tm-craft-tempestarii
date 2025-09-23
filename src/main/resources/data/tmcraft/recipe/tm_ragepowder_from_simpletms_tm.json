@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_ragepowder"
+        "id": "tmcraft:tm_ragepowder"
     },
     "fabric:load_conditions": [
         {

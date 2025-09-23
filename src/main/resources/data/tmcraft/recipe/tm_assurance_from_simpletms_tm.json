@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_assurance"
+        "id": "tmcraft:tm_assurance"
     },
     "fabric:load_conditions": [
         {

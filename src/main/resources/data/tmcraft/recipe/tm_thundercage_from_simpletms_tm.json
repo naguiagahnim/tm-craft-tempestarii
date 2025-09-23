@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_thundercage"
+        "id": "tmcraft:tm_thundercage"
     },
     "fabric:load_conditions": [
         {

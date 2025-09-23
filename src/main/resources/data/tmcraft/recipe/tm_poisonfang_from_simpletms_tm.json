@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_poisonfang"
+        "id": "tmcraft:tm_poisonfang"
     },
     "fabric:load_conditions": [
         {

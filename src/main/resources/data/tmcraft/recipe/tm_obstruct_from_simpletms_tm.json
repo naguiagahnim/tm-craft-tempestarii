@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_obstruct"
+        "id": "tmcraft:tm_obstruct"
     },
     "fabric:load_conditions": [
         {

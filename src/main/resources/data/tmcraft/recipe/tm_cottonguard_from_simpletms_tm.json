@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_cottonguard"
+        "id": "tmcraft:tm_cottonguard"
     },
     "fabric:load_conditions": [
         {

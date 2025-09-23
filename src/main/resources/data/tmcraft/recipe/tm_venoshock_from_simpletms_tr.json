@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_venoshock"
+        "id": "tmcraft:tm_venoshock"
     },
     "fabric:load_conditions": [
         {

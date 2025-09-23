@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gastroacid"
+        "id": "tmcraft:tm_gastroacid"
     },
     "fabric:load_conditions": [
         {

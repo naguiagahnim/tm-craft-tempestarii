@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_leer"
+        "id": "tmcraft:tm_leer"
     },
     "fabric:load_conditions": [
         {

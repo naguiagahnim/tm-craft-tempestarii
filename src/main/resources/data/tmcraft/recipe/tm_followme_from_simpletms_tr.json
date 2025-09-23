@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_followme"
+        "id": "tmcraft:tm_followme"
     },
     "fabric:load_conditions": [
         {

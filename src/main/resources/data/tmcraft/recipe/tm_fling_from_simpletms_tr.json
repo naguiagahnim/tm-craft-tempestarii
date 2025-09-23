@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_fling"
+        "id": "tmcraft:tm_fling"
     },
     "fabric:load_conditions": [
         {

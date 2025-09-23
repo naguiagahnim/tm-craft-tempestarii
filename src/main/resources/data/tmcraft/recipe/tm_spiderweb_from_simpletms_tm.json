@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_spiderweb"
+        "id": "tmcraft:tm_spiderweb"
     },
     "fabric:load_conditions": [
         {

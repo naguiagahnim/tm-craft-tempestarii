@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_painsplit"
+        "id": "tmcraft:tm_painsplit"
     },
     "fabric:load_conditions": [
         {

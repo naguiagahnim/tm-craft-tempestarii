@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_topsyturvy"
+        "id": "tmcraft:tm_topsyturvy"
     },
     "fabric:load_conditions": [
         {

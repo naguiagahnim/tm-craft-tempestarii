@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_nightmare"
+        "id": "tmcraft:tm_nightmare"
     },
     "fabric:load_conditions": [
         {

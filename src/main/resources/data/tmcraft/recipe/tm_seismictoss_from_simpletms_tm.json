@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_seismictoss"
+        "id": "tmcraft:tm_seismictoss"
     },
     "fabric:load_conditions": [
         {

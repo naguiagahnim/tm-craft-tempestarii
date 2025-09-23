@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxhailstorm"
+        "id": "tmcraft:tm_maxhailstorm"
     },
     "fabric:load_conditions": [
         {

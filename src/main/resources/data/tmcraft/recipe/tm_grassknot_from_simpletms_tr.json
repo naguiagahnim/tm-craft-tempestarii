@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_grassknot"
+        "id": "tmcraft:tm_grassknot"
     },
     "fabric:load_conditions": [
         {

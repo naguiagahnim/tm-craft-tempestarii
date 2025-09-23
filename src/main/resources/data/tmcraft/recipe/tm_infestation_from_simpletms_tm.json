@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_infestation"
+        "id": "tmcraft:tm_infestation"
     },
     "fabric:load_conditions": [
         {

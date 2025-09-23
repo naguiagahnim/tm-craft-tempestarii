@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_simplebeam"
+        "id": "tmcraft:tm_simplebeam"
     },
     "fabric:load_conditions": [
         {

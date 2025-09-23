@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_curse"
+        "id": "tmcraft:tm_curse"
     },
     "fabric:load_conditions": [
         {

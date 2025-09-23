@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_clangoroussoulblaze"
+        "id": "tmcraft:tm_clangoroussoulblaze"
     },
     "fabric:load_conditions": [
         {

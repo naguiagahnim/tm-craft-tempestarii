@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_blazingtorque"
+        "id": "tmcraft:tm_blazingtorque"
     },
     "fabric:load_conditions": [
         {

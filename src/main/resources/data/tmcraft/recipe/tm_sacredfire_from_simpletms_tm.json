@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sacredfire"
+        "id": "tmcraft:tm_sacredfire"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_healingwish"
+        "id": "tmcraft:tm_healingwish"
     },
     "fabric:load_conditions": [
         {

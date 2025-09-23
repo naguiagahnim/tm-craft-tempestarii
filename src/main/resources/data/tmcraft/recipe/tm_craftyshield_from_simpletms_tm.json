@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_craftyshield"
+        "id": "tmcraft:tm_craftyshield"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_snatch"
+        "id": "tmcraft:tm_snatch"
     },
     "fabric:load_conditions": [
         {

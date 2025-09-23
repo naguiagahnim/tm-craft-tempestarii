@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_ironhead"
+        "id": "tmcraft:tm_ironhead"
     },
     "fabric:load_conditions": [
         {

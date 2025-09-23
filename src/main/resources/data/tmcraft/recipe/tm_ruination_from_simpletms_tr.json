@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_ruination"
+        "id": "tmcraft:tm_ruination"
     },
     "fabric:load_conditions": [
         {

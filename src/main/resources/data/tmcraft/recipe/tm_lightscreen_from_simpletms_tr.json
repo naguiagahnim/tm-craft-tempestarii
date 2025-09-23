@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_lightscreen"
+        "id": "tmcraft:tm_lightscreen"
     },
     "fabric:load_conditions": [
         {

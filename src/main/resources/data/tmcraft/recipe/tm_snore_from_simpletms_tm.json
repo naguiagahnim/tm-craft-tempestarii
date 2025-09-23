@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_snore"
+        "id": "tmcraft:tm_snore"
     },
     "fabric:load_conditions": [
         {

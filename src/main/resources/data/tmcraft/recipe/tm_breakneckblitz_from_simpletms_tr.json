@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_breakneckblitz"
+        "id": "tmcraft:tm_breakneckblitz"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_doubleironbash"
+        "id": "tmcraft:tm_doubleironbash"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_razorwind"
+        "id": "tmcraft:tm_razorwind"
     },
     "fabric:load_conditions": [
         {

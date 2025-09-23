@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_round"
+        "id": "tmcraft:tm_round"
     },
     "fabric:load_conditions": [
         {

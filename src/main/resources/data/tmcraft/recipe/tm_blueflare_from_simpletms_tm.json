@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_blueflare"
+        "id": "tmcraft:tm_blueflare"
     },
     "fabric:load_conditions": [
         {

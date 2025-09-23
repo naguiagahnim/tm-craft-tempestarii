@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_partingshot"
+        "id": "tmcraft:tm_partingshot"
     },
     "fabric:load_conditions": [
         {

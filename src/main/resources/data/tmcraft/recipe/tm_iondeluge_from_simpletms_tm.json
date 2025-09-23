@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_iondeluge"
+        "id": "tmcraft:tm_iondeluge"
     },
     "fabric:load_conditions": [
         {

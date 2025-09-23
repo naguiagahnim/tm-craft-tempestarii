@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_roleplay"
+        "id": "tmcraft:tm_roleplay"
     },
     "fabric:load_conditions": [
         {

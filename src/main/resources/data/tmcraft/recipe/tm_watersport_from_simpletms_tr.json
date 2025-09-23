@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_watersport"
+        "id": "tmcraft:tm_watersport"
     },
     "fabric:load_conditions": [
         {

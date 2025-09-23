@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_moonblast"
+        "id": "tmcraft:tm_moonblast"
     },
     "fabric:load_conditions": [
         {

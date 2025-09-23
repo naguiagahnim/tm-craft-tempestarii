@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hurricane"
+        "id": "tmcraft:tm_hurricane"
     },
     "fabric:load_conditions": [
         {

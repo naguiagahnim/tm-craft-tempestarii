@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_rapidspin"
+        "id": "tmcraft:tm_rapidspin"
     },
     "fabric:load_conditions": [
         {

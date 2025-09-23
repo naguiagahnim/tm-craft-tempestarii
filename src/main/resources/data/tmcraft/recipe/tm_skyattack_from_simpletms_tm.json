@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_skyattack"
+        "id": "tmcraft:tm_skyattack"
     },
     "fabric:load_conditions": [
         {

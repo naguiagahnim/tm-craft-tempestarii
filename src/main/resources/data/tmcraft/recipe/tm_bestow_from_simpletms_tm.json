@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bestow"
+        "id": "tmcraft:tm_bestow"
     },
     "fabric:load_conditions": [
         {

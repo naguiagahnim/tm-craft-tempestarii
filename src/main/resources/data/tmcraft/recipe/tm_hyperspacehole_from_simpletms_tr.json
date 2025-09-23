@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hyperspacehole"
+        "id": "tmcraft:tm_hyperspacehole"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_wavecrash"
+        "id": "tmcraft:tm_wavecrash"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxairstream"
+        "id": "tmcraft:tm_maxairstream"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_reflect"
+        "id": "tmcraft:tm_reflect"
     },
     "fabric:load_conditions": [
         {

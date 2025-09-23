@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_oceanicoperetta"
+        "id": "tmcraft:tm_oceanicoperetta"
     },
     "fabric:load_conditions": [
         {

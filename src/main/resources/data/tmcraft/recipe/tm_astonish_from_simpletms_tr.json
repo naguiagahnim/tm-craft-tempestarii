@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_astonish"
+        "id": "tmcraft:tm_astonish"
     },
     "fabric:load_conditions": [
         {

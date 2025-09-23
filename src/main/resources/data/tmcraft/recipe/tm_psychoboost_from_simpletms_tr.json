@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_psychoboost"
+        "id": "tmcraft:tm_psychoboost"
     },
     "fabric:load_conditions": [
         {

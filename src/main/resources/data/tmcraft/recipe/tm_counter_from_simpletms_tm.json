@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_counter"
+        "id": "tmcraft:tm_counter"
     },
     "fabric:load_conditions": [
         {

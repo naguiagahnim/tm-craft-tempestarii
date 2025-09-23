@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_conversion"
+        "id": "tmcraft:tm_conversion"
     },
     "fabric:load_conditions": [
         {

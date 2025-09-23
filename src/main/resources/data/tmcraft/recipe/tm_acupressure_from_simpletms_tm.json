@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_acupressure"
+        "id": "tmcraft:tm_acupressure"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_lunarblessing"
+        "id": "tmcraft:tm_lunarblessing"
     },
     "fabric:load_conditions": [
         {

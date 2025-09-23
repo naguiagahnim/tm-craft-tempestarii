@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_celebrate"
+        "id": "tmcraft:tm_celebrate"
     },
     "fabric:load_conditions": [
         {

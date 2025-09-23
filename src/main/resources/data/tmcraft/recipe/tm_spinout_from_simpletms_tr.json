@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_spinout"
+        "id": "tmcraft:tm_spinout"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_expandingforce"
+        "id": "tmcraft:tm_expandingforce"
     },
     "fabric:load_conditions": [
         {

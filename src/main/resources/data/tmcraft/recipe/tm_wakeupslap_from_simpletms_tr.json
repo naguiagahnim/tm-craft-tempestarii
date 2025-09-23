@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_wakeupslap"
+        "id": "tmcraft:tm_wakeupslap"
     },
     "fabric:load_conditions": [
         {

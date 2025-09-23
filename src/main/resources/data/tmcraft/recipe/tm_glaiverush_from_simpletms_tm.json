@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_glaiverush"
+        "id": "tmcraft:tm_glaiverush"
     },
     "fabric:load_conditions": [
         {

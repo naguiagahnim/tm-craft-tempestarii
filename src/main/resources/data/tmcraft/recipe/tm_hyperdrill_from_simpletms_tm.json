@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hyperdrill"
+        "id": "tmcraft:tm_hyperdrill"
     },
     "fabric:load_conditions": [
         {

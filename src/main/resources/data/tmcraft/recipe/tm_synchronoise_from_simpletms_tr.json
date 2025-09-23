@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_synchronoise"
+        "id": "tmcraft:tm_synchronoise"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_leechlife"
+        "id": "tmcraft:tm_leechlife"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_spikyshield"
+        "id": "tmcraft:tm_spikyshield"
     },
     "fabric:load_conditions": [
         {

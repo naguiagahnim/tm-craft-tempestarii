@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_forestscurse"
+        "id": "tmcraft:tm_forestscurse"
     },
     "fabric:load_conditions": [
         {

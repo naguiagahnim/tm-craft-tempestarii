@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_poltergeist"
+        "id": "tmcraft:tm_poltergeist"
     },
     "fabric:load_conditions": [
         {

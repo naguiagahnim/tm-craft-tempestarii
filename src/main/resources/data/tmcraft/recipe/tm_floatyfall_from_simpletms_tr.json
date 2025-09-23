@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_floatyfall"
+        "id": "tmcraft:tm_floatyfall"
     },
     "fabric:load_conditions": [
         {

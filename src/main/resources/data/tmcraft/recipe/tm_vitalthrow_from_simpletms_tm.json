@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_vitalthrow"
+        "id": "tmcraft:tm_vitalthrow"
     },
     "fabric:load_conditions": [
         {

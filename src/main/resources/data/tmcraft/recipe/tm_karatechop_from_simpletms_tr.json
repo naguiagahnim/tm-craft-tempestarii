@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_karatechop"
+        "id": "tmcraft:tm_karatechop"
     },
     "fabric:load_conditions": [
         {

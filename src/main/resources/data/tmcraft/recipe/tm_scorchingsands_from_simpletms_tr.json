@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_scorchingsands"
+        "id": "tmcraft:tm_scorchingsands"
     },
     "fabric:load_conditions": [
         {

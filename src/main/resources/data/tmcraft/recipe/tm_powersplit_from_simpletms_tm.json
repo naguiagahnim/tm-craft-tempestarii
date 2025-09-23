@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_powersplit"
+        "id": "tmcraft:tm_powersplit"
     },
     "fabric:load_conditions": [
         {

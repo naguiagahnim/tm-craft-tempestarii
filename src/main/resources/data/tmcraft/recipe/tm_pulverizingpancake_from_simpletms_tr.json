@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_pulverizingpancake"
+        "id": "tmcraft:tm_pulverizingpancake"
     },
     "fabric:load_conditions": [
         {

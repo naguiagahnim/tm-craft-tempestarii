@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_happyhour"
+        "id": "tmcraft:tm_happyhour"
     },
     "fabric:load_conditions": [
         {

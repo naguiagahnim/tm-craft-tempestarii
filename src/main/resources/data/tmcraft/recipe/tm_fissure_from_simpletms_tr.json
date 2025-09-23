@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_fissure"
+        "id": "tmcraft:tm_fissure"
     },
     "fabric:load_conditions": [
         {

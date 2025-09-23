@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_forcepalm"
+        "id": "tmcraft:tm_forcepalm"
     },
     "fabric:load_conditions": [
         {

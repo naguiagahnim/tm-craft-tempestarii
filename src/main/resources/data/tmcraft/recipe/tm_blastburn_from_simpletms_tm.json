@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_blastburn"
+        "id": "tmcraft:tm_blastburn"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_stuffcheeks"
+        "id": "tmcraft:tm_stuffcheeks"
     },
     "fabric:load_conditions": [
         {

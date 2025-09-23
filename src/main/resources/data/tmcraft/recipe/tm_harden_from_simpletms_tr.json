@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_harden"
+        "id": "tmcraft:tm_harden"
     },
     "fabric:load_conditions": [
         {

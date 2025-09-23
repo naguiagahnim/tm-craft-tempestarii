@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bind"
+        "id": "tmcraft:tm_bind"
     },
     "fabric:load_conditions": [
         {

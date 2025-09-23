@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_camouflage"
+        "id": "tmcraft:tm_camouflage"
     },
     "fabric:load_conditions": [
         {

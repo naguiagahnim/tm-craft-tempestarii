@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_coreenforcer"
+        "id": "tmcraft:tm_coreenforcer"
     },
     "fabric:load_conditions": [
         {

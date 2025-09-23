@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_highhorsepower"
+        "id": "tmcraft:tm_highhorsepower"
     },
     "fabric:load_conditions": [
         {

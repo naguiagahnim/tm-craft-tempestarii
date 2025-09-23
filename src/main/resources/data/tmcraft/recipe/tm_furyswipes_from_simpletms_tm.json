@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_furyswipes"
+        "id": "tmcraft:tm_furyswipes"
     },
     "fabric:load_conditions": [
         {

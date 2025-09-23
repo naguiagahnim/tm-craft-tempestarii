@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_darkestlariat"
+        "id": "tmcraft:tm_darkestlariat"
     },
     "fabric:load_conditions": [
         {

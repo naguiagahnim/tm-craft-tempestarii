@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxvoltcrash"
+        "id": "tmcraft:tm_gmaxvoltcrash"
     },
     "fabric:load_conditions": [
         {

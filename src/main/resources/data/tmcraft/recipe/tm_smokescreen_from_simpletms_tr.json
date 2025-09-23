@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_smokescreen"
+        "id": "tmcraft:tm_smokescreen"
     },
     "fabric:load_conditions": [
         {

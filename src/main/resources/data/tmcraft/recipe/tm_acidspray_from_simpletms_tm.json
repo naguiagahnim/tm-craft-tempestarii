@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_acidspray"
+        "id": "tmcraft:tm_acidspray"
     },
     "fabric:load_conditions": [
         {

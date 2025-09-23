@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxchistrike"
+        "id": "tmcraft:tm_gmaxchistrike"
     },
     "fabric:load_conditions": [
         {

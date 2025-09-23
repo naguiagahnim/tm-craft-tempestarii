@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_revenge"
+        "id": "tmcraft:tm_revenge"
     },
     "fabric:load_conditions": [
         {

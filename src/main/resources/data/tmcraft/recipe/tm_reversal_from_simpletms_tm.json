@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_reversal"
+        "id": "tmcraft:tm_reversal"
     },
     "fabric:load_conditions": [
         {

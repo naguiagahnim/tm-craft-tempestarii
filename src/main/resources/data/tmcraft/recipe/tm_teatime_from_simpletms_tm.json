@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_teatime"
+        "id": "tmcraft:tm_teatime"
     },
     "fabric:load_conditions": [
         {

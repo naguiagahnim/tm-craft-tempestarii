@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_lavaplume"
+        "id": "tmcraft:tm_lavaplume"
     },
     "fabric:load_conditions": [
         {

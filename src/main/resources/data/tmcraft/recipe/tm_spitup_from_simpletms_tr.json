@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_spitup"
+        "id": "tmcraft:tm_spitup"
     },
     "fabric:load_conditions": [
         {

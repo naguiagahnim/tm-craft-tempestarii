@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_smartstrike"
+        "id": "tmcraft:tm_smartstrike"
     },
     "fabric:load_conditions": [
         {

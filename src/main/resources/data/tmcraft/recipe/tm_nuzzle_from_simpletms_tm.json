@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_nuzzle"
+        "id": "tmcraft:tm_nuzzle"
     },
     "fabric:load_conditions": [
         {

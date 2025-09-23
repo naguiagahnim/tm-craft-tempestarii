@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_luminacrash"
+        "id": "tmcraft:tm_luminacrash"
     },
     "fabric:load_conditions": [
         {

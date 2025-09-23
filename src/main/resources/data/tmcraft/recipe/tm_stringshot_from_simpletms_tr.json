@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_stringshot"
+        "id": "tmcraft:tm_stringshot"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_hammerarm"
+        "id": "tmcraft:tm_hammerarm"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_bonerush"
+        "id": "tmcraft:tm_bonerush"
     },
     "fabric:load_conditions": [
         {

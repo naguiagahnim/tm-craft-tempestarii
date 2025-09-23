@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_makeitrain"
+        "id": "tmcraft:tm_makeitrain"
     },
     "fabric:load_conditions": [
         {

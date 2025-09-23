@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_buzzybuzz"
+        "id": "tmcraft:tm_buzzybuzz"
     },
     "fabric:load_conditions": [
         {

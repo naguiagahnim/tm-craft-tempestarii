@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gigadrain"
+        "id": "tmcraft:tm_gigadrain"
     },
     "fabric:load_conditions": [
         {

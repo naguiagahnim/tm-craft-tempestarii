@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_devastatingdrake"
+        "id": "tmcraft:tm_devastatingdrake"
     },
     "fabric:load_conditions": [
         {

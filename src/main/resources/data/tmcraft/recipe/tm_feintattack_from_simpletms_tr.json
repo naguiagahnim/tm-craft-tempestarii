@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_feintattack"
+        "id": "tmcraft:tm_feintattack"
     },
     "fabric:load_conditions": [
         {

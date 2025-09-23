@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_clangingscales"
+        "id": "tmcraft:tm_clangingscales"
     },
     "fabric:load_conditions": [
         {

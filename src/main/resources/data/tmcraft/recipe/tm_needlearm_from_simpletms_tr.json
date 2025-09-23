@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_needlearm"
+        "id": "tmcraft:tm_needlearm"
     },
     "fabric:load_conditions": [
         {

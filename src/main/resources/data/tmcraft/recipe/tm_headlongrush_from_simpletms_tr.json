@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_headlongrush"
+        "id": "tmcraft:tm_headlongrush"
     },
     "fabric:load_conditions": [
         {

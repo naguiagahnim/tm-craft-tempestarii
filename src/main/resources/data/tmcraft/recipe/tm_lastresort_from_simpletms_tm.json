@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_lastresort"
+        "id": "tmcraft:tm_lastresort"
     },
     "fabric:load_conditions": [
         {

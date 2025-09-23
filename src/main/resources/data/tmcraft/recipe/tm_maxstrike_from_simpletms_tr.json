@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_maxstrike"
+        "id": "tmcraft:tm_maxstrike"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_nastyplot"
+        "id": "tmcraft:tm_nastyplot"
     },
     "fabric:load_conditions": [
         {

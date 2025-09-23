@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_doomdesire"
+        "id": "tmcraft:tm_doomdesire"
     },
     "fabric:load_conditions": [
         {

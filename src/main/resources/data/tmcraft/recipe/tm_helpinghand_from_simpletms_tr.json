@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_helpinghand"
+        "id": "tmcraft:tm_helpinghand"
     },
     "fabric:load_conditions": [
         {

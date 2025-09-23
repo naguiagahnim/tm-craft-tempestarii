@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_sparklyswirl"
+        "id": "tmcraft:tm_sparklyswirl"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_brickbreak"
+        "id": "tmcraft:tm_brickbreak"
     },
     "fabric:load_conditions": [
         {

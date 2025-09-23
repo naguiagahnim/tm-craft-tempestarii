@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_matblock"
+        "id": "tmcraft:tm_matblock"
     },
     "fabric:load_conditions": [
         {

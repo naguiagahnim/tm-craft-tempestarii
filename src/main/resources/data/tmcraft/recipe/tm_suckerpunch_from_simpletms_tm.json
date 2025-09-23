@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_suckerpunch"
+        "id": "tmcraft:tm_suckerpunch"
     },
     "fabric:load_conditions": [
         {

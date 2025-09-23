@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_meteorassault"
+        "id": "tmcraft:tm_meteorassault"
     },
     "fabric:load_conditions": [
         {

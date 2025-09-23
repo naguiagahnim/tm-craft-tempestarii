@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_minimize"
+        "id": "tmcraft:tm_minimize"
     },
     "fabric:load_conditions": [
         {

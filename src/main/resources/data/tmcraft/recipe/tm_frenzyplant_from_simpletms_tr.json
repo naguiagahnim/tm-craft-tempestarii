@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_frenzyplant"
+        "id": "tmcraft:tm_frenzyplant"
     },
     "fabric:load_conditions": [
         {

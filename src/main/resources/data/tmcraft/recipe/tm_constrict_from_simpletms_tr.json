@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_constrict"
+        "id": "tmcraft:tm_constrict"
     },
     "fabric:load_conditions": [
         {

@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_ominouswind"
+        "id": "tmcraft:tm_ominouswind"
     },
     "fabric:load_conditions": [
         {

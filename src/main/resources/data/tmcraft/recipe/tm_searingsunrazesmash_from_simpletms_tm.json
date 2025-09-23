@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_searingsunrazesmash"
+        "id": "tmcraft:tm_searingsunrazesmash"
     },
     "fabric:load_conditions": [
         {

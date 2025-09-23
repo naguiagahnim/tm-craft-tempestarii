@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_poisonjab"
+        "id": "tmcraft:tm_poisonjab"
     },
     "fabric:load_conditions": [
         {

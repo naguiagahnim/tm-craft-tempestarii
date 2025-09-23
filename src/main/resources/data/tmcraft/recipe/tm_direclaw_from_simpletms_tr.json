@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_direclaw"
+        "id": "tmcraft:tm_direclaw"
     },
     "fabric:load_conditions": [
         {

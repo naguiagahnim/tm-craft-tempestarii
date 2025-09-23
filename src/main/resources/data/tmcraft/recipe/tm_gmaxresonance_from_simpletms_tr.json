@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_gmaxresonance"
+        "id": "tmcraft:tm_gmaxresonance"
     },
     "fabric:load_conditions": [
         {

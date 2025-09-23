@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_behemothbash"
+        "id": "tmcraft:tm_behemothbash"
     },
     "fabric:load_conditions": [
         {

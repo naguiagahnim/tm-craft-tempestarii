@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_breakingswipe"
+        "id": "tmcraft:tm_breakingswipe"
     },
     "fabric:load_conditions": [
         {

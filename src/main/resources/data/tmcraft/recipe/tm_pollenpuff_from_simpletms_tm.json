@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_pollenpuff"
+        "id": "tmcraft:tm_pollenpuff"
     },
     "fabric:load_conditions": [
         {

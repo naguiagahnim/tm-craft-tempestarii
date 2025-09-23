@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_chipaway"
+        "id": "tmcraft:tm_chipaway"
     },
     "fabric:load_conditions": [
         {

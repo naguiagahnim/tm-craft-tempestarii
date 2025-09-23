@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_woodhammer"
+        "id": "tmcraft:tm_woodhammer"
     },
     "fabric:load_conditions": [
         {

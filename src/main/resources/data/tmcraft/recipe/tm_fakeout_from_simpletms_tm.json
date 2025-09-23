@@ -6,7 +6,7 @@
         }
     ],
     "result": {
-        "item": "tmcraft:tm_fakeout"
+        "id": "tmcraft:tm_fakeout"
     },
     "fabric:load_conditions": [
         {
