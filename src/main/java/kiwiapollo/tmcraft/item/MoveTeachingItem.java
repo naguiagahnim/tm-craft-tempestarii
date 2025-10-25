@@ -1,8 +1,6 @@
 package kiwiapollo.tmcraft.item;
 
 import com.cobblemon.mod.common.CobblemonSounds;
-import com.cobblemon.mod.common.api.battles.model.actor.BattleActor;
-import com.cobblemon.mod.common.api.item.PokemonSelectingItem;
 import com.cobblemon.mod.common.api.moves.BenchedMove;
 import com.cobblemon.mod.common.api.moves.Move;
 import com.cobblemon.mod.common.api.moves.MoveTemplate;
@@ -10,8 +8,6 @@ import com.cobblemon.mod.common.api.moves.Moves;
 import com.cobblemon.mod.common.api.moves.categories.DamageCategories;
 import com.cobblemon.mod.common.api.moves.categories.DamageCategory;
 import com.cobblemon.mod.common.api.types.ElementalType;
-import com.cobblemon.mod.common.battles.pokemon.BattlePokemon;
-import com.cobblemon.mod.common.item.battle.BagItem;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import kiwiapollo.tmcraft.common.DamageCategoryTextColorFactory;
 import kiwiapollo.tmcraft.gamerule.ModGameRule;
@@ -29,8 +25,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -38,7 +32,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Objects;
 
-public abstract class MoveTeachingItem extends Item implements ElementalTypeItem, PokemonSelectingItem {
+public abstract class MoveTeachingItem extends Item implements ElementalTypeItem {
     private final String move;
     private final ElementalType type;
 
@@ -47,17 +41,6 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
 
         this.move = move;
         this.type = type;
-    }
-
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
-        ItemStack itemStack = player.getStackInHand(hand);
-
-        if (world.isClient()) {
-            return TypedActionResult.pass(itemStack);
-        }
-
-        return use((ServerPlayerEntity) player, itemStack);
     }
 
     @Override
@@ -94,73 +77,20 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
         return Text.literal(String.valueOf(getMoveTemplate().getPower())).setStyle(style);
     }
 
-    @Override
-    public @Nullable BagItem getBagItem() {
-        return null;
-    }
-
-    @Override
-    public @NotNull TypedActionResult<ItemStack> use(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack) {
-        return PokemonSelectingItem.DefaultImpls.use(this, player, itemStack);
-    }
-
-    @Override
-    public @Nullable TypedActionResult<ItemStack> applyToPokemon(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack, @NotNull Pokemon pokemon) {
-        if (!canPokemonLearnMove(player, pokemon)) {
-            player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
-            return TypedActionResult.pass(itemStack);
-        }
-
-        teachPokemonMove(pokemon);
-
-        if (shouldConsumeItemByGameRule(player.getServerWorld()) && !player.isCreative()) {
-            itemStack.decrement(1);
-        }
-
-        player.sendMessage(Text.translatable("item.tmcraft.success.pokemon_learned_move", pokemon.getDisplayName(), getMoveTemplate().getDisplayName()));
-        player.getWorld().playSound(null, player.getBlockPos(), CobblemonSounds.PC_CLICK, SoundCategory.PLAYERS, 1.0f, 1.0f);
-
-        return TypedActionResult.success(itemStack);
-    }
-
-    protected abstract boolean canPokemonLearnMove(ServerPlayerEntity player, Pokemon pokemon);
-
-    @Override
-    public void applyToBattlePokemon(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack, @NotNull BattlePokemon battlePokemon) {
-        PokemonSelectingItem.DefaultImpls.applyToBattlePokemon(this, player, itemStack, battlePokemon);
-    }
-
-    @Override
-    public boolean canUseOnPokemon(@NotNull Pokemon pokemon) {
-        return true;
-    }
-
-    @Override
-    public boolean canUseOnBattlePokemon(@NotNull BattlePokemon battlePokemon) {
-        return false;
-    }
-
-    @Override
-    public @NotNull TypedActionResult<ItemStack> interactWithSpecificBattle(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack, @NotNull BattlePokemon battlePokemon) {
-        return PokemonSelectingItem.DefaultImpls.interactWithSpecificBattle(this, player, itemStack, battlePokemon);
-    }
-
-    @Override
-    public @NotNull TypedActionResult<ItemStack> interactGeneral(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack) {
-        return PokemonSelectingItem.DefaultImpls.interactGeneral(this, player, itemStack);
-    }
-
-    @Override
-    public @NotNull TypedActionResult<ItemStack> interactGeneralBattle(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack, @NotNull BattleActor battleActor) {
-        return PokemonSelectingItem.DefaultImpls.interactGeneralBattle(this, player, itemStack, battleActor);
-    }
-
     @NotNull
     protected MoveTemplate getMoveTemplate() {
         return Objects.requireNonNull(Moves.INSTANCE.getByName(move));
     }
 
-    protected void teachPokemonMove(Pokemon pokemon) {
+    protected void playTeachMoveErrorSound(ServerPlayerEntity player) {
+        player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
+    }
+
+    protected void playTeachMoveSuccessSound(ServerPlayerEntity player) {
+        player.getWorld().playSound(null, player.getBlockPos(), CobblemonSounds.PC_CLICK, SoundCategory.PLAYERS, 1.0f, 1.0f);
+    }
+
+    protected void teachMoveToPokemon(Pokemon pokemon) {
         if (pokemon.getMoveSet().hasSpace()) {
             pokemon.getMoveSet().add(getMoveTemplate().create());
 
@@ -179,7 +109,22 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
         }
     }
 
-    protected boolean isPokemonKnowsMove(Pokemon pokemon) {
+    protected Text getMoveLearnStatus(Pokemon pokemon) {
+        if (Objects.isNull(pokemon)) {
+            return Text.translatable("item.tmcraft.move_learn_status.empty").formatted(Formatting.GRAY);
+
+        } else if (isPokemonAlreadyLearnedMove(pokemon)) {
+            return pokemon.getDisplayName().append(Text.literal(", ")).append(Text.translatable("item.tmcraft.move_learn_status.learned").formatted(Formatting.YELLOW));
+
+        } else if (isPokemonAbleToLearnMove(pokemon)) {
+            return pokemon.getDisplayName().append(Text.literal(", ")).append(Text.translatable("item.tmcraft.move_learn_status.able").formatted(Formatting.GREEN));
+
+        } else {
+            return pokemon.getDisplayName().append(Text.literal(", ")).append(Text.translatable("item.tmcraft.move_learn_status.unable").formatted(Formatting.RED));
+        }
+    }
+
+    protected boolean isPokemonAlreadyLearnedMove(Pokemon pokemon) {
         return isMoveSetMove(pokemon) || isAccessibleMove(pokemon);
     }
 
@@ -223,6 +168,12 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
                 .map(MoveTemplate::getName).toList()
                 .contains(move);
     }
+
+    protected boolean isPokemonOwnedByPlayer(PlayerEntity player, Pokemon pokemon) {
+        return player.equals(pokemon.getOwnerPlayer());
+    }
+
+    protected abstract boolean isPokemonAbleToLearnMove(Pokemon pokemon);
 
     protected boolean shouldConsumeItemByGameRule(ServerWorld world) {
         try {

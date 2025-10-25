@@ -18,8 +18,13 @@
     "block.tmcraft.move_tutor_table": "기술작업대",
     "block.tmcraft.pokemon_breeder_table": "교배작업대",
 
+    "item.tmcraft.move_learn_status.able": "배울 수 있다",
+    "item.tmcraft.move_learn_status.unable": "배울 수 없다",
+    "item.tmcraft.move_learn_status.learned": "이미 알고 있다",
+    "item.tmcraft.move_learn_status.empty": "비어 있다",
+
     "item.tmcraft.error.cannot_learn_move": "%s는 %s를 배울 수 없습니다.",
-    "item.tmcraft.error.pokemon_knows_move": "%s는 %s를 이미 알고 있습니다.",
+    "item.tmcraft.error.already_learned_move": "%s는 %s를 이미 배웠습니다.",
 
     "item.tmcraft.success.pokemon_learned_move": "%s는 %s를 배웠습니다.",
     "item.tmcraft.success.recorded_move": "%s를 기록했습니다.",

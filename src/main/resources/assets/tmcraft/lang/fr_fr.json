@@ -20,7 +20,7 @@
     "block.tmcraft.pokemon_breeder_table": "Table de la Pension",
 
     "item.tmcraft.error.cannot_learn_move": "%s ne peut pas apprendre %s",
-    "item.tmcraft.error.pokemon_knows_move": "%s connait déjà %s",
+    "item.tmcraft.error.already_learned_move": "%s a déjà appris %s",
 
     "item.tmcraft.success.pokemon_learned_move": "%s a appris %s",
     "item.tmcraft.success.recorded_move": "CT enregistrée : %s",
