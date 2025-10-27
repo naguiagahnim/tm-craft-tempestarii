@@ -18,10 +18,10 @@
     "block.tmcraft.move_tutor_table": "Table du Donneur de Capacités",
     "block.tmcraft.pokemon_breeder_table": "Table de la Pension",
 
-    "item.tmcraft.move_learn_status.able": "Apte !",
-    "item.tmcraft.move_learn_status.unable": "Pas apte !",
-    "item.tmcraft.move_learn_status.learned": "Déjà appris !",
-    "item.tmcraft.move_learn_status.empty": "Vide",
+    "item.tmcraft.move_learn_status.able": "APTE",
+    "item.tmcraft.move_learn_status.unable": "PAS APTE",
+    "item.tmcraft.move_learn_status.learned": "APPRIS",
+    "item.tmcraft.move_learn_status.empty": "VIDE",
 
     "item.tmcraft.error.cannot_learn_move": "%s ne peut pas apprendre %s",
     "item.tmcraft.error.already_learned_move": "%s a déjà appris %s",
