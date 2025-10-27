@@ -35,7 +35,7 @@ public class TMMoveTeachingItem extends MoveTeachingItem {
             return ActionResult.PASS;
         }
 
-        player.sendMessage(getMoveLearnStatusTitle());
+        player.sendMessage(Text.translatable(String.format("item.tmcraft.tm_%s", move)).formatted(Formatting.YELLOW));
 
         PlayerPartyStore party = Cobblemon.INSTANCE.getStorage().getParty(player);
 
@@ -45,10 +45,6 @@ public class TMMoveTeachingItem extends MoveTeachingItem {
         }
 
         return ActionResult.SUCCESS;
-    }
-
-    private Text getMoveLearnStatusTitle() {
-        return Text.translatable(String.format("item.tmcraft.tm_%s", move)).formatted(Formatting.YELLOW);
     }
 
     @Override
