@@ -21,7 +21,7 @@ TMCraft Missing Recipes is a data pack that adds recipes which are not meant to 
 
 If your favorite TMs do not have recipes and if you have an idea, feel free to contact me and give suggestions.
 
-## TMs & Blank Discs
+## Blank Discs
 
 - Copper Blank Disc [0, 30)
 - Iron Blank Disc [30, 60)
@@ -34,9 +34,13 @@ Move Upgrade Smithing Template is used when upgrading tiers. Blank Discs are use
 
 Starting from 1.3.0, Move Upgrade Smithing Template replaces Netherite Upgrade Smithing Template.
 
+## TM Move Items
+
+TM Move Items teach moves that are learned by using TMs.
+
 ## Egg Move Items
 
-Egg Move Items teach moves that are supposed to be learned via breeding.
+Egg Move Items teach moves that are learned via breeding.
 
 ## Tutor Move Items
 
