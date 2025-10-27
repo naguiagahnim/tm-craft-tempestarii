@@ -69,7 +69,7 @@
     "item.tmcraft.emerald_blank_star": "Étoile d'Émeraude Vierge",
     "item.tmcraft.netherite_blank_star": "Étoile de Netherite Vierge",
 
-    "gamerule.consumeMoveItemOnUse": "Les objets de capacité sont consommés à l’usage",
+    "gamerule.consumeMoveItemOnUse": "Consommer l’objet de capacité TMCraft à l’usage",
 
     "item.tmcraft.tm_10000000voltthunderbolt": "CT-719: Giga-Tonnerre",
     "item.tmcraft.tm_absorb": "CT-71: Vole-Vie",
