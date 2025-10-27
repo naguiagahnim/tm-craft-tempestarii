@@ -1,5 +1,4 @@
 {
-
     "item_group.tmcraft.tmcraft": "CT Objets",
     "item_group.tmcraft.tm_move": "Capacités Techniques",
     "item_group.tmcraft.egg_move": "Capacités Œufs",
@@ -18,6 +17,11 @@
 
     "block.tmcraft.move_tutor_table": "Table du Donneur de Capacités",
     "block.tmcraft.pokemon_breeder_table": "Table de la Pension",
+
+    "item.tmcraft.move_learn_status.able": "ABLE",
+    "item.tmcraft.move_learn_status.unable": "UNABLE",
+    "item.tmcraft.move_learn_status.learned": "LEARNED",
+    "item.tmcraft.move_learn_status.empty": "EMPTY",
 
     "item.tmcraft.error.cannot_learn_move": "%s ne peut pas apprendre %s",
     "item.tmcraft.error.already_learned_move": "%s a déjà appris %s",
@@ -65,6 +69,7 @@
     "item.tmcraft.emerald_blank_star": "Étoile d'Émeraude Vierge",
     "item.tmcraft.netherite_blank_star": "Étoile de Netherite Vierge",
 
+    "gamerule.consumeMoveItemOnUse": "Les objets de capacité sont consommés à l’usage",
 
     "item.tmcraft.tm_10000000voltthunderbolt": "CT-719: Giga-Tonnerre",
     "item.tmcraft.tm_absorb": "CT-71: Vole-Vie",
