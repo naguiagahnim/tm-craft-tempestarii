@@ -112,13 +112,13 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
             return Text.translatable("item.tmcraft.move_learn_status.empty").formatted(Formatting.GRAY);
 
         } else if (isPokemonAlreadyLearnedMove(pokemon)) {
-            return pokemon.getDisplayName().append(Text.literal(", ")).append(Text.translatable("item.tmcraft.move_learn_status.learned").formatted(Formatting.YELLOW));
+            return pokemon.getDisplayName(false).append(Text.literal(", ")).append(Text.translatable("item.tmcraft.move_learn_status.learned").formatted(Formatting.YELLOW));
 
         } else if (isPokemonAbleToLearnMove(pokemon)) {
-            return pokemon.getDisplayName().append(Text.literal(", ")).append(Text.translatable("item.tmcraft.move_learn_status.able").formatted(Formatting.GREEN));
+            return pokemon.getDisplayName(false).append(Text.literal(", ")).append(Text.translatable("item.tmcraft.move_learn_status.able").formatted(Formatting.GREEN));
 
         } else {
-            return pokemon.getDisplayName().append(Text.literal(", ")).append(Text.translatable("item.tmcraft.move_learn_status.unable").formatted(Formatting.RED));
+            return pokemon.getDisplayName(false).append(Text.literal(", ")).append(Text.translatable("item.tmcraft.move_learn_status.unable").formatted(Formatting.RED));
         }
     }
 
@@ -149,13 +149,13 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
         }
 
         if (isPokemonAlreadyLearnedMove(pokemon)) {
-            player.sendMessage(Text.translatable("item.tmcraft.error.already_learned_move", pokemon.getDisplayName(), getMoveTemplate().getDisplayName()).formatted(Formatting.RED));
+            player.sendMessage(Text.translatable("item.tmcraft.error.already_learned_move", pokemon.getDisplayName(false), getMoveTemplate().getDisplayName()).formatted(Formatting.RED));
             player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
             return ActionResult.PASS;
         }
 
         if (!isPokemonAbleToLearnMove(pokemon)) {
-            player.sendMessage(Text.translatable("item.tmcraft.error.cannot_learn_move", pokemon.getDisplayName(), getMoveTemplate().getDisplayName()).formatted(Formatting.RED));
+            player.sendMessage(Text.translatable("item.tmcraft.error.cannot_learn_move", pokemon.getDisplayName(false), getMoveTemplate().getDisplayName()).formatted(Formatting.RED));
             player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
             return ActionResult.PASS;
         }
