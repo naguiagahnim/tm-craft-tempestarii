@@ -1,5 +1,6 @@
 package kiwiapollo.tmcraft.item;
 
+import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.api.moves.BenchedMove;
 import com.cobblemon.mod.common.api.moves.Move;
@@ -7,7 +8,9 @@ import com.cobblemon.mod.common.api.moves.MoveTemplate;
 import com.cobblemon.mod.common.api.moves.Moves;
 import com.cobblemon.mod.common.api.moves.categories.DamageCategories;
 import com.cobblemon.mod.common.api.moves.categories.DamageCategory;
+import com.cobblemon.mod.common.api.storage.party.PlayerPartyStore;
 import com.cobblemon.mod.common.api.types.ElementalType;
+import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import kiwiapollo.tmcraft.common.DamageCategoryTextColorFactory;
 import kiwiapollo.tmcraft.gamerule.ModGameRule;
@@ -15,16 +18,20 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUsageContext;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -43,11 +50,6 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
         this.type = type;
     }
 
-    @Override
-    public ElementalType getMoveType() {
-        return type;
-    }
-
     @Environment(EnvType.CLIENT)
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
@@ -62,54 +64,49 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
         }
     }
 
-    protected Text getMoveTypeTooltipText() {
+    private Text getMoveTypeTooltipText() {
         return type.getDisplayName().setStyle(Style.EMPTY.withColor(type.getHue()));
     }
 
-    protected Text getMoveDamageCategoryTooltipText() {
+    private Text getMoveDamageCategoryTooltipText() {
         DamageCategory category = getMoveTemplate().getDamageCategory();
         Style style = Style.EMPTY.withColor(new DamageCategoryTextColorFactory().create(category));
         return category.getDisplayName().copy().setStyle(style);
     }
 
-    protected Text getMovePowerTooltipText() {
+    private Text getMovePowerTooltipText() {
         Style style = Style.EMPTY.withColor(Formatting.YELLOW);
         return Text.literal(String.valueOf(getMoveTemplate().getPower())).setStyle(style);
     }
 
     @NotNull
-    protected MoveTemplate getMoveTemplate() {
+    private MoveTemplate getMoveTemplate() {
         return Objects.requireNonNull(Moves.INSTANCE.getByName(move));
     }
 
-    protected void playTeachMoveErrorSound(ServerPlayerEntity player) {
-        player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
-    }
-
-    protected void playTeachMoveSuccessSound(ServerPlayerEntity player) {
-        player.getWorld().playSound(null, player.getBlockPos(), CobblemonSounds.PC_CLICK, SoundCategory.PLAYERS, 1.0f, 1.0f);
-    }
-
-    protected void teachMoveToPokemon(Pokemon pokemon) {
-        if (pokemon.getMoveSet().hasSpace()) {
-            pokemon.getMoveSet().add(getMoveTemplate().create());
-
-        } else {
-            pokemon.getBenchedMoves().add(new BenchedMove(getMoveTemplate(), 0));
+    @Override
+    public ActionResult useOnBlock(ItemUsageContext context) {
+        if (!(context.getPlayer() instanceof ServerPlayerEntity player)) {
+            return ActionResult.PASS;
         }
-    }
 
-    protected boolean isMoveExist() {
-        try {
-            getMoveTemplate();
-            return true;
-
-        } catch (NullPointerException e) {
-            return false;
+        if (player.getWorld().isClient()) {
+            return ActionResult.PASS;
         }
+
+        player.sendMessage(Text.translatable(getTranslationKey()).formatted(Formatting.YELLOW));
+
+        PlayerPartyStore party = Cobblemon.INSTANCE.getStorage().getParty(player);
+
+        for (int i = 0; i < party.size(); i++) {
+            Pokemon pokemon = party.get(i);
+            player.sendMessage(Text.literal(String.format("[%d] ", i + 1)).append(getMoveLearnStatus(pokemon)));
+        }
+
+        return ActionResult.SUCCESS;
     }
 
-    protected Text getMoveLearnStatus(Pokemon pokemon) {
+    private Text getMoveLearnStatus(Pokemon pokemon) {
         if (Objects.isNull(pokemon)) {
             return Text.translatable("item.tmcraft.move_learn_status.empty").formatted(Formatting.GRAY);
 
@@ -124,7 +121,76 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
         }
     }
 
-    protected boolean isPokemonAlreadyLearnedMove(Pokemon pokemon) {
+    @Override
+    public ActionResult useOnEntity(ItemStack itemStack, PlayerEntity user, LivingEntity entity, Hand hand) {
+        if (user.getWorld().isClient()) {
+            return ActionResult.PASS;
+        }
+
+        if (!(user instanceof ServerPlayerEntity player)) {
+            return ActionResult.PASS;
+        }
+
+        if (!(entity instanceof PokemonEntity)) {
+            return ActionResult.PASS;
+        }
+
+        Pokemon pokemon = ((PokemonEntity) entity).getPokemon();
+
+        if (!isMoveExist()) {
+            player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
+            return ActionResult.PASS;
+        }
+
+        if (!isPokemonOwnedByPlayer(player, pokemon)) {
+            player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
+            return ActionResult.PASS;
+        }
+
+        if (isPokemonAlreadyLearnedMove(pokemon)) {
+            player.sendMessage(Text.translatable("item.tmcraft.error.already_learned_move", pokemon.getDisplayName(), getMoveTemplate().getDisplayName()).formatted(Formatting.RED));
+            player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
+            return ActionResult.PASS;
+        }
+
+        if (!isPokemonAbleToLearnMove(pokemon)) {
+            player.sendMessage(Text.translatable("item.tmcraft.error.cannot_learn_move", pokemon.getDisplayName(), getMoveTemplate().getDisplayName()).formatted(Formatting.RED));
+            player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1.0f, 1.0f);
+            return ActionResult.PASS;
+        }
+
+        teachMoveToPokemon(pokemon);
+
+        if (shouldConsumeItemByGameRule(player.getServerWorld()) && !player.isCreative()) {
+            itemStack.decrement(1);
+        }
+
+        player.sendMessage(Text.translatable("item.tmcraft.success.pokemon_learned_move", pokemon.getDisplayName(), getMoveTemplate().getDisplayName()));
+        player.getWorld().playSound(null, player.getBlockPos(), CobblemonSounds.PC_CLICK, SoundCategory.PLAYERS, 1.0f, 1.0f);
+
+        return ActionResult.SUCCESS;
+    }
+
+    private void teachMoveToPokemon(Pokemon pokemon) {
+        if (pokemon.getMoveSet().hasSpace()) {
+            pokemon.getMoveSet().add(getMoveTemplate().create());
+
+        } else {
+            pokemon.getBenchedMoves().add(new BenchedMove(getMoveTemplate(), 0));
+        }
+    }
+
+    private boolean isMoveExist() {
+        try {
+            getMoveTemplate();
+            return true;
+
+        } catch (NullPointerException e) {
+            return false;
+        }
+    }
+
+    private boolean isPokemonAlreadyLearnedMove(Pokemon pokemon) {
         return isMoveSetMove(pokemon) || isAccessibleMove(pokemon);
     }
 
@@ -169,18 +235,23 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
                 .contains(move);
     }
 
-    protected boolean isPokemonOwnedByPlayer(PlayerEntity player, Pokemon pokemon) {
+    private boolean isPokemonOwnedByPlayer(PlayerEntity player, Pokemon pokemon) {
         return player.equals(pokemon.getOwnerPlayer());
     }
 
     protected abstract boolean isPokemonAbleToLearnMove(Pokemon pokemon);
 
-    protected boolean shouldConsumeItemByGameRule(ServerWorld world) {
+    private boolean shouldConsumeItemByGameRule(ServerWorld world) {
         try {
             return world.getGameRules().get(ModGameRule.CONSUME_MOVE_ITEM_ON_USE).get();
 
         } catch (NullPointerException e) {
             return true;
         }
+    }
+
+    @Override
+    public ElementalType getMoveType() {
+        return type;
     }
 }

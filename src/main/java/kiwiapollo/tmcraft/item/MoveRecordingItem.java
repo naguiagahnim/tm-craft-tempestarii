@@ -47,7 +47,11 @@ public abstract class MoveRecordingItem extends Item implements PokemonAndMoveSe
 
     @Override
     public void applyToPokemon(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack, @NotNull Pokemon pokemon, @NotNull Move move) {
-        giveMoveTeachingItem(move, player);
+        ItemStack stack = toMoveTeachingItem(move).getDefaultStack();
+
+        if (player.giveItemStack(stack)) {
+            player.dropStack(stack);
+        }
 
         if (!player.isCreative()) {
             itemStack.decrement(1);
@@ -55,13 +59,6 @@ public abstract class MoveRecordingItem extends Item implements PokemonAndMoveSe
 
         player.sendMessage(Text.translatable("item.tmcraft.success.recorded_move", move.getDisplayName()));
         player.getWorld().playSound(null, player.getBlockPos(), CobblemonSounds.PC_CLICK, SoundCategory.PLAYERS, 1.0f, 1.0f);
-    }
-
-    private void giveMoveTeachingItem(Move move, PlayerEntity player) {
-        ItemStack stack = toMoveTeachingItem(move).getDefaultStack();
-        if (player.giveItemStack(stack)) {
-            player.dropStack(stack);
-        }
     }
 
     protected abstract Item toMoveTeachingItem(Move move);
