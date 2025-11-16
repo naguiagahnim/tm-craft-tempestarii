@@ -36,6 +36,10 @@ repositories {
 		name = "Cobblemon"
 		url = "https://maven.impactdev.net/repository/development/"
 	}
+	maven {
+		name = "TerraformersMC"
+		url = "https://maven.terraformersmc.com/"
+	}
 }
 
 loom {
@@ -69,6 +73,7 @@ dependencies {
 	modImplementation("net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}")
 	compileOnly("net.luckperms:api:${project.luckperms_version}")
 	modImplementation("com.google.code.gson:gson:2.8.9")
+	modRuntimeOnly("dev.emi:emi-fabric:${project.emi_version}")
 }
 
 processResources {
