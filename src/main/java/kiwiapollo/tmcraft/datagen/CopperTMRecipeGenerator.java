@@ -61,6 +61,11 @@ public class CopperTMRecipeGenerator implements RecipeGenerator {
                 .input(Items.EMERALD)
                 .input(Items.IRON_SWORD)
                 .offerTo(exporter);
+
+        CopperTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_TAILSLAP.getItem())
+                .input(Items.STICK)
+                .input(Items.PAPER)
+                .offerTo(exporter);
     }
 
     static class CopperTMRecipeJsonBuilder extends ShapelessRecipeJsonBuilder {
