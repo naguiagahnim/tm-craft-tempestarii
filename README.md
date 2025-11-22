@@ -12,14 +12,13 @@ By the term TM, the mod follows Gen IX. Which means TMs are consumed after being
 As of 1.4.2, all TM recipes for all generation have been added.
 
 - [TM Recipe Progress - Google Spreadsheet](https://docs.google.com/spreadsheets/d/1dSF5yGApMBniT_dNG_7rBsOzZgVQqpY8qVZWKixdT1Y/edit?usp=sharing)
-
-For server admins who prefer TMCraft without recipes, try using `x.x.x+x.x.x-norecipes` version of the mod.
-
 - [TMCraft Missing Recipes](https://github.com/KiwiFlavoredApollo/tmcraft-missing-recipes)
 
 TMCraft Missing Recipes is a data pack that adds recipes which are not meant to be included in the mod. Server admins can use this as a template.
 
 If your favorite TMs do not have recipes and if you have an idea, feel free to contact me and give suggestions.
+
+`norecipe` version is no longer provided.
 
 ## Blank Discs
 
