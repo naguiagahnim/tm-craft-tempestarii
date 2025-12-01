@@ -6,7 +6,7 @@ import kiwiapollo.tmcraft.item.MoveTeachingItem;
 
 public class TutorMoveTeachingItem extends MoveTeachingItem {
     public TutorMoveTeachingItem(String move, ElementalType type) {
-        super(move, type);
+        super(move, type, "item.tmcraft.tutor_move_item");
     }
 
     @Override

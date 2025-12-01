@@ -32,6 +32,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
+import net.minecraft.util.Language;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -42,12 +43,14 @@ import java.util.Objects;
 public abstract class MoveTeachingItem extends Item implements ElementalTypeItem {
     private final String move;
     private final ElementalType type;
+    private final String translation;
 
-    public MoveTeachingItem(String move, ElementalType type) {
+    public MoveTeachingItem(String move, ElementalType type, String translation) {
         super(new FabricItemSettings());
 
         this.move = move;
         this.type = type;
+        this.translation = translation;
     }
 
     @Environment(EnvType.CLIENT)
@@ -94,7 +97,7 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
             return ActionResult.PASS;
         }
 
-        player.sendMessage(Text.translatable(getTranslationKey()).formatted(Formatting.YELLOW));
+        player.sendMessage(getName().copy().formatted(Formatting.YELLOW));
 
         PlayerPartyStore party = Cobblemon.INSTANCE.getStorage().getParty(player);
 
@@ -247,6 +250,28 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
 
         } catch (NullPointerException e) {
             return true;
+        }
+    }
+
+    @Override
+    public Text getName(ItemStack stack) {
+        if (Language.getInstance().hasTranslation(super.getTranslationKey())) {
+            return super.getName(stack);
+
+        } else {
+            MoveTemplate m = Moves.INSTANCE.getByName(this.move);
+            return Text.translatable(translation, m.getNum(), m.getDisplayName());
+        }
+    }
+
+    @Override
+    public Text getName() {
+        if (Language.getInstance().hasTranslation(super.getTranslationKey())) {
+            return super.getName();
+
+        } else {
+            MoveTemplate m = Moves.INSTANCE.getByName(this.move);
+            return Text.translatable(translation, m.getNum(), m.getDisplayName());
         }
     }
 
