@@ -1,7 +1,7 @@
 package kiwiapollo.tmcraft.datagen;
 
 import kiwiapollo.tmcraft.TMCraft;
-import kiwiapollo.tmcraft.item.misc.SmithingTemplateItem;
+import kiwiapollo.tmcraft.item.misc.ModSmithingTemplateItem;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -11,10 +11,9 @@ import net.minecraft.util.Identifier;
 
 import java.util.function.Consumer;
 
-public class SmithingTemplateRecipeGenerator implements RecipeGenerator {
-    @Override
+public class SmithingTemplateRecipeGenerator {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, SmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem())
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModSmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE)
                 .pattern("GBG")
                 .pattern("GDG")
                 .pattern("GGG")
@@ -22,15 +21,15 @@ public class SmithingTemplateRecipeGenerator implements RecipeGenerator {
                 .input('D', Items.COBBLED_DEEPSLATE)
                 .input('B', Items.BLAZE_POWDER)
                 .criterion(FabricRecipeProvider.hasItem(Items.GOLD_INGOT), FabricRecipeProvider.conditionsFromItem(Items.GOLD_INGOT))
-                .offerTo(exporter, Identifier.of(TMCraft.MOD_ID, String.format("%s_from_blaze_powder", SmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE.getIdentifier().getPath())));
+                .offerTo(exporter, Identifier.of(TMCraft.MOD_ID, "move_upgrade_smithing_template_from_blaze_powder"));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, SmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem(), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModSmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE, 2)
                 .pattern("GTG")
                 .pattern("GDG")
                 .pattern("GGG")
                 .input('G', Items.GOLD_INGOT)
                 .input('D', Items.COBBLED_DEEPSLATE)
-                .input('T', SmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE.getItem())
+                .input('T', ModSmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE)
                 .criterion(FabricRecipeProvider.hasItem(Items.GOLD_INGOT), FabricRecipeProvider.conditionsFromItem(Items.GOLD_INGOT))
                 .offerTo(exporter);
     }

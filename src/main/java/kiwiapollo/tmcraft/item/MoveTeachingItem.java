@@ -12,7 +12,7 @@ import com.cobblemon.mod.common.api.storage.party.PlayerPartyStore;
 import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import kiwiapollo.tmcraft.common.DamageCategoryTextColorFactory;
+import kiwiapollo.tmcraft.common.TextColorMap;
 import kiwiapollo.tmcraft.gamerule.ModGameRule;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -73,7 +73,7 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
 
     private Text getMoveDamageCategoryTooltipText() {
         DamageCategory category = getMoveTemplate().getDamageCategory();
-        Style style = Style.EMPTY.withColor(new DamageCategoryTextColorFactory().create(category));
+        Style style = Style.EMPTY.withColor(new TextColorMap().get(category));
         return category.getDisplayName().copy().setStyle(style);
     }
 

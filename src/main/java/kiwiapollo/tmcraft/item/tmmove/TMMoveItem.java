@@ -4,955 +4,961 @@ import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.api.types.ElementalTypes;
 import kiwiapollo.tmcraft.TMCraft;
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public enum TMMoveItem {
-    TM_10000000VOLTTHUNDERBOLT("10000000voltthunderbolt", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_ABSORB("absorb", ElementalTypes.INSTANCE.getGRASS()),
-    TM_ACCELEROCK("accelerock", ElementalTypes.INSTANCE.getROCK()),
-    TM_ACID("acid", ElementalTypes.INSTANCE.getPOISON()),
-    TM_ACIDARMOR("acidarmor", ElementalTypes.INSTANCE.getPOISON()),
-    TM_ACIDDOWNPOUR("aciddownpour", ElementalTypes.INSTANCE.getPOISON()),
-    TM_ACIDSPRAY("acidspray", ElementalTypes.INSTANCE.getPOISON()),
-    TM_ACROBATICS("acrobatics", ElementalTypes.INSTANCE.getFLYING()),
-    TM_ACUPRESSURE("acupressure", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_AERIALACE("aerialace", ElementalTypes.INSTANCE.getFLYING()),
-    TM_AEROBLAST("aeroblast", ElementalTypes.INSTANCE.getFLYING()),
-    TM_AFTERYOU("afteryou", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_AGILITY("agility", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_AIRCUTTER("aircutter", ElementalTypes.INSTANCE.getFLYING()),
-    TM_AIRSLASH("airslash", ElementalTypes.INSTANCE.getFLYING()),
-    TM_ALLOUTPUMMELING("alloutpummeling", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_ALLYSWITCH("allyswitch", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_AMNESIA("amnesia", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_ANCHORSHOT("anchorshot", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_ANCIENTPOWER("ancientpower", ElementalTypes.INSTANCE.getROCK()),
-    TM_APPLEACID("appleacid", ElementalTypes.INSTANCE.getGRASS()),
-    TM_AQUACUTTER("aquacutter", ElementalTypes.INSTANCE.getWATER()),
-    TM_AQUAJET("aquajet", ElementalTypes.INSTANCE.getWATER()),
-    TM_AQUARING("aquaring", ElementalTypes.INSTANCE.getWATER()),
-    TM_AQUASTEP("aquastep", ElementalTypes.INSTANCE.getWATER()),
-    TM_AQUATAIL("aquatail", ElementalTypes.INSTANCE.getWATER()),
-    TM_ARMORCANNON("armorcannon", ElementalTypes.INSTANCE.getFIRE()),
-    TM_ARMTHRUST("armthrust", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_AROMATHERAPY("aromatherapy", ElementalTypes.INSTANCE.getGRASS()),
-    TM_AROMATICMIST("aromaticmist", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_ASSIST("assist", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_ASSURANCE("assurance", ElementalTypes.INSTANCE.getDARK()),
-    TM_ASTONISH("astonish", ElementalTypes.INSTANCE.getGHOST()),
-    TM_ASTRALBARRAGE("astralbarrage", ElementalTypes.INSTANCE.getGHOST()),
-    TM_ATTACKORDER("attackorder", ElementalTypes.INSTANCE.getBUG()),
-    TM_ATTRACT("attract", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_AURASPHERE("aurasphere", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_AURAWHEEL("aurawheel", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_AURORABEAM("aurorabeam", ElementalTypes.INSTANCE.getICE()),
-    TM_AURORAVEIL("auroraveil", ElementalTypes.INSTANCE.getICE()),
-    TM_AUTOTOMIZE("autotomize", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_AVALANCHE("avalanche", ElementalTypes.INSTANCE.getICE()),
-    TM_AXEKICK("axekick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_BABYDOLLEYES("babydolleyes", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_BADDYBAD("baddybad", ElementalTypes.INSTANCE.getDARK()),
-    TM_BANEFULBUNKER("banefulbunker", ElementalTypes.INSTANCE.getPOISON()),
-    TM_BARBBARRAGE("barbbarrage", ElementalTypes.INSTANCE.getPOISON()),
-    TM_BARRAGE("barrage", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_BARRIER("barrier", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_BATONPASS("batonpass", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_BEAKBLAST("beakblast", ElementalTypes.INSTANCE.getFLYING()),
-    TM_BEATUP("beatup", ElementalTypes.INSTANCE.getDARK()),
-    TM_BEHEMOTHBASH("behemothbash", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_BEHEMOTHBLADE("behemothblade", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_BELCH("belch", ElementalTypes.INSTANCE.getPOISON()),
-    TM_BELLYDRUM("bellydrum", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_BESTOW("bestow", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_BIDE("bide", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_BIND("bind", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_BITE("bite", ElementalTypes.INSTANCE.getDARK()),
-    TM_BITTERBLADE("bitterblade", ElementalTypes.INSTANCE.getFIRE()),
-    TM_BITTERMALICE("bittermalice", ElementalTypes.INSTANCE.getGHOST()),
-    TM_BLACKHOLEECLIPSE("blackholeeclipse", ElementalTypes.INSTANCE.getDARK()),
-    TM_BLASTBURN("blastburn", ElementalTypes.INSTANCE.getFIRE()),
-    TM_BLAZEKICK("blazekick", ElementalTypes.INSTANCE.getFIRE()),
-    TM_BLAZINGTORQUE("blazingtorque", ElementalTypes.INSTANCE.getFIRE()),
-    TM_BLEAKWINDSTORM("bleakwindstorm", ElementalTypes.INSTANCE.getFLYING()),
-    TM_BLIZZARD("blizzard", ElementalTypes.INSTANCE.getICE()),
-    TM_BLOCK("block", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_BLOOMDOOM("bloomdoom", ElementalTypes.INSTANCE.getGRASS()),
-    TM_BLUEFLARE("blueflare", ElementalTypes.INSTANCE.getFIRE()),
-    TM_BODYPRESS("bodypress", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_BODYSLAM("bodyslam", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_BOLTBEAK("boltbeak", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_BOLTSTRIKE("boltstrike", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_BONECLUB("boneclub", ElementalTypes.INSTANCE.getGROUND()),
-    TM_BONEMERANG("bonemerang", ElementalTypes.INSTANCE.getGROUND()),
-    TM_BONERUSH("bonerush", ElementalTypes.INSTANCE.getGROUND()),
-    TM_BOOMBURST("boomburst", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_BOUNCE("bounce", ElementalTypes.INSTANCE.getFLYING()),
-    TM_BOUNCYBUBBLE("bouncybubble", ElementalTypes.INSTANCE.getWATER()),
-    TM_BRANCHPOKE("branchpoke", ElementalTypes.INSTANCE.getGRASS()),
-    TM_BRAVEBIRD("bravebird", ElementalTypes.INSTANCE.getFLYING()),
-    TM_BREAKINGSWIPE("breakingswipe", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_BREAKNECKBLITZ("breakneckblitz", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_BRICKBREAK("brickbreak", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_BRINE("brine", ElementalTypes.INSTANCE.getWATER()),
-    TM_BRUTALSWING("brutalswing", ElementalTypes.INSTANCE.getDARK()),
-    TM_BUBBLE("bubble", ElementalTypes.INSTANCE.getWATER()),
-    TM_BUBBLEBEAM("bubblebeam", ElementalTypes.INSTANCE.getWATER()),
-    TM_BUGBITE("bugbite", ElementalTypes.INSTANCE.getBUG()),
-    TM_BUGBUZZ("bugbuzz", ElementalTypes.INSTANCE.getBUG()),
-    TM_BULKUP("bulkup", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_BULLDOZE("bulldoze", ElementalTypes.INSTANCE.getGROUND()),
-    TM_BULLETPUNCH("bulletpunch", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_BULLETSEED("bulletseed", ElementalTypes.INSTANCE.getGRASS()),
-    TM_BURNINGJEALOUSY("burningjealousy", ElementalTypes.INSTANCE.getFIRE()),
-    TM_BURNUP("burnup", ElementalTypes.INSTANCE.getFIRE()),
-    TM_BUZZYBUZZ("buzzybuzz", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_CALMMIND("calmmind", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_CAMOUFLAGE("camouflage", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_CAPTIVATE("captivate", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_CATASTROPIKA("catastropika", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_CEASELESSEDGE("ceaselessedge", ElementalTypes.INSTANCE.getDARK()),
-    TM_CELEBRATE("celebrate", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_CHARGE("charge", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_CHARGEBEAM("chargebeam", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_CHARM("charm", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_CHATTER("chatter", ElementalTypes.INSTANCE.getFLYING()),
-    TM_CHILLINGWATER("chillingwater", ElementalTypes.INSTANCE.getWATER()),
-    TM_CHILLYRECEPTION("chillyreception", ElementalTypes.INSTANCE.getICE()),
-    TM_CHIPAWAY("chipaway", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_CHLOROBLAST("chloroblast", ElementalTypes.INSTANCE.getGRASS()),
-    TM_CIRCLETHROW("circlethrow", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_CLAMP("clamp", ElementalTypes.INSTANCE.getWATER()),
-    TM_CLANGINGSCALES("clangingscales", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_CLANGOROUSSOUL("clangoroussoul", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_CLANGOROUSSOULBLAZE("clangoroussoulblaze", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_CLEARSMOG("clearsmog", ElementalTypes.INSTANCE.getPOISON()),
-    TM_CLOSECOMBAT("closecombat", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_COACHING("coaching", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_COIL("coil", ElementalTypes.INSTANCE.getPOISON()),
-    TM_COLLISIONCOURSE("collisioncourse", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_COMBATTORQUE("combattorque", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_COMETPUNCH("cometpunch", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_COMEUPPANCE("comeuppance", ElementalTypes.INSTANCE.getDARK()),
-    TM_CONFIDE("confide", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_CONFUSERAY("confuseray", ElementalTypes.INSTANCE.getGHOST()),
-    TM_CONFUSION("confusion", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_CONSTRICT("constrict", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_CONTINENTALCRUSH("continentalcrush", ElementalTypes.INSTANCE.getROCK()),
-    TM_CONVERSION("conversion", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_CONVERSION2("conversion2", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_COPYCAT("copycat", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_COREENFORCER("coreenforcer", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_CORKSCREWCRASH("corkscrewcrash", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_CORROSIVEGAS("corrosivegas", ElementalTypes.INSTANCE.getPOISON()),
-    TM_COSMICPOWER("cosmicpower", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_COTTONGUARD("cottonguard", ElementalTypes.INSTANCE.getGRASS()),
-    TM_COTTONSPORE("cottonspore", ElementalTypes.INSTANCE.getGRASS()),
-    TM_COUNTER("counter", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_COURTCHANGE("courtchange", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_COVET("covet", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_CRABHAMMER("crabhammer", ElementalTypes.INSTANCE.getWATER()),
-    TM_CRAFTYSHIELD("craftyshield", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_CROSSCHOP("crosschop", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_CROSSPOISON("crosspoison", ElementalTypes.INSTANCE.getPOISON()),
-    TM_CRUNCH("crunch", ElementalTypes.INSTANCE.getDARK()),
-    TM_CRUSHCLAW("crushclaw", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_CRUSHGRIP("crushgrip", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_CURSE("curse", ElementalTypes.INSTANCE.getGHOST()),
-    TM_CUT("cut", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_DARKESTLARIAT("darkestlariat", ElementalTypes.INSTANCE.getDARK()),
-    TM_DARKPULSE("darkpulse", ElementalTypes.INSTANCE.getDARK()),
-    TM_DARKVOID("darkvoid", ElementalTypes.INSTANCE.getDARK()),
-    TM_DAZZLINGGLEAM("dazzlinggleam", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_DECORATE("decorate", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_DEFENDORDER("defendorder", ElementalTypes.INSTANCE.getBUG()),
-    TM_DEFENSECURL("defensecurl", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_DEFOG("defog", ElementalTypes.INSTANCE.getFLYING()),
-    TM_DESTINYBOND("destinybond", ElementalTypes.INSTANCE.getGHOST()),
-    TM_DETECT("detect", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_DEVASTATINGDRAKE("devastatingdrake", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DIAMONDSTORM("diamondstorm", ElementalTypes.INSTANCE.getROCK()),
-    TM_DIG("dig", ElementalTypes.INSTANCE.getGROUND()),
-    TM_DISABLE("disable", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_DISARMINGVOICE("disarmingvoice", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_DISCHARGE("discharge", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_DIRECLAW("direclaw", ElementalTypes.INSTANCE.getPOISON()),
-    TM_DIVE("dive", ElementalTypes.INSTANCE.getWATER()),
-    TM_DIZZYPUNCH("dizzypunch", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_DOODLE("doodle", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_DOOMDESIRE("doomdesire", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_DOUBLEEDGE("doubleedge", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_DOUBLEHIT("doublehit", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_DOUBLEIRONBASH("doubleironbash", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_DOUBLEKICK("doublekick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_DOUBLESHOCK("doubleshock", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_DOUBLESLAP("doubleslap", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_DOUBLETEAM("doubleteam", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_DRACOMETEOR("dracometeor", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DRAGONASCENT("dragonascent", ElementalTypes.INSTANCE.getFLYING()),
-    TM_DRAGONBREATH("dragonbreath", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DRAGONCLAW("dragonclaw", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DRAGONDANCE("dragondance", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DRAGONDARTS("dragondarts", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DRAGONENERGY("dragonenergy", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DRAGONHAMMER("dragonhammer", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DRAGONPULSE("dragonpulse", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DRAGONRAGE("dragonrage", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DRAGONRUSH("dragonrush", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DRAGONTAIL("dragontail", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DRAININGKISS("drainingkiss", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_DRAINPUNCH("drainpunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_DREAMEATER("dreameater", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_DRILLPECK("drillpeck", ElementalTypes.INSTANCE.getFLYING()),
-    TM_DRILLRUN("drillrun", ElementalTypes.INSTANCE.getGROUND()),
-    TM_DRUMBEATING("drumbeating", ElementalTypes.INSTANCE.getGRASS()),
-    TM_DUALCHOP("dualchop", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DUALWINGBEAT("dualwingbeat", ElementalTypes.INSTANCE.getFLYING()),
-    TM_DYNAMAXCANNON("dynamaxcannon", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_DYNAMICPUNCH("dynamicpunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_EARTHPOWER("earthpower", ElementalTypes.INSTANCE.getGROUND()),
-    TM_EARTHQUAKE("earthquake", ElementalTypes.INSTANCE.getGROUND()),
-    TM_ECHOEDVOICE("echoedvoice", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_EERIEIMPULSE("eerieimpulse", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_EERIESPELL("eeriespell", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_EGGBOMB("eggbomb", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_ELECTRICTERRAIN("electricterrain", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_ELECTRIFY("electrify", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_ELECTROBALL("electroball", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_ELECTRODRIFT("electrodrift", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_ELECTROWEB("electroweb", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_EMBARGO("embargo", ElementalTypes.INSTANCE.getDARK()),
-    TM_EMBER("ember", ElementalTypes.INSTANCE.getFIRE()),
-    TM_ENCORE("encore", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_ENDEAVOR("endeavor", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_ENDURE("endure", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_ENERGYBALL("energyball", ElementalTypes.INSTANCE.getGRASS()),
-    TM_ENTRAINMENT("entrainment", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_ERUPTION("eruption", ElementalTypes.INSTANCE.getFIRE()),
-    TM_ESPERWING("esperwing", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_ETERNABEAM("eternabeam", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_EXPANDINGFORCE("expandingforce", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_EXPLOSION("explosion", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_EXTRASENSORY("extrasensory", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_EXTREMEEVOBOOST("extremeevoboost", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_EXTREMESPEED("extremespeed", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FACADE("facade", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FAIRYLOCK("fairylock", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_FAIRYWIND("fairywind", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_FAKEOUT("fakeout", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FAKETEARS("faketears", ElementalTypes.INSTANCE.getDARK()),
-    TM_FALSESURRENDER("falsesurrender", ElementalTypes.INSTANCE.getDARK()),
-    TM_FALSESWIPE("falseswipe", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FEATHERDANCE("featherdance", ElementalTypes.INSTANCE.getFLYING()),
-    TM_FEINT("feint", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FEINTATTACK("feintattack", ElementalTypes.INSTANCE.getDARK()),
-    TM_FELLSTINGER("fellstinger", ElementalTypes.INSTANCE.getBUG()),
-    TM_FIERYDANCE("fierydance", ElementalTypes.INSTANCE.getFIRE()),
-    TM_FIERYWRATH("fierywrath", ElementalTypes.INSTANCE.getDARK()),
-    TM_FILLETAWAY("filletaway", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FINALGAMBIT("finalgambit", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_FIREBLAST("fireblast", ElementalTypes.INSTANCE.getFIRE()),
-    TM_FIREFANG("firefang", ElementalTypes.INSTANCE.getFIRE()),
-    TM_FIRELASH("firelash", ElementalTypes.INSTANCE.getFIRE()),
-    TM_FIREPLEDGE("firepledge", ElementalTypes.INSTANCE.getFIRE()),
-    TM_FIREPUNCH("firepunch", ElementalTypes.INSTANCE.getFIRE()),
-    TM_FIRESPIN("firespin", ElementalTypes.INSTANCE.getFIRE()),
-    TM_FIRSTIMPRESSION("firstimpression", ElementalTypes.INSTANCE.getBUG()),
-    TM_FISHIOUSREND("fishiousrend", ElementalTypes.INSTANCE.getWATER()),
-    TM_FISSURE("fissure", ElementalTypes.INSTANCE.getGROUND()),
-    TM_FLAIL("flail", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FLAMEBURST("flameburst", ElementalTypes.INSTANCE.getFIRE()),
-    TM_FLAMECHARGE("flamecharge", ElementalTypes.INSTANCE.getFIRE()),
-    TM_FLAMEWHEEL("flamewheel", ElementalTypes.INSTANCE.getFIRE()),
-    TM_FLAMETHROWER("flamethrower", ElementalTypes.INSTANCE.getFIRE()),
-    TM_FLAREBLITZ("flareblitz", ElementalTypes.INSTANCE.getFIRE()),
-    TM_FLASH("flash", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FLASHCANNON("flashcannon", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_FLATTER("flatter", ElementalTypes.INSTANCE.getDARK()),
-    TM_FLEURCANNON("fleurcannon", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_FLING("fling", ElementalTypes.INSTANCE.getDARK()),
-    TM_FLIPTURN("flipturn", ElementalTypes.INSTANCE.getWATER()),
-    TM_FLOATYFALL("floatyfall", ElementalTypes.INSTANCE.getFLYING()),
-    TM_FLORALHEALING("floralhealing", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_FLOWERSHIELD("flowershield", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_FLOWERTRICK("flowertrick", ElementalTypes.INSTANCE.getGRASS()),
-    TM_FLY("fly", ElementalTypes.INSTANCE.getFLYING()),
-    TM_FLYINGPRESS("flyingpress", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_FOCUSBLAST("focusblast", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_FOCUSENERGY("focusenergy", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FOCUSPUNCH("focuspunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_FOLLOWME("followme", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FORCEPALM("forcepalm", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_FORESIGHT("foresight", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FORESTSCURSE("forestscurse", ElementalTypes.INSTANCE.getGRASS()),
-    TM_FOULPLAY("foulplay", ElementalTypes.INSTANCE.getDARK()),
-    TM_FREEZEDRY("freezedry", ElementalTypes.INSTANCE.getICE()),
-    TM_FREEZESHOCK("freezeshock", ElementalTypes.INSTANCE.getICE()),
-    TM_FREEZINGGLARE("freezingglare", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_FREEZYFROST("freezyfrost", ElementalTypes.INSTANCE.getICE()),
-    TM_FRENZYPLANT("frenzyplant", ElementalTypes.INSTANCE.getGRASS()),
-    TM_FROSTBREATH("frostbreath", ElementalTypes.INSTANCE.getICE()),
-    TM_FRUSTRATION("frustration", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FURYATTACK("furyattack", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FURYCUTTER("furycutter", ElementalTypes.INSTANCE.getBUG()),
-    TM_FURYSWIPES("furyswipes", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_FUSIONBOLT("fusionbolt", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_FUSIONFLARE("fusionflare", ElementalTypes.INSTANCE.getFIRE()),
-    TM_FUTURESIGHT("futuresight", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_GASTROACID("gastroacid", ElementalTypes.INSTANCE.getPOISON()),
-    TM_GEARGRIND("geargrind", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_GEARUP("gearup", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_GENESISSUPERNOVA("genesissupernova", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_GEOMANCY("geomancy", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_GIGADRAIN("gigadrain", ElementalTypes.INSTANCE.getGRASS()),
-    TM_GIGAIMPACT("gigaimpact", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_GIGATONHAMMER("gigatonhammer", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_GIGAVOLTHAVOC("gigavolthavoc", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_GLACIALLANCE("glaciallance", ElementalTypes.INSTANCE.getICE()),
-    TM_GLACIATE("glaciate", ElementalTypes.INSTANCE.getICE()),
-    TM_GLAIVERUSH("glaiverush", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_GLARE("glare", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_GLITZYGLOW("glitzyglow", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_GMAXBEFUDDLE("gmaxbefuddle", ElementalTypes.INSTANCE.getBUG()),
-    TM_GMAXCANNONADE("gmaxcannonade", ElementalTypes.INSTANCE.getWATER()),
-    TM_GMAXCENTIFERNO("gmaxcentiferno", ElementalTypes.INSTANCE.getFIRE()),
-    TM_GMAXCHISTRIKE("gmaxchistrike", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_GMAXCUDDLE("gmaxcuddle", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_GMAXDEPLETION("gmaxdepletion", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_GMAXDRUMSOLO("gmaxdrumsolo", ElementalTypes.INSTANCE.getGRASS()),
-    TM_GMAXFINALE("gmaxfinale", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_GMAXFIREBALL("gmaxfireball", ElementalTypes.INSTANCE.getFIRE()),
-    TM_GMAXFOAMBURST("gmaxfoamburst", ElementalTypes.INSTANCE.getWATER()),
-    TM_GMAXGOLDRUSH("gmaxgoldrush", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_GMAXGRAVITAS("gmaxgravitas", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_GMAXHYDROSNIPE("gmaxhydrosnipe", ElementalTypes.INSTANCE.getWATER()),
-    TM_GMAXMALODOR("gmaxmalodor", ElementalTypes.INSTANCE.getPOISON()),
-    TM_GMAXMELTDOWN("gmaxmeltdown", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_GMAXONEBLOW("gmaxoneblow", ElementalTypes.INSTANCE.getDARK()),
-    TM_GMAXRAPIDFLOW("gmaxrapidflow", ElementalTypes.INSTANCE.getWATER()),
-    TM_GMAXREPLENISH("gmaxreplenish", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_GMAXRESONANCE("gmaxresonance", ElementalTypes.INSTANCE.getICE()),
-    TM_GMAXSANDBLAST("gmaxsandblast", ElementalTypes.INSTANCE.getGROUND()),
-    TM_GMAXSMITE("gmaxsmite", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_GMAXSNOOZE("gmaxsnooze", ElementalTypes.INSTANCE.getDARK()),
-    TM_GMAXSTEELSURGE("gmaxsteelsurge", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_GMAXSTONESURGE("gmaxstonesurge", ElementalTypes.INSTANCE.getWATER()),
-    TM_GMAXSTUNSHOCK("gmaxstunshock", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_GMAXSWEETNESS("gmaxsweetness", ElementalTypes.INSTANCE.getGRASS()),
-    TM_GMAXTARTNESS("gmaxtartness", ElementalTypes.INSTANCE.getGRASS()),
-    TM_GMAXTERROR("gmaxterror", ElementalTypes.INSTANCE.getGHOST()),
-    TM_GMAXVINELASH("gmaxvinelash", ElementalTypes.INSTANCE.getGRASS()),
-    TM_GMAXVOLCALITH("gmaxvolcalith", ElementalTypes.INSTANCE.getROCK()),
-    TM_GMAXVOLTCRASH("gmaxvoltcrash", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_GMAXWILDFIRE("gmaxwildfire", ElementalTypes.INSTANCE.getFIRE()),
-    TM_GMAXWINDRAGE("gmaxwindrage", ElementalTypes.INSTANCE.getFLYING()),
-    TM_GRASSKNOT("grassknot", ElementalTypes.INSTANCE.getGRASS()),
-    TM_GRASSPLEDGE("grasspledge", ElementalTypes.INSTANCE.getGRASS()),
-    TM_GRASSWHISTLE("grasswhistle", ElementalTypes.INSTANCE.getGRASS()),
-    TM_GRASSYGLIDE("grassyglide", ElementalTypes.INSTANCE.getGRASS()),
-    TM_GRASSYTERRAIN("grassyterrain", ElementalTypes.INSTANCE.getGRASS()),
-    TM_GRAVAPPLE("gravapple", ElementalTypes.INSTANCE.getGRASS()),
-    TM_GRAVITY("gravity", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_GROWL("growl", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_GROWTH("growth", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_GRUDGE("grudge", ElementalTypes.INSTANCE.getGHOST()),
-    TM_GUARDIANOFALOLA("guardianofalola", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_GUARDSPLIT("guardsplit", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_GUARDSWAP("guardswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_GUILLOTINE("guillotine", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_GUNKSHOT("gunkshot", ElementalTypes.INSTANCE.getPOISON()),
-    TM_GUST("gust", ElementalTypes.INSTANCE.getFLYING()),
-    TM_GYROBALL("gyroball", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_HAIL("hail", ElementalTypes.INSTANCE.getICE()),
-    TM_HAMMERARM("hammerarm", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_HAPPYHOUR("happyhour", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HARDEN("harden", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HAZE("haze", ElementalTypes.INSTANCE.getICE()),
-    TM_HEADBUTT("headbutt", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HEADCHARGE("headcharge", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HEADLONGRUSH("headlongrush", ElementalTypes.INSTANCE.getGROUND()),
-    TM_HEADSMASH("headsmash", ElementalTypes.INSTANCE.getROCK()),
-    TM_HEALBELL("healbell", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HEALBLOCK("healblock", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_HEALINGWISH("healingwish", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_HEALORDER("healorder", ElementalTypes.INSTANCE.getBUG()),
-    TM_HEALPULSE("healpulse", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_HEARTSTAMP("heartstamp", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_HEARTSWAP("heartswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_HEATCRASH("heatcrash", ElementalTypes.INSTANCE.getFIRE()),
-    TM_HEATWAVE("heatwave", ElementalTypes.INSTANCE.getFIRE()),
-    TM_HEAVYSLAM("heavyslam", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_HELPINGHAND("helpinghand", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HEX("hex", ElementalTypes.INSTANCE.getGHOST()),
-    TM_HIDDENPOWER("hiddenpower", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HIGHHORSEPOWER("highhorsepower", ElementalTypes.INSTANCE.getGROUND()),
-    TM_HIGHJUMPKICK("highjumpkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_HOLDBACK("holdback", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HOLDHANDS("holdhands", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HONECLAWS("honeclaws", ElementalTypes.INSTANCE.getDARK()),
-    TM_HORNATTACK("hornattack", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HORNDRILL("horndrill", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HORNLEECH("hornleech", ElementalTypes.INSTANCE.getGRASS()),
-    TM_HOWL("howl", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HURRICANE("hurricane", ElementalTypes.INSTANCE.getFLYING()),
-    TM_HYDROCANNON("hydrocannon", ElementalTypes.INSTANCE.getWATER()),
-    TM_HYDROPUMP("hydropump", ElementalTypes.INSTANCE.getWATER()),
-    TM_HYDROSTEAM("hydrosteam", ElementalTypes.INSTANCE.getWATER()),
-    TM_HYDROVORTEX("hydrovortex", ElementalTypes.INSTANCE.getWATER()),
-    TM_HYPERBEAM("hyperbeam", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HYPERDRILL("hyperdrill", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HYPERFANG("hyperfang", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HYPERSPACEFURY("hyperspacefury", ElementalTypes.INSTANCE.getDARK()),
-    TM_HYPERSPACEHOLE("hyperspacehole", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_HYPERVOICE("hypervoice", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_HYPNOSIS("hypnosis", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_ICEBALL("iceball", ElementalTypes.INSTANCE.getICE()),
-    TM_ICEBEAM("icebeam", ElementalTypes.INSTANCE.getICE()),
-    TM_ICEBURN("iceburn", ElementalTypes.INSTANCE.getICE()),
-    TM_ICEFANG("icefang", ElementalTypes.INSTANCE.getICE()),
-    TM_ICEHAMMER("icehammer", ElementalTypes.INSTANCE.getICE()),
-    TM_ICEPUNCH("icepunch", ElementalTypes.INSTANCE.getICE()),
-    TM_ICESHARD("iceshard", ElementalTypes.INSTANCE.getICE()),
-    TM_ICESPINNER("icespinner", ElementalTypes.INSTANCE.getICE()),
-    TM_ICICLECRASH("iciclecrash", ElementalTypes.INSTANCE.getICE()),
-    TM_ICICLESPEAR("iciclespear", ElementalTypes.INSTANCE.getICE()),
-    TM_ICYWIND("icywind", ElementalTypes.INSTANCE.getICE()),
-    TM_IMPRISON("imprison", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_INCINERATE("incinerate", ElementalTypes.INSTANCE.getFIRE()),
-    TM_INFERNALPARADE("infernalparade", ElementalTypes.INSTANCE.getGHOST()),
-    TM_INFERNO("inferno", ElementalTypes.INSTANCE.getFIRE()),
-    TM_INFERNOOVERDRIVE("infernooverdrive", ElementalTypes.INSTANCE.getFIRE()),
-    TM_INFESTATION("infestation", ElementalTypes.INSTANCE.getBUG()),
-    TM_INGRAIN("ingrain", ElementalTypes.INSTANCE.getGRASS()),
-    TM_INSTRUCT("instruct", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_IONDELUGE("iondeluge", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_IRONDEFENSE("irondefense", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_IRONHEAD("ironhead", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_IRONTAIL("irontail", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_JAWLOCK("jawlock", ElementalTypes.INSTANCE.getDARK()),
-    TM_JETPUNCH("jetpunch", ElementalTypes.INSTANCE.getWATER()),
-    TM_JUDGMENT("judgment", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_JUMPKICK("jumpkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_JUNGLEHEALING("junglehealing", ElementalTypes.INSTANCE.getGRASS()),
-    TM_KARATECHOP("karatechop", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_KINESIS("kinesis", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_KINGSSHIELD("kingsshield", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_KNOCKOFF("knockoff", ElementalTypes.INSTANCE.getDARK()),
-    TM_KOWTOWCLEAVE("kowtowcleave", ElementalTypes.INSTANCE.getDARK()),
-    TM_LANDSWRATH("landswrath", ElementalTypes.INSTANCE.getGROUND()),
-    TM_LASERFOCUS("laserfocus", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_LASHOUT("lashout", ElementalTypes.INSTANCE.getDARK()),
-    TM_LASTRESORT("lastresort", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_LASTRESPECTS("lastrespects", ElementalTypes.INSTANCE.getGHOST()),
-    TM_LAVAPLUME("lavaplume", ElementalTypes.INSTANCE.getFIRE()),
-    TM_LEAFAGE("leafage", ElementalTypes.INSTANCE.getGRASS()),
-    TM_LEAFBLADE("leafblade", ElementalTypes.INSTANCE.getGRASS()),
-    TM_LEAFSTORM("leafstorm", ElementalTypes.INSTANCE.getGRASS()),
-    TM_LEAFTORNADO("leaftornado", ElementalTypes.INSTANCE.getGRASS()),
-    TM_LEECHLIFE("leechlife", ElementalTypes.INSTANCE.getBUG()),
-    TM_LEECHSEED("leechseed", ElementalTypes.INSTANCE.getGRASS()),
-    TM_LEER("leer", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_LETSSNUGGLEFOREVER("letssnuggleforever", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_LICK("lick", ElementalTypes.INSTANCE.getGHOST()),
-    TM_LIFEDEW("lifedew", ElementalTypes.INSTANCE.getWATER()),
-    TM_LIGHTOFRUIN("lightofruin", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_LIGHTSCREEN("lightscreen", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_LIGHTTHATBURNSTHESKY("lightthatburnsthesky", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_LIQUIDATION("liquidation", ElementalTypes.INSTANCE.getWATER()),
-    TM_LOCKON("lockon", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_LOVELYKISS("lovelykiss", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_LOWKICK("lowkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_LOWSWEEP("lowsweep", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_LUCKYCHANT("luckychant", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_LUMINACRASH("luminacrash", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_LUNARBLESSING("lunarblessing", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_LUNARDANCE("lunardance", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_LUNGE("lunge", ElementalTypes.INSTANCE.getBUG()),
-    TM_LUSTERPURGE("lusterpurge", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_MACHPUNCH("machpunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_MAGICALLEAF("magicalleaf", ElementalTypes.INSTANCE.getGRASS()),
-    TM_MAGICALTORQUE("magicaltorque", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_MAGICCOAT("magiccoat", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_MAGICPOWDER("magicpowder", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_MAGICROOM("magicroom", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_MAGMASTORM("magmastorm", ElementalTypes.INSTANCE.getFIRE()),
-    TM_MAGNETBOMB("magnetbomb", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_MAGNETICFLUX("magneticflux", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_MAGNETRISE("magnetrise", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_MAGNITUDE("magnitude", ElementalTypes.INSTANCE.getGROUND()),
-    TM_MAKEITRAIN("makeitrain", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_MALICIOUSMOONSAULT("maliciousmoonsault", ElementalTypes.INSTANCE.getDARK()),
-    TM_MATBLOCK("matblock", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_MAXAIRSTREAM("maxairstream", ElementalTypes.INSTANCE.getFLYING()),
-    TM_MAXDARKNESS("maxdarkness", ElementalTypes.INSTANCE.getDARK()),
-    TM_MAXFLARE("maxflare", ElementalTypes.INSTANCE.getFIRE()),
-    TM_MAXFLUTTERBY("maxflutterby", ElementalTypes.INSTANCE.getBUG()),
-    TM_MAXGEYSER("maxgeyser", ElementalTypes.INSTANCE.getWATER()),
-    TM_MAXGUARD("maxguard", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_MAXHAILSTORM("maxhailstorm", ElementalTypes.INSTANCE.getICE()),
-    TM_MAXKNUCKLE("maxknuckle", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_MAXLIGHTNING("maxlightning", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_MAXMINDSTORM("maxmindstorm", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_MAXOOZE("maxooze", ElementalTypes.INSTANCE.getPOISON()),
-    TM_MAXOVERGROWTH("maxovergrowth", ElementalTypes.INSTANCE.getGRASS()),
-    TM_MAXPHANTASM("maxphantasm", ElementalTypes.INSTANCE.getGHOST()),
-    TM_MAXQUAKE("maxquake", ElementalTypes.INSTANCE.getGROUND()),
-    TM_MAXROCKFALL("maxrockfall", ElementalTypes.INSTANCE.getROCK()),
-    TM_MAXSTARFALL("maxstarfall", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_MAXSTEELSPIKE("maxsteelspike", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_MAXSTRIKE("maxstrike", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_MAXWYRMWIND("maxwyrmwind", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_MEANLOOK("meanlook", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_MEDITATE("meditate", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_MEFIRST("mefirst", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_MEGADRAIN("megadrain", ElementalTypes.INSTANCE.getGRASS()),
-    TM_MEGAHORN("megahorn", ElementalTypes.INSTANCE.getBUG()),
-    TM_MEGAKICK("megakick", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_MEGAPUNCH("megapunch", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_MEMENTO("memento", ElementalTypes.INSTANCE.getDARK()),
-    TM_MENACINGMOONRAZEMAELSTROM("menacingmoonrazemaelstrom", ElementalTypes.INSTANCE.getGHOST()),
-    TM_METALBURST("metalburst", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_METALCLAW("metalclaw", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_METALSOUND("metalsound", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_METEORASSAULT("meteorassault", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_METEORBEAM("meteorbeam", ElementalTypes.INSTANCE.getROCK()),
-    TM_METEORMASH("meteormash", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_METRONOME("metronome", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_MILKDRINK("milkdrink", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_MIMIC("mimic", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_MINDBLOWN("mindblown", ElementalTypes.INSTANCE.getFIRE()),
-    TM_MINDREADER("mindreader", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_MINIMIZE("minimize", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_MIRACLEEYE("miracleeye", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_MIRRORCOAT("mirrorcoat", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_MIRRORMOVE("mirrormove", ElementalTypes.INSTANCE.getFLYING()),
-    TM_MIRRORSHOT("mirrorshot", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_MIST("mist", ElementalTypes.INSTANCE.getICE()),
-    TM_MISTBALL("mistball", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_MISTYEXPLOSION("mistyexplosion", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_MISTYTERRAIN("mistyterrain", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_MOONBLAST("moonblast", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_MOONGEISTBEAM("moongeistbeam", ElementalTypes.INSTANCE.getGHOST()),
-    TM_MOONLIGHT("moonlight", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_MORNINGSUN("morningsun", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_MORTALSPIN("mortalspin", ElementalTypes.INSTANCE.getPOISON()),
-    TM_MOUNTAINGALE("mountaingale", ElementalTypes.INSTANCE.getICE()),
-    TM_MUDBOMB("mudbomb", ElementalTypes.INSTANCE.getGROUND()),
-    TM_MUDSHOT("mudshot", ElementalTypes.INSTANCE.getGROUND()),
-    TM_MUDSLAP("mudslap", ElementalTypes.INSTANCE.getGROUND()),
-    TM_MUDSPORT("mudsport", ElementalTypes.INSTANCE.getGROUND()),
-    TM_MUDDYWATER("muddywater", ElementalTypes.INSTANCE.getWATER()),
-    TM_MULTIATTACK("multiattack", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_MYSTICALFIRE("mysticalfire", ElementalTypes.INSTANCE.getFIRE()),
-    TM_MYSTICALPOWER("mysticalpower", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_NASTYPLOT("nastyplot", ElementalTypes.INSTANCE.getDARK()),
-    TM_NATURALGIFT("naturalgift", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_NATUREPOWER("naturepower", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_NATURESMADNESS("naturesmadness", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_NEEDLEARM("needlearm", ElementalTypes.INSTANCE.getGRASS()),
-    TM_NEVERENDINGNIGHTMARE("neverendingnightmare", ElementalTypes.INSTANCE.getGHOST()),
-    TM_NIGHTDAZE("nightdaze", ElementalTypes.INSTANCE.getDARK()),
-    TM_NIGHTMARE("nightmare", ElementalTypes.INSTANCE.getGHOST()),
-    TM_NIGHTSHADE("nightshade", ElementalTypes.INSTANCE.getGHOST()),
-    TM_NIGHTSLASH("nightslash", ElementalTypes.INSTANCE.getDARK()),
-    TM_NOBLEROAR("nobleroar", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_NORETREAT("noretreat", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_NOXIOUSTORQUE("noxioustorque", ElementalTypes.INSTANCE.getPOISON()),
-    TM_NUZZLE("nuzzle", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_OBLIVIONWING("oblivionwing", ElementalTypes.INSTANCE.getFLYING()),
-    TM_OBSTRUCT("obstruct", ElementalTypes.INSTANCE.getDARK()),
-    TM_OCEANICOPERETTA("oceanicoperetta", ElementalTypes.INSTANCE.getWATER()),
-    TM_OCTAZOOKA("octazooka", ElementalTypes.INSTANCE.getWATER()),
-    TM_OCTOLOCK("octolock", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_ODORSLEUTH("odorsleuth", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_OMINOUSWIND("ominouswind", ElementalTypes.INSTANCE.getGHOST()),
-    TM_ORDERUP("orderup", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_ORIGINPULSE("originpulse", ElementalTypes.INSTANCE.getWATER()),
-    TM_OUTRAGE("outrage", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_OVERDRIVE("overdrive", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_OVERHEAT("overheat", ElementalTypes.INSTANCE.getFIRE()),
-    TM_PAINSPLIT("painsplit", ElementalTypes.INSTANCE.getNORMAL()),
-    //TM_PALEOWAVE("paleowave", ElementalTypes.INSTANCE.getROCK()), // Signature move for Stratagem, Smogon's custom Pokémon
-    TM_PARABOLICCHARGE("paraboliccharge", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_PARTINGSHOT("partingshot", ElementalTypes.INSTANCE.getDARK()),
-    TM_PAYBACK("payback", ElementalTypes.INSTANCE.getDARK()),
-    TM_PAYDAY("payday", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_PECK("peck", ElementalTypes.INSTANCE.getFLYING()),
-    TM_PERISHSONG("perishsong", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_PETALBLIZZARD("petalblizzard", ElementalTypes.INSTANCE.getGRASS()),
-    TM_PETALDANCE("petaldance", ElementalTypes.INSTANCE.getGRASS()),
-    TM_PHANTOMFORCE("phantomforce", ElementalTypes.INSTANCE.getGHOST()),
-    TM_PHOTONGEYSER("photongeyser", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PIKAPAPOW("pikapapow", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_PINMISSILE("pinmissile", ElementalTypes.INSTANCE.getBUG()),
-    TM_PLASMAFISTS("plasmafists", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_PLAYNICE("playnice", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_PLAYROUGH("playrough", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_PLUCK("pluck", ElementalTypes.INSTANCE.getFLYING()),
-    TM_POISONFANG("poisonfang", ElementalTypes.INSTANCE.getPOISON()),
-    TM_POISONGAS("poisongas", ElementalTypes.INSTANCE.getPOISON()),
-    TM_POISONJAB("poisonjab", ElementalTypes.INSTANCE.getPOISON()),
-    TM_POISONPOWDER("poisonpowder", ElementalTypes.INSTANCE.getPOISON()),
-    TM_POISONSTING("poisonsting", ElementalTypes.INSTANCE.getPOISON()),
-    TM_POISONTAIL("poisontail", ElementalTypes.INSTANCE.getPOISON()),
-    TM_POLLENPUFF("pollenpuff", ElementalTypes.INSTANCE.getBUG()),
-    TM_POLTERGEIST("poltergeist", ElementalTypes.INSTANCE.getGHOST()),
-    TM_POPULATIONBOMB("populationbomb", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_POUNCE("pounce", ElementalTypes.INSTANCE.getBUG()),
-    TM_POUND("pound", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_POWDER("powder", ElementalTypes.INSTANCE.getBUG()),
-    TM_POWDERSNOW("powdersnow", ElementalTypes.INSTANCE.getICE()),
-    TM_POWERGEM("powergem", ElementalTypes.INSTANCE.getROCK()),
-    TM_POWERSHIFT("powershift", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_POWERSPLIT("powersplit", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_POWERSWAP("powerswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_POWERTRICK("powertrick", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_POWERTRIP("powertrip", ElementalTypes.INSTANCE.getDARK()),
-    TM_POWERUPPUNCH("poweruppunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_POWERWHIP("powerwhip", ElementalTypes.INSTANCE.getGRASS()),
-    TM_PRECIPICEBLADES("precipiceblades", ElementalTypes.INSTANCE.getGROUND()),
-    TM_PRESENT("present", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_PRISMATICLASER("prismaticlaser", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PROTECT("protect", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_PSYBEAM("psybeam", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PSYBLADE("psyblade", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PSYCHUP("psychup", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_PSYCHIC("psychic", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PSYCHICFANGS("psychicfangs", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PSYCHICTERRAIN("psychicterrain", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PSYCHOBOOST("psychoboost", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PSYCHOCUT("psychocut", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PSYCHOSHIFT("psychoshift", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PSYSHIELDBASH("psyshieldbash", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PSYSHOCK("psyshock", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PSYSTRIKE("psystrike", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PSYWAVE("psywave", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_PULVERIZINGPANCAKE("pulverizingpancake", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_PUNISHMENT("punishment", ElementalTypes.INSTANCE.getDARK()),
-    TM_PURIFY("purify", ElementalTypes.INSTANCE.getPOISON()),
-    TM_PURSUIT("pursuit", ElementalTypes.INSTANCE.getDARK()),
-    TM_PYROBALL("pyroball", ElementalTypes.INSTANCE.getFIRE()),
-    TM_QUASH("quash", ElementalTypes.INSTANCE.getDARK()),
-    TM_QUICKATTACK("quickattack", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_QUICKGUARD("quickguard", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_QUIVERDANCE("quiverdance", ElementalTypes.INSTANCE.getBUG()),
-    TM_RAGE("rage", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_RAGEFIST("ragefist", ElementalTypes.INSTANCE.getGHOST()),
-    TM_RAGEPOWDER("ragepowder", ElementalTypes.INSTANCE.getBUG()),
-    TM_RAGINGBULL("ragingbull", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_RAGINGFURY("ragingfury", ElementalTypes.INSTANCE.getFIRE()),
-    TM_RAINDANCE("raindance", ElementalTypes.INSTANCE.getWATER()),
-    TM_RAPIDSPIN("rapidspin", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_RAZORLEAF("razorleaf", ElementalTypes.INSTANCE.getGRASS()),
-    TM_RAZORSHELL("razorshell", ElementalTypes.INSTANCE.getWATER()),
-    TM_RAZORWIND("razorwind", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_RECOVER("recover", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_RECYCLE("recycle", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_REFLECT("reflect", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_REFLECTTYPE("reflecttype", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_REFRESH("refresh", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_RELICSONG("relicsong", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_REST("rest", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_RETALIATE("retaliate", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_RETURN("return", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_REVELATIONDANCE("revelationdance", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_REVENGE("revenge", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_REVERSAL("reversal", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_REVIVALBLESSING("revivalblessing", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_RISINGVOLTAGE("risingvoltage", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_ROAR("roar", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_ROAROFTIME("roaroftime", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_ROCKBLAST("rockblast", ElementalTypes.INSTANCE.getROCK()),
-    TM_ROCKCLIMB("rockclimb", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_ROCKPOLISH("rockpolish", ElementalTypes.INSTANCE.getROCK()),
-    TM_ROCKSLIDE("rockslide", ElementalTypes.INSTANCE.getROCK()),
-    TM_ROCKSMASH("rocksmash", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_ROCKTHROW("rockthrow", ElementalTypes.INSTANCE.getROCK()),
-    TM_ROCKTOMB("rocktomb", ElementalTypes.INSTANCE.getROCK()),
-    TM_ROCKWRECKER("rockwrecker", ElementalTypes.INSTANCE.getROCK()),
-    TM_ROLEPLAY("roleplay", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_ROLLINGKICK("rollingkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_ROLLOUT("rollout", ElementalTypes.INSTANCE.getROCK()),
-    TM_ROOST("roost", ElementalTypes.INSTANCE.getFLYING()),
-    TM_ROTOTILLER("rototiller", ElementalTypes.INSTANCE.getGROUND()),
-    TM_ROUND("round", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_RUINATION("ruination", ElementalTypes.INSTANCE.getDARK()),
-    TM_SACREDFIRE("sacredfire", ElementalTypes.INSTANCE.getFIRE()),
-    TM_SACREDSWORD("sacredsword", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_SAFEGUARD("safeguard", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SALTCURE("saltcure", ElementalTypes.INSTANCE.getROCK()),
-    TM_SANDATTACK("sandattack", ElementalTypes.INSTANCE.getGROUND()),
-    TM_SANDSEARSTORM("sandsearstorm", ElementalTypes.INSTANCE.getGROUND()),
-    TM_SANDSTORM("sandstorm", ElementalTypes.INSTANCE.getROCK()),
-    TM_SANDTOMB("sandtomb", ElementalTypes.INSTANCE.getGROUND()),
-    TM_SAPPYSEED("sappyseed", ElementalTypes.INSTANCE.getGRASS()),
-    TM_SAVAGESPINOUT("savagespinout", ElementalTypes.INSTANCE.getBUG()),
-    TM_SCALD("scald", ElementalTypes.INSTANCE.getWATER()),
-    TM_SCALESHOT("scaleshot", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_SCARYFACE("scaryface", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SCORCHINGSANDS("scorchingsands", ElementalTypes.INSTANCE.getGROUND()),
-    TM_SCRATCH("scratch", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SCREECH("screech", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SEARINGSHOT("searingshot", ElementalTypes.INSTANCE.getFIRE()),
-    TM_SEARINGSUNRAZESMASH("searingsunrazesmash", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_SECRETPOWER("secretpower", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SECRETSWORD("secretsword", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_SEEDBOMB("seedbomb", ElementalTypes.INSTANCE.getGRASS()),
-    TM_SEEDFLARE("seedflare", ElementalTypes.INSTANCE.getGRASS()),
-    TM_SEISMICTOSS("seismictoss", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_SELFDESTRUCT("selfdestruct", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SHADOWBALL("shadowball", ElementalTypes.INSTANCE.getGHOST()),
-    TM_SHADOWBONE("shadowbone", ElementalTypes.INSTANCE.getGHOST()),
-    TM_SHADOWCLAW("shadowclaw", ElementalTypes.INSTANCE.getGHOST()),
-    TM_SHADOWFORCE("shadowforce", ElementalTypes.INSTANCE.getGHOST()),
-    TM_SHADOWPUNCH("shadowpunch", ElementalTypes.INSTANCE.getGHOST()),
-    TM_SHADOWSNEAK("shadowsneak", ElementalTypes.INSTANCE.getGHOST()),
-    //TM_SHADOWSTRIKE("shadowstrike", ElementalTypes.INSTANCE.getGHOST()), // Signature move for Kitsunoh, Smogon's custom Pokémon
-    TM_SHARPEN("sharpen", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SHATTEREDPSYCHE("shatteredpsyche", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_SHEDTAIL("shedtail", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SHEERCOLD("sheercold", ElementalTypes.INSTANCE.getICE()),
-    TM_SHELLSIDEARM("shellsidearm", ElementalTypes.INSTANCE.getPOISON()),
-    TM_SHELLSMASH("shellsmash", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SHELLTRAP("shelltrap", ElementalTypes.INSTANCE.getFIRE()),
-    TM_SHELTER("shelter", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_SHIFTGEAR("shiftgear", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_SHOCKWAVE("shockwave", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_SHOREUP("shoreup", ElementalTypes.INSTANCE.getGROUND()),
-    TM_SIGNALBEAM("signalbeam", ElementalTypes.INSTANCE.getBUG()),
-    TM_SILKTRAP("silktrap", ElementalTypes.INSTANCE.getBUG()),
-    TM_SILVERWIND("silverwind", ElementalTypes.INSTANCE.getBUG()),
-    TM_SIMPLEBEAM("simplebeam", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SING("sing", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SINISTERARROWRAID("sinisterarrowraid", ElementalTypes.INSTANCE.getGHOST()),
-    TM_SIZZLYSLIDE("sizzlyslide", ElementalTypes.INSTANCE.getFIRE()),
-    TM_SKETCH("sketch", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SKILLSWAP("skillswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_SKITTERSMACK("skittersmack", ElementalTypes.INSTANCE.getBUG()),
-    TM_SKULLBASH("skullbash", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SKYATTACK("skyattack", ElementalTypes.INSTANCE.getFLYING()),
-    TM_SKYDROP("skydrop", ElementalTypes.INSTANCE.getFLYING()),
-    TM_SKYUPPERCUT("skyuppercut", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_SLACKOFF("slackoff", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SLAM("slam", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SLASH("slash", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SLEEPPOWDER("sleeppowder", ElementalTypes.INSTANCE.getGRASS()),
-    TM_SLEEPTALK("sleeptalk", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SLUDGE("sludge", ElementalTypes.INSTANCE.getPOISON()),
-    TM_SLUDGEBOMB("sludgebomb", ElementalTypes.INSTANCE.getPOISON()),
-    TM_SLUDGEWAVE("sludgewave", ElementalTypes.INSTANCE.getPOISON()),
-    TM_SMACKDOWN("smackdown", ElementalTypes.INSTANCE.getROCK()),
-    TM_SMARTSTRIKE("smartstrike", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_SMELLINGSALTS("smellingsalts", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SMOG("smog", ElementalTypes.INSTANCE.getPOISON()),
-    TM_SMOKESCREEN("smokescreen", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SNAPTRAP("snaptrap", ElementalTypes.INSTANCE.getGRASS()),
-    TM_SNARL("snarl", ElementalTypes.INSTANCE.getDARK()),
-    TM_SNATCH("snatch", ElementalTypes.INSTANCE.getDARK()),
-    TM_SNIPESHOT("snipeshot", ElementalTypes.INSTANCE.getWATER()),
-    TM_SNORE("snore", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SNOWSCAPE("snowscape", ElementalTypes.INSTANCE.getICE()),
-    TM_SOAK("soak", ElementalTypes.INSTANCE.getWATER()),
-    TM_SOFTBOILED("softboiled", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SOLARBEAM("solarbeam", ElementalTypes.INSTANCE.getGRASS()),
-    TM_SOLARBLADE("solarblade", ElementalTypes.INSTANCE.getGRASS()),
-    TM_SONICBOOM("sonicboom", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SOULSTEALING7STARSTRIKE("soulstealing7starstrike", ElementalTypes.INSTANCE.getGHOST()),
-    TM_SPACIALREND("spacialrend", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_SPARK("spark", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_SPARKLINGARIA("sparklingaria", ElementalTypes.INSTANCE.getWATER()),
-    TM_SPARKLYSWIRL("sparklyswirl", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_SPECTRALTHIEF("spectralthief", ElementalTypes.INSTANCE.getGHOST()),
-    TM_SPEEDSWAP("speedswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_SPICYEXTRACT("spicyextract", ElementalTypes.INSTANCE.getGRASS()),
-    TM_SPIDERWEB("spiderweb", ElementalTypes.INSTANCE.getBUG()),
-    TM_SPIKECANNON("spikecannon", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SPIKES("spikes", ElementalTypes.INSTANCE.getGROUND()),
-    TM_SPIKYSHIELD("spikyshield", ElementalTypes.INSTANCE.getGRASS()),
-    TM_SPINOUT("spinout", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_SPIRITBREAK("spiritbreak", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_SPIRITSHACKLE("spiritshackle", ElementalTypes.INSTANCE.getGHOST()),
-    TM_SPITUP("spitup", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SPITE("spite", ElementalTypes.INSTANCE.getGHOST()),
-    TM_SPLASH("splash", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SPLINTEREDSTORMSHARDS("splinteredstormshards", ElementalTypes.INSTANCE.getROCK()),
-    TM_SPLISHYSPLASH("splishysplash", ElementalTypes.INSTANCE.getWATER()),
-    TM_SPORE("spore", ElementalTypes.INSTANCE.getGRASS()),
-    TM_SPOTLIGHT("spotlight", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SPRINGTIDESTORM("springtidestorm", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_STEALTHROCK("stealthrock", ElementalTypes.INSTANCE.getROCK()),
-    TM_STEAMERUPTION("steameruption", ElementalTypes.INSTANCE.getWATER()),
-    TM_STEAMROLLER("steamroller", ElementalTypes.INSTANCE.getBUG()),
-    TM_STEELBEAM("steelbeam", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_STEELROLLER("steelroller", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_STEELWING("steelwing", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_STICKYWEB("stickyweb", ElementalTypes.INSTANCE.getBUG()),
-    TM_STOCKPILE("stockpile", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_STOKEDSPARKSURFER("stokedsparksurfer", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_STOMP("stomp", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_STOMPINGTANTRUM("stompingtantrum", ElementalTypes.INSTANCE.getGROUND()),
-    TM_STONEAXE("stoneaxe", ElementalTypes.INSTANCE.getROCK()),
-    TM_STONEEDGE("stoneedge", ElementalTypes.INSTANCE.getROCK()),
-    TM_STOREDPOWER("storedpower", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_STORMTHROW("stormthrow", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_STRANGESTEAM("strangesteam", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_STRENGTH("strength", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_STRENGTHSAP("strengthsap", ElementalTypes.INSTANCE.getGRASS()),
-    TM_STRINGSHOT("stringshot", ElementalTypes.INSTANCE.getBUG()),
-    TM_STRUGGLE("struggle", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_STRUGGLEBUG("strugglebug", ElementalTypes.INSTANCE.getBUG()),
-    TM_STUFFCHEEKS("stuffcheeks", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_STUNSPORE("stunspore", ElementalTypes.INSTANCE.getGRASS()),
-    TM_SUBMISSION("submission", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_SUBSTITUTE("substitute", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SUBZEROSLAMMER("subzeroslammer", ElementalTypes.INSTANCE.getICE()),
-    TM_SUCKERPUNCH("suckerpunch", ElementalTypes.INSTANCE.getDARK()),
-    TM_SUNNYDAY("sunnyday", ElementalTypes.INSTANCE.getFIRE()),
-    TM_SUNSTEELSTRIKE("sunsteelstrike", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_SUPERFANG("superfang", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SUPERPOWER("superpower", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_SUPERSONIC("supersonic", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SUPERSONICSKYSTRIKE("supersonicskystrike", ElementalTypes.INSTANCE.getFLYING()),
-    TM_SURF("surf", ElementalTypes.INSTANCE.getWATER()),
-    TM_SURGINGSTRIKES("surgingstrikes", ElementalTypes.INSTANCE.getWATER()),
-    TM_SWAGGER("swagger", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SWALLOW("swallow", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SWEETKISS("sweetkiss", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_SWEETSCENT("sweetscent", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SWIFT("swift", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SWITCHEROO("switcheroo", ElementalTypes.INSTANCE.getDARK()),
-    TM_SWORDSDANCE("swordsdance", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_SYNCHRONOISE("synchronoise", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_SYNTHESIS("synthesis", ElementalTypes.INSTANCE.getGRASS()),
-    TM_TACKLE("tackle", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TAILGLOW("tailglow", ElementalTypes.INSTANCE.getBUG()),
-    TM_TAILSLAP("tailslap", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TAILWHIP("tailwhip", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TAILWIND("tailwind", ElementalTypes.INSTANCE.getFLYING()),
-    TM_TAKEDOWN("takedown", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TAKEHEART("takeheart", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_TARSHOT("tarshot", ElementalTypes.INSTANCE.getROCK()),
-    TM_TAUNT("taunt", ElementalTypes.INSTANCE.getDARK()),
-    TM_TEARFULLOOK("tearfullook", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TEATIME("teatime", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TECHNOBLAST("technoblast", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TECTONICRAGE("tectonicrage", ElementalTypes.INSTANCE.getGROUND()),
-    TM_TEETERDANCE("teeterdance", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TELEKINESIS("telekinesis", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_TELEPORT("teleport", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_TERABLAST("terablast", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TERRAINPULSE("terrainpulse", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_THIEF("thief", ElementalTypes.INSTANCE.getDARK()),
-    TM_THOUSANDARROWS("thousandarrows", ElementalTypes.INSTANCE.getGROUND()),
-    TM_THOUSANDWAVES("thousandwaves", ElementalTypes.INSTANCE.getGROUND()),
-    TM_THRASH("thrash", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_THROATCHOP("throatchop", ElementalTypes.INSTANCE.getDARK()),
-    TM_THUNDER("thunder", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_THUNDERBOLT("thunderbolt", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_THUNDERCAGE("thundercage", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_THUNDERFANG("thunderfang", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_THUNDEROUSKICK("thunderouskick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_THUNDERPUNCH("thunderpunch", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_THUNDERSHOCK("thundershock", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_THUNDERWAVE("thunderwave", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_TICKLE("tickle", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TIDYUP("tidyup", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TOPSYTURVY("topsyturvy", ElementalTypes.INSTANCE.getDARK()),
-    TM_TORCHSONG("torchsong", ElementalTypes.INSTANCE.getFIRE()),
-    TM_TORMENT("torment", ElementalTypes.INSTANCE.getDARK()),
-    TM_TOXIC("toxic", ElementalTypes.INSTANCE.getPOISON()),
-    TM_TOXICSPIKES("toxicspikes", ElementalTypes.INSTANCE.getPOISON()),
-    TM_TOXICTHREAD("toxicthread", ElementalTypes.INSTANCE.getPOISON()),
-    TM_TRAILBLAZE("trailblaze", ElementalTypes.INSTANCE.getGRASS()),
-    TM_TRANSFORM("transform", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TRIATTACK("triattack", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TRICK("trick", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_TRICKORTREAT("trickortreat", ElementalTypes.INSTANCE.getGHOST()),
-    TM_TRICKROOM("trickroom", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_TRIPLEARROWS("triplearrows", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_TRIPLEAXEL("tripleaxel", ElementalTypes.INSTANCE.getICE()),
-    TM_TRIPLEDIVE("tripledive", ElementalTypes.INSTANCE.getWATER()),
-    TM_TRIPLEKICK("triplekick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_TROPKICK("tropkick", ElementalTypes.INSTANCE.getGRASS()),
-    TM_TRUMPCARD("trumpcard", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_TWINBEAM("twinbeam", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_TWINEEDLE("twineedle", ElementalTypes.INSTANCE.getBUG()),
-    TM_TWINKLETACKLE("twinkletackle", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_TWISTER("twister", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_UTURN("uturn", ElementalTypes.INSTANCE.getBUG()),
-    TM_UPROAR("uproar", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_VACUUMWAVE("vacuumwave", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_VCREATE("vcreate", ElementalTypes.INSTANCE.getFIRE()),
-    TM_VEEVEEVOLLEY("veeveevolley", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_VENOMDRENCH("venomdrench", ElementalTypes.INSTANCE.getPOISON()),
-    TM_VENOSHOCK("venoshock", ElementalTypes.INSTANCE.getPOISON()),
-    TM_VICTORYDANCE("victorydance", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_VINEWHIP("vinewhip", ElementalTypes.INSTANCE.getGRASS()),
-    TM_VISEGRIP("visegrip", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_VITALTHROW("vitalthrow", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_VOLTSWITCH("voltswitch", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_VOLTTACKLE("volttackle", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_WAKEUPSLAP("wakeupslap", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_WATERFALL("waterfall", ElementalTypes.INSTANCE.getWATER()),
-    TM_WATERGUN("watergun", ElementalTypes.INSTANCE.getWATER()),
-    TM_WATERPLEDGE("waterpledge", ElementalTypes.INSTANCE.getWATER()),
-    TM_WATERPULSE("waterpulse", ElementalTypes.INSTANCE.getWATER()),
-    TM_WATERSHURIKEN("watershuriken", ElementalTypes.INSTANCE.getWATER()),
-    TM_WATERSPORT("watersport", ElementalTypes.INSTANCE.getWATER()),
-    TM_WATERSPOUT("waterspout", ElementalTypes.INSTANCE.getWATER()),
-    TM_WAVECRASH("wavecrash", ElementalTypes.INSTANCE.getWATER()),
-    TM_WEATHERBALL("weatherball", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_WHIRLPOOL("whirlpool", ElementalTypes.INSTANCE.getWATER()),
-    TM_WHIRLWIND("whirlwind", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_WICKEDBLOW("wickedblow", ElementalTypes.INSTANCE.getDARK()),
-    TM_WICKEDTORQUE("wickedtorque", ElementalTypes.INSTANCE.getDARK()),
-    TM_WIDEGUARD("wideguard", ElementalTypes.INSTANCE.getROCK()),
-    TM_WILDBOLTSTORM("wildboltstorm", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_WILDCHARGE("wildcharge", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_WILLOWISP("willowisp", ElementalTypes.INSTANCE.getFIRE()),
-    TM_WINGATTACK("wingattack", ElementalTypes.INSTANCE.getFLYING()),
-    TM_WISH("wish", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_WITHDRAW("withdraw", ElementalTypes.INSTANCE.getWATER()),
-    TM_WONDERROOM("wonderroom", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_WOODHAMMER("woodhammer", ElementalTypes.INSTANCE.getGRASS()),
-    TM_WORKUP("workup", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_WORRYSEED("worryseed", ElementalTypes.INSTANCE.getGRASS()),
-    TM_WRAP("wrap", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_WRINGOUT("wringout", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_XSCISSOR("xscissor", ElementalTypes.INSTANCE.getBUG()),
-    TM_YAWN("yawn", ElementalTypes.INSTANCE.getNORMAL()),
-    TM_ZAPCANNON("zapcannon", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_ZENHEADBUTT("zenheadbutt", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_ZINGZAP("zingzap", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_ZIPPYZAP("zippyzap", ElementalTypes.INSTANCE.getELECTRIC()),
+import java.util.ArrayList;
+import java.util.List;
 
-    TM_TEMPERFLARE("temperflare", ElementalTypes.INSTANCE.getFIRE()),
-    TM_SUPERCELLSLAM("supercellslam", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_HARDPRESS("hardpress", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_DRAGONCHEER("dragoncheer", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_ALLURINGVOICE("alluringvoice", ElementalTypes.INSTANCE.getFAIRY()),
-    TM_PSYCHICNOISE("psychicnoise", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TM_UPPERHAND("upperhand", ElementalTypes.INSTANCE.getFIGHTING()),
-    TM_ELECTROSHOT("electroshot", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_FICKLEBEAM("ficklebeam", ElementalTypes.INSTANCE.getDRAGON()),
-    TM_BURNINGBULWARK("burningbulwark", ElementalTypes.INSTANCE.getFIRE()),
-    TM_THUNDERCLAP("thunderclap", ElementalTypes.INSTANCE.getELECTRIC()),
-    TM_MIGHTYCLEAVE("mightycleave", ElementalTypes.INSTANCE.getROCK()),
-    TM_TACHYONCUTTER("tachyoncutter", ElementalTypes.INSTANCE.getSTEEL()),
-    TM_TERASTARSTORM("terastarstorm", ElementalTypes.INSTANCE.getNORMAL());
+public class TMMoveItem {
+    private static final List<Item> all = new ArrayList<>();
 
-    private final Item item;
-    private final Identifier identifier;
+    public static final Item TM_10000000VOLTTHUNDERBOLT = register("10000000voltthunderbolt", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_ABSORB = register("absorb", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_ACCELEROCK = register("accelerock", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_ACID = register("acid", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_ACIDARMOR = register("acidarmor", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_ACIDDOWNPOUR = register("aciddownpour", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_ACIDSPRAY = register("acidspray", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_ACROBATICS = register("acrobatics", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_ACUPRESSURE = register("acupressure", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_AERIALACE = register("aerialace", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_AEROBLAST = register("aeroblast", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_AFTERYOU = register("afteryou", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_AGILITY = register("agility", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_AIRCUTTER = register("aircutter", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_AIRSLASH = register("airslash", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_ALLOUTPUMMELING = register("alloutpummeling", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_ALLYSWITCH = register("allyswitch", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_AMNESIA = register("amnesia", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_ANCHORSHOT = register("anchorshot", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_ANCIENTPOWER = register("ancientpower", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_APPLEACID = register("appleacid", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_AQUACUTTER = register("aquacutter", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_AQUAJET = register("aquajet", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_AQUARING = register("aquaring", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_AQUASTEP = register("aquastep", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_AQUATAIL = register("aquatail", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_ARMORCANNON = register("armorcannon", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_ARMTHRUST = register("armthrust", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_AROMATHERAPY = register("aromatherapy", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_AROMATICMIST = register("aromaticmist", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_ASSIST = register("assist", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_ASSURANCE = register("assurance", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_ASTONISH = register("astonish", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_ASTRALBARRAGE = register("astralbarrage", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_ATTACKORDER = register("attackorder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_ATTRACT = register("attract", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_AURASPHERE = register("aurasphere", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_AURAWHEEL = register("aurawheel", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_AURORABEAM = register("aurorabeam", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_AURORAVEIL = register("auroraveil", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_AUTOTOMIZE = register("autotomize", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_AVALANCHE = register("avalanche", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_AXEKICK = register("axekick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_BABYDOLLEYES = register("babydolleyes", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_BADDYBAD = register("baddybad", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_BANEFULBUNKER = register("banefulbunker", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_BARBBARRAGE = register("barbbarrage", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_BARRAGE = register("barrage", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_BARRIER = register("barrier", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_BATONPASS = register("batonpass", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_BEAKBLAST = register("beakblast", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_BEATUP = register("beatup", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_BEHEMOTHBASH = register("behemothbash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_BEHEMOTHBLADE = register("behemothblade", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_BELCH = register("belch", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_BELLYDRUM = register("bellydrum", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_BESTOW = register("bestow", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_BIDE = register("bide", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_BIND = register("bind", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_BITE = register("bite", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_BITTERBLADE = register("bitterblade", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_BITTERMALICE = register("bittermalice", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_BLACKHOLEECLIPSE = register("blackholeeclipse", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_BLASTBURN = register("blastburn", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_BLAZEKICK = register("blazekick", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_BLAZINGTORQUE = register("blazingtorque", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_BLEAKWINDSTORM = register("bleakwindstorm", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_BLIZZARD = register("blizzard", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_BLOCK = register("block", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_BLOOMDOOM = register("bloomdoom", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_BLUEFLARE = register("blueflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_BODYPRESS = register("bodypress", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_BODYSLAM = register("bodyslam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_BOLTBEAK = register("boltbeak", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_BOLTSTRIKE = register("boltstrike", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_BONECLUB = register("boneclub", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_BONEMERANG = register("bonemerang", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_BONERUSH = register("bonerush", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_BOOMBURST = register("boomburst", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_BOUNCE = register("bounce", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_BOUNCYBUBBLE = register("bouncybubble", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_BRANCHPOKE = register("branchpoke", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_BRAVEBIRD = register("bravebird", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_BREAKINGSWIPE = register("breakingswipe", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_BREAKNECKBLITZ = register("breakneckblitz", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_BRICKBREAK = register("brickbreak", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_BRINE = register("brine", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_BRUTALSWING = register("brutalswing", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_BUBBLE = register("bubble", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_BUBBLEBEAM = register("bubblebeam", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_BUGBITE = register("bugbite", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_BUGBUZZ = register("bugbuzz", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_BULKUP = register("bulkup", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_BULLDOZE = register("bulldoze", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_BULLETPUNCH = register("bulletpunch", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_BULLETSEED = register("bulletseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_BURNINGJEALOUSY = register("burningjealousy", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_BURNUP = register("burnup", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_BUZZYBUZZ = register("buzzybuzz", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_CALMMIND = register("calmmind", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_CAMOUFLAGE = register("camouflage", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_CAPTIVATE = register("captivate", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_CATASTROPIKA = register("catastropika", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_CEASELESSEDGE = register("ceaselessedge", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_CELEBRATE = register("celebrate", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_CHARGE = register("charge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_CHARGEBEAM = register("chargebeam", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_CHARM = register("charm", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_CHATTER = register("chatter", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_CHILLINGWATER = register("chillingwater", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_CHILLYRECEPTION = register("chillyreception", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_CHIPAWAY = register("chipaway", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_CHLOROBLAST = register("chloroblast", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_CIRCLETHROW = register("circlethrow", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_CLAMP = register("clamp", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_CLANGINGSCALES = register("clangingscales", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_CLANGOROUSSOUL = register("clangoroussoul", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_CLANGOROUSSOULBLAZE = register("clangoroussoulblaze", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_CLEARSMOG = register("clearsmog", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_CLOSECOMBAT = register("closecombat", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_COACHING = register("coaching", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_COIL = register("coil", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_COLLISIONCOURSE = register("collisioncourse", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_COMBATTORQUE = register("combattorque", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_COMETPUNCH = register("cometpunch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_COMEUPPANCE = register("comeuppance", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_CONFIDE = register("confide", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_CONFUSERAY = register("confuseray", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_CONFUSION = register("confusion", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_CONSTRICT = register("constrict", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_CONTINENTALCRUSH = register("continentalcrush", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_CONVERSION = register("conversion", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_CONVERSION2 = register("conversion2", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_COPYCAT = register("copycat", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_COREENFORCER = register("coreenforcer", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_CORKSCREWCRASH = register("corkscrewcrash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_CORROSIVEGAS = register("corrosivegas", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_COSMICPOWER = register("cosmicpower", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_COTTONGUARD = register("cottonguard", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_COTTONSPORE = register("cottonspore", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_COUNTER = register("counter", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_COURTCHANGE = register("courtchange", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_COVET = register("covet", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_CRABHAMMER = register("crabhammer", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_CRAFTYSHIELD = register("craftyshield", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_CROSSCHOP = register("crosschop", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_CROSSPOISON = register("crosspoison", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_CRUNCH = register("crunch", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_CRUSHCLAW = register("crushclaw", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_CRUSHGRIP = register("crushgrip", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_CURSE = register("curse", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_CUT = register("cut", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_DARKESTLARIAT = register("darkestlariat", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_DARKPULSE = register("darkpulse", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_DARKVOID = register("darkvoid", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_DAZZLINGGLEAM = register("dazzlinggleam", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_DECORATE = register("decorate", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_DEFENDORDER = register("defendorder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_DEFENSECURL = register("defensecurl", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_DEFOG = register("defog", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_DESTINYBOND = register("destinybond", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_DETECT = register("detect", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_DEVASTATINGDRAKE = register("devastatingdrake", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DIAMONDSTORM = register("diamondstorm", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_DIG = register("dig", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_DISABLE = register("disable", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_DISARMINGVOICE = register("disarmingvoice", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_DISCHARGE = register("discharge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_DIRECLAW = register("direclaw", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_DIVE = register("dive", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_DIZZYPUNCH = register("dizzypunch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_DOODLE = register("doodle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_DOOMDESIRE = register("doomdesire", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_DOUBLEEDGE = register("doubleedge", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_DOUBLEHIT = register("doublehit", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_DOUBLEIRONBASH = register("doubleironbash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_DOUBLEKICK = register("doublekick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_DOUBLESHOCK = register("doubleshock", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_DOUBLESLAP = register("doubleslap", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_DOUBLETEAM = register("doubleteam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_DRACOMETEOR = register("dracometeor", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DRAGONASCENT = register("dragonascent", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_DRAGONBREATH = register("dragonbreath", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DRAGONCLAW = register("dragonclaw", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DRAGONDANCE = register("dragondance", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DRAGONDARTS = register("dragondarts", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DRAGONENERGY = register("dragonenergy", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DRAGONHAMMER = register("dragonhammer", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DRAGONPULSE = register("dragonpulse", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DRAGONRAGE = register("dragonrage", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DRAGONRUSH = register("dragonrush", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DRAGONTAIL = register("dragontail", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DRAININGKISS = register("drainingkiss", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_DRAINPUNCH = register("drainpunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_DREAMEATER = register("dreameater", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_DRILLPECK = register("drillpeck", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_DRILLRUN = register("drillrun", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_DRUMBEATING = register("drumbeating", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_DUALCHOP = register("dualchop", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DUALWINGBEAT = register("dualwingbeat", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_DYNAMAXCANNON = register("dynamaxcannon", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_DYNAMICPUNCH = register("dynamicpunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_EARTHPOWER = register("earthpower", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_EARTHQUAKE = register("earthquake", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_ECHOEDVOICE = register("echoedvoice", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_EERIEIMPULSE = register("eerieimpulse", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_EERIESPELL = register("eeriespell", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_EGGBOMB = register("eggbomb", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_ELECTRICTERRAIN = register("electricterrain", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_ELECTRIFY = register("electrify", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_ELECTROBALL = register("electroball", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_ELECTRODRIFT = register("electrodrift", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_ELECTROWEB = register("electroweb", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_EMBARGO = register("embargo", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_EMBER = register("ember", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_ENCORE = register("encore", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_ENDEAVOR = register("endeavor", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_ENDURE = register("endure", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_ENERGYBALL = register("energyball", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_ENTRAINMENT = register("entrainment", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_ERUPTION = register("eruption", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_ESPERWING = register("esperwing", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_ETERNABEAM = register("eternabeam", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_EXPANDINGFORCE = register("expandingforce", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_EXPLOSION = register("explosion", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_EXTRASENSORY = register("extrasensory", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_EXTREMEEVOBOOST = register("extremeevoboost", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_EXTREMESPEED = register("extremespeed", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FACADE = register("facade", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FAIRYLOCK = register("fairylock", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_FAIRYWIND = register("fairywind", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_FAKEOUT = register("fakeout", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FAKETEARS = register("faketears", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_FALSESURRENDER = register("falsesurrender", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_FALSESWIPE = register("falseswipe", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FEATHERDANCE = register("featherdance", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_FEINT = register("feint", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FEINTATTACK = register("feintattack", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_FELLSTINGER = register("fellstinger", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_FIERYDANCE = register("fierydance", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_FIERYWRATH = register("fierywrath", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_FILLETAWAY = register("filletaway", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FINALGAMBIT = register("finalgambit", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_FIREBLAST = register("fireblast", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_FIREFANG = register("firefang", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_FIRELASH = register("firelash", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_FIREPLEDGE = register("firepledge", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_FIREPUNCH = register("firepunch", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_FIRESPIN = register("firespin", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_FIRSTIMPRESSION = register("firstimpression", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_FISHIOUSREND = register("fishiousrend", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_FISSURE = register("fissure", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_FLAIL = register("flail", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FLAMEBURST = register("flameburst", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_FLAMECHARGE = register("flamecharge", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_FLAMEWHEEL = register("flamewheel", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_FLAMETHROWER = register("flamethrower", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_FLAREBLITZ = register("flareblitz", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_FLASH = register("flash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FLASHCANNON = register("flashcannon", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_FLATTER = register("flatter", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_FLEURCANNON = register("fleurcannon", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_FLING = register("fling", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_FLIPTURN = register("flipturn", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_FLOATYFALL = register("floatyfall", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_FLORALHEALING = register("floralhealing", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_FLOWERSHIELD = register("flowershield", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_FLOWERTRICK = register("flowertrick", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_FLY = register("fly", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_FLYINGPRESS = register("flyingpress", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_FOCUSBLAST = register("focusblast", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_FOCUSENERGY = register("focusenergy", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FOCUSPUNCH = register("focuspunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_FOLLOWME = register("followme", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FORCEPALM = register("forcepalm", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_FORESIGHT = register("foresight", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FORESTSCURSE = register("forestscurse", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_FOULPLAY = register("foulplay", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_FREEZEDRY = register("freezedry", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_FREEZESHOCK = register("freezeshock", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_FREEZINGGLARE = register("freezingglare", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_FREEZYFROST = register("freezyfrost", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_FRENZYPLANT = register("frenzyplant", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_FROSTBREATH = register("frostbreath", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_FRUSTRATION = register("frustration", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FURYATTACK = register("furyattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FURYCUTTER = register("furycutter", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_FURYSWIPES = register("furyswipes", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_FUSIONBOLT = register("fusionbolt", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_FUSIONFLARE = register("fusionflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_FUTURESIGHT = register("futuresight", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_GASTROACID = register("gastroacid", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_GEARGRIND = register("geargrind", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_GEARUP = register("gearup", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_GENESISSUPERNOVA = register("genesissupernova", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_GEOMANCY = register("geomancy", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_GIGADRAIN = register("gigadrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_GIGAIMPACT = register("gigaimpact", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_GIGATONHAMMER = register("gigatonhammer", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_GIGAVOLTHAVOC = register("gigavolthavoc", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_GLACIALLANCE = register("glaciallance", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_GLACIATE = register("glaciate", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_GLAIVERUSH = register("glaiverush", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_GLARE = register("glare", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_GLITZYGLOW = register("glitzyglow", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_GMAXBEFUDDLE = register("gmaxbefuddle", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_GMAXCANNONADE = register("gmaxcannonade", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_GMAXCENTIFERNO = register("gmaxcentiferno", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_GMAXCHISTRIKE = register("gmaxchistrike", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_GMAXCUDDLE = register("gmaxcuddle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_GMAXDEPLETION = register("gmaxdepletion", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_GMAXDRUMSOLO = register("gmaxdrumsolo", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_GMAXFINALE = register("gmaxfinale", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_GMAXFIREBALL = register("gmaxfireball", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_GMAXFOAMBURST = register("gmaxfoamburst", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_GMAXGOLDRUSH = register("gmaxgoldrush", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_GMAXGRAVITAS = register("gmaxgravitas", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_GMAXHYDROSNIPE = register("gmaxhydrosnipe", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_GMAXMALODOR = register("gmaxmalodor", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_GMAXMELTDOWN = register("gmaxmeltdown", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_GMAXONEBLOW = register("gmaxoneblow", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_GMAXRAPIDFLOW = register("gmaxrapidflow", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_GMAXREPLENISH = register("gmaxreplenish", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_GMAXRESONANCE = register("gmaxresonance", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_GMAXSANDBLAST = register("gmaxsandblast", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_GMAXSMITE = register("gmaxsmite", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_GMAXSNOOZE = register("gmaxsnooze", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_GMAXSTEELSURGE = register("gmaxsteelsurge", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_GMAXSTONESURGE = register("gmaxstonesurge", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_GMAXSTUNSHOCK = register("gmaxstunshock", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_GMAXSWEETNESS = register("gmaxsweetness", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_GMAXTARTNESS = register("gmaxtartness", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_GMAXTERROR = register("gmaxterror", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_GMAXVINELASH = register("gmaxvinelash", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_GMAXVOLCALITH = register("gmaxvolcalith", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_GMAXVOLTCRASH = register("gmaxvoltcrash", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_GMAXWILDFIRE = register("gmaxwildfire", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_GMAXWINDRAGE = register("gmaxwindrage", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_GRASSKNOT = register("grassknot", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_GRASSPLEDGE = register("grasspledge", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_GRASSWHISTLE = register("grasswhistle", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_GRASSYGLIDE = register("grassyglide", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_GRASSYTERRAIN = register("grassyterrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_GRAVAPPLE = register("gravapple", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_GRAVITY = register("gravity", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_GROWL = register("growl", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_GROWTH = register("growth", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_GRUDGE = register("grudge", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_GUARDIANOFALOLA = register("guardianofalola", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_GUARDSPLIT = register("guardsplit", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_GUARDSWAP = register("guardswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_GUILLOTINE = register("guillotine", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_GUNKSHOT = register("gunkshot", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_GUST = register("gust", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_GYROBALL = register("gyroball", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_HAIL = register("hail", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_HAMMERARM = register("hammerarm", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_HAPPYHOUR = register("happyhour", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HARDEN = register("harden", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HAZE = register("haze", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_HEADBUTT = register("headbutt", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HEADCHARGE = register("headcharge", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HEADLONGRUSH = register("headlongrush", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_HEADSMASH = register("headsmash", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_HEALBELL = register("healbell", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HEALBLOCK = register("healblock", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_HEALINGWISH = register("healingwish", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_HEALORDER = register("healorder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_HEALPULSE = register("healpulse", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_HEARTSTAMP = register("heartstamp", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_HEARTSWAP = register("heartswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_HEATCRASH = register("heatcrash", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_HEATWAVE = register("heatwave", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_HEAVYSLAM = register("heavyslam", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_HELPINGHAND = register("helpinghand", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HEX = register("hex", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_HIDDENPOWER = register("hiddenpower", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HIGHHORSEPOWER = register("highhorsepower", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_HIGHJUMPKICK = register("highjumpkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_HOLDBACK = register("holdback", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HOLDHANDS = register("holdhands", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HONECLAWS = register("honeclaws", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_HORNATTACK = register("hornattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HORNDRILL = register("horndrill", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HORNLEECH = register("hornleech", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_HOWL = register("howl", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HURRICANE = register("hurricane", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_HYDROCANNON = register("hydrocannon", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_HYDROPUMP = register("hydropump", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_HYDROSTEAM = register("hydrosteam", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_HYDROVORTEX = register("hydrovortex", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_HYPERBEAM = register("hyperbeam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HYPERDRILL = register("hyperdrill", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HYPERFANG = register("hyperfang", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HYPERSPACEFURY = register("hyperspacefury", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_HYPERSPACEHOLE = register("hyperspacehole", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_HYPERVOICE = register("hypervoice", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_HYPNOSIS = register("hypnosis", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_ICEBALL = register("iceball", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_ICEBEAM = register("icebeam", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_ICEBURN = register("iceburn", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_ICEFANG = register("icefang", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_ICEHAMMER = register("icehammer", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_ICEPUNCH = register("icepunch", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_ICESHARD = register("iceshard", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_ICESPINNER = register("icespinner", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_ICICLECRASH = register("iciclecrash", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_ICICLESPEAR = register("iciclespear", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_ICYWIND = register("icywind", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_IMPRISON = register("imprison", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_INCINERATE = register("incinerate", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_INFERNALPARADE = register("infernalparade", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_INFERNO = register("inferno", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_INFERNOOVERDRIVE = register("infernooverdrive", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_INFESTATION = register("infestation", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_INGRAIN = register("ingrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_INSTRUCT = register("instruct", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_IONDELUGE = register("iondeluge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_IRONDEFENSE = register("irondefense", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_IRONHEAD = register("ironhead", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_IRONTAIL = register("irontail", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_JAWLOCK = register("jawlock", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_JETPUNCH = register("jetpunch", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_JUDGMENT = register("judgment", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_JUMPKICK = register("jumpkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_JUNGLEHEALING = register("junglehealing", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_KARATECHOP = register("karatechop", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_KINESIS = register("kinesis", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_KINGSSHIELD = register("kingsshield", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_KNOCKOFF = register("knockoff", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_KOWTOWCLEAVE = register("kowtowcleave", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_LANDSWRATH = register("landswrath", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_LASERFOCUS = register("laserfocus", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_LASHOUT = register("lashout", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_LASTRESORT = register("lastresort", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_LASTRESPECTS = register("lastrespects", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_LAVAPLUME = register("lavaplume", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_LEAFAGE = register("leafage", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_LEAFBLADE = register("leafblade", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_LEAFSTORM = register("leafstorm", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_LEAFTORNADO = register("leaftornado", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_LEECHLIFE = register("leechlife", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_LEECHSEED = register("leechseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_LEER = register("leer", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_LETSSNUGGLEFOREVER = register("letssnuggleforever", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_LICK = register("lick", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_LIFEDEW = register("lifedew", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_LIGHTOFRUIN = register("lightofruin", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_LIGHTSCREEN = register("lightscreen", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_LIGHTTHATBURNSTHESKY = register("lightthatburnsthesky", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_LIQUIDATION = register("liquidation", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_LOCKON = register("lockon", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_LOVELYKISS = register("lovelykiss", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_LOWKICK = register("lowkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_LOWSWEEP = register("lowsweep", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_LUCKYCHANT = register("luckychant", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_LUMINACRASH = register("luminacrash", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_LUNARBLESSING = register("lunarblessing", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_LUNARDANCE = register("lunardance", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_LUNGE = register("lunge", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_LUSTERPURGE = register("lusterpurge", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_MACHPUNCH = register("machpunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_MAGICALLEAF = register("magicalleaf", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_MAGICALTORQUE = register("magicaltorque", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_MAGICCOAT = register("magiccoat", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_MAGICPOWDER = register("magicpowder", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_MAGICROOM = register("magicroom", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_MAGMASTORM = register("magmastorm", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_MAGNETBOMB = register("magnetbomb", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_MAGNETICFLUX = register("magneticflux", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_MAGNETRISE = register("magnetrise", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_MAGNITUDE = register("magnitude", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_MAKEITRAIN = register("makeitrain", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_MALICIOUSMOONSAULT = register("maliciousmoonsault", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_MATBLOCK = register("matblock", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_MAXAIRSTREAM = register("maxairstream", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_MAXDARKNESS = register("maxdarkness", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_MAXFLARE = register("maxflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_MAXFLUTTERBY = register("maxflutterby", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_MAXGEYSER = register("maxgeyser", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_MAXGUARD = register("maxguard", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_MAXHAILSTORM = register("maxhailstorm", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_MAXKNUCKLE = register("maxknuckle", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_MAXLIGHTNING = register("maxlightning", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_MAXMINDSTORM = register("maxmindstorm", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_MAXOOZE = register("maxooze", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_MAXOVERGROWTH = register("maxovergrowth", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_MAXPHANTASM = register("maxphantasm", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_MAXQUAKE = register("maxquake", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_MAXROCKFALL = register("maxrockfall", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_MAXSTARFALL = register("maxstarfall", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_MAXSTEELSPIKE = register("maxsteelspike", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_MAXSTRIKE = register("maxstrike", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_MAXWYRMWIND = register("maxwyrmwind", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_MEANLOOK = register("meanlook", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_MEDITATE = register("meditate", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_MEFIRST = register("mefirst", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_MEGADRAIN = register("megadrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_MEGAHORN = register("megahorn", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_MEGAKICK = register("megakick", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_MEGAPUNCH = register("megapunch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_MEMENTO = register("memento", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_MENACINGMOONRAZEMAELSTROM = register("menacingmoonrazemaelstrom", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_METALBURST = register("metalburst", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_METALCLAW = register("metalclaw", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_METALSOUND = register("metalsound", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_METEORASSAULT = register("meteorassault", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_METEORBEAM = register("meteorbeam", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_METEORMASH = register("meteormash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_METRONOME = register("metronome", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_MILKDRINK = register("milkdrink", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_MIMIC = register("mimic", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_MINDBLOWN = register("mindblown", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_MINDREADER = register("mindreader", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_MINIMIZE = register("minimize", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_MIRACLEEYE = register("miracleeye", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_MIRRORCOAT = register("mirrorcoat", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_MIRRORMOVE = register("mirrormove", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_MIRRORSHOT = register("mirrorshot", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_MIST = register("mist", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_MISTBALL = register("mistball", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_MISTYEXPLOSION = register("mistyexplosion", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_MISTYTERRAIN = register("mistyterrain", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_MOONBLAST = register("moonblast", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_MOONGEISTBEAM = register("moongeistbeam", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_MOONLIGHT = register("moonlight", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_MORNINGSUN = register("morningsun", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_MORTALSPIN = register("mortalspin", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_MOUNTAINGALE = register("mountaingale", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_MUDBOMB = register("mudbomb", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_MUDSHOT = register("mudshot", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_MUDSLAP = register("mudslap", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_MUDSPORT = register("mudsport", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_MUDDYWATER = register("muddywater", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_MULTIATTACK = register("multiattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_MYSTICALFIRE = register("mysticalfire", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_MYSTICALPOWER = register("mysticalpower", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_NASTYPLOT = register("nastyplot", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_NATURALGIFT = register("naturalgift", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_NATUREPOWER = register("naturepower", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_NATURESMADNESS = register("naturesmadness", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_NEEDLEARM = register("needlearm", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_NEVERENDINGNIGHTMARE = register("neverendingnightmare", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_NIGHTDAZE = register("nightdaze", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_NIGHTMARE = register("nightmare", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_NIGHTSHADE = register("nightshade", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_NIGHTSLASH = register("nightslash", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_NOBLEROAR = register("nobleroar", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_NORETREAT = register("noretreat", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_NOXIOUSTORQUE = register("noxioustorque", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_NUZZLE = register("nuzzle", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_OBLIVIONWING = register("oblivionwing", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_OBSTRUCT = register("obstruct", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_OCEANICOPERETTA = register("oceanicoperetta", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_OCTAZOOKA = register("octazooka", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_OCTOLOCK = register("octolock", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_ODORSLEUTH = register("odorsleuth", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_OMINOUSWIND = register("ominouswind", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_ORDERUP = register("orderup", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_ORIGINPULSE = register("originpulse", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_OUTRAGE = register("outrage", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_OVERDRIVE = register("overdrive", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_OVERHEAT = register("overheat", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_PAINSPLIT = register("painsplit", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_PARABOLICCHARGE = register("paraboliccharge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_PARTINGSHOT = register("partingshot", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_PAYBACK = register("payback", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_PAYDAY = register("payday", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_PECK = register("peck", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_PERISHSONG = register("perishsong", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_PETALBLIZZARD = register("petalblizzard", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_PETALDANCE = register("petaldance", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_PHANTOMFORCE = register("phantomforce", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_PHOTONGEYSER = register("photongeyser", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PIKAPAPOW = register("pikapapow", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_PINMISSILE = register("pinmissile", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_PLASMAFISTS = register("plasmafists", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_PLAYNICE = register("playnice", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_PLAYROUGH = register("playrough", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_PLUCK = register("pluck", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_POISONFANG = register("poisonfang", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_POISONGAS = register("poisongas", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_POISONJAB = register("poisonjab", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_POISONPOWDER = register("poisonpowder", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_POISONSTING = register("poisonsting", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_POISONTAIL = register("poisontail", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_POLLENPUFF = register("pollenpuff", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_POLTERGEIST = register("poltergeist", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_POPULATIONBOMB = register("populationbomb", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_POUNCE = register("pounce", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_POUND = register("pound", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_POWDER = register("powder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_POWDERSNOW = register("powdersnow", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_POWERGEM = register("powergem", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_POWERSHIFT = register("powershift", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_POWERSPLIT = register("powersplit", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_POWERSWAP = register("powerswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_POWERTRICK = register("powertrick", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_POWERTRIP = register("powertrip", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_POWERUPPUNCH = register("poweruppunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_POWERWHIP = register("powerwhip", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_PRECIPICEBLADES = register("precipiceblades", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_PRESENT = register("present", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_PRISMATICLASER = register("prismaticlaser", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PROTECT = register("protect", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_PSYBEAM = register("psybeam", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PSYBLADE = register("psyblade", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PSYCHUP = register("psychup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_PSYCHIC = register("psychic", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PSYCHICFANGS = register("psychicfangs", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PSYCHICTERRAIN = register("psychicterrain", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PSYCHOBOOST = register("psychoboost", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PSYCHOCUT = register("psychocut", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PSYCHOSHIFT = register("psychoshift", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PSYSHIELDBASH = register("psyshieldbash", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PSYSHOCK = register("psyshock", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PSYSTRIKE = register("psystrike", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PSYWAVE = register("psywave", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_PULVERIZINGPANCAKE = register("pulverizingpancake", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_PUNISHMENT = register("punishment", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_PURIFY = register("purify", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_PURSUIT = register("pursuit", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_PYROBALL = register("pyroball", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_QUASH = register("quash", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_QUICKATTACK = register("quickattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_QUICKGUARD = register("quickguard", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_QUIVERDANCE = register("quiverdance", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_RAGE = register("rage", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_RAGEFIST = register("ragefist", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_RAGEPOWDER = register("ragepowder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_RAGINGBULL = register("ragingbull", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_RAGINGFURY = register("ragingfury", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_RAINDANCE = register("raindance", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_RAPIDSPIN = register("rapidspin", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_RAZORLEAF = register("razorleaf", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_RAZORSHELL = register("razorshell", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_RAZORWIND = register("razorwind", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_RECOVER = register("recover", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_RECYCLE = register("recycle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_REFLECT = register("reflect", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_REFLECTTYPE = register("reflecttype", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_REFRESH = register("refresh", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_RELICSONG = register("relicsong", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_REST = register("rest", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_RETALIATE = register("retaliate", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_RETURN = register("return", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_REVELATIONDANCE = register("revelationdance", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_REVENGE = register("revenge", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_REVERSAL = register("reversal", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_REVIVALBLESSING = register("revivalblessing", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_RISINGVOLTAGE = register("risingvoltage", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_ROAR = register("roar", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_ROAROFTIME = register("roaroftime", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_ROCKBLAST = register("rockblast", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_ROCKCLIMB = register("rockclimb", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_ROCKPOLISH = register("rockpolish", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_ROCKSLIDE = register("rockslide", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_ROCKSMASH = register("rocksmash", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_ROCKTHROW = register("rockthrow", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_ROCKTOMB = register("rocktomb", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_ROCKWRECKER = register("rockwrecker", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_ROLEPLAY = register("roleplay", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_ROLLINGKICK = register("rollingkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_ROLLOUT = register("rollout", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_ROOST = register("roost", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_ROTOTILLER = register("rototiller", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_ROUND = register("round", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_RUINATION = register("ruination", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_SACREDFIRE = register("sacredfire", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_SACREDSWORD = register("sacredsword", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_SAFEGUARD = register("safeguard", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SALTCURE = register("saltcure", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_SANDATTACK = register("sandattack", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_SANDSEARSTORM = register("sandsearstorm", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_SANDSTORM = register("sandstorm", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_SANDTOMB = register("sandtomb", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_SAPPYSEED = register("sappyseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_SAVAGESPINOUT = register("savagespinout", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_SCALD = register("scald", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_SCALESHOT = register("scaleshot", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_SCARYFACE = register("scaryface", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SCORCHINGSANDS = register("scorchingsands", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_SCRATCH = register("scratch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SCREECH = register("screech", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SEARINGSHOT = register("searingshot", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_SEARINGSUNRAZESMASH = register("searingsunrazesmash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_SECRETPOWER = register("secretpower", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SECRETSWORD = register("secretsword", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_SEEDBOMB = register("seedbomb", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_SEEDFLARE = register("seedflare", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_SEISMICTOSS = register("seismictoss", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_SELFDESTRUCT = register("selfdestruct", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SHADOWBALL = register("shadowball", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_SHADOWBONE = register("shadowbone", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_SHADOWCLAW = register("shadowclaw", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_SHADOWFORCE = register("shadowforce", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_SHADOWPUNCH = register("shadowpunch", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_SHADOWSNEAK = register("shadowsneak", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_SHARPEN = register("sharpen", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SHATTEREDPSYCHE = register("shatteredpsyche", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_SHEDTAIL = register("shedtail", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SHEERCOLD = register("sheercold", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_SHELLSIDEARM = register("shellsidearm", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_SHELLSMASH = register("shellsmash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SHELLTRAP = register("shelltrap", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_SHELTER = register("shelter", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_SHIFTGEAR = register("shiftgear", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_SHOCKWAVE = register("shockwave", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_SHOREUP = register("shoreup", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_SIGNALBEAM = register("signalbeam", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_SILKTRAP = register("silktrap", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_SILVERWIND = register("silverwind", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_SIMPLEBEAM = register("simplebeam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SING = register("sing", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SINISTERARROWRAID = register("sinisterarrowraid", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_SIZZLYSLIDE = register("sizzlyslide", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_SKETCH = register("sketch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SKILLSWAP = register("skillswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_SKITTERSMACK = register("skittersmack", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_SKULLBASH = register("skullbash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SKYATTACK = register("skyattack", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_SKYDROP = register("skydrop", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_SKYUPPERCUT = register("skyuppercut", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_SLACKOFF = register("slackoff", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SLAM = register("slam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SLASH = register("slash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SLEEPPOWDER = register("sleeppowder", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_SLEEPTALK = register("sleeptalk", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SLUDGE = register("sludge", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_SLUDGEBOMB = register("sludgebomb", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_SLUDGEWAVE = register("sludgewave", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_SMACKDOWN = register("smackdown", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_SMARTSTRIKE = register("smartstrike", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_SMELLINGSALTS = register("smellingsalts", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SMOG = register("smog", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_SMOKESCREEN = register("smokescreen", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SNAPTRAP = register("snaptrap", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_SNARL = register("snarl", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_SNATCH = register("snatch", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_SNIPESHOT = register("snipeshot", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_SNORE = register("snore", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SNOWSCAPE = register("snowscape", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_SOAK = register("soak", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_SOFTBOILED = register("softboiled", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SOLARBEAM = register("solarbeam", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_SOLARBLADE = register("solarblade", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_SONICBOOM = register("sonicboom", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SOULSTEALING7STARSTRIKE = register("soulstealing7starstrike", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_SPACIALREND = register("spacialrend", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_SPARK = register("spark", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_SPARKLINGARIA = register("sparklingaria", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_SPARKLYSWIRL = register("sparklyswirl", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_SPECTRALTHIEF = register("spectralthief", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_SPEEDSWAP = register("speedswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_SPICYEXTRACT = register("spicyextract", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_SPIDERWEB = register("spiderweb", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_SPIKECANNON = register("spikecannon", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SPIKES = register("spikes", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_SPIKYSHIELD = register("spikyshield", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_SPINOUT = register("spinout", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_SPIRITBREAK = register("spiritbreak", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_SPIRITSHACKLE = register("spiritshackle", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_SPITUP = register("spitup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SPITE = register("spite", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_SPLASH = register("splash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SPLINTEREDSTORMSHARDS = register("splinteredstormshards", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_SPLISHYSPLASH = register("splishysplash", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_SPORE = register("spore", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_SPOTLIGHT = register("spotlight", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SPRINGTIDESTORM = register("springtidestorm", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_STEALTHROCK = register("stealthrock", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_STEAMERUPTION = register("steameruption", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_STEAMROLLER = register("steamroller", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_STEELBEAM = register("steelbeam", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_STEELROLLER = register("steelroller", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_STEELWING = register("steelwing", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_STICKYWEB = register("stickyweb", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_STOCKPILE = register("stockpile", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_STOKEDSPARKSURFER = register("stokedsparksurfer", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_STOMP = register("stomp", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_STOMPINGTANTRUM = register("stompingtantrum", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_STONEAXE = register("stoneaxe", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_STONEEDGE = register("stoneedge", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_STOREDPOWER = register("storedpower", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_STORMTHROW = register("stormthrow", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_STRANGESTEAM = register("strangesteam", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_STRENGTH = register("strength", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_STRENGTHSAP = register("strengthsap", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_STRINGSHOT = register("stringshot", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_STRUGGLE = register("struggle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_STRUGGLEBUG = register("strugglebug", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_STUFFCHEEKS = register("stuffcheeks", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_STUNSPORE = register("stunspore", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_SUBMISSION = register("submission", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_SUBSTITUTE = register("substitute", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SUBZEROSLAMMER = register("subzeroslammer", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_SUCKERPUNCH = register("suckerpunch", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_SUNNYDAY = register("sunnyday", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_SUNSTEELSTRIKE = register("sunsteelstrike", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_SUPERFANG = register("superfang", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SUPERPOWER = register("superpower", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_SUPERSONIC = register("supersonic", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SUPERSONICSKYSTRIKE = register("supersonicskystrike", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_SURF = register("surf", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_SURGINGSTRIKES = register("surgingstrikes", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_SWAGGER = register("swagger", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SWALLOW = register("swallow", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SWEETKISS = register("sweetkiss", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_SWEETSCENT = register("sweetscent", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SWIFT = register("swift", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SWITCHEROO = register("switcheroo", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_SWORDSDANCE = register("swordsdance", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_SYNCHRONOISE = register("synchronoise", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_SYNTHESIS = register("synthesis", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_TACKLE = register("tackle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TAILGLOW = register("tailglow", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_TAILSLAP = register("tailslap", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TAILWHIP = register("tailwhip", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TAILWIND = register("tailwind", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_TAKEDOWN = register("takedown", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TAKEHEART = register("takeheart", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_TARSHOT = register("tarshot", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_TAUNT = register("taunt", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_TEARFULLOOK = register("tearfullook", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TEATIME = register("teatime", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TECHNOBLAST = register("technoblast", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TECTONICRAGE = register("tectonicrage", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_TEETERDANCE = register("teeterdance", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TELEKINESIS = register("telekinesis", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_TELEPORT = register("teleport", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_TERABLAST = register("terablast", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TERRAINPULSE = register("terrainpulse", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_THIEF = register("thief", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_THOUSANDARROWS = register("thousandarrows", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_THOUSANDWAVES = register("thousandwaves", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TM_THRASH = register("thrash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_THROATCHOP = register("throatchop", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_THUNDER = register("thunder", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_THUNDERBOLT = register("thunderbolt", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_THUNDERCAGE = register("thundercage", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_THUNDERFANG = register("thunderfang", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_THUNDEROUSKICK = register("thunderouskick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_THUNDERPUNCH = register("thunderpunch", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_THUNDERSHOCK = register("thundershock", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_THUNDERWAVE = register("thunderwave", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_TICKLE = register("tickle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TIDYUP = register("tidyup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TOPSYTURVY = register("topsyturvy", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_TORCHSONG = register("torchsong", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_TORMENT = register("torment", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_TOXIC = register("toxic", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_TOXICSPIKES = register("toxicspikes", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_TOXICTHREAD = register("toxicthread", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_TRAILBLAZE = register("trailblaze", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_TRANSFORM = register("transform", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TRIATTACK = register("triattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TRICK = register("trick", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_TRICKORTREAT = register("trickortreat", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TM_TRICKROOM = register("trickroom", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_TRIPLEARROWS = register("triplearrows", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_TRIPLEAXEL = register("tripleaxel", ElementalTypes.INSTANCE.getICE());
+    public static final Item TM_TRIPLEDIVE = register("tripledive", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_TRIPLEKICK = register("triplekick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_TROPKICK = register("tropkick", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_TRUMPCARD = register("trumpcard", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_TWINBEAM = register("twinbeam", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_TWINEEDLE = register("twineedle", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_TWINKLETACKLE = register("twinkletackle", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_TWISTER = register("twister", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_UTURN = register("uturn", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_UPROAR = register("uproar", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_VACUUMWAVE = register("vacuumwave", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_VCREATE = register("vcreate", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_VEEVEEVOLLEY = register("veeveevolley", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_VENOMDRENCH = register("venomdrench", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_VENOSHOCK = register("venoshock", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TM_VICTORYDANCE = register("victorydance", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_VINEWHIP = register("vinewhip", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_VISEGRIP = register("visegrip", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_VITALTHROW = register("vitalthrow", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_VOLTSWITCH = register("voltswitch", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_VOLTTACKLE = register("volttackle", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_WAKEUPSLAP = register("wakeupslap", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_WATERFALL = register("waterfall", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_WATERGUN = register("watergun", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_WATERPLEDGE = register("waterpledge", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_WATERPULSE = register("waterpulse", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_WATERSHURIKEN = register("watershuriken", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_WATERSPORT = register("watersport", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_WATERSPOUT = register("waterspout", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_WAVECRASH = register("wavecrash", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_WEATHERBALL = register("weatherball", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_WHIRLPOOL = register("whirlpool", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_WHIRLWIND = register("whirlwind", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_WICKEDBLOW = register("wickedblow", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_WICKEDTORQUE = register("wickedtorque", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TM_WIDEGUARD = register("wideguard", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_WILDBOLTSTORM = register("wildboltstorm", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_WILDCHARGE = register("wildcharge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_WILLOWISP = register("willowisp", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_WINGATTACK = register("wingattack", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TM_WISH = register("wish", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_WITHDRAW = register("withdraw", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TM_WONDERROOM = register("wonderroom", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_WOODHAMMER = register("woodhammer", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_WORKUP = register("workup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_WORRYSEED = register("worryseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TM_WRAP = register("wrap", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_WRINGOUT = register("wringout", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_XSCISSOR = register("xscissor", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TM_YAWN = register("yawn", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TM_ZAPCANNON = register("zapcannon", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_ZENHEADBUTT = register("zenheadbutt", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_ZINGZAP = register("zingzap", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_ZIPPYZAP = register("zippyzap", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_TEMPERFLARE = register("temperflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_SUPERCELLSLAM = register("supercellslam", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_HARDPRESS = register("hardpress", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_DRAGONCHEER = register("dragoncheer", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_ALLURINGVOICE = register("alluringvoice", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TM_PSYCHICNOISE = register("psychicnoise", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TM_UPPERHAND = register("upperhand", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TM_ELECTROSHOT = register("electroshot", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_FICKLEBEAM = register("ficklebeam", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TM_BURNINGBULWARK = register("burningbulwark", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TM_THUNDERCLAP = register("thunderclap", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TM_MIGHTYCLEAVE = register("mightycleave", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TM_TACHYONCUTTER = register("tachyoncutter", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TM_TERASTARSTORM = register("terastarstorm", ElementalTypes.INSTANCE.getNORMAL());
 
-    TMMoveItem(String name, ElementalType type) {
-        this.identifier = Identifier.of(TMCraft.MOD_ID, String.format("tm_%s", name));
-        this.item = new TMMoveTeachingItem(name, type);
+    public static void initialize() {
+
     }
 
-    public Identifier getIdentifier() {
-        return identifier;
-    }
+    public static Item register(String name, ElementalType type) {
+        Identifier identifier = Identifier.of(TMCraft.MOD_ID, String.format("tm_%s", name));
+        Item item = new TMMoveTeachingItem(name, type);
 
-    public Item getItem() {
+        Registry.register(Registries.ITEM, identifier, item);
+        all.add(item);
+
         return item;
+    }
+
+    public static List<Item> getAll() {
+        return new ArrayList<>(all);
     }
 }

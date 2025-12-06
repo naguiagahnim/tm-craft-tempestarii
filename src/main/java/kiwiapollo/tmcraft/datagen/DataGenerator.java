@@ -4,6 +4,7 @@ import kiwiapollo.tmcraft.item.eggmove.EggMoveItem;
 import kiwiapollo.tmcraft.item.misc.BlankBookItem;
 import kiwiapollo.tmcraft.item.misc.BlankDiscItem;
 import kiwiapollo.tmcraft.item.misc.BlankEggItem;
+import kiwiapollo.tmcraft.item.misc.BlankStarItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItem;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -39,7 +40,13 @@ public class DataGenerator implements DataGeneratorEntrypoint {
 
         @Override
         public void generate(Consumer<RecipeJsonProvider> exporter) {
-            new TMRecipeGenerator().generate(exporter);
+            new CopperTMRecipeGenerator().generate(exporter);
+            new IronTMRecipeGenerator().generate(exporter);
+            new GoldTMRecipeGenerator().generate(exporter);
+            new DiamondTMRecipeGenerator().generate(exporter);
+            new EmeraldTMRecipeGenerator().generate(exporter);
+            new NetheriteTMRecipeGenerator().generate(exporter);
+
             new BlankDiscRecipeGenerator().generate(exporter);
             new SmithingTemplateRecipeGenerator().generate(exporter);
             new MoveTutorTableRecipeGenerator().generate(exporter);
@@ -54,15 +61,15 @@ public class DataGenerator implements DataGeneratorEntrypoint {
 
         @Override
         protected void configure(RegistryWrapper.WrapperLookup arg) {
-            Arrays.stream(TMMoveItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.TM_MOVES).add(item.getItem()));
-            Arrays.stream(EggMoveItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.EGG_MOVES).add(item.getItem()));
-            Arrays.stream(TutorMoveItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.TUTOR_MOVES).add(item.getItem()));
-            Arrays.stream(TutorMoveItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.STAR_MOVES).add(item.getItem()));
+            TMMoveItem.getAll().forEach(getOrCreateTagBuilder(ModTagRegistry.TM_MOVES)::add);
+            EggMoveItem.getAll().forEach(getOrCreateTagBuilder(ModTagRegistry.EGG_MOVES)::add);
+            TutorMoveItem.getAll().forEach(getOrCreateTagBuilder(ModTagRegistry.TUTOR_MOVES)::add);
+            TutorMoveItem.getAll().forEach(getOrCreateTagBuilder(ModTagRegistry.STAR_MOVES)::add);
 
-            Arrays.stream(BlankDiscItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_DISCS).add(item.getItem()));
-            Arrays.stream(BlankEggItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_EGGS).add(item.getItem()));
-            Arrays.stream(BlankBookItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_BOOKS).add(item.getItem()));
-            Arrays.stream(BlankBookItem.values()).forEach(item -> getOrCreateTagBuilder(ModTagRegistry.BLANK_STARS).add(item.getItem()));
+            BlankDiscItem.getAll().forEach(getOrCreateTagBuilder(ModTagRegistry.BLANK_DISCS)::add);
+            BlankEggItem.getAll().forEach(getOrCreateTagBuilder(ModTagRegistry.BLANK_EGGS)::add);
+            BlankBookItem.getAll().forEach(getOrCreateTagBuilder(ModTagRegistry.BLANK_BOOKS)::add);
+            BlankStarItem.getAll().forEach(getOrCreateTagBuilder(ModTagRegistry.BLANK_STARS)::add);
         }
     }
 }

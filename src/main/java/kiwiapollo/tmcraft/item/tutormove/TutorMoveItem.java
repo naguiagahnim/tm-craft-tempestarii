@@ -4,955 +4,961 @@ import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.api.types.ElementalTypes;
 import kiwiapollo.tmcraft.TMCraft;
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public enum TutorMoveItem {
-    TUTOR_10000000VOLTTHUNDERBOLT("10000000voltthunderbolt", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_ABSORB("absorb", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_ACCELEROCK("accelerock", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_ACID("acid", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_ACIDARMOR("acidarmor", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_ACIDDOWNPOUR("aciddownpour", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_ACIDSPRAY("acidspray", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_ACROBATICS("acrobatics", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_ACUPRESSURE("acupressure", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_AERIALACE("aerialace", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_AEROBLAST("aeroblast", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_AFTERYOU("afteryou", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_AGILITY("agility", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_AIRCUTTER("aircutter", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_AIRSLASH("airslash", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_ALLOUTPUMMELING("alloutpummeling", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_ALLYSWITCH("allyswitch", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_AMNESIA("amnesia", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_ANCHORSHOT("anchorshot", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_ANCIENTPOWER("ancientpower", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_APPLEACID("appleacid", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_AQUACUTTER("aquacutter", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_AQUAJET("aquajet", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_AQUARING("aquaring", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_AQUASTEP("aquastep", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_AQUATAIL("aquatail", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_ARMORCANNON("armorcannon", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_ARMTHRUST("armthrust", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_AROMATHERAPY("aromatherapy", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_AROMATICMIST("aromaticmist", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_ASSIST("assist", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_ASSURANCE("assurance", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_ASTONISH("astonish", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_ASTRALBARRAGE("astralbarrage", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_ATTACKORDER("attackorder", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_ATTRACT("attract", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_AURASPHERE("aurasphere", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_AURAWHEEL("aurawheel", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_AURORABEAM("aurorabeam", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_AURORAVEIL("auroraveil", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_AUTOTOMIZE("autotomize", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_AVALANCHE("avalanche", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_AXEKICK("axekick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_BABYDOLLEYES("babydolleyes", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_BADDYBAD("baddybad", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_BANEFULBUNKER("banefulbunker", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_BARBBARRAGE("barbbarrage", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_BARRAGE("barrage", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_BARRIER("barrier", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_BATONPASS("batonpass", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_BEAKBLAST("beakblast", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_BEATUP("beatup", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_BEHEMOTHBASH("behemothbash", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_BEHEMOTHBLADE("behemothblade", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_BELCH("belch", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_BELLYDRUM("bellydrum", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_BESTOW("bestow", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_BIDE("bide", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_BIND("bind", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_BITE("bite", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_BITTERBLADE("bitterblade", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_BITTERMALICE("bittermalice", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_BLACKHOLEECLIPSE("blackholeeclipse", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_BLASTBURN("blastburn", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_BLAZEKICK("blazekick", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_BLAZINGTORQUE("blazingtorque", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_BLEAKWINDSTORM("bleakwindstorm", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_BLIZZARD("blizzard", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_BLOCK("block", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_BLOOMDOOM("bloomdoom", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_BLUEFLARE("blueflare", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_BODYPRESS("bodypress", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_BODYSLAM("bodyslam", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_BOLTBEAK("boltbeak", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_BOLTSTRIKE("boltstrike", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_BONECLUB("boneclub", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_BONEMERANG("bonemerang", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_BONERUSH("bonerush", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_BOOMBURST("boomburst", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_BOUNCE("bounce", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_BOUNCYBUBBLE("bouncybubble", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_BRANCHPOKE("branchpoke", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_BRAVEBIRD("bravebird", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_BREAKINGSWIPE("breakingswipe", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_BREAKNECKBLITZ("breakneckblitz", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_BRICKBREAK("brickbreak", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_BRINE("brine", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_BRUTALSWING("brutalswing", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_BUBBLE("bubble", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_BUBBLEBEAM("bubblebeam", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_BUGBITE("bugbite", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_BUGBUZZ("bugbuzz", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_BULKUP("bulkup", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_BULLDOZE("bulldoze", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_BULLETPUNCH("bulletpunch", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_BULLETSEED("bulletseed", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_BURNINGJEALOUSY("burningjealousy", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_BURNUP("burnup", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_BUZZYBUZZ("buzzybuzz", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_CALMMIND("calmmind", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_CAMOUFLAGE("camouflage", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_CAPTIVATE("captivate", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_CATASTROPIKA("catastropika", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_CEASELESSEDGE("ceaselessedge", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_CELEBRATE("celebrate", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_CHARGE("charge", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_CHARGEBEAM("chargebeam", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_CHARM("charm", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_CHATTER("chatter", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_CHILLINGWATER("chillingwater", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_CHILLYRECEPTION("chillyreception", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_CHIPAWAY("chipaway", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_CHLOROBLAST("chloroblast", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_CIRCLETHROW("circlethrow", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_CLAMP("clamp", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_CLANGINGSCALES("clangingscales", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_CLANGOROUSSOUL("clangoroussoul", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_CLANGOROUSSOULBLAZE("clangoroussoulblaze", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_CLEARSMOG("clearsmog", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_CLOSECOMBAT("closecombat", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_COACHING("coaching", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_COIL("coil", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_COLLISIONCOURSE("collisioncourse", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_COMBATTORQUE("combattorque", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_COMETPUNCH("cometpunch", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_COMEUPPANCE("comeuppance", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_CONFIDE("confide", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_CONFUSERAY("confuseray", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_CONFUSION("confusion", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_CONSTRICT("constrict", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_CONTINENTALCRUSH("continentalcrush", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_CONVERSION("conversion", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_CONVERSION2("conversion2", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_COPYCAT("copycat", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_COREENFORCER("coreenforcer", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_CORKSCREWCRASH("corkscrewcrash", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_CORROSIVEGAS("corrosivegas", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_COSMICPOWER("cosmicpower", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_COTTONGUARD("cottonguard", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_COTTONSPORE("cottonspore", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_COUNTER("counter", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_COURTCHANGE("courtchange", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_COVET("covet", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_CRABHAMMER("crabhammer", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_CRAFTYSHIELD("craftyshield", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_CROSSCHOP("crosschop", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_CROSSPOISON("crosspoison", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_CRUNCH("crunch", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_CRUSHCLAW("crushclaw", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_CRUSHGRIP("crushgrip", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_CURSE("curse", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_CUT("cut", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_DARKESTLARIAT("darkestlariat", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_DARKPULSE("darkpulse", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_DARKVOID("darkvoid", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_DAZZLINGGLEAM("dazzlinggleam", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_DECORATE("decorate", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_DEFENDORDER("defendorder", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_DEFENSECURL("defensecurl", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_DEFOG("defog", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_DESTINYBOND("destinybond", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_DETECT("detect", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_DEVASTATINGDRAKE("devastatingdrake", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DIAMONDSTORM("diamondstorm", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_DIG("dig", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_DISABLE("disable", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_DISARMINGVOICE("disarmingvoice", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_DISCHARGE("discharge", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_DIRECLAW("direclaw", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_DIVE("dive", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_DIZZYPUNCH("dizzypunch", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_DOODLE("doodle", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_DOOMDESIRE("doomdesire", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_DOUBLEEDGE("doubleedge", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_DOUBLEHIT("doublehit", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_DOUBLEIRONBASH("doubleironbash", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_DOUBLEKICK("doublekick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_DOUBLESHOCK("doubleshock", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_DOUBLESLAP("doubleslap", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_DOUBLETEAM("doubleteam", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_DRACOMETEOR("dracometeor", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DRAGONASCENT("dragonascent", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_DRAGONBREATH("dragonbreath", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DRAGONCLAW("dragonclaw", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DRAGONDANCE("dragondance", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DRAGONDARTS("dragondarts", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DRAGONENERGY("dragonenergy", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DRAGONHAMMER("dragonhammer", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DRAGONPULSE("dragonpulse", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DRAGONRAGE("dragonrage", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DRAGONRUSH("dragonrush", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DRAGONTAIL("dragontail", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DRAININGKISS("drainingkiss", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_DRAINPUNCH("drainpunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_DREAMEATER("dreameater", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_DRILLPECK("drillpeck", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_DRILLRUN("drillrun", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_DRUMBEATING("drumbeating", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_DUALCHOP("dualchop", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DUALWINGBEAT("dualwingbeat", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_DYNAMAXCANNON("dynamaxcannon", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_DYNAMICPUNCH("dynamicpunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_EARTHPOWER("earthpower", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_EARTHQUAKE("earthquake", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_ECHOEDVOICE("echoedvoice", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_EERIEIMPULSE("eerieimpulse", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_EERIESPELL("eeriespell", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_EGGBOMB("eggbomb", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_ELECTRICTERRAIN("electricterrain", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_ELECTRIFY("electrify", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_ELECTROBALL("electroball", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_ELECTRODRIFT("electrodrift", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_ELECTROWEB("electroweb", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_EMBARGO("embargo", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_EMBER("ember", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_ENCORE("encore", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_ENDEAVOR("endeavor", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_ENDURE("endure", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_ENERGYBALL("energyball", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_ENTRAINMENT("entrainment", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_ERUPTION("eruption", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_ESPERWING("esperwing", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_ETERNABEAM("eternabeam", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_EXPANDINGFORCE("expandingforce", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_EXPLOSION("explosion", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_EXTRASENSORY("extrasensory", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_EXTREMEEVOBOOST("extremeevoboost", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_EXTREMESPEED("extremespeed", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FACADE("facade", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FAIRYLOCK("fairylock", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_FAIRYWIND("fairywind", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_FAKEOUT("fakeout", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FAKETEARS("faketears", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_FALSESURRENDER("falsesurrender", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_FALSESWIPE("falseswipe", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FEATHERDANCE("featherdance", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_FEINT("feint", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FEINTATTACK("feintattack", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_FELLSTINGER("fellstinger", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_FIERYDANCE("fierydance", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_FIERYWRATH("fierywrath", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_FILLETAWAY("filletaway", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FINALGAMBIT("finalgambit", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_FIREBLAST("fireblast", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_FIREFANG("firefang", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_FIRELASH("firelash", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_FIREPLEDGE("firepledge", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_FIREPUNCH("firepunch", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_FIRESPIN("firespin", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_FIRSTIMPRESSION("firstimpression", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_FISHIOUSREND("fishiousrend", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_FISSURE("fissure", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_FLAIL("flail", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FLAMEBURST("flameburst", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_FLAMECHARGE("flamecharge", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_FLAMEWHEEL("flamewheel", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_FLAMETHROWER("flamethrower", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_FLAREBLITZ("flareblitz", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_FLASH("flash", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FLASHCANNON("flashcannon", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_FLATTER("flatter", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_FLEURCANNON("fleurcannon", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_FLING("fling", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_FLIPTURN("flipturn", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_FLOATYFALL("floatyfall", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_FLORALHEALING("floralhealing", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_FLOWERSHIELD("flowershield", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_FLOWERTRICK("flowertrick", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_FLY("fly", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_FLYINGPRESS("flyingpress", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_FOCUSBLAST("focusblast", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_FOCUSENERGY("focusenergy", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FOCUSPUNCH("focuspunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_FOLLOWME("followme", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FORCEPALM("forcepalm", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_FORESIGHT("foresight", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FORESTSCURSE("forestscurse", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_FOULPLAY("foulplay", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_FREEZEDRY("freezedry", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_FREEZESHOCK("freezeshock", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_FREEZINGGLARE("freezingglare", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_FREEZYFROST("freezyfrost", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_FRENZYPLANT("frenzyplant", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_FROSTBREATH("frostbreath", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_FRUSTRATION("frustration", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FURYATTACK("furyattack", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FURYCUTTER("furycutter", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_FURYSWIPES("furyswipes", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_FUSIONBOLT("fusionbolt", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_FUSIONFLARE("fusionflare", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_FUTURESIGHT("futuresight", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_GASTROACID("gastroacid", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_GEARGRIND("geargrind", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_GEARUP("gearup", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_GENESISSUPERNOVA("genesissupernova", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_GEOMANCY("geomancy", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_GIGADRAIN("gigadrain", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_GIGAIMPACT("gigaimpact", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_GIGATONHAMMER("gigatonhammer", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_GIGAVOLTHAVOC("gigavolthavoc", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_GLACIALLANCE("glaciallance", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_GLACIATE("glaciate", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_GLAIVERUSH("glaiverush", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_GLARE("glare", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_GLITZYGLOW("glitzyglow", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_GMAXBEFUDDLE("gmaxbefuddle", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_GMAXCANNONADE("gmaxcannonade", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_GMAXCENTIFERNO("gmaxcentiferno", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_GMAXCHISTRIKE("gmaxchistrike", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_GMAXCUDDLE("gmaxcuddle", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_GMAXDEPLETION("gmaxdepletion", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_GMAXDRUMSOLO("gmaxdrumsolo", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_GMAXFINALE("gmaxfinale", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_GMAXFIREBALL("gmaxfireball", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_GMAXFOAMBURST("gmaxfoamburst", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_GMAXGOLDRUSH("gmaxgoldrush", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_GMAXGRAVITAS("gmaxgravitas", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_GMAXHYDROSNIPE("gmaxhydrosnipe", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_GMAXMALODOR("gmaxmalodor", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_GMAXMELTDOWN("gmaxmeltdown", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_GMAXONEBLOW("gmaxoneblow", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_GMAXRAPIDFLOW("gmaxrapidflow", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_GMAXREPLENISH("gmaxreplenish", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_GMAXRESONANCE("gmaxresonance", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_GMAXSANDBLAST("gmaxsandblast", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_GMAXSMITE("gmaxsmite", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_GMAXSNOOZE("gmaxsnooze", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_GMAXSTEELSURGE("gmaxsteelsurge", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_GMAXSTONESURGE("gmaxstonesurge", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_GMAXSTUNSHOCK("gmaxstunshock", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_GMAXSWEETNESS("gmaxsweetness", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_GMAXTARTNESS("gmaxtartness", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_GMAXTERROR("gmaxterror", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_GMAXVINELASH("gmaxvinelash", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_GMAXVOLCALITH("gmaxvolcalith", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_GMAXVOLTCRASH("gmaxvoltcrash", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_GMAXWILDFIRE("gmaxwildfire", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_GMAXWINDRAGE("gmaxwindrage", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_GRASSKNOT("grassknot", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_GRASSPLEDGE("grasspledge", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_GRASSWHISTLE("grasswhistle", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_GRASSYGLIDE("grassyglide", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_GRASSYTERRAIN("grassyterrain", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_GRAVAPPLE("gravapple", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_GRAVITY("gravity", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_GROWL("growl", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_GROWTH("growth", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_GRUDGE("grudge", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_GUARDIANOFALOLA("guardianofalola", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_GUARDSPLIT("guardsplit", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_GUARDSWAP("guardswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_GUILLOTINE("guillotine", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_GUNKSHOT("gunkshot", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_GUST("gust", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_GYROBALL("gyroball", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_HAIL("hail", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_HAMMERARM("hammerarm", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_HAPPYHOUR("happyhour", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HARDEN("harden", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HAZE("haze", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_HEADBUTT("headbutt", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HEADCHARGE("headcharge", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HEADLONGRUSH("headlongrush", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_HEADSMASH("headsmash", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_HEALBELL("healbell", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HEALBLOCK("healblock", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_HEALINGWISH("healingwish", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_HEALORDER("healorder", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_HEALPULSE("healpulse", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_HEARTSTAMP("heartstamp", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_HEARTSWAP("heartswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_HEATCRASH("heatcrash", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_HEATWAVE("heatwave", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_HEAVYSLAM("heavyslam", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_HELPINGHAND("helpinghand", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HEX("hex", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_HIDDENPOWER("hiddenpower", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HIGHHORSEPOWER("highhorsepower", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_HIGHJUMPKICK("highjumpkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_HOLDBACK("holdback", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HOLDHANDS("holdhands", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HONECLAWS("honeclaws", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_HORNATTACK("hornattack", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HORNDRILL("horndrill", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HORNLEECH("hornleech", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_HOWL("howl", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HURRICANE("hurricane", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_HYDROCANNON("hydrocannon", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_HYDROPUMP("hydropump", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_HYDROSTEAM("hydrosteam", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_HYDROVORTEX("hydrovortex", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_HYPERBEAM("hyperbeam", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HYPERDRILL("hyperdrill", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HYPERFANG("hyperfang", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HYPERSPACEFURY("hyperspacefury", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_HYPERSPACEHOLE("hyperspacehole", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_HYPERVOICE("hypervoice", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_HYPNOSIS("hypnosis", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_ICEBALL("iceball", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_ICEBEAM("icebeam", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_ICEBURN("iceburn", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_ICEFANG("icefang", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_ICEHAMMER("icehammer", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_ICEPUNCH("icepunch", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_ICESHARD("iceshard", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_ICESPINNER("icespinner", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_ICICLECRASH("iciclecrash", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_ICICLESPEAR("iciclespear", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_ICYWIND("icywind", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_IMPRISON("imprison", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_INCINERATE("incinerate", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_INFERNALPARADE("infernalparade", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_INFERNO("inferno", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_INFERNOOVERDRIVE("infernooverdrive", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_INFESTATION("infestation", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_INGRAIN("ingrain", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_INSTRUCT("instruct", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_IONDELUGE("iondeluge", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_IRONDEFENSE("irondefense", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_IRONHEAD("ironhead", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_IRONTAIL("irontail", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_JAWLOCK("jawlock", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_JETPUNCH("jetpunch", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_JUDGMENT("judgment", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_JUMPKICK("jumpkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_JUNGLEHEALING("junglehealing", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_KARATECHOP("karatechop", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_KINESIS("kinesis", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_KINGSSHIELD("kingsshield", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_KNOCKOFF("knockoff", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_KOWTOWCLEAVE("kowtowcleave", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_LANDSWRATH("landswrath", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_LASERFOCUS("laserfocus", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_LASHOUT("lashout", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_LASTRESORT("lastresort", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_LASTRESPECTS("lastrespects", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_LAVAPLUME("lavaplume", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_LEAFAGE("leafage", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_LEAFBLADE("leafblade", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_LEAFSTORM("leafstorm", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_LEAFTORNADO("leaftornado", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_LEECHLIFE("leechlife", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_LEECHSEED("leechseed", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_LEER("leer", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_LETSSNUGGLEFOREVER("letssnuggleforever", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_LICK("lick", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_LIFEDEW("lifedew", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_LIGHTOFRUIN("lightofruin", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_LIGHTSCREEN("lightscreen", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_LIGHTTHATBURNSTHESKY("lightthatburnsthesky", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_LIQUIDATION("liquidation", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_LOCKON("lockon", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_LOVELYKISS("lovelykiss", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_LOWKICK("lowkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_LOWSWEEP("lowsweep", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_LUCKYCHANT("luckychant", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_LUMINACRASH("luminacrash", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_LUNARBLESSING("lunarblessing", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_LUNARDANCE("lunardance", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_LUNGE("lunge", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_LUSTERPURGE("lusterpurge", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_MACHPUNCH("machpunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_MAGICALLEAF("magicalleaf", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_MAGICALTORQUE("magicaltorque", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_MAGICCOAT("magiccoat", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_MAGICPOWDER("magicpowder", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_MAGICROOM("magicroom", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_MAGMASTORM("magmastorm", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_MAGNETBOMB("magnetbomb", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_MAGNETICFLUX("magneticflux", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_MAGNETRISE("magnetrise", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_MAGNITUDE("magnitude", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_MAKEITRAIN("makeitrain", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_MALICIOUSMOONSAULT("maliciousmoonsault", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_MATBLOCK("matblock", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_MAXAIRSTREAM("maxairstream", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_MAXDARKNESS("maxdarkness", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_MAXFLARE("maxflare", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_MAXFLUTTERBY("maxflutterby", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_MAXGEYSER("maxgeyser", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_MAXGUARD("maxguard", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_MAXHAILSTORM("maxhailstorm", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_MAXKNUCKLE("maxknuckle", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_MAXLIGHTNING("maxlightning", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_MAXMINDSTORM("maxmindstorm", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_MAXOOZE("maxooze", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_MAXOVERGROWTH("maxovergrowth", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_MAXPHANTASM("maxphantasm", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_MAXQUAKE("maxquake", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_MAXROCKFALL("maxrockfall", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_MAXSTARFALL("maxstarfall", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_MAXSTEELSPIKE("maxsteelspike", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_MAXSTRIKE("maxstrike", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_MAXWYRMWIND("maxwyrmwind", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_MEANLOOK("meanlook", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_MEDITATE("meditate", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_MEFIRST("mefirst", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_MEGADRAIN("megadrain", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_MEGAHORN("megahorn", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_MEGAKICK("megakick", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_MEGAPUNCH("megapunch", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_MEMENTO("memento", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_MENACINGMOONRAZEMAELSTROM("menacingmoonrazemaelstrom", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_METALBURST("metalburst", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_METALCLAW("metalclaw", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_METALSOUND("metalsound", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_METEORASSAULT("meteorassault", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_METEORBEAM("meteorbeam", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_METEORMASH("meteormash", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_METRONOME("metronome", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_MILKDRINK("milkdrink", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_MIMIC("mimic", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_MINDBLOWN("mindblown", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_MINDREADER("mindreader", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_MINIMIZE("minimize", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_MIRACLEEYE("miracleeye", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_MIRRORCOAT("mirrorcoat", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_MIRRORMOVE("mirrormove", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_MIRRORSHOT("mirrorshot", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_MIST("mist", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_MISTBALL("mistball", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_MISTYEXPLOSION("mistyexplosion", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_MISTYTERRAIN("mistyterrain", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_MOONBLAST("moonblast", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_MOONGEISTBEAM("moongeistbeam", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_MOONLIGHT("moonlight", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_MORNINGSUN("morningsun", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_MORTALSPIN("mortalspin", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_MOUNTAINGALE("mountaingale", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_MUDBOMB("mudbomb", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_MUDSHOT("mudshot", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_MUDSLAP("mudslap", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_MUDSPORT("mudsport", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_MUDDYWATER("muddywater", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_MULTIATTACK("multiattack", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_MYSTICALFIRE("mysticalfire", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_MYSTICALPOWER("mysticalpower", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_NASTYPLOT("nastyplot", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_NATURALGIFT("naturalgift", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_NATUREPOWER("naturepower", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_NATURESMADNESS("naturesmadness", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_NEEDLEARM("needlearm", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_NEVERENDINGNIGHTMARE("neverendingnightmare", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_NIGHTDAZE("nightdaze", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_NIGHTMARE("nightmare", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_NIGHTSHADE("nightshade", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_NIGHTSLASH("nightslash", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_NOBLEROAR("nobleroar", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_NORETREAT("noretreat", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_NOXIOUSTORQUE("noxioustorque", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_NUZZLE("nuzzle", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_OBLIVIONWING("oblivionwing", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_OBSTRUCT("obstruct", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_OCEANICOPERETTA("oceanicoperetta", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_OCTAZOOKA("octazooka", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_OCTOLOCK("octolock", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_ODORSLEUTH("odorsleuth", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_OMINOUSWIND("ominouswind", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_ORDERUP("orderup", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_ORIGINPULSE("originpulse", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_OUTRAGE("outrage", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_OVERDRIVE("overdrive", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_OVERHEAT("overheat", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_PAINSPLIT("painsplit", ElementalTypes.INSTANCE.getNORMAL()),
-    //TUTOR_PALEOWAVE("paleowave", ElementalTypes.INSTANCE.getROCK()), // Signature move for Stratagem, Smogon's custom Pokémon
-    TUTOR_PARABOLICCHARGE("paraboliccharge", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_PARTINGSHOT("partingshot", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_PAYBACK("payback", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_PAYDAY("payday", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_PECK("peck", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_PERISHSONG("perishsong", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_PETALBLIZZARD("petalblizzard", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_PETALDANCE("petaldance", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_PHANTOMFORCE("phantomforce", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_PHOTONGEYSER("photongeyser", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PIKAPAPOW("pikapapow", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_PINMISSILE("pinmissile", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_PLASMAFISTS("plasmafists", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_PLAYNICE("playnice", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_PLAYROUGH("playrough", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_PLUCK("pluck", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_POISONFANG("poisonfang", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_POISONGAS("poisongas", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_POISONJAB("poisonjab", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_POISONPOWDER("poisonpowder", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_POISONSTING("poisonsting", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_POISONTAIL("poisontail", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_POLLENPUFF("pollenpuff", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_POLTERGEIST("poltergeist", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_POPULATIONBOMB("populationbomb", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_POUNCE("pounce", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_POUND("pound", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_POWDER("powder", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_POWDERSNOW("powdersnow", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_POWERGEM("powergem", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_POWERSHIFT("powershift", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_POWERSPLIT("powersplit", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_POWERSWAP("powerswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_POWERTRICK("powertrick", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_POWERTRIP("powertrip", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_POWERUPPUNCH("poweruppunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_POWERWHIP("powerwhip", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_PRECIPICEBLADES("precipiceblades", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_PRESENT("present", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_PRISMATICLASER("prismaticlaser", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PROTECT("protect", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_PSYBEAM("psybeam", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PSYBLADE("psyblade", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PSYCHUP("psychup", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_PSYCHIC("psychic", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PSYCHICFANGS("psychicfangs", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PSYCHICTERRAIN("psychicterrain", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PSYCHOBOOST("psychoboost", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PSYCHOCUT("psychocut", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PSYCHOSHIFT("psychoshift", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PSYSHIELDBASH("psyshieldbash", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PSYSHOCK("psyshock", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PSYSTRIKE("psystrike", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PSYWAVE("psywave", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_PULVERIZINGPANCAKE("pulverizingpancake", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_PUNISHMENT("punishment", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_PURIFY("purify", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_PURSUIT("pursuit", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_PYROBALL("pyroball", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_QUASH("quash", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_QUICKATTACK("quickattack", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_QUICKGUARD("quickguard", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_QUIVERDANCE("quiverdance", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_RAGE("rage", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_RAGEFIST("ragefist", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_RAGEPOWDER("ragepowder", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_RAGINGBULL("ragingbull", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_RAGINGFURY("ragingfury", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_RAINDANCE("raindance", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_RAPIDSPIN("rapidspin", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_RAZORLEAF("razorleaf", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_RAZORSHELL("razorshell", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_RAZORWIND("razorwind", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_RECOVER("recover", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_RECYCLE("recycle", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_REFLECT("reflect", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_REFLECTTYPE("reflecttype", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_REFRESH("refresh", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_RELICSONG("relicsong", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_REST("rest", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_RETALIATE("retaliate", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_RETURN("return", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_REVELATIONDANCE("revelationdance", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_REVENGE("revenge", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_REVERSAL("reversal", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_REVIVALBLESSING("revivalblessing", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_RISINGVOLTAGE("risingvoltage", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_ROAR("roar", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_ROAROFTIME("roaroftime", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_ROCKBLAST("rockblast", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_ROCKCLIMB("rockclimb", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_ROCKPOLISH("rockpolish", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_ROCKSLIDE("rockslide", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_ROCKSMASH("rocksmash", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_ROCKTHROW("rockthrow", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_ROCKTOMB("rocktomb", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_ROCKWRECKER("rockwrecker", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_ROLEPLAY("roleplay", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_ROLLINGKICK("rollingkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_ROLLOUT("rollout", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_ROOST("roost", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_ROTOTILLER("rototiller", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_ROUND("round", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_RUINATION("ruination", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_SACREDFIRE("sacredfire", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_SACREDSWORD("sacredsword", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_SAFEGUARD("safeguard", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SALTCURE("saltcure", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_SANDATTACK("sandattack", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_SANDSEARSTORM("sandsearstorm", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_SANDSTORM("sandstorm", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_SANDTOMB("sandtomb", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_SAPPYSEED("sappyseed", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_SAVAGESPINOUT("savagespinout", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_SCALD("scald", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_SCALESHOT("scaleshot", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_SCARYFACE("scaryface", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SCORCHINGSANDS("scorchingsands", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_SCRATCH("scratch", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SCREECH("screech", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SEARINGSHOT("searingshot", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_SEARINGSUNRAZESMASH("searingsunrazesmash", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_SECRETPOWER("secretpower", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SECRETSWORD("secretsword", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_SEEDBOMB("seedbomb", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_SEEDFLARE("seedflare", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_SEISMICTOSS("seismictoss", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_SELFDESTRUCT("selfdestruct", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SHADOWBALL("shadowball", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_SHADOWBONE("shadowbone", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_SHADOWCLAW("shadowclaw", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_SHADOWFORCE("shadowforce", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_SHADOWPUNCH("shadowpunch", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_SHADOWSNEAK("shadowsneak", ElementalTypes.INSTANCE.getGHOST()),
-    //TUTOR_SHADOWSTRIKE("shadowstrike", ElementalTypes.INSTANCE.getGHOST()), // Signature move for Kitsunoh, Smogon's custom Pokémon
-    TUTOR_SHARPEN("sharpen", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SHATTEREDPSYCHE("shatteredpsyche", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_SHEDTAIL("shedtail", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SHEERCOLD("sheercold", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_SHELLSIDEARM("shellsidearm", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_SHELLSMASH("shellsmash", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SHELLTRAP("shelltrap", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_SHELTER("shelter", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_SHIFTGEAR("shiftgear", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_SHOCKWAVE("shockwave", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_SHOREUP("shoreup", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_SIGNALBEAM("signalbeam", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_SILKTRAP("silktrap", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_SILVERWIND("silverwind", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_SIMPLEBEAM("simplebeam", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SING("sing", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SINISTERARROWRAID("sinisterarrowraid", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_SIZZLYSLIDE("sizzlyslide", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_SKETCH("sketch", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SKILLSWAP("skillswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_SKITTERSMACK("skittersmack", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_SKULLBASH("skullbash", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SKYATTACK("skyattack", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_SKYDROP("skydrop", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_SKYUPPERCUT("skyuppercut", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_SLACKOFF("slackoff", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SLAM("slam", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SLASH("slash", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SLEEPPOWDER("sleeppowder", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_SLEEPTALK("sleeptalk", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SLUDGE("sludge", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_SLUDGEBOMB("sludgebomb", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_SLUDGEWAVE("sludgewave", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_SMACKDOWN("smackdown", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_SMARTSTRIKE("smartstrike", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_SMELLINGSALTS("smellingsalts", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SMOG("smog", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_SMOKESCREEN("smokescreen", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SNAPTRAP("snaptrap", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_SNARL("snarl", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_SNATCH("snatch", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_SNIPESHOT("snipeshot", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_SNORE("snore", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SNOWSCAPE("snowscape", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_SOAK("soak", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_SOFTBOILED("softboiled", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SOLARBEAM("solarbeam", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_SOLARBLADE("solarblade", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_SONICBOOM("sonicboom", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SOULSTEALING7STARSTRIKE("soulstealing7starstrike", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_SPACIALREND("spacialrend", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_SPARK("spark", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_SPARKLINGARIA("sparklingaria", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_SPARKLYSWIRL("sparklyswirl", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_SPECTRALTHIEF("spectralthief", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_SPEEDSWAP("speedswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_SPICYEXTRACT("spicyextract", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_SPIDERWEB("spiderweb", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_SPIKECANNON("spikecannon", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SPIKES("spikes", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_SPIKYSHIELD("spikyshield", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_SPINOUT("spinout", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_SPIRITBREAK("spiritbreak", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_SPIRITSHACKLE("spiritshackle", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_SPITUP("spitup", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SPITE("spite", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_SPLASH("splash", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SPLINTEREDSTORMSHARDS("splinteredstormshards", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_SPLISHYSPLASH("splishysplash", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_SPORE("spore", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_SPOTLIGHT("spotlight", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SPRINGTIDESTORM("springtidestorm", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_STEALTHROCK("stealthrock", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_STEAMERUPTION("steameruption", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_STEAMROLLER("steamroller", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_STEELBEAM("steelbeam", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_STEELROLLER("steelroller", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_STEELWING("steelwing", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_STICKYWEB("stickyweb", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_STOCKPILE("stockpile", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_STOKEDSPARKSURFER("stokedsparksurfer", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_STOMP("stomp", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_STOMPINGTANTRUM("stompingtantrum", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_STONEAXE("stoneaxe", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_STONEEDGE("stoneedge", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_STOREDPOWER("storedpower", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_STORMTHROW("stormthrow", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_STRANGESTEAM("strangesteam", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_STRENGTH("strength", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_STRENGTHSAP("strengthsap", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_STRINGSHOT("stringshot", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_STRUGGLE("struggle", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_STRUGGLEBUG("strugglebug", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_STUFFCHEEKS("stuffcheeks", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_STUNSPORE("stunspore", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_SUBMISSION("submission", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_SUBSTITUTE("substitute", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SUBZEROSLAMMER("subzeroslammer", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_SUCKERPUNCH("suckerpunch", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_SUNNYDAY("sunnyday", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_SUNSTEELSTRIKE("sunsteelstrike", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_SUPERFANG("superfang", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SUPERPOWER("superpower", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_SUPERSONIC("supersonic", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SUPERSONICSKYSTRIKE("supersonicskystrike", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_SURF("surf", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_SURGINGSTRIKES("surgingstrikes", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_SWAGGER("swagger", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SWALLOW("swallow", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SWEETKISS("sweetkiss", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_SWEETSCENT("sweetscent", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SWIFT("swift", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SWITCHEROO("switcheroo", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_SWORDSDANCE("swordsdance", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_SYNCHRONOISE("synchronoise", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_SYNTHESIS("synthesis", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_TACKLE("tackle", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TAILGLOW("tailglow", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_TAILSLAP("tailslap", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TAILWHIP("tailwhip", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TAILWIND("tailwind", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_TAKEDOWN("takedown", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TAKEHEART("takeheart", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_TARSHOT("tarshot", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_TAUNT("taunt", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_TEARFULLOOK("tearfullook", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TEATIME("teatime", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TECHNOBLAST("technoblast", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TECTONICRAGE("tectonicrage", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_TEETERDANCE("teeterdance", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TELEKINESIS("telekinesis", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_TELEPORT("teleport", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_TERABLAST("terablast", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TERRAINPULSE("terrainpulse", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_THIEF("thief", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_THOUSANDARROWS("thousandarrows", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_THOUSANDWAVES("thousandwaves", ElementalTypes.INSTANCE.getGROUND()),
-    TUTOR_THRASH("thrash", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_THROATCHOP("throatchop", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_THUNDER("thunder", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_THUNDERBOLT("thunderbolt", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_THUNDERCAGE("thundercage", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_THUNDERFANG("thunderfang", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_THUNDEROUSKICK("thunderouskick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_THUNDERPUNCH("thunderpunch", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_THUNDERSHOCK("thundershock", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_THUNDERWAVE("thunderwave", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_TICKLE("tickle", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TIDYUP("tidyup", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TOPSYTURVY("topsyturvy", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_TORCHSONG("torchsong", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_TORMENT("torment", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_TOXIC("toxic", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_TOXICSPIKES("toxicspikes", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_TOXICTHREAD("toxicthread", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_TRAILBLAZE("trailblaze", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_TRANSFORM("transform", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TRIATTACK("triattack", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TRICK("trick", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_TRICKORTREAT("trickortreat", ElementalTypes.INSTANCE.getGHOST()),
-    TUTOR_TRICKROOM("trickroom", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_TRIPLEARROWS("triplearrows", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_TRIPLEAXEL("tripleaxel", ElementalTypes.INSTANCE.getICE()),
-    TUTOR_TRIPLEDIVE("tripledive", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_TRIPLEKICK("triplekick", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_TROPKICK("tropkick", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_TRUMPCARD("trumpcard", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_TWINBEAM("twinbeam", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_TWINEEDLE("twineedle", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_TWINKLETACKLE("twinkletackle", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_TWISTER("twister", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_UTURN("uturn", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_UPROAR("uproar", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_VACUUMWAVE("vacuumwave", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_VCREATE("vcreate", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_VEEVEEVOLLEY("veeveevolley", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_VENOMDRENCH("venomdrench", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_VENOSHOCK("venoshock", ElementalTypes.INSTANCE.getPOISON()),
-    TUTOR_VICTORYDANCE("victorydance", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_VINEWHIP("vinewhip", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_VISEGRIP("visegrip", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_VITALTHROW("vitalthrow", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_VOLTSWITCH("voltswitch", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_VOLTTACKLE("volttackle", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_WAKEUPSLAP("wakeupslap", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_WATERFALL("waterfall", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_WATERGUN("watergun", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_WATERPLEDGE("waterpledge", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_WATERPULSE("waterpulse", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_WATERSHURIKEN("watershuriken", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_WATERSPORT("watersport", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_WATERSPOUT("waterspout", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_WAVECRASH("wavecrash", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_WEATHERBALL("weatherball", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_WHIRLPOOL("whirlpool", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_WHIRLWIND("whirlwind", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_WICKEDBLOW("wickedblow", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_WICKEDTORQUE("wickedtorque", ElementalTypes.INSTANCE.getDARK()),
-    TUTOR_WIDEGUARD("wideguard", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_WILDBOLTSTORM("wildboltstorm", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_WILDCHARGE("wildcharge", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_WILLOWISP("willowisp", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_WINGATTACK("wingattack", ElementalTypes.INSTANCE.getFLYING()),
-    TUTOR_WISH("wish", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_WITHDRAW("withdraw", ElementalTypes.INSTANCE.getWATER()),
-    TUTOR_WONDERROOM("wonderroom", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_WOODHAMMER("woodhammer", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_WORKUP("workup", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_WORRYSEED("worryseed", ElementalTypes.INSTANCE.getGRASS()),
-    TUTOR_WRAP("wrap", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_WRINGOUT("wringout", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_XSCISSOR("xscissor", ElementalTypes.INSTANCE.getBUG()),
-    TUTOR_YAWN("yawn", ElementalTypes.INSTANCE.getNORMAL()),
-    TUTOR_ZAPCANNON("zapcannon", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_ZENHEADBUTT("zenheadbutt", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_ZINGZAP("zingzap", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_ZIPPYZAP("zippyzap", ElementalTypes.INSTANCE.getELECTRIC()),
+import java.util.ArrayList;
+import java.util.List;
 
-    TUTOR_TEMPERFLARE("temperflare", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_SUPERCELLSLAM("supercellslam", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_HARDPRESS("hardpress", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_DRAGONCHEER("dragoncheer", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_ALLURINGVOICE("alluringvoice", ElementalTypes.INSTANCE.getFAIRY()),
-    TUTOR_PSYCHICNOISE("psychicnoise", ElementalTypes.INSTANCE.getPSYCHIC()),
-    TUTOR_UPPERHAND("upperhand", ElementalTypes.INSTANCE.getFIGHTING()),
-    TUTOR_ELECTROSHOT("electroshot", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_FICKLEBEAM("ficklebeam", ElementalTypes.INSTANCE.getDRAGON()),
-    TUTOR_BURNINGBULWARK("burningbulwark", ElementalTypes.INSTANCE.getFIRE()),
-    TUTOR_THUNDERCLAP("thunderclap", ElementalTypes.INSTANCE.getELECTRIC()),
-    TUTOR_MIGHTYCLEAVE("mightycleave", ElementalTypes.INSTANCE.getROCK()),
-    TUTOR_TACHYONCUTTER("tachyoncutter", ElementalTypes.INSTANCE.getSTEEL()),
-    TUTOR_TERASTARSTORM("terastarstorm", ElementalTypes.INSTANCE.getNORMAL());
+public class TutorMoveItem {
+    private static final List<Item> all = new ArrayList<>();
 
-    private final Item item;
-    private final Identifier identifier;
+    public static final Item TUTOR_10000000VOLTTHUNDERBOLT = register("10000000voltthunderbolt", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_ABSORB = register("absorb", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_ACCELEROCK = register("accelerock", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_ACID = register("acid", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_ACIDARMOR = register("acidarmor", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_ACIDDOWNPOUR = register("aciddownpour", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_ACIDSPRAY = register("acidspray", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_ACROBATICS = register("acrobatics", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_ACUPRESSURE = register("acupressure", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_AERIALACE = register("aerialace", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_AEROBLAST = register("aeroblast", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_AFTERYOU = register("afteryou", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_AGILITY = register("agility", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_AIRCUTTER = register("aircutter", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_AIRSLASH = register("airslash", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_ALLOUTPUMMELING = register("alloutpummeling", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_ALLYSWITCH = register("allyswitch", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_AMNESIA = register("amnesia", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_ANCHORSHOT = register("anchorshot", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_ANCIENTPOWER = register("ancientpower", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_APPLEACID = register("appleacid", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_AQUACUTTER = register("aquacutter", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_AQUAJET = register("aquajet", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_AQUARING = register("aquaring", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_AQUASTEP = register("aquastep", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_AQUATAIL = register("aquatail", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_ARMORCANNON = register("armorcannon", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_ARMTHRUST = register("armthrust", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_AROMATHERAPY = register("aromatherapy", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_AROMATICMIST = register("aromaticmist", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_ASSIST = register("assist", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_ASSURANCE = register("assurance", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_ASTONISH = register("astonish", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_ASTRALBARRAGE = register("astralbarrage", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_ATTACKORDER = register("attackorder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_ATTRACT = register("attract", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_AURASPHERE = register("aurasphere", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_AURAWHEEL = register("aurawheel", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_AURORABEAM = register("aurorabeam", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_AURORAVEIL = register("auroraveil", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_AUTOTOMIZE = register("autotomize", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_AVALANCHE = register("avalanche", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_AXEKICK = register("axekick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_BABYDOLLEYES = register("babydolleyes", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_BADDYBAD = register("baddybad", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_BANEFULBUNKER = register("banefulbunker", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_BARBBARRAGE = register("barbbarrage", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_BARRAGE = register("barrage", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_BARRIER = register("barrier", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_BATONPASS = register("batonpass", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_BEAKBLAST = register("beakblast", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_BEATUP = register("beatup", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_BEHEMOTHBASH = register("behemothbash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_BEHEMOTHBLADE = register("behemothblade", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_BELCH = register("belch", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_BELLYDRUM = register("bellydrum", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_BESTOW = register("bestow", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_BIDE = register("bide", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_BIND = register("bind", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_BITE = register("bite", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_BITTERBLADE = register("bitterblade", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_BITTERMALICE = register("bittermalice", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_BLACKHOLEECLIPSE = register("blackholeeclipse", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_BLASTBURN = register("blastburn", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_BLAZEKICK = register("blazekick", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_BLAZINGTORQUE = register("blazingtorque", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_BLEAKWINDSTORM = register("bleakwindstorm", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_BLIZZARD = register("blizzard", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_BLOCK = register("block", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_BLOOMDOOM = register("bloomdoom", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_BLUEFLARE = register("blueflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_BODYPRESS = register("bodypress", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_BODYSLAM = register("bodyslam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_BOLTBEAK = register("boltbeak", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_BOLTSTRIKE = register("boltstrike", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_BONECLUB = register("boneclub", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_BONEMERANG = register("bonemerang", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_BONERUSH = register("bonerush", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_BOOMBURST = register("boomburst", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_BOUNCE = register("bounce", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_BOUNCYBUBBLE = register("bouncybubble", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_BRANCHPOKE = register("branchpoke", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_BRAVEBIRD = register("bravebird", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_BREAKINGSWIPE = register("breakingswipe", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_BREAKNECKBLITZ = register("breakneckblitz", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_BRICKBREAK = register("brickbreak", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_BRINE = register("brine", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_BRUTALSWING = register("brutalswing", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_BUBBLE = register("bubble", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_BUBBLEBEAM = register("bubblebeam", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_BUGBITE = register("bugbite", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_BUGBUZZ = register("bugbuzz", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_BULKUP = register("bulkup", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_BULLDOZE = register("bulldoze", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_BULLETPUNCH = register("bulletpunch", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_BULLETSEED = register("bulletseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_BURNINGJEALOUSY = register("burningjealousy", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_BURNUP = register("burnup", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_BUZZYBUZZ = register("buzzybuzz", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_CALMMIND = register("calmmind", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_CAMOUFLAGE = register("camouflage", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_CAPTIVATE = register("captivate", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_CATASTROPIKA = register("catastropika", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_CEASELESSEDGE = register("ceaselessedge", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_CELEBRATE = register("celebrate", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_CHARGE = register("charge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_CHARGEBEAM = register("chargebeam", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_CHARM = register("charm", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_CHATTER = register("chatter", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_CHILLINGWATER = register("chillingwater", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_CHILLYRECEPTION = register("chillyreception", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_CHIPAWAY = register("chipaway", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_CHLOROBLAST = register("chloroblast", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_CIRCLETHROW = register("circlethrow", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_CLAMP = register("clamp", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_CLANGINGSCALES = register("clangingscales", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_CLANGOROUSSOUL = register("clangoroussoul", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_CLANGOROUSSOULBLAZE = register("clangoroussoulblaze", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_CLEARSMOG = register("clearsmog", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_CLOSECOMBAT = register("closecombat", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_COACHING = register("coaching", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_COIL = register("coil", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_COLLISIONCOURSE = register("collisioncourse", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_COMBATTORQUE = register("combattorque", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_COMETPUNCH = register("cometpunch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_COMEUPPANCE = register("comeuppance", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_CONFIDE = register("confide", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_CONFUSERAY = register("confuseray", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_CONFUSION = register("confusion", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_CONSTRICT = register("constrict", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_CONTINENTALCRUSH = register("continentalcrush", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_CONVERSION = register("conversion", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_CONVERSION2 = register("conversion2", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_COPYCAT = register("copycat", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_COREENFORCER = register("coreenforcer", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_CORKSCREWCRASH = register("corkscrewcrash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_CORROSIVEGAS = register("corrosivegas", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_COSMICPOWER = register("cosmicpower", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_COTTONGUARD = register("cottonguard", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_COTTONSPORE = register("cottonspore", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_COUNTER = register("counter", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_COURTCHANGE = register("courtchange", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_COVET = register("covet", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_CRABHAMMER = register("crabhammer", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_CRAFTYSHIELD = register("craftyshield", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_CROSSCHOP = register("crosschop", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_CROSSPOISON = register("crosspoison", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_CRUNCH = register("crunch", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_CRUSHCLAW = register("crushclaw", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_CRUSHGRIP = register("crushgrip", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_CURSE = register("curse", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_CUT = register("cut", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_DARKESTLARIAT = register("darkestlariat", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_DARKPULSE = register("darkpulse", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_DARKVOID = register("darkvoid", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_DAZZLINGGLEAM = register("dazzlinggleam", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_DECORATE = register("decorate", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_DEFENDORDER = register("defendorder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_DEFENSECURL = register("defensecurl", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_DEFOG = register("defog", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_DESTINYBOND = register("destinybond", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_DETECT = register("detect", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_DEVASTATINGDRAKE = register("devastatingdrake", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DIAMONDSTORM = register("diamondstorm", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_DIG = register("dig", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_DISABLE = register("disable", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_DISARMINGVOICE = register("disarmingvoice", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_DISCHARGE = register("discharge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_DIRECLAW = register("direclaw", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_DIVE = register("dive", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_DIZZYPUNCH = register("dizzypunch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_DOODLE = register("doodle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_DOOMDESIRE = register("doomdesire", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_DOUBLEEDGE = register("doubleedge", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_DOUBLEHIT = register("doublehit", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_DOUBLEIRONBASH = register("doubleironbash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_DOUBLEKICK = register("doublekick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_DOUBLESHOCK = register("doubleshock", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_DOUBLESLAP = register("doubleslap", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_DOUBLETEAM = register("doubleteam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_DRACOMETEOR = register("dracometeor", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DRAGONASCENT = register("dragonascent", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_DRAGONBREATH = register("dragonbreath", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DRAGONCLAW = register("dragonclaw", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DRAGONDANCE = register("dragondance", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DRAGONDARTS = register("dragondarts", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DRAGONENERGY = register("dragonenergy", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DRAGONHAMMER = register("dragonhammer", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DRAGONPULSE = register("dragonpulse", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DRAGONRAGE = register("dragonrage", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DRAGONRUSH = register("dragonrush", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DRAGONTAIL = register("dragontail", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DRAININGKISS = register("drainingkiss", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_DRAINPUNCH = register("drainpunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_DREAMEATER = register("dreameater", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_DRILLPECK = register("drillpeck", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_DRILLRUN = register("drillrun", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_DRUMBEATING = register("drumbeating", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_DUALCHOP = register("dualchop", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DUALWINGBEAT = register("dualwingbeat", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_DYNAMAXCANNON = register("dynamaxcannon", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_DYNAMICPUNCH = register("dynamicpunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_EARTHPOWER = register("earthpower", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_EARTHQUAKE = register("earthquake", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_ECHOEDVOICE = register("echoedvoice", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_EERIEIMPULSE = register("eerieimpulse", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_EERIESPELL = register("eeriespell", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_EGGBOMB = register("eggbomb", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_ELECTRICTERRAIN = register("electricterrain", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_ELECTRIFY = register("electrify", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_ELECTROBALL = register("electroball", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_ELECTRODRIFT = register("electrodrift", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_ELECTROWEB = register("electroweb", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_EMBARGO = register("embargo", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_EMBER = register("ember", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_ENCORE = register("encore", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_ENDEAVOR = register("endeavor", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_ENDURE = register("endure", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_ENERGYBALL = register("energyball", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_ENTRAINMENT = register("entrainment", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_ERUPTION = register("eruption", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_ESPERWING = register("esperwing", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_ETERNABEAM = register("eternabeam", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_EXPANDINGFORCE = register("expandingforce", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_EXPLOSION = register("explosion", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_EXTRASENSORY = register("extrasensory", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_EXTREMEEVOBOOST = register("extremeevoboost", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_EXTREMESPEED = register("extremespeed", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FACADE = register("facade", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FAIRYLOCK = register("fairylock", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_FAIRYWIND = register("fairywind", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_FAKEOUT = register("fakeout", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FAKETEARS = register("faketears", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_FALSESURRENDER = register("falsesurrender", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_FALSESWIPE = register("falseswipe", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FEATHERDANCE = register("featherdance", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_FEINT = register("feint", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FEINTATTACK = register("feintattack", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_FELLSTINGER = register("fellstinger", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_FIERYDANCE = register("fierydance", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_FIERYWRATH = register("fierywrath", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_FILLETAWAY = register("filletaway", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FINALGAMBIT = register("finalgambit", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_FIREBLAST = register("fireblast", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_FIREFANG = register("firefang", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_FIRELASH = register("firelash", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_FIREPLEDGE = register("firepledge", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_FIREPUNCH = register("firepunch", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_FIRESPIN = register("firespin", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_FIRSTIMPRESSION = register("firstimpression", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_FISHIOUSREND = register("fishiousrend", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_FISSURE = register("fissure", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_FLAIL = register("flail", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FLAMEBURST = register("flameburst", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_FLAMECHARGE = register("flamecharge", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_FLAMEWHEEL = register("flamewheel", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_FLAMETHROWER = register("flamethrower", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_FLAREBLITZ = register("flareblitz", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_FLASH = register("flash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FLASHCANNON = register("flashcannon", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_FLATTER = register("flatter", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_FLEURCANNON = register("fleurcannon", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_FLING = register("fling", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_FLIPTURN = register("flipturn", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_FLOATYFALL = register("floatyfall", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_FLORALHEALING = register("floralhealing", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_FLOWERSHIELD = register("flowershield", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_FLOWERTRICK = register("flowertrick", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_FLY = register("fly", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_FLYINGPRESS = register("flyingpress", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_FOCUSBLAST = register("focusblast", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_FOCUSENERGY = register("focusenergy", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FOCUSPUNCH = register("focuspunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_FOLLOWME = register("followme", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FORCEPALM = register("forcepalm", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_FORESIGHT = register("foresight", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FORESTSCURSE = register("forestscurse", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_FOULPLAY = register("foulplay", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_FREEZEDRY = register("freezedry", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_FREEZESHOCK = register("freezeshock", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_FREEZINGGLARE = register("freezingglare", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_FREEZYFROST = register("freezyfrost", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_FRENZYPLANT = register("frenzyplant", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_FROSTBREATH = register("frostbreath", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_FRUSTRATION = register("frustration", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FURYATTACK = register("furyattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FURYCUTTER = register("furycutter", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_FURYSWIPES = register("furyswipes", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_FUSIONBOLT = register("fusionbolt", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_FUSIONFLARE = register("fusionflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_FUTURESIGHT = register("futuresight", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_GASTROACID = register("gastroacid", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_GEARGRIND = register("geargrind", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_GEARUP = register("gearup", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_GENESISSUPERNOVA = register("genesissupernova", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_GEOMANCY = register("geomancy", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_GIGADRAIN = register("gigadrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_GIGAIMPACT = register("gigaimpact", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_GIGATONHAMMER = register("gigatonhammer", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_GIGAVOLTHAVOC = register("gigavolthavoc", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_GLACIALLANCE = register("glaciallance", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_GLACIATE = register("glaciate", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_GLAIVERUSH = register("glaiverush", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_GLARE = register("glare", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_GLITZYGLOW = register("glitzyglow", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_GMAXBEFUDDLE = register("gmaxbefuddle", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_GMAXCANNONADE = register("gmaxcannonade", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_GMAXCENTIFERNO = register("gmaxcentiferno", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_GMAXCHISTRIKE = register("gmaxchistrike", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_GMAXCUDDLE = register("gmaxcuddle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_GMAXDEPLETION = register("gmaxdepletion", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_GMAXDRUMSOLO = register("gmaxdrumsolo", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_GMAXFINALE = register("gmaxfinale", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_GMAXFIREBALL = register("gmaxfireball", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_GMAXFOAMBURST = register("gmaxfoamburst", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_GMAXGOLDRUSH = register("gmaxgoldrush", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_GMAXGRAVITAS = register("gmaxgravitas", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_GMAXHYDROSNIPE = register("gmaxhydrosnipe", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_GMAXMALODOR = register("gmaxmalodor", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_GMAXMELTDOWN = register("gmaxmeltdown", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_GMAXONEBLOW = register("gmaxoneblow", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_GMAXRAPIDFLOW = register("gmaxrapidflow", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_GMAXREPLENISH = register("gmaxreplenish", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_GMAXRESONANCE = register("gmaxresonance", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_GMAXSANDBLAST = register("gmaxsandblast", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_GMAXSMITE = register("gmaxsmite", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_GMAXSNOOZE = register("gmaxsnooze", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_GMAXSTEELSURGE = register("gmaxsteelsurge", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_GMAXSTONESURGE = register("gmaxstonesurge", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_GMAXSTUNSHOCK = register("gmaxstunshock", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_GMAXSWEETNESS = register("gmaxsweetness", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_GMAXTARTNESS = register("gmaxtartness", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_GMAXTERROR = register("gmaxterror", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_GMAXVINELASH = register("gmaxvinelash", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_GMAXVOLCALITH = register("gmaxvolcalith", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_GMAXVOLTCRASH = register("gmaxvoltcrash", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_GMAXWILDFIRE = register("gmaxwildfire", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_GMAXWINDRAGE = register("gmaxwindrage", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_GRASSKNOT = register("grassknot", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_GRASSPLEDGE = register("grasspledge", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_GRASSWHISTLE = register("grasswhistle", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_GRASSYGLIDE = register("grassyglide", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_GRASSYTERRAIN = register("grassyterrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_GRAVAPPLE = register("gravapple", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_GRAVITY = register("gravity", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_GROWL = register("growl", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_GROWTH = register("growth", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_GRUDGE = register("grudge", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_GUARDIANOFALOLA = register("guardianofalola", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_GUARDSPLIT = register("guardsplit", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_GUARDSWAP = register("guardswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_GUILLOTINE = register("guillotine", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_GUNKSHOT = register("gunkshot", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_GUST = register("gust", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_GYROBALL = register("gyroball", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_HAIL = register("hail", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_HAMMERARM = register("hammerarm", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_HAPPYHOUR = register("happyhour", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HARDEN = register("harden", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HAZE = register("haze", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_HEADBUTT = register("headbutt", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HEADCHARGE = register("headcharge", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HEADLONGRUSH = register("headlongrush", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_HEADSMASH = register("headsmash", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_HEALBELL = register("healbell", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HEALBLOCK = register("healblock", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_HEALINGWISH = register("healingwish", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_HEALORDER = register("healorder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_HEALPULSE = register("healpulse", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_HEARTSTAMP = register("heartstamp", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_HEARTSWAP = register("heartswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_HEATCRASH = register("heatcrash", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_HEATWAVE = register("heatwave", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_HEAVYSLAM = register("heavyslam", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_HELPINGHAND = register("helpinghand", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HEX = register("hex", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_HIDDENPOWER = register("hiddenpower", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HIGHHORSEPOWER = register("highhorsepower", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_HIGHJUMPKICK = register("highjumpkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_HOLDBACK = register("holdback", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HOLDHANDS = register("holdhands", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HONECLAWS = register("honeclaws", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_HORNATTACK = register("hornattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HORNDRILL = register("horndrill", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HORNLEECH = register("hornleech", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_HOWL = register("howl", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HURRICANE = register("hurricane", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_HYDROCANNON = register("hydrocannon", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_HYDROPUMP = register("hydropump", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_HYDROSTEAM = register("hydrosteam", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_HYDROVORTEX = register("hydrovortex", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_HYPERBEAM = register("hyperbeam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HYPERDRILL = register("hyperdrill", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HYPERFANG = register("hyperfang", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HYPERSPACEFURY = register("hyperspacefury", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_HYPERSPACEHOLE = register("hyperspacehole", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_HYPERVOICE = register("hypervoice", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_HYPNOSIS = register("hypnosis", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_ICEBALL = register("iceball", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_ICEBEAM = register("icebeam", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_ICEBURN = register("iceburn", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_ICEFANG = register("icefang", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_ICEHAMMER = register("icehammer", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_ICEPUNCH = register("icepunch", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_ICESHARD = register("iceshard", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_ICESPINNER = register("icespinner", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_ICICLECRASH = register("iciclecrash", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_ICICLESPEAR = register("iciclespear", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_ICYWIND = register("icywind", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_IMPRISON = register("imprison", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_INCINERATE = register("incinerate", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_INFERNALPARADE = register("infernalparade", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_INFERNO = register("inferno", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_INFERNOOVERDRIVE = register("infernooverdrive", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_INFESTATION = register("infestation", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_INGRAIN = register("ingrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_INSTRUCT = register("instruct", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_IONDELUGE = register("iondeluge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_IRONDEFENSE = register("irondefense", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_IRONHEAD = register("ironhead", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_IRONTAIL = register("irontail", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_JAWLOCK = register("jawlock", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_JETPUNCH = register("jetpunch", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_JUDGMENT = register("judgment", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_JUMPKICK = register("jumpkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_JUNGLEHEALING = register("junglehealing", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_KARATECHOP = register("karatechop", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_KINESIS = register("kinesis", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_KINGSSHIELD = register("kingsshield", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_KNOCKOFF = register("knockoff", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_KOWTOWCLEAVE = register("kowtowcleave", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_LANDSWRATH = register("landswrath", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_LASERFOCUS = register("laserfocus", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_LASHOUT = register("lashout", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_LASTRESORT = register("lastresort", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_LASTRESPECTS = register("lastrespects", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_LAVAPLUME = register("lavaplume", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_LEAFAGE = register("leafage", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_LEAFBLADE = register("leafblade", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_LEAFSTORM = register("leafstorm", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_LEAFTORNADO = register("leaftornado", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_LEECHLIFE = register("leechlife", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_LEECHSEED = register("leechseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_LEER = register("leer", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_LETSSNUGGLEFOREVER = register("letssnuggleforever", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_LICK = register("lick", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_LIFEDEW = register("lifedew", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_LIGHTOFRUIN = register("lightofruin", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_LIGHTSCREEN = register("lightscreen", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_LIGHTTHATBURNSTHESKY = register("lightthatburnsthesky", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_LIQUIDATION = register("liquidation", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_LOCKON = register("lockon", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_LOVELYKISS = register("lovelykiss", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_LOWKICK = register("lowkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_LOWSWEEP = register("lowsweep", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_LUCKYCHANT = register("luckychant", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_LUMINACRASH = register("luminacrash", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_LUNARBLESSING = register("lunarblessing", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_LUNARDANCE = register("lunardance", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_LUNGE = register("lunge", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_LUSTERPURGE = register("lusterpurge", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_MACHPUNCH = register("machpunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_MAGICALLEAF = register("magicalleaf", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_MAGICALTORQUE = register("magicaltorque", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_MAGICCOAT = register("magiccoat", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_MAGICPOWDER = register("magicpowder", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_MAGICROOM = register("magicroom", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_MAGMASTORM = register("magmastorm", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_MAGNETBOMB = register("magnetbomb", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_MAGNETICFLUX = register("magneticflux", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_MAGNETRISE = register("magnetrise", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_MAGNITUDE = register("magnitude", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_MAKEITRAIN = register("makeitrain", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_MALICIOUSMOONSAULT = register("maliciousmoonsault", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_MATBLOCK = register("matblock", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_MAXAIRSTREAM = register("maxairstream", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_MAXDARKNESS = register("maxdarkness", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_MAXFLARE = register("maxflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_MAXFLUTTERBY = register("maxflutterby", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_MAXGEYSER = register("maxgeyser", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_MAXGUARD = register("maxguard", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_MAXHAILSTORM = register("maxhailstorm", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_MAXKNUCKLE = register("maxknuckle", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_MAXLIGHTNING = register("maxlightning", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_MAXMINDSTORM = register("maxmindstorm", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_MAXOOZE = register("maxooze", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_MAXOVERGROWTH = register("maxovergrowth", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_MAXPHANTASM = register("maxphantasm", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_MAXQUAKE = register("maxquake", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_MAXROCKFALL = register("maxrockfall", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_MAXSTARFALL = register("maxstarfall", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_MAXSTEELSPIKE = register("maxsteelspike", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_MAXSTRIKE = register("maxstrike", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_MAXWYRMWIND = register("maxwyrmwind", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_MEANLOOK = register("meanlook", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_MEDITATE = register("meditate", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_MEFIRST = register("mefirst", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_MEGADRAIN = register("megadrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_MEGAHORN = register("megahorn", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_MEGAKICK = register("megakick", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_MEGAPUNCH = register("megapunch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_MEMENTO = register("memento", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_MENACINGMOONRAZEMAELSTROM = register("menacingmoonrazemaelstrom", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_METALBURST = register("metalburst", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_METALCLAW = register("metalclaw", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_METALSOUND = register("metalsound", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_METEORASSAULT = register("meteorassault", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_METEORBEAM = register("meteorbeam", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_METEORMASH = register("meteormash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_METRONOME = register("metronome", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_MILKDRINK = register("milkdrink", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_MIMIC = register("mimic", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_MINDBLOWN = register("mindblown", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_MINDREADER = register("mindreader", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_MINIMIZE = register("minimize", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_MIRACLEEYE = register("miracleeye", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_MIRRORCOAT = register("mirrorcoat", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_MIRRORMOVE = register("mirrormove", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_MIRRORSHOT = register("mirrorshot", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_MIST = register("mist", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_MISTBALL = register("mistball", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_MISTYEXPLOSION = register("mistyexplosion", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_MISTYTERRAIN = register("mistyterrain", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_MOONBLAST = register("moonblast", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_MOONGEISTBEAM = register("moongeistbeam", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_MOONLIGHT = register("moonlight", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_MORNINGSUN = register("morningsun", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_MORTALSPIN = register("mortalspin", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_MOUNTAINGALE = register("mountaingale", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_MUDBOMB = register("mudbomb", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_MUDSHOT = register("mudshot", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_MUDSLAP = register("mudslap", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_MUDSPORT = register("mudsport", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_MUDDYWATER = register("muddywater", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_MULTIATTACK = register("multiattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_MYSTICALFIRE = register("mysticalfire", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_MYSTICALPOWER = register("mysticalpower", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_NASTYPLOT = register("nastyplot", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_NATURALGIFT = register("naturalgift", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_NATUREPOWER = register("naturepower", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_NATURESMADNESS = register("naturesmadness", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_NEEDLEARM = register("needlearm", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_NEVERENDINGNIGHTMARE = register("neverendingnightmare", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_NIGHTDAZE = register("nightdaze", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_NIGHTMARE = register("nightmare", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_NIGHTSHADE = register("nightshade", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_NIGHTSLASH = register("nightslash", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_NOBLEROAR = register("nobleroar", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_NORETREAT = register("noretreat", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_NOXIOUSTORQUE = register("noxioustorque", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_NUZZLE = register("nuzzle", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_OBLIVIONWING = register("oblivionwing", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_OBSTRUCT = register("obstruct", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_OCEANICOPERETTA = register("oceanicoperetta", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_OCTAZOOKA = register("octazooka", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_OCTOLOCK = register("octolock", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_ODORSLEUTH = register("odorsleuth", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_OMINOUSWIND = register("ominouswind", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_ORDERUP = register("orderup", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_ORIGINPULSE = register("originpulse", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_OUTRAGE = register("outrage", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_OVERDRIVE = register("overdrive", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_OVERHEAT = register("overheat", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_PAINSPLIT = register("painsplit", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_PARABOLICCHARGE = register("paraboliccharge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_PARTINGSHOT = register("partingshot", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_PAYBACK = register("payback", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_PAYDAY = register("payday", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_PECK = register("peck", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_PERISHSONG = register("perishsong", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_PETALBLIZZARD = register("petalblizzard", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_PETALDANCE = register("petaldance", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_PHANTOMFORCE = register("phantomforce", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_PHOTONGEYSER = register("photongeyser", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PIKAPAPOW = register("pikapapow", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_PINMISSILE = register("pinmissile", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_PLASMAFISTS = register("plasmafists", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_PLAYNICE = register("playnice", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_PLAYROUGH = register("playrough", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_PLUCK = register("pluck", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_POISONFANG = register("poisonfang", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_POISONGAS = register("poisongas", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_POISONJAB = register("poisonjab", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_POISONPOWDER = register("poisonpowder", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_POISONSTING = register("poisonsting", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_POISONTAIL = register("poisontail", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_POLLENPUFF = register("pollenpuff", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_POLTERGEIST = register("poltergeist", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_POPULATIONBOMB = register("populationbomb", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_POUNCE = register("pounce", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_POUND = register("pound", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_POWDER = register("powder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_POWDERSNOW = register("powdersnow", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_POWERGEM = register("powergem", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_POWERSHIFT = register("powershift", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_POWERSPLIT = register("powersplit", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_POWERSWAP = register("powerswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_POWERTRICK = register("powertrick", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_POWERTRIP = register("powertrip", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_POWERUPPUNCH = register("poweruppunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_POWERWHIP = register("powerwhip", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_PRECIPICEBLADES = register("precipiceblades", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_PRESENT = register("present", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_PRISMATICLASER = register("prismaticlaser", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PROTECT = register("protect", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_PSYBEAM = register("psybeam", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PSYBLADE = register("psyblade", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PSYCHUP = register("psychup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_PSYCHIC = register("psychic", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PSYCHICFANGS = register("psychicfangs", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PSYCHICTERRAIN = register("psychicterrain", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PSYCHOBOOST = register("psychoboost", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PSYCHOCUT = register("psychocut", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PSYCHOSHIFT = register("psychoshift", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PSYSHIELDBASH = register("psyshieldbash", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PSYSHOCK = register("psyshock", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PSYSTRIKE = register("psystrike", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PSYWAVE = register("psywave", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_PULVERIZINGPANCAKE = register("pulverizingpancake", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_PUNISHMENT = register("punishment", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_PURIFY = register("purify", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_PURSUIT = register("pursuit", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_PYROBALL = register("pyroball", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_QUASH = register("quash", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_QUICKATTACK = register("quickattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_QUICKGUARD = register("quickguard", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_QUIVERDANCE = register("quiverdance", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_RAGE = register("rage", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_RAGEFIST = register("ragefist", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_RAGEPOWDER = register("ragepowder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_RAGINGBULL = register("ragingbull", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_RAGINGFURY = register("ragingfury", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_RAINDANCE = register("raindance", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_RAPIDSPIN = register("rapidspin", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_RAZORLEAF = register("razorleaf", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_RAZORSHELL = register("razorshell", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_RAZORWIND = register("razorwind", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_RECOVER = register("recover", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_RECYCLE = register("recycle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_REFLECT = register("reflect", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_REFLECTTYPE = register("reflecttype", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_REFRESH = register("refresh", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_RELICSONG = register("relicsong", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_REST = register("rest", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_RETALIATE = register("retaliate", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_RETURN = register("return", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_REVELATIONDANCE = register("revelationdance", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_REVENGE = register("revenge", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_REVERSAL = register("reversal", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_REVIVALBLESSING = register("revivalblessing", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_RISINGVOLTAGE = register("risingvoltage", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_ROAR = register("roar", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_ROAROFTIME = register("roaroftime", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_ROCKBLAST = register("rockblast", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_ROCKCLIMB = register("rockclimb", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_ROCKPOLISH = register("rockpolish", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_ROCKSLIDE = register("rockslide", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_ROCKSMASH = register("rocksmash", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_ROCKTHROW = register("rockthrow", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_ROCKTOMB = register("rocktomb", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_ROCKWRECKER = register("rockwrecker", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_ROLEPLAY = register("roleplay", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_ROLLINGKICK = register("rollingkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_ROLLOUT = register("rollout", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_ROOST = register("roost", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_ROTOTILLER = register("rototiller", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_ROUND = register("round", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_RUINATION = register("ruination", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_SACREDFIRE = register("sacredfire", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_SACREDSWORD = register("sacredsword", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_SAFEGUARD = register("safeguard", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SALTCURE = register("saltcure", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_SANDATTACK = register("sandattack", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_SANDSEARSTORM = register("sandsearstorm", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_SANDSTORM = register("sandstorm", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_SANDTOMB = register("sandtomb", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_SAPPYSEED = register("sappyseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_SAVAGESPINOUT = register("savagespinout", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_SCALD = register("scald", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_SCALESHOT = register("scaleshot", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_SCARYFACE = register("scaryface", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SCORCHINGSANDS = register("scorchingsands", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_SCRATCH = register("scratch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SCREECH = register("screech", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SEARINGSHOT = register("searingshot", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_SEARINGSUNRAZESMASH = register("searingsunrazesmash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_SECRETPOWER = register("secretpower", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SECRETSWORD = register("secretsword", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_SEEDBOMB = register("seedbomb", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_SEEDFLARE = register("seedflare", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_SEISMICTOSS = register("seismictoss", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_SELFDESTRUCT = register("selfdestruct", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SHADOWBALL = register("shadowball", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_SHADOWBONE = register("shadowbone", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_SHADOWCLAW = register("shadowclaw", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_SHADOWFORCE = register("shadowforce", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_SHADOWPUNCH = register("shadowpunch", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_SHADOWSNEAK = register("shadowsneak", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_SHARPEN = register("sharpen", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SHATTEREDPSYCHE = register("shatteredpsyche", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_SHEDTAIL = register("shedtail", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SHEERCOLD = register("sheercold", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_SHELLSIDEARM = register("shellsidearm", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_SHELLSMASH = register("shellsmash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SHELLTRAP = register("shelltrap", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_SHELTER = register("shelter", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_SHIFTGEAR = register("shiftgear", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_SHOCKWAVE = register("shockwave", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_SHOREUP = register("shoreup", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_SIGNALBEAM = register("signalbeam", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_SILKTRAP = register("silktrap", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_SILVERWIND = register("silverwind", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_SIMPLEBEAM = register("simplebeam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SING = register("sing", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SINISTERARROWRAID = register("sinisterarrowraid", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_SIZZLYSLIDE = register("sizzlyslide", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_SKETCH = register("sketch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SKILLSWAP = register("skillswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_SKITTERSMACK = register("skittersmack", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_SKULLBASH = register("skullbash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SKYATTACK = register("skyattack", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_SKYDROP = register("skydrop", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_SKYUPPERCUT = register("skyuppercut", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_SLACKOFF = register("slackoff", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SLAM = register("slam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SLASH = register("slash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SLEEPPOWDER = register("sleeppowder", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_SLEEPTALK = register("sleeptalk", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SLUDGE = register("sludge", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_SLUDGEBOMB = register("sludgebomb", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_SLUDGEWAVE = register("sludgewave", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_SMACKDOWN = register("smackdown", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_SMARTSTRIKE = register("smartstrike", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_SMELLINGSALTS = register("smellingsalts", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SMOG = register("smog", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_SMOKESCREEN = register("smokescreen", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SNAPTRAP = register("snaptrap", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_SNARL = register("snarl", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_SNATCH = register("snatch", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_SNIPESHOT = register("snipeshot", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_SNORE = register("snore", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SNOWSCAPE = register("snowscape", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_SOAK = register("soak", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_SOFTBOILED = register("softboiled", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SOLARBEAM = register("solarbeam", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_SOLARBLADE = register("solarblade", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_SONICBOOM = register("sonicboom", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SOULSTEALING7STARSTRIKE = register("soulstealing7starstrike", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_SPACIALREND = register("spacialrend", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_SPARK = register("spark", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_SPARKLINGARIA = register("sparklingaria", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_SPARKLYSWIRL = register("sparklyswirl", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_SPECTRALTHIEF = register("spectralthief", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_SPEEDSWAP = register("speedswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_SPICYEXTRACT = register("spicyextract", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_SPIDERWEB = register("spiderweb", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_SPIKECANNON = register("spikecannon", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SPIKES = register("spikes", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_SPIKYSHIELD = register("spikyshield", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_SPINOUT = register("spinout", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_SPIRITBREAK = register("spiritbreak", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_SPIRITSHACKLE = register("spiritshackle", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_SPITUP = register("spitup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SPITE = register("spite", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_SPLASH = register("splash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SPLINTEREDSTORMSHARDS = register("splinteredstormshards", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_SPLISHYSPLASH = register("splishysplash", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_SPORE = register("spore", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_SPOTLIGHT = register("spotlight", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SPRINGTIDESTORM = register("springtidestorm", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_STEALTHROCK = register("stealthrock", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_STEAMERUPTION = register("steameruption", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_STEAMROLLER = register("steamroller", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_STEELBEAM = register("steelbeam", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_STEELROLLER = register("steelroller", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_STEELWING = register("steelwing", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_STICKYWEB = register("stickyweb", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_STOCKPILE = register("stockpile", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_STOKEDSPARKSURFER = register("stokedsparksurfer", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_STOMP = register("stomp", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_STOMPINGTANTRUM = register("stompingtantrum", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_STONEAXE = register("stoneaxe", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_STONEEDGE = register("stoneedge", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_STOREDPOWER = register("storedpower", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_STORMTHROW = register("stormthrow", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_STRANGESTEAM = register("strangesteam", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_STRENGTH = register("strength", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_STRENGTHSAP = register("strengthsap", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_STRINGSHOT = register("stringshot", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_STRUGGLE = register("struggle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_STRUGGLEBUG = register("strugglebug", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_STUFFCHEEKS = register("stuffcheeks", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_STUNSPORE = register("stunspore", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_SUBMISSION = register("submission", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_SUBSTITUTE = register("substitute", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SUBZEROSLAMMER = register("subzeroslammer", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_SUCKERPUNCH = register("suckerpunch", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_SUNNYDAY = register("sunnyday", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_SUNSTEELSTRIKE = register("sunsteelstrike", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_SUPERFANG = register("superfang", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SUPERPOWER = register("superpower", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_SUPERSONIC = register("supersonic", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SUPERSONICSKYSTRIKE = register("supersonicskystrike", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_SURF = register("surf", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_SURGINGSTRIKES = register("surgingstrikes", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_SWAGGER = register("swagger", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SWALLOW = register("swallow", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SWEETKISS = register("sweetkiss", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_SWEETSCENT = register("sweetscent", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SWIFT = register("swift", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SWITCHEROO = register("switcheroo", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_SWORDSDANCE = register("swordsdance", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_SYNCHRONOISE = register("synchronoise", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_SYNTHESIS = register("synthesis", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_TACKLE = register("tackle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TAILGLOW = register("tailglow", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_TAILSLAP = register("tailslap", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TAILWHIP = register("tailwhip", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TAILWIND = register("tailwind", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_TAKEDOWN = register("takedown", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TAKEHEART = register("takeheart", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_TARSHOT = register("tarshot", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_TAUNT = register("taunt", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_TEARFULLOOK = register("tearfullook", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TEATIME = register("teatime", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TECHNOBLAST = register("technoblast", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TECTONICRAGE = register("tectonicrage", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_TEETERDANCE = register("teeterdance", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TELEKINESIS = register("telekinesis", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_TELEPORT = register("teleport", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_TERABLAST = register("terablast", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TERRAINPULSE = register("terrainpulse", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_THIEF = register("thief", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_THOUSANDARROWS = register("thousandarrows", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_THOUSANDWAVES = register("thousandwaves", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item TUTOR_THRASH = register("thrash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_THROATCHOP = register("throatchop", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_THUNDER = register("thunder", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_THUNDERBOLT = register("thunderbolt", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_THUNDERCAGE = register("thundercage", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_THUNDERFANG = register("thunderfang", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_THUNDEROUSKICK = register("thunderouskick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_THUNDERPUNCH = register("thunderpunch", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_THUNDERSHOCK = register("thundershock", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_THUNDERWAVE = register("thunderwave", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_TICKLE = register("tickle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TIDYUP = register("tidyup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TOPSYTURVY = register("topsyturvy", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_TORCHSONG = register("torchsong", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_TORMENT = register("torment", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_TOXIC = register("toxic", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_TOXICSPIKES = register("toxicspikes", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_TOXICTHREAD = register("toxicthread", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_TRAILBLAZE = register("trailblaze", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_TRANSFORM = register("transform", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TRIATTACK = register("triattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TRICK = register("trick", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_TRICKORTREAT = register("trickortreat", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item TUTOR_TRICKROOM = register("trickroom", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_TRIPLEARROWS = register("triplearrows", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_TRIPLEAXEL = register("tripleaxel", ElementalTypes.INSTANCE.getICE());
+    public static final Item TUTOR_TRIPLEDIVE = register("tripledive", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_TRIPLEKICK = register("triplekick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_TROPKICK = register("tropkick", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_TRUMPCARD = register("trumpcard", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_TWINBEAM = register("twinbeam", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_TWINEEDLE = register("twineedle", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_TWINKLETACKLE = register("twinkletackle", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_TWISTER = register("twister", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_UTURN = register("uturn", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_UPROAR = register("uproar", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_VACUUMWAVE = register("vacuumwave", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_VCREATE = register("vcreate", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_VEEVEEVOLLEY = register("veeveevolley", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_VENOMDRENCH = register("venomdrench", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_VENOSHOCK = register("venoshock", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item TUTOR_VICTORYDANCE = register("victorydance", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_VINEWHIP = register("vinewhip", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_VISEGRIP = register("visegrip", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_VITALTHROW = register("vitalthrow", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_VOLTSWITCH = register("voltswitch", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_VOLTTACKLE = register("volttackle", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_WAKEUPSLAP = register("wakeupslap", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_WATERFALL = register("waterfall", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_WATERGUN = register("watergun", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_WATERPLEDGE = register("waterpledge", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_WATERPULSE = register("waterpulse", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_WATERSHURIKEN = register("watershuriken", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_WATERSPORT = register("watersport", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_WATERSPOUT = register("waterspout", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_WAVECRASH = register("wavecrash", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_WEATHERBALL = register("weatherball", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_WHIRLPOOL = register("whirlpool", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_WHIRLWIND = register("whirlwind", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_WICKEDBLOW = register("wickedblow", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_WICKEDTORQUE = register("wickedtorque", ElementalTypes.INSTANCE.getDARK());
+    public static final Item TUTOR_WIDEGUARD = register("wideguard", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_WILDBOLTSTORM = register("wildboltstorm", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_WILDCHARGE = register("wildcharge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_WILLOWISP = register("willowisp", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_WINGATTACK = register("wingattack", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item TUTOR_WISH = register("wish", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_WITHDRAW = register("withdraw", ElementalTypes.INSTANCE.getWATER());
+    public static final Item TUTOR_WONDERROOM = register("wonderroom", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_WOODHAMMER = register("woodhammer", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_WORKUP = register("workup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_WORRYSEED = register("worryseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item TUTOR_WRAP = register("wrap", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_WRINGOUT = register("wringout", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_XSCISSOR = register("xscissor", ElementalTypes.INSTANCE.getBUG());
+    public static final Item TUTOR_YAWN = register("yawn", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item TUTOR_ZAPCANNON = register("zapcannon", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_ZENHEADBUTT = register("zenheadbutt", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_ZINGZAP = register("zingzap", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_ZIPPYZAP = register("zippyzap", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_TEMPERFLARE = register("temperflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_SUPERCELLSLAM = register("supercellslam", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_HARDPRESS = register("hardpress", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_DRAGONCHEER = register("dragoncheer", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_ALLURINGVOICE = register("alluringvoice", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item TUTOR_PSYCHICNOISE = register("psychicnoise", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item TUTOR_UPPERHAND = register("upperhand", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item TUTOR_ELECTROSHOT = register("electroshot", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_FICKLEBEAM = register("ficklebeam", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item TUTOR_BURNINGBULWARK = register("burningbulwark", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item TUTOR_THUNDERCLAP = register("thunderclap", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item TUTOR_MIGHTYCLEAVE = register("mightycleave", ElementalTypes.INSTANCE.getROCK());
+    public static final Item TUTOR_TACHYONCUTTER = register("tachyoncutter", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item TUTOR_TERASTARSTORM = register("terastarstorm", ElementalTypes.INSTANCE.getNORMAL());
 
-    TutorMoveItem(String name, ElementalType type) {
-        this.identifier = Identifier.of(TMCraft.MOD_ID, String.format("tutor_%s", name));
-        this.item = new TutorMoveTeachingItem(name, type);
+    public static void initialize() {
+
     }
 
-    public Identifier getIdentifier() {
-        return identifier;
-    }
+    public static Item register(String name, ElementalType type) {
+        Identifier identifier = Identifier.of(TMCraft.MOD_ID, String.format("tutor_%s", name));
+        Item item = new TutorMoveTeachingItem(name, type);
 
-    public Item getItem() {
+        Registry.register(Registries.ITEM, identifier, item);
+        all.add(item);
+
         return item;
+    }
+
+    public static List<Item> getAll() {
+        return new ArrayList<>(all);
     }
 }

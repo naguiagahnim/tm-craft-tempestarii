@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 
 import java.util.Map;
 
-public class TypeGemFactory {
+public class TypeGemMap {
     private static final Map<ElementalType, Item> TO_TYPE_GEM = Map.ofEntries(
             Map.entry(ElementalTypes.INSTANCE.getNORMAL(), CobblemonItems.NORMAL_GEM),
             Map.entry(ElementalTypes.INSTANCE.getFIRE(), CobblemonItems.FIRE_GEM),
@@ -29,7 +29,7 @@ public class TypeGemFactory {
             Map.entry(ElementalTypes.INSTANCE.getFAIRY(), CobblemonItems.FAIRY_GEM)
     );
 
-    public Item create(ElementalType type) {
+    public Item get(ElementalType type) {
         return TO_TYPE_GEM.get(type);
     }
 }

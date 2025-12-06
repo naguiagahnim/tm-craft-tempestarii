@@ -1,28 +1,25 @@
 package kiwiapollo.tmcraft.item.moverecorder;
 
+import com.cobblemon.mod.common.api.types.ElementalType;
 import kiwiapollo.tmcraft.TMCraft;
+import kiwiapollo.tmcraft.item.starmove.StarMoveTeachingItem;
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public enum MoveRecorderItem {
-    TM_MOVE_RECORDER(Identifier.of(TMCraft.MOD_ID, "tm_move_recorder"), new TMMoveRecorder()),
-    EGG_MOVE_RECORDER(Identifier.of(TMCraft.MOD_ID, "egg_move_recorder"), new EggMoveRecorder()),
-    TUTOR_MOVE_RECORDER(Identifier.of(TMCraft.MOD_ID, "tutor_move_recorder"), new TutorMoveRecorder()),
-    STAR_MOVE_RECORDER(Identifier.of(TMCraft.MOD_ID, "star_move_recorder"), new StarMoveRecorder());
+public class MoveRecorderItem {
+    public static final Item TM_MOVE_RECORDER = register("tm_move_recorder", new TMMoveRecorder());
+    public static final Item EGG_MOVE_RECORDER = register("egg_move_recorder", new EggMoveRecorder());
+    public static final Item TUTOR_MOVE_RECORDER = register("tutor_move_recorder", new TutorMoveRecorder());
+    public static final Item STAR_MOVE_RECORDER = register("star_move_recorder", new StarMoveRecorder());
 
-    private final Item item;
-    private final Identifier identifier;
+    public static void initialize() {
 
-    MoveRecorderItem(Identifier identifier, Item item) {
-        this.identifier = identifier;
-        this.item = item;
     }
 
-    public Identifier getIdentifier() {
-        return identifier;
-    }
-
-    public Item getItem() {
-        return item;
+    public static Item register(String name, Item item) {
+        Identifier identifier = Identifier.of(TMCraft.MOD_ID, name);
+        return Registry.register(Registries.ITEM, identifier, item);
     }
 }

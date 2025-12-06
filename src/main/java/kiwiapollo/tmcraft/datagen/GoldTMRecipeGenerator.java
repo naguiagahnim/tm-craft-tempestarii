@@ -2,7 +2,7 @@ package kiwiapollo.tmcraft.datagen;
 
 import com.cobblemon.mod.common.CobblemonItems;
 import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
-import kiwiapollo.tmcraft.common.TypeGemFactory;
+import kiwiapollo.tmcraft.common.TypeGemMap;
 import kiwiapollo.tmcraft.item.misc.BlankDiscItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveTeachingItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
@@ -16,502 +16,502 @@ import net.minecraft.registry.tag.ItemTags;
 
 import java.util.function.Consumer;
 
-public class GoldTMRecipeGenerator implements RecipeGenerator {
+public class GoldTMRecipeGenerator {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_CRUNCH.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_CRUNCH)
                 .input(CobblemonItems.DEEP_SEA_TOOTH)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DRAGONCLAW.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DRAGONCLAW)
                 .input(CobblemonItems.RAZOR_CLAW)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ICEPUNCH.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ICEPUNCH)
                 .input(CobblemonItems.BLACK_BELT)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FIREPUNCH.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FIREPUNCH)
                 .input(CobblemonItems.BLACK_BELT)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_THUNDERPUNCH.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_THUNDERPUNCH)
                 .input(CobblemonItems.BLACK_BELT)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HIDDENPOWER.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HIDDENPOWER)
                 .input(Items.ENDER_EYE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_VOLTSWITCH.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_VOLTSWITCH)
                 .input(Items.ENDER_PEARL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_UTURN.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_UTURN)
                 .input(CobblemonItems.EJECT_BUTTON)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PLUCK.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PLUCK)
                 .input(CobblemonItemTags.BERRIES)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SHADOWBALL.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SHADOWBALL)
                 .input(Items.SNOWBALL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SHADOWCLAW.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SHADOWCLAW)
                 .input(CobblemonItems.RAZOR_CLAW)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_AIRSLASH.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_AIRSLASH)
                 .input(Items.IRON_SWORD)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_AERIALACE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_AERIALACE)
                 .input(CobblemonItems.SHARP_BEAK)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_VENOSHOCK.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_VENOSHOCK)
                 .input(CobblemonItems.POISON_BARB)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SCALD.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SCALD)
                 .input(Items.BLAZE_POWDER)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_STEELWING.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_STEELWING)
                 .input(Items.FEATHER)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ICEFANG.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ICEFANG)
                 .input(CobblemonItems.RAZOR_FANG)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FIREFANG.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FIREFANG)
                 .input(CobblemonItems.RAZOR_FANG)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_THUNDERFANG.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_THUNDERFANG)
                 .input(CobblemonItems.RAZOR_FANG)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BOUNCE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BOUNCE)
                 .input(Items.SLIME_BLOCK)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_MEGAPUNCH.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_MEGAPUNCH)
                 .input(CobblemonItems.EXPERT_BELT)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DRAINPUNCH.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DRAINPUNCH)
                 .input(CobblemonItems.BLACK_BELT)
                 .input(Items.SPONGE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_RAZORSHELL.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_RAZORSHELL)
                 .input(Items.NAUTILUS_SHELL)
                 .input(Items.IRON_SWORD)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SMARTSTRIKE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SMARTSTRIKE)
                 .input(Items.GOAT_HORN)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_METRONOME.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_METRONOME)
                 .input(Items.CLOCK)
                 .input(Items.JUKEBOX)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_TRIATTACK.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_TRIATTACK)
                 .input(Items.ICE)
                 .input(Items.BLAZE_POWDER)
                 .input(Items.LIGHTNING_ROD)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BRINE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BRINE)
                 .input(Items.GLOWSTONE_DUST)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_AVALANCHE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_AVALANCHE)
                 .input(Items.POWDER_SNOW_BUCKET)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SKYDROP.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SKYDROP)
                 .input(Items.ANVIL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DAZZLINGGLEAM.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DAZZLINGGLEAM)
                 .input(Items.END_ROD)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_WATERPULSE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_WATERPULSE)
                 .input(Items.BELL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DARKPULSE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DARKPULSE)
                 .input(Items.BELL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DRAGONPULSE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DRAGONPULSE)
                 .input(Items.BELL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FROSTBREATH.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FROSTBREATH)
                 .input(Items.DRAGON_BREATH)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_XSCISSOR.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_XSCISSOR)
                 .input(Items.SHEARS)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DIG.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DIG)
                 .input(Items.IRON_SHOVEL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SUBMISSION.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SUBMISSION)
                 .input(Items.LEAD)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_GIGADRAIN.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_GIGADRAIN)
                 .input(Items.SPONGE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_WATERFALL.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_WATERFALL)
                 .input(Items.ANVIL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DRILLRUN.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DRILLRUN)
                 .input(CobblemonItems.DIRE_HIT)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HEADBUTT.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HEADBUTT)
                 .input(CobblemonItems.ROCKY_HELMET)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FACADE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FACADE)
                 .input(CobblemonItems.PARALYZE_HEAL)
                 .input(CobblemonItems.BURN_HEAL)
                 .input(CobblemonItems.ICE_HEAL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SILVERWIND.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SILVERWIND)
                 .input(Items.FEATHER)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_NIGHTSHADE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_NIGHTSHADE)
                 .input(Items.EXPERIENCE_BOTTLE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SWIFT.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SWIFT)
                 .input(CobblemonItems.X_ACCURACY)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HEX.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HEX)
                 .input(Items.ENDER_EYE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ZENHEADBUTT.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ZENHEADBUTT)
                 .input(CobblemonItems.ROCKY_HELMET)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BODYSLAM.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BODYSLAM)
                 .input(Items.ANVIL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_THROATCHOP.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_THROATCHOP)
                 .input(Items.TIPPED_ARROW)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BREAKINGSWIPE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BREAKINGSWIPE)
                 .input(Items.FERMENTED_SPIDER_EYE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SKITTERSMACK.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SKITTERSMACK)
                 .input(Items.SCULK_SENSOR)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SCORCHINGSANDS.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SCORCHINGSANDS)
                 .input(Items.BLAZE_POWDER)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HEATCRASH.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HEATCRASH)
                 .input(CobblemonItems.FOCUS_BAND)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BURNINGJEALOUSY.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BURNINGJEALOUSY)
                 .input(CobblemonItems.DESTINY_KNOT)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_LASHOUT.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_LASHOUT)
                 .input(Items.EGG)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SEEDBOMB.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SEEDBOMB)
                 .input(CobblemonItemTags.SEEDS)
                 .input(Items.GUNPOWDER)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ROCKTOMB.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ROCKTOMB)
                 .input(Items.OBSIDIAN)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FLASHCANNON.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FLASHCANNON)
                 .input(Items.GLOWSTONE_DUST)
                 .input(Items.DISPENSER)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_LEECHLIFE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_LEECHLIFE)
                 .input(Items.GOLDEN_APPLE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FIREPLEDGE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FIREPLEDGE)
                 .input(Items.WRITTEN_BOOK)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_GRASSPLEDGE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_GRASSPLEDGE)
                 .input(Items.WRITTEN_BOOK)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_WATERPLEDGE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_WATERPLEDGE)
                 .input(Items.WRITTEN_BOOK)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HARDPRESS.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HARDPRESS)
                 .input(Items.SMITHING_TABLE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ALLURINGVOICE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ALLURINGVOICE)
                 .input(CobblemonItems.LOVE_SWEET)
                 .input(Items.GOAT_HORN)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYCHICNOISE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYCHICNOISE)
                 .input(Items.BELL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_UPPERHAND.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_UPPERHAND)
                 .input(CobblemonItems.KINGS_ROCK)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_EXPANDINGFORCE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_EXPANDINGFORCE)
                 .input(Items.PISTON)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_IRONHEAD.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_IRONHEAD)
                 .input(Items.IRON_HELMET)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_TEMPERFLARE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_TEMPERFLARE)
                 .input(Items.FLINT_AND_STEEL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ENDEAVOR.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ENDEAVOR)
                 .input(Items.LEAD)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ICESPINNER.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ICESPINNER)
                 .input(Items.IRON_PICKAXE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_REVERSAL.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_REVERSAL)
                 .input(CobblemonItems.HP_UP)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HEAVYSLAM.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HEAVYSLAM)
                 .input(Items.ANVIL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_TERABLAST.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_TERABLAST)
                 .input(CobblemonItems.X_ATTACK)
                 .input(CobblemonItems.X_SP_ATK)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FLIPTURN.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FLIPTURN)
                 .input(CobblemonItems.EJECT_BUTTON)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_KNOCKOFF.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_KNOCKOFF)
                 .input(Items.BONE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BUGBITE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BUGBITE)
                 .input(CobblemonItems.RAZOR_FANG)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SUPERFANG.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SUPERFANG)
                 .input(CobblemonItems.RAZOR_FANG)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_LUNGE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_LUNGE)
                 .input(CobblemonItems.PROTEIN)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BODYPRESS.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BODYPRESS)
                 .input(Items.ANVIL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_LIQUIDATION.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_LIQUIDATION)
                 .input(Items.IRON_PICKAXE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_AURASPHERE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_AURASPHERE)
                 .input(CobblemonItems.LIFE_ORB)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_GRASSKNOT.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_GRASSKNOT)
                 .input(Items.LEAD)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ELECTROBALL.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ELECTROBALL)
                 .input(CobblemonItemTags.POKE_BALLS)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_POISONJAB.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_POISONJAB)
                 .input(CobblemonItems.BLACK_BELT)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_STOMPINGTANTRUM.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_STOMPINGTANTRUM)
                 .input(CobblemonItems.HEAVY_DUTY_BOOTS)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ROCKSLIDE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ROCKSLIDE)
                 .input(Items.GRAVEL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYSHOCK.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYSHOCK)
                 .input(Items.LIGHTNING_ROD)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BRICKBREAK.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BRICKBREAK)
                 .input(Items.BRICKS)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYCHICFANGS.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYCHICFANGS)
                 .input(CobblemonItems.RAZOR_FANG)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYBEAM.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYBEAM)
                 .input(Items.BELL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_THIEF.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_THIEF)
                 .input(CobblemonItems.RELIC_COIN)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BULLDOZE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BULLDOZE)
                 .input(Items.IRON_HOE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_AIRCUTTER.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_AIRCUTTER)
                 .input(Items.IRON_AXE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DRAGONTAIL.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DRAGONTAIL)
                 .input(Items.WEEPING_VINES)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DIVE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DIVE)
                 .input(Items.SCUTE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_REVENGE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_REVENGE)
                 .input(Items.CACTUS)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ASSURANCE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ASSURANCE)
                 .input(CobblemonItems.RED_CARD)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYCHOCUT.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYCHOCUT)
                 .input(Items.IRON_SWORD)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BEATUP.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BEATUP)
                 .input(Items.ROTTEN_FLESH)
                 .input(Items.BONE)
                 .input(Items.GUNPOWDER)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_NATUREPOWER.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_NATUREPOWER)
                 .input(Items.GRASS_BLOCK)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_RETURN.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_RETURN)
                 .input(CobblemonItems.SOOTHE_BELL)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FRUSTRATION.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FRUSTRATION)
                 .input(CobblemonItems.ENERGY_ROOT)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_CROSSPOISON.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_CROSSPOISON)
                 .input(CobblemonItems.DIRE_HIT)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ROUND.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ROUND)
                 .input(ItemTags.MUSIC_DISCS)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SHOCKWAVE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SHOCKWAVE)
                 .input(CobblemonItems.X_ACCURACY)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BRUTALSWING.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BRUTALSWING)
                 .input(CobblemonItems.MEDICINAL_LEEK)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_MYSTICALFIRE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_MYSTICALFIRE)
                 .input(Items.SOUL_CAMPFIRE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_RETALIATE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_RETALIATE)
                 .input(Items.BLAZE_POWDER)
                 .input(Items.IRON_SWORD)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_NATURALGIFT.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_NATURALGIFT)
                 .input(CobblemonItemTags.BERRIES)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SEISMICTOSS.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SEISMICTOSS)
                 .input(Items.CARTOGRAPHY_TABLE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_INCINERATE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_INCINERATE)
                 .input(Items.CAMPFIRE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SECRETPOWER.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SECRETPOWER)
                 .input(Items.GRASS_BLOCK)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_STRENGTH.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_STRENGTH)
                 .input(Items.BLAZE_POWDER)
                 .input(Items.NETHER_WART)
                 .input(Items.POTION)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_RAZORWIND.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_RAZORWIND)
                 .input(Items.IRON_SWORD)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BUBBLEBEAM.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BUBBLEBEAM)
                 .input(Items.MAGMA_BLOCK)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYWAVE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYWAVE)
                 .input(Items.REPEATER)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DRAGONBREATH.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DRAGONBREATH)
                 .input(Items.DRAGON_BREATH)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_COUNTER.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_COUNTER)
                 .input(Items.SHIELD)
                 .input(Items.IRON_AXE)
                 .offerTo(exporter);
 
-        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BIDE.getItem())
+        GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BIDE)
                 .input(Items.TURTLE_HELMET)
                 .input(CobblemonItems.X_ATTACK, 2)
                 .offerTo(exporter);
@@ -524,9 +524,9 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
 
         public static GoldTMRecipeJsonBuilder create(TMMoveTeachingItem item) {
             return (GoldTMRecipeJsonBuilder) new GoldTMRecipeJsonBuilder(item)
-                    .input(BlankDiscItem.GOLD_BLANK_DISC.getItem())
-                    .input(new TypeGemFactory().create(item.getMoveType()))
-                    .criterion(FabricRecipeProvider.hasItem(BlankDiscItem.GOLD_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItem.GOLD_BLANK_DISC.getItem()));
+                    .input(BlankDiscItem.GOLD_BLANK_DISC)
+                    .input(new TypeGemMap().get(item.getMoveType()))
+                    .criterion(FabricRecipeProvider.hasItem(BlankDiscItem.GOLD_BLANK_DISC), FabricRecipeProvider.conditionsFromItem(BlankDiscItem.GOLD_BLANK_DISC));
         }
     }
 }

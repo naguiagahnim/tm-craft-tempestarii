@@ -12,20 +12,14 @@ import kiwiapollo.tmcraft.item.tmmove.TMMoveItemGroup;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItemGroup;
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItem;
-import kiwiapollo.tmcraft.villager.movetutor.MoveTutorTradeOffer;
-import kiwiapollo.tmcraft.villager.movetutor.MoveTutorVillager;
-import kiwiapollo.tmcraft.villager.pokemonbreeder.PokemonBreederTradeOffer;
-import kiwiapollo.tmcraft.villager.pokemonbreeder.PokemonBreederVillager;
+import kiwiapollo.tmcraft.villager.MoveTutorTradeOffer;
+import kiwiapollo.tmcraft.villager.MoveTutorVillager;
+import kiwiapollo.tmcraft.villager.PokemonBreederTradeOffer;
+import kiwiapollo.tmcraft.villager.PokemonBreederVillager;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Arrays;
 
 public class TMCraft implements ModInitializer {
 	public static final String MOD_ID = "tmcraft";
@@ -33,130 +27,32 @@ public class TMCraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModGameRule.register();
+		ModGameRule.initialize();
 
-		Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(TMCraft.MOD_ID, MoveTutorVillager.PROFESSION_ID), MoveTutorVillager.PROFESSION);
-		new MoveTutorTradeOffer().register();
+		MoveTutorVillager.initialize();
+		MoveTutorTradeOffer.initialize();
 
-		Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(TMCraft.MOD_ID, PokemonBreederVillager.PROFESSION_ID), PokemonBreederVillager.PROFESSION);
-		new PokemonBreederTradeOffer().register();
+		PokemonBreederVillager.initialize();
+		PokemonBreederTradeOffer.initialize();
 
-		Arrays.stream(ModBlock.values()).forEach(block -> {
-			Registry.register(Registries.BLOCK, block.getIdentifier(), block.getBlock());
-			Registry.register(Registries.ITEM, block.getIdentifier(), block.getItem());
-		});
+		ModBlock.initialize();
+		ModSmithingTemplateItem.initialize();
+		MoveRecorderItem.initialize();
 
-		Arrays.stream(SmithingTemplateItem.values()).forEach(item -> {
-			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
-		});
+		BlankDiscItem.initialize();
+		BlankEggItem.initialize();
+		BlankBookItem.initialize();
+		BlankStarItem.initialize();
 
-		Arrays.stream(MoveRecorderItem.values()).forEach(item -> {
-			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
-		});
+		TMMoveItem.initialize();
+		EggMoveItem.initialize();
+		TutorMoveItem.initialize();
+		StarMoveItem.initialize();
 
-
-		Arrays.stream(BlankDiscItem.values()).forEach(item -> {
-			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
-		});
-
-		Arrays.stream(TMMoveItem.values()).forEach(item -> {
-			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
-		});
-
-
-		Arrays.stream(BlankEggItem.values()).forEach(item -> {
-			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
-		});
-
-		Arrays.stream(EggMoveItem.values()).forEach(item -> {
-			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
-		});
-
-
-		Arrays.stream(BlankBookItem.values()).forEach(item -> {
-			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
-		});
-
-		Arrays.stream(TutorMoveItem.values()).forEach(item -> {
-			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
-		});
-
-
-		Arrays.stream(BlankStarItem.values()).forEach(item -> {
-			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
-		});
-
-		Arrays.stream(StarMoveItem.values()).forEach(item -> {
-			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
-		});
-
-
-		Registry.register(Registries.ITEM_GROUP, MiscItemGroup.ITEM_GROUP_REGISTRY_KEY, MiscItemGroup.ITEM_GROUP);
-
-		ItemGroupEvents.modifyEntriesEvent(MiscItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(ModBlock.values()).forEach(block -> {
-				itemGroup.add(block.getItem());
-			});
-
-			Arrays.stream(SmithingTemplateItem.values()).forEach(item -> {
-				itemGroup.add(item.getItem());
-			});
-
-			Arrays.stream(MoveRecorderItem.values()).forEach(item -> {
-				itemGroup.add(item.getItem());
-			});
-
-			Arrays.stream(BlankDiscItem.values()).forEach(item -> {
-				itemGroup.add(item.getItem());
-			});
-
-			Arrays.stream(BlankEggItem.values()).forEach(item -> {
-				itemGroup.add(item.getItem());
-			});
-
-			Arrays.stream(BlankBookItem.values()).forEach(item -> {
-				itemGroup.add(item.getItem());
-			});
-
-			Arrays.stream(BlankStarItem.values()).forEach(item -> {
-				itemGroup.add(item.getItem());
-			});
-		});
-
-
-		Registry.register(Registries.ITEM_GROUP, TMMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, TMMoveItemGroup.ITEM_GROUP);
-
-		ItemGroupEvents.modifyEntriesEvent(TMMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(TMMoveItem.values()).forEach(item -> {
-				itemGroup.add(item.getItem());
-			});
-		});
-
-
-		Registry.register(Registries.ITEM_GROUP, EggMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, EggMoveItemGroup.ITEM_GROUP);
-
-		ItemGroupEvents.modifyEntriesEvent(EggMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(EggMoveItem.values()).forEach(item -> {
-				itemGroup.add(item.getItem());
-			});
-		});
-
-
-		Registry.register(Registries.ITEM_GROUP, TutorMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, TutorMoveItemGroup.ITEM_GROUP);
-
-		ItemGroupEvents.modifyEntriesEvent(TutorMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(TutorMoveItem.values()).forEach(item -> {
-				itemGroup.add(item.getItem());
-			});
-		});
-
-
-		Registry.register(Registries.ITEM_GROUP, StarMoveItemGroup.ITEM_GROUP_REGISTRY_KEY, StarMoveItemGroup.ITEM_GROUP);
-
-		ItemGroupEvents.modifyEntriesEvent(StarMoveItemGroup.ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
-			Arrays.stream(StarMoveItem.values()).forEach(item -> {
-				itemGroup.add(item.getItem());
-			});
-		});
+		MiscItemGroup.initialize();
+		TMMoveItemGroup.initialize();
+		EggMoveItemGroup.initialize();
+		TutorMoveItemGroup.initialize();
+		StarMoveItemGroup.initialize();
 	}
 }

@@ -1,14 +1,18 @@
 package kiwiapollo.tmcraft.item.misc;
 
 import kiwiapollo.tmcraft.TMCraft;
+import net.minecraft.item.Item;
+import net.minecraft.item.SmithingTemplateItem;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
 
-public enum SmithingTemplateItem {
-    MOVE_UPGRADE_SMITHING_TEMPLATE("move_upgrade_smithing_template", new net.minecraft.item.SmithingTemplateItem(
+public class ModSmithingTemplateItem {
+    public static final Item MOVE_UPGRADE_SMITHING_TEMPLATE = register("move_upgrade_smithing_template", new SmithingTemplateItem(
             Text.translatable("item.tmcraft.move_upgrade_smithing_template.applies_to").formatted(Formatting.BLUE),
             Text.translatable("item.tmcraft.move_upgrade_smithing_template.ingredients").formatted(Formatting.BLUE),
             Text.translatable("item.tmcraft.move_upgrade_smithing_template.title").formatted(Formatting.GRAY),
@@ -27,19 +31,12 @@ public enum SmithingTemplateItem {
             )
     ));
 
-    private final Identifier identifier;
-    private final net.minecraft.item.SmithingTemplateItem item;
+    public static void initialize() {
 
-    SmithingTemplateItem(String path, net.minecraft.item.SmithingTemplateItem item) {
-        this.identifier = Identifier.of(TMCraft.MOD_ID, path);
-        this.item = item;
     }
 
-    public Identifier getIdentifier() {
-        return identifier;
-    }
-
-    public net.minecraft.item.SmithingTemplateItem getItem() {
-        return item;
+    public static Item register(String name, Item item) {
+        Identifier identifier = Identifier.of(TMCraft.MOD_ID, name);
+        return Registry.register(Registries.ITEM, identifier, item);
     }
 }

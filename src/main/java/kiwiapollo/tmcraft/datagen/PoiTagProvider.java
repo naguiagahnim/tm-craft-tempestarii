@@ -1,8 +1,8 @@
 package kiwiapollo.tmcraft.datagen;
 
-import kiwiapollo.tmcraft.villager.movetutor.MoveTutorVillager;
+import kiwiapollo.tmcraft.villager.MoveTutorVillager;
 import kiwiapollo.tmcraft.TMCraft;
-import kiwiapollo.tmcraft.villager.pokemonbreeder.PokemonBreederVillager;
+import kiwiapollo.tmcraft.villager.PokemonBreederVillager;
 import net.minecraft.data.DataOutput;
 import net.minecraft.data.server.tag.TagProvider;
 import net.minecraft.registry.RegistryKeys;

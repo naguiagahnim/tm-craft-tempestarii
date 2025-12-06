@@ -4,955 +4,961 @@ import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.api.types.ElementalTypes;
 import kiwiapollo.tmcraft.TMCraft;
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public enum EggMoveItem {
-    EGG_10000000VOLTTHUNDERBOLT("10000000voltthunderbolt", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_ABSORB("absorb", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_ACCELEROCK("accelerock", ElementalTypes.INSTANCE.getROCK()),
-    EGG_ACID("acid", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_ACIDARMOR("acidarmor", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_ACIDDOWNPOUR("aciddownpour", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_ACIDSPRAY("acidspray", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_ACROBATICS("acrobatics", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_ACUPRESSURE("acupressure", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_AERIALACE("aerialace", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_AEROBLAST("aeroblast", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_AFTERYOU("afteryou", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_AGILITY("agility", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_AIRCUTTER("aircutter", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_AIRSLASH("airslash", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_ALLOUTPUMMELING("alloutpummeling", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_ALLYSWITCH("allyswitch", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_AMNESIA("amnesia", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_ANCHORSHOT("anchorshot", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_ANCIENTPOWER("ancientpower", ElementalTypes.INSTANCE.getROCK()),
-    EGG_APPLEACID("appleacid", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_AQUACUTTER("aquacutter", ElementalTypes.INSTANCE.getWATER()),
-    EGG_AQUAJET("aquajet", ElementalTypes.INSTANCE.getWATER()),
-    EGG_AQUARING("aquaring", ElementalTypes.INSTANCE.getWATER()),
-    EGG_AQUASTEP("aquastep", ElementalTypes.INSTANCE.getWATER()),
-    EGG_AQUATAIL("aquatail", ElementalTypes.INSTANCE.getWATER()),
-    EGG_ARMORCANNON("armorcannon", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_ARMTHRUST("armthrust", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_AROMATHERAPY("aromatherapy", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_AROMATICMIST("aromaticmist", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_ASSIST("assist", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_ASSURANCE("assurance", ElementalTypes.INSTANCE.getDARK()),
-    EGG_ASTONISH("astonish", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_ASTRALBARRAGE("astralbarrage", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_ATTACKORDER("attackorder", ElementalTypes.INSTANCE.getBUG()),
-    EGG_ATTRACT("attract", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_AURASPHERE("aurasphere", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_AURAWHEEL("aurawheel", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_AURORABEAM("aurorabeam", ElementalTypes.INSTANCE.getICE()),
-    EGG_AURORAVEIL("auroraveil", ElementalTypes.INSTANCE.getICE()),
-    EGG_AUTOTOMIZE("autotomize", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_AVALANCHE("avalanche", ElementalTypes.INSTANCE.getICE()),
-    EGG_AXEKICK("axekick", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_BABYDOLLEYES("babydolleyes", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_BADDYBAD("baddybad", ElementalTypes.INSTANCE.getDARK()),
-    EGG_BANEFULBUNKER("banefulbunker", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_BARBBARRAGE("barbbarrage", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_BARRAGE("barrage", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_BARRIER("barrier", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_BATONPASS("batonpass", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_BEAKBLAST("beakblast", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_BEATUP("beatup", ElementalTypes.INSTANCE.getDARK()),
-    EGG_BEHEMOTHBASH("behemothbash", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_BEHEMOTHBLADE("behemothblade", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_BELCH("belch", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_BELLYDRUM("bellydrum", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_BESTOW("bestow", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_BIDE("bide", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_BIND("bind", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_BITE("bite", ElementalTypes.INSTANCE.getDARK()),
-    EGG_BITTERBLADE("bitterblade", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_BITTERMALICE("bittermalice", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_BLACKHOLEECLIPSE("blackholeeclipse", ElementalTypes.INSTANCE.getDARK()),
-    EGG_BLASTBURN("blastburn", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_BLAZEKICK("blazekick", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_BLAZINGTORQUE("blazingtorque", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_BLEAKWINDSTORM("bleakwindstorm", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_BLIZZARD("blizzard", ElementalTypes.INSTANCE.getICE()),
-    EGG_BLOCK("block", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_BLOOMDOOM("bloomdoom", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_BLUEFLARE("blueflare", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_BODYPRESS("bodypress", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_BODYSLAM("bodyslam", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_BOLTBEAK("boltbeak", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_BOLTSTRIKE("boltstrike", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_BONECLUB("boneclub", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_BONEMERANG("bonemerang", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_BONERUSH("bonerush", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_BOOMBURST("boomburst", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_BOUNCE("bounce", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_BOUNCYBUBBLE("bouncybubble", ElementalTypes.INSTANCE.getWATER()),
-    EGG_BRANCHPOKE("branchpoke", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_BRAVEBIRD("bravebird", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_BREAKINGSWIPE("breakingswipe", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_BREAKNECKBLITZ("breakneckblitz", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_BRICKBREAK("brickbreak", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_BRINE("brine", ElementalTypes.INSTANCE.getWATER()),
-    EGG_BRUTALSWING("brutalswing", ElementalTypes.INSTANCE.getDARK()),
-    EGG_BUBBLE("bubble", ElementalTypes.INSTANCE.getWATER()),
-    EGG_BUBBLEBEAM("bubblebeam", ElementalTypes.INSTANCE.getWATER()),
-    EGG_BUGBITE("bugbite", ElementalTypes.INSTANCE.getBUG()),
-    EGG_BUGBUZZ("bugbuzz", ElementalTypes.INSTANCE.getBUG()),
-    EGG_BULKUP("bulkup", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_BULLDOZE("bulldoze", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_BULLETPUNCH("bulletpunch", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_BULLETSEED("bulletseed", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_BURNINGJEALOUSY("burningjealousy", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_BURNUP("burnup", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_BUZZYBUZZ("buzzybuzz", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_CALMMIND("calmmind", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_CAMOUFLAGE("camouflage", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_CAPTIVATE("captivate", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_CATASTROPIKA("catastropika", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_CEASELESSEDGE("ceaselessedge", ElementalTypes.INSTANCE.getDARK()),
-    EGG_CELEBRATE("celebrate", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_CHARGE("charge", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_CHARGEBEAM("chargebeam", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_CHARM("charm", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_CHATTER("chatter", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_CHILLINGWATER("chillingwater", ElementalTypes.INSTANCE.getWATER()),
-    EGG_CHILLYRECEPTION("chillyreception", ElementalTypes.INSTANCE.getICE()),
-    EGG_CHIPAWAY("chipaway", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_CHLOROBLAST("chloroblast", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_CIRCLETHROW("circlethrow", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_CLAMP("clamp", ElementalTypes.INSTANCE.getWATER()),
-    EGG_CLANGINGSCALES("clangingscales", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_CLANGOROUSSOUL("clangoroussoul", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_CLANGOROUSSOULBLAZE("clangoroussoulblaze", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_CLEARSMOG("clearsmog", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_CLOSECOMBAT("closecombat", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_COACHING("coaching", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_COIL("coil", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_COLLISIONCOURSE("collisioncourse", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_COMBATTORQUE("combattorque", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_COMETPUNCH("cometpunch", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_COMEUPPANCE("comeuppance", ElementalTypes.INSTANCE.getDARK()),
-    EGG_CONFIDE("confide", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_CONFUSERAY("confuseray", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_CONFUSION("confusion", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_CONSTRICT("constrict", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_CONTINENTALCRUSH("continentalcrush", ElementalTypes.INSTANCE.getROCK()),
-    EGG_CONVERSION("conversion", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_CONVERSION2("conversion2", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_COPYCAT("copycat", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_COREENFORCER("coreenforcer", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_CORKSCREWCRASH("corkscrewcrash", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_CORROSIVEGAS("corrosivegas", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_COSMICPOWER("cosmicpower", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_COTTONGUARD("cottonguard", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_COTTONSPORE("cottonspore", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_COUNTER("counter", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_COURTCHANGE("courtchange", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_COVET("covet", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_CRABHAMMER("crabhammer", ElementalTypes.INSTANCE.getWATER()),
-    EGG_CRAFTYSHIELD("craftyshield", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_CROSSCHOP("crosschop", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_CROSSPOISON("crosspoison", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_CRUNCH("crunch", ElementalTypes.INSTANCE.getDARK()),
-    EGG_CRUSHCLAW("crushclaw", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_CRUSHGRIP("crushgrip", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_CURSE("curse", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_CUT("cut", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_DARKESTLARIAT("darkestlariat", ElementalTypes.INSTANCE.getDARK()),
-    EGG_DARKPULSE("darkpulse", ElementalTypes.INSTANCE.getDARK()),
-    EGG_DARKVOID("darkvoid", ElementalTypes.INSTANCE.getDARK()),
-    EGG_DAZZLINGGLEAM("dazzlinggleam", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_DECORATE("decorate", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_DEFENDORDER("defendorder", ElementalTypes.INSTANCE.getBUG()),
-    EGG_DEFENSECURL("defensecurl", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_DEFOG("defog", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_DESTINYBOND("destinybond", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_DETECT("detect", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_DEVASTATINGDRAKE("devastatingdrake", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DIAMONDSTORM("diamondstorm", ElementalTypes.INSTANCE.getROCK()),
-    EGG_DIG("dig", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_DISABLE("disable", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_DISARMINGVOICE("disarmingvoice", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_DISCHARGE("discharge", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_DIRECLAW("direclaw", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_DIVE("dive", ElementalTypes.INSTANCE.getWATER()),
-    EGG_DIZZYPUNCH("dizzypunch", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_DOODLE("doodle", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_DOOMDESIRE("doomdesire", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_DOUBLEEDGE("doubleedge", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_DOUBLEHIT("doublehit", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_DOUBLEIRONBASH("doubleironbash", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_DOUBLEKICK("doublekick", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_DOUBLESHOCK("doubleshock", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_DOUBLESLAP("doubleslap", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_DOUBLETEAM("doubleteam", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_DRACOMETEOR("dracometeor", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DRAGONASCENT("dragonascent", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_DRAGONBREATH("dragonbreath", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DRAGONCLAW("dragonclaw", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DRAGONDANCE("dragondance", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DRAGONDARTS("dragondarts", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DRAGONENERGY("dragonenergy", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DRAGONHAMMER("dragonhammer", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DRAGONPULSE("dragonpulse", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DRAGONRAGE("dragonrage", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DRAGONRUSH("dragonrush", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DRAGONTAIL("dragontail", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DRAININGKISS("drainingkiss", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_DRAINPUNCH("drainpunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_DREAMEATER("dreameater", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_DRILLPECK("drillpeck", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_DRILLRUN("drillrun", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_DRUMBEATING("drumbeating", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_DUALCHOP("dualchop", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DUALWINGBEAT("dualwingbeat", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_DYNAMAXCANNON("dynamaxcannon", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_DYNAMICPUNCH("dynamicpunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_EARTHPOWER("earthpower", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_EARTHQUAKE("earthquake", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_ECHOEDVOICE("echoedvoice", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_EERIEIMPULSE("eerieimpulse", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_EERIESPELL("eeriespell", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_EGGBOMB("eggbomb", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_ELECTRICTERRAIN("electricterrain", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_ELECTRIFY("electrify", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_ELECTROBALL("electroball", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_ELECTRODRIFT("electrodrift", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_ELECTROWEB("electroweb", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_EMBARGO("embargo", ElementalTypes.INSTANCE.getDARK()),
-    EGG_EMBER("ember", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_ENCORE("encore", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_ENDEAVOR("endeavor", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_ENDURE("endure", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_ENERGYBALL("energyball", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_ENTRAINMENT("entrainment", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_ERUPTION("eruption", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_ESPERWING("esperwing", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_ETERNABEAM("eternabeam", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_EXPANDINGFORCE("expandingforce", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_EXPLOSION("explosion", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_EXTRASENSORY("extrasensory", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_EXTREMEEVOBOOST("extremeevoboost", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_EXTREMESPEED("extremespeed", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FACADE("facade", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FAIRYLOCK("fairylock", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_FAIRYWIND("fairywind", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_FAKEOUT("fakeout", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FAKETEARS("faketears", ElementalTypes.INSTANCE.getDARK()),
-    EGG_FALSESURRENDER("falsesurrender", ElementalTypes.INSTANCE.getDARK()),
-    EGG_FALSESWIPE("falseswipe", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FEATHERDANCE("featherdance", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_FEINT("feint", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FEINTATTACK("feintattack", ElementalTypes.INSTANCE.getDARK()),
-    EGG_FELLSTINGER("fellstinger", ElementalTypes.INSTANCE.getBUG()),
-    EGG_FIERYDANCE("fierydance", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_FIERYWRATH("fierywrath", ElementalTypes.INSTANCE.getDARK()),
-    EGG_FILLETAWAY("filletaway", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FINALGAMBIT("finalgambit", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_FIREBLAST("fireblast", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_FIREFANG("firefang", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_FIRELASH("firelash", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_FIREPLEDGE("firepledge", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_FIREPUNCH("firepunch", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_FIRESPIN("firespin", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_FIRSTIMPRESSION("firstimpression", ElementalTypes.INSTANCE.getBUG()),
-    EGG_FISHIOUSREND("fishiousrend", ElementalTypes.INSTANCE.getWATER()),
-    EGG_FISSURE("fissure", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_FLAIL("flail", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FLAMEBURST("flameburst", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_FLAMECHARGE("flamecharge", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_FLAMEWHEEL("flamewheel", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_FLAMETHROWER("flamethrower", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_FLAREBLITZ("flareblitz", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_FLASH("flash", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FLASHCANNON("flashcannon", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_FLATTER("flatter", ElementalTypes.INSTANCE.getDARK()),
-    EGG_FLEURCANNON("fleurcannon", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_FLING("fling", ElementalTypes.INSTANCE.getDARK()),
-    EGG_FLIPTURN("flipturn", ElementalTypes.INSTANCE.getWATER()),
-    EGG_FLOATYFALL("floatyfall", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_FLORALHEALING("floralhealing", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_FLOWERSHIELD("flowershield", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_FLOWERTRICK("flowertrick", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_FLY("fly", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_FLYINGPRESS("flyingpress", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_FOCUSBLAST("focusblast", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_FOCUSENERGY("focusenergy", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FOCUSPUNCH("focuspunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_FOLLOWME("followme", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FORCEPALM("forcepalm", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_FORESIGHT("foresight", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FORESTSCURSE("forestscurse", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_FOULPLAY("foulplay", ElementalTypes.INSTANCE.getDARK()),
-    EGG_FREEZEDRY("freezedry", ElementalTypes.INSTANCE.getICE()),
-    EGG_FREEZESHOCK("freezeshock", ElementalTypes.INSTANCE.getICE()),
-    EGG_FREEZINGGLARE("freezingglare", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_FREEZYFROST("freezyfrost", ElementalTypes.INSTANCE.getICE()),
-    EGG_FRENZYPLANT("frenzyplant", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_FROSTBREATH("frostbreath", ElementalTypes.INSTANCE.getICE()),
-    EGG_FRUSTRATION("frustration", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FURYATTACK("furyattack", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FURYCUTTER("furycutter", ElementalTypes.INSTANCE.getBUG()),
-    EGG_FURYSWIPES("furyswipes", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_FUSIONBOLT("fusionbolt", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_FUSIONFLARE("fusionflare", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_FUTURESIGHT("futuresight", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_GASTROACID("gastroacid", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_GEARGRIND("geargrind", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_GEARUP("gearup", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_GENESISSUPERNOVA("genesissupernova", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_GEOMANCY("geomancy", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_GIGADRAIN("gigadrain", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_GIGAIMPACT("gigaimpact", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_GIGATONHAMMER("gigatonhammer", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_GIGAVOLTHAVOC("gigavolthavoc", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_GLACIALLANCE("glaciallance", ElementalTypes.INSTANCE.getICE()),
-    EGG_GLACIATE("glaciate", ElementalTypes.INSTANCE.getICE()),
-    EGG_GLAIVERUSH("glaiverush", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_GLARE("glare", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_GLITZYGLOW("glitzyglow", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_GMAXBEFUDDLE("gmaxbefuddle", ElementalTypes.INSTANCE.getBUG()),
-    EGG_GMAXCANNONADE("gmaxcannonade", ElementalTypes.INSTANCE.getWATER()),
-    EGG_GMAXCENTIFERNO("gmaxcentiferno", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_GMAXCHISTRIKE("gmaxchistrike", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_GMAXCUDDLE("gmaxcuddle", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_GMAXDEPLETION("gmaxdepletion", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_GMAXDRUMSOLO("gmaxdrumsolo", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_GMAXFINALE("gmaxfinale", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_GMAXFIREBALL("gmaxfireball", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_GMAXFOAMBURST("gmaxfoamburst", ElementalTypes.INSTANCE.getWATER()),
-    EGG_GMAXGOLDRUSH("gmaxgoldrush", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_GMAXGRAVITAS("gmaxgravitas", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_GMAXHYDROSNIPE("gmaxhydrosnipe", ElementalTypes.INSTANCE.getWATER()),
-    EGG_GMAXMALODOR("gmaxmalodor", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_GMAXMELTDOWN("gmaxmeltdown", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_GMAXONEBLOW("gmaxoneblow", ElementalTypes.INSTANCE.getDARK()),
-    EGG_GMAXRAPIDFLOW("gmaxrapidflow", ElementalTypes.INSTANCE.getWATER()),
-    EGG_GMAXREPLENISH("gmaxreplenish", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_GMAXRESONANCE("gmaxresonance", ElementalTypes.INSTANCE.getICE()),
-    EGG_GMAXSANDBLAST("gmaxsandblast", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_GMAXSMITE("gmaxsmite", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_GMAXSNOOZE("gmaxsnooze", ElementalTypes.INSTANCE.getDARK()),
-    EGG_GMAXSTEELSURGE("gmaxsteelsurge", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_GMAXSTONESURGE("gmaxstonesurge", ElementalTypes.INSTANCE.getWATER()),
-    EGG_GMAXSTUNSHOCK("gmaxstunshock", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_GMAXSWEETNESS("gmaxsweetness", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_GMAXTARTNESS("gmaxtartness", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_GMAXTERROR("gmaxterror", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_GMAXVINELASH("gmaxvinelash", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_GMAXVOLCALITH("gmaxvolcalith", ElementalTypes.INSTANCE.getROCK()),
-    EGG_GMAXVOLTCRASH("gmaxvoltcrash", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_GMAXWILDFIRE("gmaxwildfire", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_GMAXWINDRAGE("gmaxwindrage", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_GRASSKNOT("grassknot", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_GRASSPLEDGE("grasspledge", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_GRASSWHISTLE("grasswhistle", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_GRASSYGLIDE("grassyglide", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_GRASSYTERRAIN("grassyterrain", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_GRAVAPPLE("gravapple", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_GRAVITY("gravity", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_GROWL("growl", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_GROWTH("growth", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_GRUDGE("grudge", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_GUARDIANOFALOLA("guardianofalola", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_GUARDSPLIT("guardsplit", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_GUARDSWAP("guardswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_GUILLOTINE("guillotine", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_GUNKSHOT("gunkshot", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_GUST("gust", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_GYROBALL("gyroball", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_HAIL("hail", ElementalTypes.INSTANCE.getICE()),
-    EGG_HAMMERARM("hammerarm", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_HAPPYHOUR("happyhour", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HARDEN("harden", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HAZE("haze", ElementalTypes.INSTANCE.getICE()),
-    EGG_HEADBUTT("headbutt", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HEADCHARGE("headcharge", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HEADLONGRUSH("headlongrush", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_HEADSMASH("headsmash", ElementalTypes.INSTANCE.getROCK()),
-    EGG_HEALBELL("healbell", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HEALBLOCK("healblock", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_HEALINGWISH("healingwish", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_HEALORDER("healorder", ElementalTypes.INSTANCE.getBUG()),
-    EGG_HEALPULSE("healpulse", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_HEARTSTAMP("heartstamp", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_HEARTSWAP("heartswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_HEATCRASH("heatcrash", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_HEATWAVE("heatwave", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_HEAVYSLAM("heavyslam", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_HELPINGHAND("helpinghand", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HEX("hex", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_HIDDENPOWER("hiddenpower", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HIGHHORSEPOWER("highhorsepower", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_HIGHJUMPKICK("highjumpkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_HOLDBACK("holdback", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HOLDHANDS("holdhands", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HONECLAWS("honeclaws", ElementalTypes.INSTANCE.getDARK()),
-    EGG_HORNATTACK("hornattack", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HORNDRILL("horndrill", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HORNLEECH("hornleech", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_HOWL("howl", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HURRICANE("hurricane", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_HYDROCANNON("hydrocannon", ElementalTypes.INSTANCE.getWATER()),
-    EGG_HYDROPUMP("hydropump", ElementalTypes.INSTANCE.getWATER()),
-    EGG_HYDROSTEAM("hydrosteam", ElementalTypes.INSTANCE.getWATER()),
-    EGG_HYDROVORTEX("hydrovortex", ElementalTypes.INSTANCE.getWATER()),
-    EGG_HYPERBEAM("hyperbeam", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HYPERDRILL("hyperdrill", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HYPERFANG("hyperfang", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HYPERSPACEFURY("hyperspacefury", ElementalTypes.INSTANCE.getDARK()),
-    EGG_HYPERSPACEHOLE("hyperspacehole", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_HYPERVOICE("hypervoice", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_HYPNOSIS("hypnosis", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_ICEBALL("iceball", ElementalTypes.INSTANCE.getICE()),
-    EGG_ICEBEAM("icebeam", ElementalTypes.INSTANCE.getICE()),
-    EGG_ICEBURN("iceburn", ElementalTypes.INSTANCE.getICE()),
-    EGG_ICEFANG("icefang", ElementalTypes.INSTANCE.getICE()),
-    EGG_ICEHAMMER("icehammer", ElementalTypes.INSTANCE.getICE()),
-    EGG_ICEPUNCH("icepunch", ElementalTypes.INSTANCE.getICE()),
-    EGG_ICESHARD("iceshard", ElementalTypes.INSTANCE.getICE()),
-    EGG_ICESPINNER("icespinner", ElementalTypes.INSTANCE.getICE()),
-    EGG_ICICLECRASH("iciclecrash", ElementalTypes.INSTANCE.getICE()),
-    EGG_ICICLESPEAR("iciclespear", ElementalTypes.INSTANCE.getICE()),
-    EGG_ICYWIND("icywind", ElementalTypes.INSTANCE.getICE()),
-    EGG_IMPRISON("imprison", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_INCINERATE("incinerate", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_INFERNALPARADE("infernalparade", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_INFERNO("inferno", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_INFERNOOVERDRIVE("infernooverdrive", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_INFESTATION("infestation", ElementalTypes.INSTANCE.getBUG()),
-    EGG_INGRAIN("ingrain", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_INSTRUCT("instruct", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_IONDELUGE("iondeluge", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_IRONDEFENSE("irondefense", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_IRONHEAD("ironhead", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_IRONTAIL("irontail", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_JAWLOCK("jawlock", ElementalTypes.INSTANCE.getDARK()),
-    EGG_JETPUNCH("jetpunch", ElementalTypes.INSTANCE.getWATER()),
-    EGG_JUDGMENT("judgment", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_JUMPKICK("jumpkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_JUNGLEHEALING("junglehealing", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_KARATECHOP("karatechop", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_KINESIS("kinesis", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_KINGSSHIELD("kingsshield", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_KNOCKOFF("knockoff", ElementalTypes.INSTANCE.getDARK()),
-    EGG_KOWTOWCLEAVE("kowtowcleave", ElementalTypes.INSTANCE.getDARK()),
-    EGG_LANDSWRATH("landswrath", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_LASERFOCUS("laserfocus", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_LASHOUT("lashout", ElementalTypes.INSTANCE.getDARK()),
-    EGG_LASTRESORT("lastresort", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_LASTRESPECTS("lastrespects", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_LAVAPLUME("lavaplume", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_LEAFAGE("leafage", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_LEAFBLADE("leafblade", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_LEAFSTORM("leafstorm", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_LEAFTORNADO("leaftornado", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_LEECHLIFE("leechlife", ElementalTypes.INSTANCE.getBUG()),
-    EGG_LEECHSEED("leechseed", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_LEER("leer", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_LETSSNUGGLEFOREVER("letssnuggleforever", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_LICK("lick", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_LIFEDEW("lifedew", ElementalTypes.INSTANCE.getWATER()),
-    EGG_LIGHTOFRUIN("lightofruin", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_LIGHTSCREEN("lightscreen", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_LIGHTTHATBURNSTHESKY("lightthatburnsthesky", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_LIQUIDATION("liquidation", ElementalTypes.INSTANCE.getWATER()),
-    EGG_LOCKON("lockon", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_LOVELYKISS("lovelykiss", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_LOWKICK("lowkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_LOWSWEEP("lowsweep", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_LUCKYCHANT("luckychant", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_LUMINACRASH("luminacrash", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_LUNARBLESSING("lunarblessing", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_LUNARDANCE("lunardance", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_LUNGE("lunge", ElementalTypes.INSTANCE.getBUG()),
-    EGG_LUSTERPURGE("lusterpurge", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_MACHPUNCH("machpunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_MAGICALLEAF("magicalleaf", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_MAGICALTORQUE("magicaltorque", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_MAGICCOAT("magiccoat", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_MAGICPOWDER("magicpowder", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_MAGICROOM("magicroom", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_MAGMASTORM("magmastorm", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_MAGNETBOMB("magnetbomb", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_MAGNETICFLUX("magneticflux", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_MAGNETRISE("magnetrise", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_MAGNITUDE("magnitude", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_MAKEITRAIN("makeitrain", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_MALICIOUSMOONSAULT("maliciousmoonsault", ElementalTypes.INSTANCE.getDARK()),
-    EGG_MATBLOCK("matblock", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_MAXAIRSTREAM("maxairstream", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_MAXDARKNESS("maxdarkness", ElementalTypes.INSTANCE.getDARK()),
-    EGG_MAXFLARE("maxflare", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_MAXFLUTTERBY("maxflutterby", ElementalTypes.INSTANCE.getBUG()),
-    EGG_MAXGEYSER("maxgeyser", ElementalTypes.INSTANCE.getWATER()),
-    EGG_MAXGUARD("maxguard", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_MAXHAILSTORM("maxhailstorm", ElementalTypes.INSTANCE.getICE()),
-    EGG_MAXKNUCKLE("maxknuckle", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_MAXLIGHTNING("maxlightning", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_MAXMINDSTORM("maxmindstorm", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_MAXOOZE("maxooze", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_MAXOVERGROWTH("maxovergrowth", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_MAXPHANTASM("maxphantasm", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_MAXQUAKE("maxquake", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_MAXROCKFALL("maxrockfall", ElementalTypes.INSTANCE.getROCK()),
-    EGG_MAXSTARFALL("maxstarfall", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_MAXSTEELSPIKE("maxsteelspike", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_MAXSTRIKE("maxstrike", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_MAXWYRMWIND("maxwyrmwind", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_MEANLOOK("meanlook", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_MEDITATE("meditate", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_MEFIRST("mefirst", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_MEGADRAIN("megadrain", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_MEGAHORN("megahorn", ElementalTypes.INSTANCE.getBUG()),
-    EGG_MEGAKICK("megakick", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_MEGAPUNCH("megapunch", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_MEMENTO("memento", ElementalTypes.INSTANCE.getDARK()),
-    EGG_MENACINGMOONRAZEMAELSTROM("menacingmoonrazemaelstrom", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_METALBURST("metalburst", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_METALCLAW("metalclaw", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_METALSOUND("metalsound", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_METEORASSAULT("meteorassault", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_METEORBEAM("meteorbeam", ElementalTypes.INSTANCE.getROCK()),
-    EGG_METEORMASH("meteormash", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_METRONOME("metronome", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_MILKDRINK("milkdrink", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_MIMIC("mimic", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_MINDBLOWN("mindblown", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_MINDREADER("mindreader", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_MINIMIZE("minimize", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_MIRACLEEYE("miracleeye", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_MIRRORCOAT("mirrorcoat", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_MIRRORMOVE("mirrormove", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_MIRRORSHOT("mirrorshot", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_MIST("mist", ElementalTypes.INSTANCE.getICE()),
-    EGG_MISTBALL("mistball", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_MISTYEXPLOSION("mistyexplosion", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_MISTYTERRAIN("mistyterrain", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_MOONBLAST("moonblast", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_MOONGEISTBEAM("moongeistbeam", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_MOONLIGHT("moonlight", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_MORNINGSUN("morningsun", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_MORTALSPIN("mortalspin", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_MOUNTAINGALE("mountaingale", ElementalTypes.INSTANCE.getICE()),
-    EGG_MUDBOMB("mudbomb", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_MUDSHOT("mudshot", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_MUDSLAP("mudslap", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_MUDSPORT("mudsport", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_MUDDYWATER("muddywater", ElementalTypes.INSTANCE.getWATER()),
-    EGG_MULTIATTACK("multiattack", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_MYSTICALFIRE("mysticalfire", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_MYSTICALPOWER("mysticalpower", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_NASTYPLOT("nastyplot", ElementalTypes.INSTANCE.getDARK()),
-    EGG_NATURALGIFT("naturalgift", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_NATUREPOWER("naturepower", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_NATURESMADNESS("naturesmadness", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_NEEDLEARM("needlearm", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_NEVERENDINGNIGHTMARE("neverendingnightmare", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_NIGHTDAZE("nightdaze", ElementalTypes.INSTANCE.getDARK()),
-    EGG_NIGHTMARE("nightmare", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_NIGHTSHADE("nightshade", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_NIGHTSLASH("nightslash", ElementalTypes.INSTANCE.getDARK()),
-    EGG_NOBLEROAR("nobleroar", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_NORETREAT("noretreat", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_NOXIOUSTORQUE("noxioustorque", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_NUZZLE("nuzzle", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_OBLIVIONWING("oblivionwing", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_OBSTRUCT("obstruct", ElementalTypes.INSTANCE.getDARK()),
-    EGG_OCEANICOPERETTA("oceanicoperetta", ElementalTypes.INSTANCE.getWATER()),
-    EGG_OCTAZOOKA("octazooka", ElementalTypes.INSTANCE.getWATER()),
-    EGG_OCTOLOCK("octolock", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_ODORSLEUTH("odorsleuth", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_OMINOUSWIND("ominouswind", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_ORDERUP("orderup", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_ORIGINPULSE("originpulse", ElementalTypes.INSTANCE.getWATER()),
-    EGG_OUTRAGE("outrage", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_OVERDRIVE("overdrive", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_OVERHEAT("overheat", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_PAINSPLIT("painsplit", ElementalTypes.INSTANCE.getNORMAL()),
-    //EGG_PALEOWAVE("paleowave", ElementalTypes.INSTANCE.getROCK()), // Signature move for Stratagem, Smogon's custom Pokémon
-    EGG_PARABOLICCHARGE("paraboliccharge", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_PARTINGSHOT("partingshot", ElementalTypes.INSTANCE.getDARK()),
-    EGG_PAYBACK("payback", ElementalTypes.INSTANCE.getDARK()),
-    EGG_PAYDAY("payday", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_PECK("peck", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_PERISHSONG("perishsong", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_PETALBLIZZARD("petalblizzard", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_PETALDANCE("petaldance", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_PHANTOMFORCE("phantomforce", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_PHOTONGEYSER("photongeyser", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PIKAPAPOW("pikapapow", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_PINMISSILE("pinmissile", ElementalTypes.INSTANCE.getBUG()),
-    EGG_PLASMAFISTS("plasmafists", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_PLAYNICE("playnice", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_PLAYROUGH("playrough", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_PLUCK("pluck", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_POISONFANG("poisonfang", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_POISONGAS("poisongas", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_POISONJAB("poisonjab", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_POISONPOWDER("poisonpowder", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_POISONSTING("poisonsting", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_POISONTAIL("poisontail", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_POLLENPUFF("pollenpuff", ElementalTypes.INSTANCE.getBUG()),
-    EGG_POLTERGEIST("poltergeist", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_POPULATIONBOMB("populationbomb", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_POUNCE("pounce", ElementalTypes.INSTANCE.getBUG()),
-    EGG_POUND("pound", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_POWDER("powder", ElementalTypes.INSTANCE.getBUG()),
-    EGG_POWDERSNOW("powdersnow", ElementalTypes.INSTANCE.getICE()),
-    EGG_POWERGEM("powergem", ElementalTypes.INSTANCE.getROCK()),
-    EGG_POWERSHIFT("powershift", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_POWERSPLIT("powersplit", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_POWERSWAP("powerswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_POWERTRICK("powertrick", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_POWERTRIP("powertrip", ElementalTypes.INSTANCE.getDARK()),
-    EGG_POWERUPPUNCH("poweruppunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_POWERWHIP("powerwhip", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_PRECIPICEBLADES("precipiceblades", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_PRESENT("present", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_PRISMATICLASER("prismaticlaser", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PROTECT("protect", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_PSYBEAM("psybeam", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PSYBLADE("psyblade", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PSYCHUP("psychup", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_PSYCHIC("psychic", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PSYCHICFANGS("psychicfangs", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PSYCHICTERRAIN("psychicterrain", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PSYCHOBOOST("psychoboost", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PSYCHOCUT("psychocut", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PSYCHOSHIFT("psychoshift", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PSYSHIELDBASH("psyshieldbash", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PSYSHOCK("psyshock", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PSYSTRIKE("psystrike", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PSYWAVE("psywave", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_PULVERIZINGPANCAKE("pulverizingpancake", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_PUNISHMENT("punishment", ElementalTypes.INSTANCE.getDARK()),
-    EGG_PURIFY("purify", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_PURSUIT("pursuit", ElementalTypes.INSTANCE.getDARK()),
-    EGG_PYROBALL("pyroball", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_QUASH("quash", ElementalTypes.INSTANCE.getDARK()),
-    EGG_QUICKATTACK("quickattack", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_QUICKGUARD("quickguard", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_QUIVERDANCE("quiverdance", ElementalTypes.INSTANCE.getBUG()),
-    EGG_RAGE("rage", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_RAGEFIST("ragefist", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_RAGEPOWDER("ragepowder", ElementalTypes.INSTANCE.getBUG()),
-    EGG_RAGINGBULL("ragingbull", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_RAGINGFURY("ragingfury", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_RAINDANCE("raindance", ElementalTypes.INSTANCE.getWATER()),
-    EGG_RAPIDSPIN("rapidspin", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_RAZORLEAF("razorleaf", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_RAZORSHELL("razorshell", ElementalTypes.INSTANCE.getWATER()),
-    EGG_RAZORWIND("razorwind", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_RECOVER("recover", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_RECYCLE("recycle", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_REFLECT("reflect", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_REFLECTTYPE("reflecttype", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_REFRESH("refresh", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_RELICSONG("relicsong", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_REST("rest", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_RETALIATE("retaliate", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_RETURN("return", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_REVELATIONDANCE("revelationdance", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_REVENGE("revenge", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_REVERSAL("reversal", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_REVIVALBLESSING("revivalblessing", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_RISINGVOLTAGE("risingvoltage", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_ROAR("roar", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_ROAROFTIME("roaroftime", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_ROCKBLAST("rockblast", ElementalTypes.INSTANCE.getROCK()),
-    EGG_ROCKCLIMB("rockclimb", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_ROCKPOLISH("rockpolish", ElementalTypes.INSTANCE.getROCK()),
-    EGG_ROCKSLIDE("rockslide", ElementalTypes.INSTANCE.getROCK()),
-    EGG_ROCKSMASH("rocksmash", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_ROCKTHROW("rockthrow", ElementalTypes.INSTANCE.getROCK()),
-    EGG_ROCKTOMB("rocktomb", ElementalTypes.INSTANCE.getROCK()),
-    EGG_ROCKWRECKER("rockwrecker", ElementalTypes.INSTANCE.getROCK()),
-    EGG_ROLEPLAY("roleplay", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_ROLLINGKICK("rollingkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_ROLLOUT("rollout", ElementalTypes.INSTANCE.getROCK()),
-    EGG_ROOST("roost", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_ROTOTILLER("rototiller", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_ROUND("round", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_RUINATION("ruination", ElementalTypes.INSTANCE.getDARK()),
-    EGG_SACREDFIRE("sacredfire", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_SACREDSWORD("sacredsword", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_SAFEGUARD("safeguard", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SALTCURE("saltcure", ElementalTypes.INSTANCE.getROCK()),
-    EGG_SANDATTACK("sandattack", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_SANDSEARSTORM("sandsearstorm", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_SANDSTORM("sandstorm", ElementalTypes.INSTANCE.getROCK()),
-    EGG_SANDTOMB("sandtomb", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_SAPPYSEED("sappyseed", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_SAVAGESPINOUT("savagespinout", ElementalTypes.INSTANCE.getBUG()),
-    EGG_SCALD("scald", ElementalTypes.INSTANCE.getWATER()),
-    EGG_SCALESHOT("scaleshot", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_SCARYFACE("scaryface", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SCORCHINGSANDS("scorchingsands", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_SCRATCH("scratch", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SCREECH("screech", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SEARINGSHOT("searingshot", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_SEARINGSUNRAZESMASH("searingsunrazesmash", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_SECRETPOWER("secretpower", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SECRETSWORD("secretsword", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_SEEDBOMB("seedbomb", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_SEEDFLARE("seedflare", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_SEISMICTOSS("seismictoss", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_SELFDESTRUCT("selfdestruct", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SHADOWBALL("shadowball", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_SHADOWBONE("shadowbone", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_SHADOWCLAW("shadowclaw", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_SHADOWFORCE("shadowforce", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_SHADOWPUNCH("shadowpunch", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_SHADOWSNEAK("shadowsneak", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_SHADOWSTRIKE("shadowstrike", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_SHARPEN("sharpen", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SHATTEREDPSYCHE("shatteredpsyche", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_SHEDTAIL("shedtail", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SHEERCOLD("sheercold", ElementalTypes.INSTANCE.getICE()),
-    EGG_SHELLSIDEARM("shellsidearm", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_SHELLSMASH("shellsmash", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SHELLTRAP("shelltrap", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_SHELTER("shelter", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_SHIFTGEAR("shiftgear", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_SHOCKWAVE("shockwave", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_SHOREUP("shoreup", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_SIGNALBEAM("signalbeam", ElementalTypes.INSTANCE.getBUG()),
-    EGG_SILKTRAP("silktrap", ElementalTypes.INSTANCE.getBUG()),
-    EGG_SILVERWIND("silverwind", ElementalTypes.INSTANCE.getBUG()),
-    EGG_SIMPLEBEAM("simplebeam", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SING("sing", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SINISTERARROWRAID("sinisterarrowraid", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_SIZZLYSLIDE("sizzlyslide", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_SKETCH("sketch", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SKILLSWAP("skillswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_SKITTERSMACK("skittersmack", ElementalTypes.INSTANCE.getBUG()),
-    EGG_SKULLBASH("skullbash", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SKYATTACK("skyattack", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_SKYDROP("skydrop", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_SKYUPPERCUT("skyuppercut", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_SLACKOFF("slackoff", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SLAM("slam", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SLASH("slash", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SLEEPPOWDER("sleeppowder", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_SLEEPTALK("sleeptalk", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SLUDGE("sludge", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_SLUDGEBOMB("sludgebomb", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_SLUDGEWAVE("sludgewave", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_SMACKDOWN("smackdown", ElementalTypes.INSTANCE.getROCK()),
-    EGG_SMARTSTRIKE("smartstrike", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_SMELLINGSALTS("smellingsalts", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SMOG("smog", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_SMOKESCREEN("smokescreen", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SNAPTRAP("snaptrap", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_SNARL("snarl", ElementalTypes.INSTANCE.getDARK()),
-    EGG_SNATCH("snatch", ElementalTypes.INSTANCE.getDARK()),
-    EGG_SNIPESHOT("snipeshot", ElementalTypes.INSTANCE.getWATER()),
-    EGG_SNORE("snore", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SNOWSCAPE("snowscape", ElementalTypes.INSTANCE.getICE()),
-    EGG_SOAK("soak", ElementalTypes.INSTANCE.getWATER()),
-    EGG_SOFTBOILED("softboiled", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SOLARBEAM("solarbeam", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_SOLARBLADE("solarblade", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_SONICBOOM("sonicboom", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SOULSTEALING7STARSTRIKE("soulstealing7starstrike", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_SPACIALREND("spacialrend", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_SPARK("spark", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_SPARKLINGARIA("sparklingaria", ElementalTypes.INSTANCE.getWATER()),
-    EGG_SPARKLYSWIRL("sparklyswirl", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_SPECTRALTHIEF("spectralthief", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_SPEEDSWAP("speedswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_SPICYEXTRACT("spicyextract", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_SPIDERWEB("spiderweb", ElementalTypes.INSTANCE.getBUG()),
-    EGG_SPIKECANNON("spikecannon", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SPIKES("spikes", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_SPIKYSHIELD("spikyshield", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_SPINOUT("spinout", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_SPIRITBREAK("spiritbreak", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_SPIRITSHACKLE("spiritshackle", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_SPITUP("spitup", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SPITE("spite", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_SPLASH("splash", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SPLINTEREDSTORMSHARDS("splinteredstormshards", ElementalTypes.INSTANCE.getROCK()),
-    EGG_SPLISHYSPLASH("splishysplash", ElementalTypes.INSTANCE.getWATER()),
-    EGG_SPORE("spore", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_SPOTLIGHT("spotlight", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SPRINGTIDESTORM("springtidestorm", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_STEALTHROCK("stealthrock", ElementalTypes.INSTANCE.getROCK()),
-    EGG_STEAMERUPTION("steameruption", ElementalTypes.INSTANCE.getWATER()),
-    EGG_STEAMROLLER("steamroller", ElementalTypes.INSTANCE.getBUG()),
-    EGG_STEELBEAM("steelbeam", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_STEELROLLER("steelroller", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_STEELWING("steelwing", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_STICKYWEB("stickyweb", ElementalTypes.INSTANCE.getBUG()),
-    EGG_STOCKPILE("stockpile", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_STOKEDSPARKSURFER("stokedsparksurfer", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_STOMP("stomp", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_STOMPINGTANTRUM("stompingtantrum", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_STONEAXE("stoneaxe", ElementalTypes.INSTANCE.getROCK()),
-    EGG_STONEEDGE("stoneedge", ElementalTypes.INSTANCE.getROCK()),
-    EGG_STOREDPOWER("storedpower", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_STORMTHROW("stormthrow", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_STRANGESTEAM("strangesteam", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_STRENGTH("strength", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_STRENGTHSAP("strengthsap", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_STRINGSHOT("stringshot", ElementalTypes.INSTANCE.getBUG()),
-    EGG_STRUGGLE("struggle", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_STRUGGLEBUG("strugglebug", ElementalTypes.INSTANCE.getBUG()),
-    EGG_STUFFCHEEKS("stuffcheeks", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_STUNSPORE("stunspore", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_SUBMISSION("submission", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_SUBSTITUTE("substitute", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SUBZEROSLAMMER("subzeroslammer", ElementalTypes.INSTANCE.getICE()),
-    EGG_SUCKERPUNCH("suckerpunch", ElementalTypes.INSTANCE.getDARK()),
-    EGG_SUNNYDAY("sunnyday", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_SUNSTEELSTRIKE("sunsteelstrike", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_SUPERFANG("superfang", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SUPERPOWER("superpower", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_SUPERSONIC("supersonic", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SUPERSONICSKYSTRIKE("supersonicskystrike", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_SURF("surf", ElementalTypes.INSTANCE.getWATER()),
-    EGG_SURGINGSTRIKES("surgingstrikes", ElementalTypes.INSTANCE.getWATER()),
-    EGG_SWAGGER("swagger", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SWALLOW("swallow", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SWEETKISS("sweetkiss", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_SWEETSCENT("sweetscent", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SWIFT("swift", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SWITCHEROO("switcheroo", ElementalTypes.INSTANCE.getDARK()),
-    EGG_SWORDSDANCE("swordsdance", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_SYNCHRONOISE("synchronoise", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_SYNTHESIS("synthesis", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_TACKLE("tackle", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TAILGLOW("tailglow", ElementalTypes.INSTANCE.getBUG()),
-    EGG_TAILSLAP("tailslap", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TAILWHIP("tailwhip", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TAILWIND("tailwind", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_TAKEDOWN("takedown", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TAKEHEART("takeheart", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_TARSHOT("tarshot", ElementalTypes.INSTANCE.getROCK()),
-    EGG_TAUNT("taunt", ElementalTypes.INSTANCE.getDARK()),
-    EGG_TEARFULLOOK("tearfullook", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TEATIME("teatime", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TECHNOBLAST("technoblast", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TECTONICRAGE("tectonicrage", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_TEETERDANCE("teeterdance", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TELEKINESIS("telekinesis", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_TELEPORT("teleport", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_TERABLAST("terablast", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TERRAINPULSE("terrainpulse", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_THIEF("thief", ElementalTypes.INSTANCE.getDARK()),
-    EGG_THOUSANDARROWS("thousandarrows", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_THOUSANDWAVES("thousandwaves", ElementalTypes.INSTANCE.getGROUND()),
-    EGG_THRASH("thrash", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_THROATCHOP("throatchop", ElementalTypes.INSTANCE.getDARK()),
-    EGG_THUNDER("thunder", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_THUNDERBOLT("thunderbolt", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_THUNDERCAGE("thundercage", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_THUNDERFANG("thunderfang", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_THUNDEROUSKICK("thunderouskick", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_THUNDERPUNCH("thunderpunch", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_THUNDERSHOCK("thundershock", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_THUNDERWAVE("thunderwave", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_TICKLE("tickle", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TIDYUP("tidyup", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TOPSYTURVY("topsyturvy", ElementalTypes.INSTANCE.getDARK()),
-    EGG_TORCHSONG("torchsong", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_TORMENT("torment", ElementalTypes.INSTANCE.getDARK()),
-    EGG_TOXIC("toxic", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_TOXICSPIKES("toxicspikes", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_TOXICTHREAD("toxicthread", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_TRAILBLAZE("trailblaze", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_TRANSFORM("transform", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TRIATTACK("triattack", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TRICK("trick", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_TRICKORTREAT("trickortreat", ElementalTypes.INSTANCE.getGHOST()),
-    EGG_TRICKROOM("trickroom", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_TRIPLEARROWS("triplearrows", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_TRIPLEAXEL("tripleaxel", ElementalTypes.INSTANCE.getICE()),
-    EGG_TRIPLEDIVE("tripledive", ElementalTypes.INSTANCE.getWATER()),
-    EGG_TRIPLEKICK("triplekick", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_TROPKICK("tropkick", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_TRUMPCARD("trumpcard", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_TWINBEAM("twinbeam", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_TWINEEDLE("twineedle", ElementalTypes.INSTANCE.getBUG()),
-    EGG_TWINKLETACKLE("twinkletackle", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_TWISTER("twister", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_UTURN("uturn", ElementalTypes.INSTANCE.getBUG()),
-    EGG_UPROAR("uproar", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_VACUUMWAVE("vacuumwave", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_VCREATE("vcreate", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_VEEVEEVOLLEY("veeveevolley", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_VENOMDRENCH("venomdrench", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_VENOSHOCK("venoshock", ElementalTypes.INSTANCE.getPOISON()),
-    EGG_VICTORYDANCE("victorydance", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_VINEWHIP("vinewhip", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_VISEGRIP("visegrip", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_VITALTHROW("vitalthrow", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_VOLTSWITCH("voltswitch", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_VOLTTACKLE("volttackle", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_WAKEUPSLAP("wakeupslap", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_WATERFALL("waterfall", ElementalTypes.INSTANCE.getWATER()),
-    EGG_WATERGUN("watergun", ElementalTypes.INSTANCE.getWATER()),
-    EGG_WATERPLEDGE("waterpledge", ElementalTypes.INSTANCE.getWATER()),
-    EGG_WATERPULSE("waterpulse", ElementalTypes.INSTANCE.getWATER()),
-    EGG_WATERSHURIKEN("watershuriken", ElementalTypes.INSTANCE.getWATER()),
-    EGG_WATERSPORT("watersport", ElementalTypes.INSTANCE.getWATER()),
-    EGG_WATERSPOUT("waterspout", ElementalTypes.INSTANCE.getWATER()),
-    EGG_WAVECRASH("wavecrash", ElementalTypes.INSTANCE.getWATER()),
-    EGG_WEATHERBALL("weatherball", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_WHIRLPOOL("whirlpool", ElementalTypes.INSTANCE.getWATER()),
-    EGG_WHIRLWIND("whirlwind", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_WICKEDBLOW("wickedblow", ElementalTypes.INSTANCE.getDARK()),
-    EGG_WICKEDTORQUE("wickedtorque", ElementalTypes.INSTANCE.getDARK()),
-    EGG_WIDEGUARD("wideguard", ElementalTypes.INSTANCE.getROCK()),
-    EGG_WILDBOLTSTORM("wildboltstorm", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_WILDCHARGE("wildcharge", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_WILLOWISP("willowisp", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_WINGATTACK("wingattack", ElementalTypes.INSTANCE.getFLYING()),
-    EGG_WISH("wish", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_WITHDRAW("withdraw", ElementalTypes.INSTANCE.getWATER()),
-    EGG_WONDERROOM("wonderroom", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_WOODHAMMER("woodhammer", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_WORKUP("workup", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_WORRYSEED("worryseed", ElementalTypes.INSTANCE.getGRASS()),
-    EGG_WRAP("wrap", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_WRINGOUT("wringout", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_XSCISSOR("xscissor", ElementalTypes.INSTANCE.getBUG()),
-    EGG_YAWN("yawn", ElementalTypes.INSTANCE.getNORMAL()),
-    EGG_ZAPCANNON("zapcannon", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_ZENHEADBUTT("zenheadbutt", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_ZINGZAP("zingzap", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_ZIPPYZAP("zippyzap", ElementalTypes.INSTANCE.getELECTRIC()),
+import java.util.ArrayList;
+import java.util.List;
 
-    EGG_TEMPERFLARE("temperflare", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_SUPERCELLSLAM("supercellslam", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_HARDPRESS("hardpress", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_DRAGONCHEER("dragoncheer", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_ALLURINGVOICE("alluringvoice", ElementalTypes.INSTANCE.getFAIRY()),
-    EGG_PSYCHICNOISE("psychicnoise", ElementalTypes.INSTANCE.getPSYCHIC()),
-    EGG_UPPERHAND("upperhand", ElementalTypes.INSTANCE.getFIGHTING()),
-    EGG_ELECTROSHOT("electroshot", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_FICKLEBEAM("ficklebeam", ElementalTypes.INSTANCE.getDRAGON()),
-    EGG_BURNINGBULWARK("burningbulwark", ElementalTypes.INSTANCE.getFIRE()),
-    EGG_THUNDERCLAP("thunderclap", ElementalTypes.INSTANCE.getELECTRIC()),
-    EGG_MIGHTYCLEAVE("mightycleave", ElementalTypes.INSTANCE.getROCK()),
-    EGG_TACHYONCUTTER("tachyoncutter", ElementalTypes.INSTANCE.getSTEEL()),
-    EGG_TERASTARSTORM("terastarstorm", ElementalTypes.INSTANCE.getNORMAL());
+public class EggMoveItem {
+    private static final List<Item> all = new ArrayList<>();
 
-    private final Item item;
-    private final Identifier identifier;
+    public static final Item EGG_10000000VOLTTHUNDERBOLT = register("10000000voltthunderbolt", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_ABSORB = register("absorb", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_ACCELEROCK = register("accelerock", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_ACID = register("acid", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_ACIDARMOR = register("acidarmor", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_ACIDDOWNPOUR = register("aciddownpour", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_ACIDSPRAY = register("acidspray", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_ACROBATICS = register("acrobatics", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_ACUPRESSURE = register("acupressure", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_AERIALACE = register("aerialace", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_AEROBLAST = register("aeroblast", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_AFTERYOU = register("afteryou", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_AGILITY = register("agility", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_AIRCUTTER = register("aircutter", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_AIRSLASH = register("airslash", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_ALLOUTPUMMELING = register("alloutpummeling", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_ALLYSWITCH = register("allyswitch", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_AMNESIA = register("amnesia", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_ANCHORSHOT = register("anchorshot", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_ANCIENTPOWER = register("ancientpower", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_APPLEACID = register("appleacid", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_AQUACUTTER = register("aquacutter", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_AQUAJET = register("aquajet", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_AQUARING = register("aquaring", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_AQUASTEP = register("aquastep", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_AQUATAIL = register("aquatail", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_ARMORCANNON = register("armorcannon", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_ARMTHRUST = register("armthrust", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_AROMATHERAPY = register("aromatherapy", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_AROMATICMIST = register("aromaticmist", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_ASSIST = register("assist", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_ASSURANCE = register("assurance", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_ASTONISH = register("astonish", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_ASTRALBARRAGE = register("astralbarrage", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_ATTACKORDER = register("attackorder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_ATTRACT = register("attract", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_AURASPHERE = register("aurasphere", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_AURAWHEEL = register("aurawheel", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_AURORABEAM = register("aurorabeam", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_AURORAVEIL = register("auroraveil", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_AUTOTOMIZE = register("autotomize", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_AVALANCHE = register("avalanche", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_AXEKICK = register("axekick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_BABYDOLLEYES = register("babydolleyes", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_BADDYBAD = register("baddybad", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_BANEFULBUNKER = register("banefulbunker", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_BARBBARRAGE = register("barbbarrage", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_BARRAGE = register("barrage", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_BARRIER = register("barrier", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_BATONPASS = register("batonpass", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_BEAKBLAST = register("beakblast", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_BEATUP = register("beatup", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_BEHEMOTHBASH = register("behemothbash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_BEHEMOTHBLADE = register("behemothblade", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_BELCH = register("belch", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_BELLYDRUM = register("bellydrum", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_BESTOW = register("bestow", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_BIDE = register("bide", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_BIND = register("bind", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_BITE = register("bite", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_BITTERBLADE = register("bitterblade", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_BITTERMALICE = register("bittermalice", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_BLACKHOLEECLIPSE = register("blackholeeclipse", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_BLASTBURN = register("blastburn", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_BLAZEKICK = register("blazekick", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_BLAZINGTORQUE = register("blazingtorque", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_BLEAKWINDSTORM = register("bleakwindstorm", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_BLIZZARD = register("blizzard", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_BLOCK = register("block", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_BLOOMDOOM = register("bloomdoom", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_BLUEFLARE = register("blueflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_BODYPRESS = register("bodypress", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_BODYSLAM = register("bodyslam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_BOLTBEAK = register("boltbeak", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_BOLTSTRIKE = register("boltstrike", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_BONECLUB = register("boneclub", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_BONEMERANG = register("bonemerang", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_BONERUSH = register("bonerush", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_BOOMBURST = register("boomburst", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_BOUNCE = register("bounce", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_BOUNCYBUBBLE = register("bouncybubble", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_BRANCHPOKE = register("branchpoke", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_BRAVEBIRD = register("bravebird", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_BREAKINGSWIPE = register("breakingswipe", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_BREAKNECKBLITZ = register("breakneckblitz", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_BRICKBREAK = register("brickbreak", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_BRINE = register("brine", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_BRUTALSWING = register("brutalswing", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_BUBBLE = register("bubble", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_BUBBLEBEAM = register("bubblebeam", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_BUGBITE = register("bugbite", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_BUGBUZZ = register("bugbuzz", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_BULKUP = register("bulkup", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_BULLDOZE = register("bulldoze", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_BULLETPUNCH = register("bulletpunch", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_BULLETSEED = register("bulletseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_BURNINGJEALOUSY = register("burningjealousy", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_BURNUP = register("burnup", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_BUZZYBUZZ = register("buzzybuzz", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_CALMMIND = register("calmmind", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_CAMOUFLAGE = register("camouflage", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_CAPTIVATE = register("captivate", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_CATASTROPIKA = register("catastropika", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_CEASELESSEDGE = register("ceaselessedge", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_CELEBRATE = register("celebrate", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_CHARGE = register("charge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_CHARGEBEAM = register("chargebeam", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_CHARM = register("charm", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_CHATTER = register("chatter", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_CHILLINGWATER = register("chillingwater", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_CHILLYRECEPTION = register("chillyreception", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_CHIPAWAY = register("chipaway", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_CHLOROBLAST = register("chloroblast", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_CIRCLETHROW = register("circlethrow", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_CLAMP = register("clamp", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_CLANGINGSCALES = register("clangingscales", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_CLANGOROUSSOUL = register("clangoroussoul", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_CLANGOROUSSOULBLAZE = register("clangoroussoulblaze", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_CLEARSMOG = register("clearsmog", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_CLOSECOMBAT = register("closecombat", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_COACHING = register("coaching", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_COIL = register("coil", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_COLLISIONCOURSE = register("collisioncourse", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_COMBATTORQUE = register("combattorque", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_COMETPUNCH = register("cometpunch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_COMEUPPANCE = register("comeuppance", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_CONFIDE = register("confide", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_CONFUSERAY = register("confuseray", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_CONFUSION = register("confusion", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_CONSTRICT = register("constrict", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_CONTINENTALCRUSH = register("continentalcrush", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_CONVERSION = register("conversion", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_CONVERSION2 = register("conversion2", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_COPYCAT = register("copycat", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_COREENFORCER = register("coreenforcer", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_CORKSCREWCRASH = register("corkscrewcrash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_CORROSIVEGAS = register("corrosivegas", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_COSMICPOWER = register("cosmicpower", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_COTTONGUARD = register("cottonguard", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_COTTONSPORE = register("cottonspore", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_COUNTER = register("counter", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_COURTCHANGE = register("courtchange", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_COVET = register("covet", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_CRABHAMMER = register("crabhammer", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_CRAFTYSHIELD = register("craftyshield", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_CROSSCHOP = register("crosschop", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_CROSSPOISON = register("crosspoison", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_CRUNCH = register("crunch", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_CRUSHCLAW = register("crushclaw", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_CRUSHGRIP = register("crushgrip", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_CURSE = register("curse", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_CUT = register("cut", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_DARKESTLARIAT = register("darkestlariat", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_DARKPULSE = register("darkpulse", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_DARKVOID = register("darkvoid", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_DAZZLINGGLEAM = register("dazzlinggleam", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_DECORATE = register("decorate", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_DEFENDORDER = register("defendorder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_DEFENSECURL = register("defensecurl", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_DEFOG = register("defog", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_DESTINYBOND = register("destinybond", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_DETECT = register("detect", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_DEVASTATINGDRAKE = register("devastatingdrake", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DIAMONDSTORM = register("diamondstorm", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_DIG = register("dig", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_DISABLE = register("disable", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_DISARMINGVOICE = register("disarmingvoice", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_DISCHARGE = register("discharge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_DIRECLAW = register("direclaw", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_DIVE = register("dive", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_DIZZYPUNCH = register("dizzypunch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_DOODLE = register("doodle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_DOOMDESIRE = register("doomdesire", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_DOUBLEEDGE = register("doubleedge", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_DOUBLEHIT = register("doublehit", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_DOUBLEIRONBASH = register("doubleironbash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_DOUBLEKICK = register("doublekick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_DOUBLESHOCK = register("doubleshock", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_DOUBLESLAP = register("doubleslap", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_DOUBLETEAM = register("doubleteam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_DRACOMETEOR = register("dracometeor", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DRAGONASCENT = register("dragonascent", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_DRAGONBREATH = register("dragonbreath", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DRAGONCLAW = register("dragonclaw", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DRAGONDANCE = register("dragondance", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DRAGONDARTS = register("dragondarts", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DRAGONENERGY = register("dragonenergy", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DRAGONHAMMER = register("dragonhammer", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DRAGONPULSE = register("dragonpulse", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DRAGONRAGE = register("dragonrage", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DRAGONRUSH = register("dragonrush", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DRAGONTAIL = register("dragontail", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DRAININGKISS = register("drainingkiss", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_DRAINPUNCH = register("drainpunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_DREAMEATER = register("dreameater", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_DRILLPECK = register("drillpeck", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_DRILLRUN = register("drillrun", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_DRUMBEATING = register("drumbeating", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_DUALCHOP = register("dualchop", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DUALWINGBEAT = register("dualwingbeat", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_DYNAMAXCANNON = register("dynamaxcannon", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_DYNAMICPUNCH = register("dynamicpunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_EARTHPOWER = register("earthpower", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_EARTHQUAKE = register("earthquake", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_ECHOEDVOICE = register("echoedvoice", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_EERIEIMPULSE = register("eerieimpulse", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_EERIESPELL = register("eeriespell", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_EGGBOMB = register("eggbomb", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_ELECTRICTERRAIN = register("electricterrain", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_ELECTRIFY = register("electrify", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_ELECTROBALL = register("electroball", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_ELECTRODRIFT = register("electrodrift", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_ELECTROWEB = register("electroweb", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_EMBARGO = register("embargo", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_EMBER = register("ember", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_ENCORE = register("encore", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_ENDEAVOR = register("endeavor", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_ENDURE = register("endure", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_ENERGYBALL = register("energyball", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_ENTRAINMENT = register("entrainment", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_ERUPTION = register("eruption", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_ESPERWING = register("esperwing", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_ETERNABEAM = register("eternabeam", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_EXPANDINGFORCE = register("expandingforce", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_EXPLOSION = register("explosion", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_EXTRASENSORY = register("extrasensory", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_EXTREMEEVOBOOST = register("extremeevoboost", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_EXTREMESPEED = register("extremespeed", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FACADE = register("facade", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FAIRYLOCK = register("fairylock", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_FAIRYWIND = register("fairywind", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_FAKEOUT = register("fakeout", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FAKETEARS = register("faketears", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_FALSESURRENDER = register("falsesurrender", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_FALSESWIPE = register("falseswipe", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FEATHERDANCE = register("featherdance", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_FEINT = register("feint", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FEINTATTACK = register("feintattack", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_FELLSTINGER = register("fellstinger", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_FIERYDANCE = register("fierydance", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_FIERYWRATH = register("fierywrath", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_FILLETAWAY = register("filletaway", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FINALGAMBIT = register("finalgambit", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_FIREBLAST = register("fireblast", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_FIREFANG = register("firefang", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_FIRELASH = register("firelash", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_FIREPLEDGE = register("firepledge", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_FIREPUNCH = register("firepunch", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_FIRESPIN = register("firespin", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_FIRSTIMPRESSION = register("firstimpression", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_FISHIOUSREND = register("fishiousrend", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_FISSURE = register("fissure", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_FLAIL = register("flail", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FLAMEBURST = register("flameburst", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_FLAMECHARGE = register("flamecharge", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_FLAMEWHEEL = register("flamewheel", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_FLAMETHROWER = register("flamethrower", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_FLAREBLITZ = register("flareblitz", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_FLASH = register("flash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FLASHCANNON = register("flashcannon", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_FLATTER = register("flatter", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_FLEURCANNON = register("fleurcannon", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_FLING = register("fling", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_FLIPTURN = register("flipturn", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_FLOATYFALL = register("floatyfall", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_FLORALHEALING = register("floralhealing", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_FLOWERSHIELD = register("flowershield", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_FLOWERTRICK = register("flowertrick", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_FLY = register("fly", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_FLYINGPRESS = register("flyingpress", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_FOCUSBLAST = register("focusblast", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_FOCUSENERGY = register("focusenergy", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FOCUSPUNCH = register("focuspunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_FOLLOWME = register("followme", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FORCEPALM = register("forcepalm", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_FORESIGHT = register("foresight", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FORESTSCURSE = register("forestscurse", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_FOULPLAY = register("foulplay", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_FREEZEDRY = register("freezedry", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_FREEZESHOCK = register("freezeshock", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_FREEZINGGLARE = register("freezingglare", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_FREEZYFROST = register("freezyfrost", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_FRENZYPLANT = register("frenzyplant", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_FROSTBREATH = register("frostbreath", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_FRUSTRATION = register("frustration", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FURYATTACK = register("furyattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FURYCUTTER = register("furycutter", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_FURYSWIPES = register("furyswipes", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_FUSIONBOLT = register("fusionbolt", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_FUSIONFLARE = register("fusionflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_FUTURESIGHT = register("futuresight", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_GASTROACID = register("gastroacid", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_GEARGRIND = register("geargrind", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_GEARUP = register("gearup", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_GENESISSUPERNOVA = register("genesissupernova", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_GEOMANCY = register("geomancy", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_GIGADRAIN = register("gigadrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_GIGAIMPACT = register("gigaimpact", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_GIGATONHAMMER = register("gigatonhammer", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_GIGAVOLTHAVOC = register("gigavolthavoc", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_GLACIALLANCE = register("glaciallance", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_GLACIATE = register("glaciate", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_GLAIVERUSH = register("glaiverush", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_GLARE = register("glare", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_GLITZYGLOW = register("glitzyglow", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_GMAXBEFUDDLE = register("gmaxbefuddle", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_GMAXCANNONADE = register("gmaxcannonade", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_GMAXCENTIFERNO = register("gmaxcentiferno", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_GMAXCHISTRIKE = register("gmaxchistrike", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_GMAXCUDDLE = register("gmaxcuddle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_GMAXDEPLETION = register("gmaxdepletion", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_GMAXDRUMSOLO = register("gmaxdrumsolo", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_GMAXFINALE = register("gmaxfinale", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_GMAXFIREBALL = register("gmaxfireball", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_GMAXFOAMBURST = register("gmaxfoamburst", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_GMAXGOLDRUSH = register("gmaxgoldrush", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_GMAXGRAVITAS = register("gmaxgravitas", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_GMAXHYDROSNIPE = register("gmaxhydrosnipe", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_GMAXMALODOR = register("gmaxmalodor", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_GMAXMELTDOWN = register("gmaxmeltdown", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_GMAXONEBLOW = register("gmaxoneblow", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_GMAXRAPIDFLOW = register("gmaxrapidflow", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_GMAXREPLENISH = register("gmaxreplenish", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_GMAXRESONANCE = register("gmaxresonance", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_GMAXSANDBLAST = register("gmaxsandblast", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_GMAXSMITE = register("gmaxsmite", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_GMAXSNOOZE = register("gmaxsnooze", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_GMAXSTEELSURGE = register("gmaxsteelsurge", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_GMAXSTONESURGE = register("gmaxstonesurge", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_GMAXSTUNSHOCK = register("gmaxstunshock", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_GMAXSWEETNESS = register("gmaxsweetness", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_GMAXTARTNESS = register("gmaxtartness", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_GMAXTERROR = register("gmaxterror", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_GMAXVINELASH = register("gmaxvinelash", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_GMAXVOLCALITH = register("gmaxvolcalith", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_GMAXVOLTCRASH = register("gmaxvoltcrash", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_GMAXWILDFIRE = register("gmaxwildfire", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_GMAXWINDRAGE = register("gmaxwindrage", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_GRASSKNOT = register("grassknot", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_GRASSPLEDGE = register("grasspledge", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_GRASSWHISTLE = register("grasswhistle", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_GRASSYGLIDE = register("grassyglide", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_GRASSYTERRAIN = register("grassyterrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_GRAVAPPLE = register("gravapple", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_GRAVITY = register("gravity", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_GROWL = register("growl", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_GROWTH = register("growth", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_GRUDGE = register("grudge", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_GUARDIANOFALOLA = register("guardianofalola", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_GUARDSPLIT = register("guardsplit", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_GUARDSWAP = register("guardswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_GUILLOTINE = register("guillotine", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_GUNKSHOT = register("gunkshot", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_GUST = register("gust", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_GYROBALL = register("gyroball", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_HAIL = register("hail", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_HAMMERARM = register("hammerarm", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_HAPPYHOUR = register("happyhour", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HARDEN = register("harden", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HAZE = register("haze", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_HEADBUTT = register("headbutt", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HEADCHARGE = register("headcharge", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HEADLONGRUSH = register("headlongrush", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_HEADSMASH = register("headsmash", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_HEALBELL = register("healbell", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HEALBLOCK = register("healblock", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_HEALINGWISH = register("healingwish", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_HEALORDER = register("healorder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_HEALPULSE = register("healpulse", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_HEARTSTAMP = register("heartstamp", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_HEARTSWAP = register("heartswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_HEATCRASH = register("heatcrash", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_HEATWAVE = register("heatwave", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_HEAVYSLAM = register("heavyslam", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_HELPINGHAND = register("helpinghand", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HEX = register("hex", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_HIDDENPOWER = register("hiddenpower", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HIGHHORSEPOWER = register("highhorsepower", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_HIGHJUMPKICK = register("highjumpkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_HOLDBACK = register("holdback", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HOLDHANDS = register("holdhands", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HONECLAWS = register("honeclaws", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_HORNATTACK = register("hornattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HORNDRILL = register("horndrill", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HORNLEECH = register("hornleech", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_HOWL = register("howl", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HURRICANE = register("hurricane", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_HYDROCANNON = register("hydrocannon", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_HYDROPUMP = register("hydropump", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_HYDROSTEAM = register("hydrosteam", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_HYDROVORTEX = register("hydrovortex", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_HYPERBEAM = register("hyperbeam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HYPERDRILL = register("hyperdrill", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HYPERFANG = register("hyperfang", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HYPERSPACEFURY = register("hyperspacefury", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_HYPERSPACEHOLE = register("hyperspacehole", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_HYPERVOICE = register("hypervoice", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_HYPNOSIS = register("hypnosis", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_ICEBALL = register("iceball", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_ICEBEAM = register("icebeam", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_ICEBURN = register("iceburn", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_ICEFANG = register("icefang", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_ICEHAMMER = register("icehammer", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_ICEPUNCH = register("icepunch", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_ICESHARD = register("iceshard", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_ICESPINNER = register("icespinner", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_ICICLECRASH = register("iciclecrash", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_ICICLESPEAR = register("iciclespear", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_ICYWIND = register("icywind", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_IMPRISON = register("imprison", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_INCINERATE = register("incinerate", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_INFERNALPARADE = register("infernalparade", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_INFERNO = register("inferno", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_INFERNOOVERDRIVE = register("infernooverdrive", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_INFESTATION = register("infestation", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_INGRAIN = register("ingrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_INSTRUCT = register("instruct", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_IONDELUGE = register("iondeluge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_IRONDEFENSE = register("irondefense", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_IRONHEAD = register("ironhead", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_IRONTAIL = register("irontail", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_JAWLOCK = register("jawlock", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_JETPUNCH = register("jetpunch", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_JUDGMENT = register("judgment", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_JUMPKICK = register("jumpkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_JUNGLEHEALING = register("junglehealing", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_KARATECHOP = register("karatechop", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_KINESIS = register("kinesis", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_KINGSSHIELD = register("kingsshield", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_KNOCKOFF = register("knockoff", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_KOWTOWCLEAVE = register("kowtowcleave", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_LANDSWRATH = register("landswrath", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_LASERFOCUS = register("laserfocus", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_LASHOUT = register("lashout", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_LASTRESORT = register("lastresort", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_LASTRESPECTS = register("lastrespects", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_LAVAPLUME = register("lavaplume", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_LEAFAGE = register("leafage", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_LEAFBLADE = register("leafblade", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_LEAFSTORM = register("leafstorm", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_LEAFTORNADO = register("leaftornado", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_LEECHLIFE = register("leechlife", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_LEECHSEED = register("leechseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_LEER = register("leer", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_LETSSNUGGLEFOREVER = register("letssnuggleforever", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_LICK = register("lick", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_LIFEDEW = register("lifedew", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_LIGHTOFRUIN = register("lightofruin", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_LIGHTSCREEN = register("lightscreen", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_LIGHTTHATBURNSTHESKY = register("lightthatburnsthesky", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_LIQUIDATION = register("liquidation", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_LOCKON = register("lockon", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_LOVELYKISS = register("lovelykiss", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_LOWKICK = register("lowkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_LOWSWEEP = register("lowsweep", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_LUCKYCHANT = register("luckychant", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_LUMINACRASH = register("luminacrash", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_LUNARBLESSING = register("lunarblessing", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_LUNARDANCE = register("lunardance", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_LUNGE = register("lunge", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_LUSTERPURGE = register("lusterpurge", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_MACHPUNCH = register("machpunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_MAGICALLEAF = register("magicalleaf", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_MAGICALTORQUE = register("magicaltorque", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_MAGICCOAT = register("magiccoat", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_MAGICPOWDER = register("magicpowder", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_MAGICROOM = register("magicroom", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_MAGMASTORM = register("magmastorm", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_MAGNETBOMB = register("magnetbomb", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_MAGNETICFLUX = register("magneticflux", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_MAGNETRISE = register("magnetrise", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_MAGNITUDE = register("magnitude", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_MAKEITRAIN = register("makeitrain", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_MALICIOUSMOONSAULT = register("maliciousmoonsault", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_MATBLOCK = register("matblock", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_MAXAIRSTREAM = register("maxairstream", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_MAXDARKNESS = register("maxdarkness", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_MAXFLARE = register("maxflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_MAXFLUTTERBY = register("maxflutterby", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_MAXGEYSER = register("maxgeyser", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_MAXGUARD = register("maxguard", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_MAXHAILSTORM = register("maxhailstorm", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_MAXKNUCKLE = register("maxknuckle", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_MAXLIGHTNING = register("maxlightning", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_MAXMINDSTORM = register("maxmindstorm", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_MAXOOZE = register("maxooze", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_MAXOVERGROWTH = register("maxovergrowth", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_MAXPHANTASM = register("maxphantasm", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_MAXQUAKE = register("maxquake", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_MAXROCKFALL = register("maxrockfall", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_MAXSTARFALL = register("maxstarfall", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_MAXSTEELSPIKE = register("maxsteelspike", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_MAXSTRIKE = register("maxstrike", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_MAXWYRMWIND = register("maxwyrmwind", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_MEANLOOK = register("meanlook", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_MEDITATE = register("meditate", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_MEFIRST = register("mefirst", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_MEGADRAIN = register("megadrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_MEGAHORN = register("megahorn", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_MEGAKICK = register("megakick", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_MEGAPUNCH = register("megapunch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_MEMENTO = register("memento", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_MENACINGMOONRAZEMAELSTROM = register("menacingmoonrazemaelstrom", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_METALBURST = register("metalburst", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_METALCLAW = register("metalclaw", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_METALSOUND = register("metalsound", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_METEORASSAULT = register("meteorassault", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_METEORBEAM = register("meteorbeam", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_METEORMASH = register("meteormash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_METRONOME = register("metronome", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_MILKDRINK = register("milkdrink", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_MIMIC = register("mimic", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_MINDBLOWN = register("mindblown", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_MINDREADER = register("mindreader", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_MINIMIZE = register("minimize", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_MIRACLEEYE = register("miracleeye", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_MIRRORCOAT = register("mirrorcoat", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_MIRRORMOVE = register("mirrormove", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_MIRRORSHOT = register("mirrorshot", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_MIST = register("mist", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_MISTBALL = register("mistball", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_MISTYEXPLOSION = register("mistyexplosion", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_MISTYTERRAIN = register("mistyterrain", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_MOONBLAST = register("moonblast", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_MOONGEISTBEAM = register("moongeistbeam", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_MOONLIGHT = register("moonlight", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_MORNINGSUN = register("morningsun", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_MORTALSPIN = register("mortalspin", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_MOUNTAINGALE = register("mountaingale", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_MUDBOMB = register("mudbomb", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_MUDSHOT = register("mudshot", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_MUDSLAP = register("mudslap", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_MUDSPORT = register("mudsport", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_MUDDYWATER = register("muddywater", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_MULTIATTACK = register("multiattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_MYSTICALFIRE = register("mysticalfire", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_MYSTICALPOWER = register("mysticalpower", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_NASTYPLOT = register("nastyplot", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_NATURALGIFT = register("naturalgift", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_NATUREPOWER = register("naturepower", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_NATURESMADNESS = register("naturesmadness", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_NEEDLEARM = register("needlearm", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_NEVERENDINGNIGHTMARE = register("neverendingnightmare", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_NIGHTDAZE = register("nightdaze", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_NIGHTMARE = register("nightmare", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_NIGHTSHADE = register("nightshade", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_NIGHTSLASH = register("nightslash", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_NOBLEROAR = register("nobleroar", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_NORETREAT = register("noretreat", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_NOXIOUSTORQUE = register("noxioustorque", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_NUZZLE = register("nuzzle", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_OBLIVIONWING = register("oblivionwing", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_OBSTRUCT = register("obstruct", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_OCEANICOPERETTA = register("oceanicoperetta", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_OCTAZOOKA = register("octazooka", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_OCTOLOCK = register("octolock", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_ODORSLEUTH = register("odorsleuth", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_OMINOUSWIND = register("ominouswind", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_ORDERUP = register("orderup", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_ORIGINPULSE = register("originpulse", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_OUTRAGE = register("outrage", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_OVERDRIVE = register("overdrive", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_OVERHEAT = register("overheat", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_PAINSPLIT = register("painsplit", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_PARABOLICCHARGE = register("paraboliccharge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_PARTINGSHOT = register("partingshot", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_PAYBACK = register("payback", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_PAYDAY = register("payday", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_PECK = register("peck", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_PERISHSONG = register("perishsong", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_PETALBLIZZARD = register("petalblizzard", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_PETALDANCE = register("petaldance", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_PHANTOMFORCE = register("phantomforce", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_PHOTONGEYSER = register("photongeyser", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PIKAPAPOW = register("pikapapow", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_PINMISSILE = register("pinmissile", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_PLASMAFISTS = register("plasmafists", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_PLAYNICE = register("playnice", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_PLAYROUGH = register("playrough", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_PLUCK = register("pluck", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_POISONFANG = register("poisonfang", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_POISONGAS = register("poisongas", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_POISONJAB = register("poisonjab", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_POISONPOWDER = register("poisonpowder", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_POISONSTING = register("poisonsting", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_POISONTAIL = register("poisontail", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_POLLENPUFF = register("pollenpuff", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_POLTERGEIST = register("poltergeist", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_POPULATIONBOMB = register("populationbomb", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_POUNCE = register("pounce", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_POUND = register("pound", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_POWDER = register("powder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_POWDERSNOW = register("powdersnow", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_POWERGEM = register("powergem", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_POWERSHIFT = register("powershift", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_POWERSPLIT = register("powersplit", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_POWERSWAP = register("powerswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_POWERTRICK = register("powertrick", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_POWERTRIP = register("powertrip", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_POWERUPPUNCH = register("poweruppunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_POWERWHIP = register("powerwhip", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_PRECIPICEBLADES = register("precipiceblades", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_PRESENT = register("present", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_PRISMATICLASER = register("prismaticlaser", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PROTECT = register("protect", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_PSYBEAM = register("psybeam", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PSYBLADE = register("psyblade", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PSYCHUP = register("psychup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_PSYCHIC = register("psychic", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PSYCHICFANGS = register("psychicfangs", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PSYCHICTERRAIN = register("psychicterrain", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PSYCHOBOOST = register("psychoboost", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PSYCHOCUT = register("psychocut", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PSYCHOSHIFT = register("psychoshift", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PSYSHIELDBASH = register("psyshieldbash", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PSYSHOCK = register("psyshock", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PSYSTRIKE = register("psystrike", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PSYWAVE = register("psywave", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_PULVERIZINGPANCAKE = register("pulverizingpancake", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_PUNISHMENT = register("punishment", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_PURIFY = register("purify", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_PURSUIT = register("pursuit", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_PYROBALL = register("pyroball", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_QUASH = register("quash", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_QUICKATTACK = register("quickattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_QUICKGUARD = register("quickguard", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_QUIVERDANCE = register("quiverdance", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_RAGE = register("rage", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_RAGEFIST = register("ragefist", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_RAGEPOWDER = register("ragepowder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_RAGINGBULL = register("ragingbull", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_RAGINGFURY = register("ragingfury", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_RAINDANCE = register("raindance", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_RAPIDSPIN = register("rapidspin", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_RAZORLEAF = register("razorleaf", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_RAZORSHELL = register("razorshell", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_RAZORWIND = register("razorwind", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_RECOVER = register("recover", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_RECYCLE = register("recycle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_REFLECT = register("reflect", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_REFLECTTYPE = register("reflecttype", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_REFRESH = register("refresh", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_RELICSONG = register("relicsong", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_REST = register("rest", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_RETALIATE = register("retaliate", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_RETURN = register("return", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_REVELATIONDANCE = register("revelationdance", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_REVENGE = register("revenge", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_REVERSAL = register("reversal", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_REVIVALBLESSING = register("revivalblessing", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_RISINGVOLTAGE = register("risingvoltage", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_ROAR = register("roar", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_ROAROFTIME = register("roaroftime", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_ROCKBLAST = register("rockblast", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_ROCKCLIMB = register("rockclimb", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_ROCKPOLISH = register("rockpolish", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_ROCKSLIDE = register("rockslide", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_ROCKSMASH = register("rocksmash", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_ROCKTHROW = register("rockthrow", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_ROCKTOMB = register("rocktomb", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_ROCKWRECKER = register("rockwrecker", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_ROLEPLAY = register("roleplay", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_ROLLINGKICK = register("rollingkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_ROLLOUT = register("rollout", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_ROOST = register("roost", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_ROTOTILLER = register("rototiller", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_ROUND = register("round", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_RUINATION = register("ruination", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_SACREDFIRE = register("sacredfire", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_SACREDSWORD = register("sacredsword", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_SAFEGUARD = register("safeguard", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SALTCURE = register("saltcure", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_SANDATTACK = register("sandattack", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_SANDSEARSTORM = register("sandsearstorm", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_SANDSTORM = register("sandstorm", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_SANDTOMB = register("sandtomb", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_SAPPYSEED = register("sappyseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_SAVAGESPINOUT = register("savagespinout", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_SCALD = register("scald", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_SCALESHOT = register("scaleshot", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_SCARYFACE = register("scaryface", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SCORCHINGSANDS = register("scorchingsands", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_SCRATCH = register("scratch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SCREECH = register("screech", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SEARINGSHOT = register("searingshot", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_SEARINGSUNRAZESMASH = register("searingsunrazesmash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_SECRETPOWER = register("secretpower", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SECRETSWORD = register("secretsword", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_SEEDBOMB = register("seedbomb", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_SEEDFLARE = register("seedflare", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_SEISMICTOSS = register("seismictoss", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_SELFDESTRUCT = register("selfdestruct", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SHADOWBALL = register("shadowball", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_SHADOWBONE = register("shadowbone", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_SHADOWCLAW = register("shadowclaw", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_SHADOWFORCE = register("shadowforce", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_SHADOWPUNCH = register("shadowpunch", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_SHADOWSNEAK = register("shadowsneak", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_SHARPEN = register("sharpen", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SHATTEREDPSYCHE = register("shatteredpsyche", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_SHEDTAIL = register("shedtail", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SHEERCOLD = register("sheercold", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_SHELLSIDEARM = register("shellsidearm", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_SHELLSMASH = register("shellsmash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SHELLTRAP = register("shelltrap", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_SHELTER = register("shelter", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_SHIFTGEAR = register("shiftgear", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_SHOCKWAVE = register("shockwave", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_SHOREUP = register("shoreup", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_SIGNALBEAM = register("signalbeam", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_SILKTRAP = register("silktrap", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_SILVERWIND = register("silverwind", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_SIMPLEBEAM = register("simplebeam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SING = register("sing", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SINISTERARROWRAID = register("sinisterarrowraid", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_SIZZLYSLIDE = register("sizzlyslide", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_SKETCH = register("sketch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SKILLSWAP = register("skillswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_SKITTERSMACK = register("skittersmack", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_SKULLBASH = register("skullbash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SKYATTACK = register("skyattack", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_SKYDROP = register("skydrop", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_SKYUPPERCUT = register("skyuppercut", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_SLACKOFF = register("slackoff", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SLAM = register("slam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SLASH = register("slash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SLEEPPOWDER = register("sleeppowder", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_SLEEPTALK = register("sleeptalk", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SLUDGE = register("sludge", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_SLUDGEBOMB = register("sludgebomb", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_SLUDGEWAVE = register("sludgewave", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_SMACKDOWN = register("smackdown", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_SMARTSTRIKE = register("smartstrike", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_SMELLINGSALTS = register("smellingsalts", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SMOG = register("smog", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_SMOKESCREEN = register("smokescreen", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SNAPTRAP = register("snaptrap", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_SNARL = register("snarl", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_SNATCH = register("snatch", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_SNIPESHOT = register("snipeshot", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_SNORE = register("snore", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SNOWSCAPE = register("snowscape", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_SOAK = register("soak", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_SOFTBOILED = register("softboiled", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SOLARBEAM = register("solarbeam", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_SOLARBLADE = register("solarblade", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_SONICBOOM = register("sonicboom", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SOULSTEALING7STARSTRIKE = register("soulstealing7starstrike", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_SPACIALREND = register("spacialrend", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_SPARK = register("spark", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_SPARKLINGARIA = register("sparklingaria", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_SPARKLYSWIRL = register("sparklyswirl", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_SPECTRALTHIEF = register("spectralthief", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_SPEEDSWAP = register("speedswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_SPICYEXTRACT = register("spicyextract", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_SPIDERWEB = register("spiderweb", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_SPIKECANNON = register("spikecannon", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SPIKES = register("spikes", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_SPIKYSHIELD = register("spikyshield", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_SPINOUT = register("spinout", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_SPIRITBREAK = register("spiritbreak", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_SPIRITSHACKLE = register("spiritshackle", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_SPITUP = register("spitup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SPITE = register("spite", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_SPLASH = register("splash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SPLINTEREDSTORMSHARDS = register("splinteredstormshards", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_SPLISHYSPLASH = register("splishysplash", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_SPORE = register("spore", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_SPOTLIGHT = register("spotlight", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SPRINGTIDESTORM = register("springtidestorm", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_STEALTHROCK = register("stealthrock", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_STEAMERUPTION = register("steameruption", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_STEAMROLLER = register("steamroller", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_STEELBEAM = register("steelbeam", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_STEELROLLER = register("steelroller", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_STEELWING = register("steelwing", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_STICKYWEB = register("stickyweb", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_STOCKPILE = register("stockpile", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_STOKEDSPARKSURFER = register("stokedsparksurfer", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_STOMP = register("stomp", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_STOMPINGTANTRUM = register("stompingtantrum", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_STONEAXE = register("stoneaxe", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_STONEEDGE = register("stoneedge", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_STOREDPOWER = register("storedpower", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_STORMTHROW = register("stormthrow", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_STRANGESTEAM = register("strangesteam", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_STRENGTH = register("strength", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_STRENGTHSAP = register("strengthsap", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_STRINGSHOT = register("stringshot", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_STRUGGLE = register("struggle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_STRUGGLEBUG = register("strugglebug", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_STUFFCHEEKS = register("stuffcheeks", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_STUNSPORE = register("stunspore", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_SUBMISSION = register("submission", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_SUBSTITUTE = register("substitute", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SUBZEROSLAMMER = register("subzeroslammer", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_SUCKERPUNCH = register("suckerpunch", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_SUNNYDAY = register("sunnyday", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_SUNSTEELSTRIKE = register("sunsteelstrike", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_SUPERFANG = register("superfang", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SUPERPOWER = register("superpower", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_SUPERSONIC = register("supersonic", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SUPERSONICSKYSTRIKE = register("supersonicskystrike", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_SURF = register("surf", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_SURGINGSTRIKES = register("surgingstrikes", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_SWAGGER = register("swagger", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SWALLOW = register("swallow", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SWEETKISS = register("sweetkiss", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_SWEETSCENT = register("sweetscent", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SWIFT = register("swift", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SWITCHEROO = register("switcheroo", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_SWORDSDANCE = register("swordsdance", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_SYNCHRONOISE = register("synchronoise", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_SYNTHESIS = register("synthesis", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_TACKLE = register("tackle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TAILGLOW = register("tailglow", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_TAILSLAP = register("tailslap", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TAILWHIP = register("tailwhip", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TAILWIND = register("tailwind", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_TAKEDOWN = register("takedown", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TAKEHEART = register("takeheart", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_TARSHOT = register("tarshot", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_TAUNT = register("taunt", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_TEARFULLOOK = register("tearfullook", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TEATIME = register("teatime", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TECHNOBLAST = register("technoblast", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TECTONICRAGE = register("tectonicrage", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_TEETERDANCE = register("teeterdance", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TELEKINESIS = register("telekinesis", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_TELEPORT = register("teleport", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_TERABLAST = register("terablast", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TERRAINPULSE = register("terrainpulse", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_THIEF = register("thief", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_THOUSANDARROWS = register("thousandarrows", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_THOUSANDWAVES = register("thousandwaves", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item EGG_THRASH = register("thrash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_THROATCHOP = register("throatchop", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_THUNDER = register("thunder", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_THUNDERBOLT = register("thunderbolt", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_THUNDERCAGE = register("thundercage", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_THUNDERFANG = register("thunderfang", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_THUNDEROUSKICK = register("thunderouskick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_THUNDERPUNCH = register("thunderpunch", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_THUNDERSHOCK = register("thundershock", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_THUNDERWAVE = register("thunderwave", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_TICKLE = register("tickle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TIDYUP = register("tidyup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TOPSYTURVY = register("topsyturvy", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_TORCHSONG = register("torchsong", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_TORMENT = register("torment", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_TOXIC = register("toxic", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_TOXICSPIKES = register("toxicspikes", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_TOXICTHREAD = register("toxicthread", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_TRAILBLAZE = register("trailblaze", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_TRANSFORM = register("transform", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TRIATTACK = register("triattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TRICK = register("trick", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_TRICKORTREAT = register("trickortreat", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item EGG_TRICKROOM = register("trickroom", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_TRIPLEARROWS = register("triplearrows", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_TRIPLEAXEL = register("tripleaxel", ElementalTypes.INSTANCE.getICE());
+    public static final Item EGG_TRIPLEDIVE = register("tripledive", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_TRIPLEKICK = register("triplekick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_TROPKICK = register("tropkick", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_TRUMPCARD = register("trumpcard", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_TWINBEAM = register("twinbeam", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_TWINEEDLE = register("twineedle", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_TWINKLETACKLE = register("twinkletackle", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_TWISTER = register("twister", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_UTURN = register("uturn", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_UPROAR = register("uproar", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_VACUUMWAVE = register("vacuumwave", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_VCREATE = register("vcreate", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_VEEVEEVOLLEY = register("veeveevolley", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_VENOMDRENCH = register("venomdrench", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_VENOSHOCK = register("venoshock", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item EGG_VICTORYDANCE = register("victorydance", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_VINEWHIP = register("vinewhip", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_VISEGRIP = register("visegrip", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_VITALTHROW = register("vitalthrow", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_VOLTSWITCH = register("voltswitch", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_VOLTTACKLE = register("volttackle", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_WAKEUPSLAP = register("wakeupslap", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_WATERFALL = register("waterfall", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_WATERGUN = register("watergun", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_WATERPLEDGE = register("waterpledge", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_WATERPULSE = register("waterpulse", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_WATERSHURIKEN = register("watershuriken", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_WATERSPORT = register("watersport", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_WATERSPOUT = register("waterspout", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_WAVECRASH = register("wavecrash", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_WEATHERBALL = register("weatherball", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_WHIRLPOOL = register("whirlpool", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_WHIRLWIND = register("whirlwind", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_WICKEDBLOW = register("wickedblow", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_WICKEDTORQUE = register("wickedtorque", ElementalTypes.INSTANCE.getDARK());
+    public static final Item EGG_WIDEGUARD = register("wideguard", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_WILDBOLTSTORM = register("wildboltstorm", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_WILDCHARGE = register("wildcharge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_WILLOWISP = register("willowisp", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_WINGATTACK = register("wingattack", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item EGG_WISH = register("wish", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_WITHDRAW = register("withdraw", ElementalTypes.INSTANCE.getWATER());
+    public static final Item EGG_WONDERROOM = register("wonderroom", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_WOODHAMMER = register("woodhammer", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_WORKUP = register("workup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_WORRYSEED = register("worryseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item EGG_WRAP = register("wrap", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_WRINGOUT = register("wringout", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_XSCISSOR = register("xscissor", ElementalTypes.INSTANCE.getBUG());
+    public static final Item EGG_YAWN = register("yawn", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item EGG_ZAPCANNON = register("zapcannon", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_ZENHEADBUTT = register("zenheadbutt", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_ZINGZAP = register("zingzap", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_ZIPPYZAP = register("zippyzap", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_TEMPERFLARE = register("temperflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_SUPERCELLSLAM = register("supercellslam", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_HARDPRESS = register("hardpress", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_DRAGONCHEER = register("dragoncheer", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_ALLURINGVOICE = register("alluringvoice", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item EGG_PSYCHICNOISE = register("psychicnoise", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item EGG_UPPERHAND = register("upperhand", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item EGG_ELECTROSHOT = register("electroshot", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_FICKLEBEAM = register("ficklebeam", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item EGG_BURNINGBULWARK = register("burningbulwark", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item EGG_THUNDERCLAP = register("thunderclap", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item EGG_MIGHTYCLEAVE = register("mightycleave", ElementalTypes.INSTANCE.getROCK());
+    public static final Item EGG_TACHYONCUTTER = register("tachyoncutter", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item EGG_TERASTARSTORM = register("terastarstorm", ElementalTypes.INSTANCE.getNORMAL());
 
-    EggMoveItem(String name, ElementalType type) {
-        this.identifier = Identifier.of(TMCraft.MOD_ID, String.format("egg_%s", name));
-        this.item = new EggMoveTeachingItem(name, type);
+    public static void initialize() {
+
     }
 
-    public Identifier getIdentifier() {
-        return identifier;
-    }
+    public static Item register(String name, ElementalType type) {
+        Identifier identifier = Identifier.of(TMCraft.MOD_ID, String.format("egg_%s", name));
+        Item item = new EggMoveTeachingItem(name, type);
 
-    public Item getItem() {
+        Registry.register(Registries.ITEM, identifier, item);
+        all.add(item);
+
         return item;
+    }
+
+    public static List<Item> getAll() {
+        return new ArrayList<>(all);
     }
 }

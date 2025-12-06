@@ -4,955 +4,961 @@ import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.api.types.ElementalTypes;
 import kiwiapollo.tmcraft.TMCraft;
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public enum StarMoveItem {
-    STAR_10000000VOLTTHUNDERBOLT("10000000voltthunderbolt", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_ABSORB("absorb", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_ACCELEROCK("accelerock", ElementalTypes.INSTANCE.getROCK()),
-    STAR_ACID("acid", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_ACIDARMOR("acidarmor", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_ACIDDOWNPOUR("aciddownpour", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_ACIDSPRAY("acidspray", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_ACROBATICS("acrobatics", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_ACUPRESSURE("acupressure", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_AERIALACE("aerialace", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_AEROBLAST("aeroblast", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_AFTERYOU("afteryou", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_AGILITY("agility", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_AIRCUTTER("aircutter", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_AIRSLASH("airslash", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_ALLOUTPUMMELING("alloutpummeling", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_ALLYSWITCH("allyswitch", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_AMNESIA("amnesia", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_ANCHORSHOT("anchorshot", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_ANCIENTPOWER("ancientpower", ElementalTypes.INSTANCE.getROCK()),
-    STAR_APPLEACID("appleacid", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_AQUACUTTER("aquacutter", ElementalTypes.INSTANCE.getWATER()),
-    STAR_AQUAJET("aquajet", ElementalTypes.INSTANCE.getWATER()),
-    STAR_AQUARING("aquaring", ElementalTypes.INSTANCE.getWATER()),
-    STAR_AQUASTEP("aquastep", ElementalTypes.INSTANCE.getWATER()),
-    STAR_AQUATAIL("aquatail", ElementalTypes.INSTANCE.getWATER()),
-    STAR_ARMORCANNON("armorcannon", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_ARMTHRUST("armthrust", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_AROMATHERAPY("aromatherapy", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_AROMATICMIST("aromaticmist", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_ASSIST("assist", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_ASSURANCE("assurance", ElementalTypes.INSTANCE.getDARK()),
-    STAR_ASTONISH("astonish", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_ASTRALBARRAGE("astralbarrage", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_ATTACKORDER("attackorder", ElementalTypes.INSTANCE.getBUG()),
-    STAR_ATTRACT("attract", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_AURASPHERE("aurasphere", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_AURAWHEEL("aurawheel", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_AURORABEAM("aurorabeam", ElementalTypes.INSTANCE.getICE()),
-    STAR_AURORAVEIL("auroraveil", ElementalTypes.INSTANCE.getICE()),
-    STAR_AUTOTOMIZE("autotomize", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_AVALANCHE("avalanche", ElementalTypes.INSTANCE.getICE()),
-    STAR_AXEKICK("axekick", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_BABYDOLLEYES("babydolleyes", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_BADDYBAD("baddybad", ElementalTypes.INSTANCE.getDARK()),
-    STAR_BANEFULBUNKER("banefulbunker", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_BARBBARRAGE("barbbarrage", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_BARRAGE("barrage", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_BARRIER("barrier", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_BATONPASS("batonpass", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_BEAKBLAST("beakblast", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_BEATUP("beatup", ElementalTypes.INSTANCE.getDARK()),
-    STAR_BEHEMOTHBASH("behemothbash", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_BEHEMOTHBLADE("behemothblade", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_BELCH("belch", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_BELLYDRUM("bellydrum", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_BESTOW("bestow", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_BIDE("bide", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_BIND("bind", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_BITE("bite", ElementalTypes.INSTANCE.getDARK()),
-    STAR_BITTERBLADE("bitterblade", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_BITTERMALICE("bittermalice", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_BLACKHOLEECLIPSE("blackholeeclipse", ElementalTypes.INSTANCE.getDARK()),
-    STAR_BLASTBURN("blastburn", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_BLAZEKICK("blazekick", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_BLAZINGTORQUE("blazingtorque", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_BLEAKWINDSTORM("bleakwindstorm", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_BLIZZARD("blizzard", ElementalTypes.INSTANCE.getICE()),
-    STAR_BLOCK("block", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_BLOOMDOOM("bloomdoom", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_BLUEFLARE("blueflare", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_BODYPRESS("bodypress", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_BODYSLAM("bodyslam", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_BOLTBEAK("boltbeak", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_BOLTSTRIKE("boltstrike", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_BONECLUB("boneclub", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_BONEMERANG("bonemerang", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_BONERUSH("bonerush", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_BOOMBURST("boomburst", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_BOUNCE("bounce", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_BOUNCYBUBBLE("bouncybubble", ElementalTypes.INSTANCE.getWATER()),
-    STAR_BRANCHPOKE("branchpoke", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_BRAVEBIRD("bravebird", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_BREAKINGSWIPE("breakingswipe", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_BREAKNECKBLITZ("breakneckblitz", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_BRICKBREAK("brickbreak", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_BRINE("brine", ElementalTypes.INSTANCE.getWATER()),
-    STAR_BRUTALSWING("brutalswing", ElementalTypes.INSTANCE.getDARK()),
-    STAR_BUBBLE("bubble", ElementalTypes.INSTANCE.getWATER()),
-    STAR_BUBBLEBEAM("bubblebeam", ElementalTypes.INSTANCE.getWATER()),
-    STAR_BUGBITE("bugbite", ElementalTypes.INSTANCE.getBUG()),
-    STAR_BUGBUZZ("bugbuzz", ElementalTypes.INSTANCE.getBUG()),
-    STAR_BULKUP("bulkup", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_BULLDOZE("bulldoze", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_BULLETPUNCH("bulletpunch", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_BULLETSEED("bulletseed", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_BURNINGJEALOUSY("burningjealousy", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_BURNUP("burnup", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_BUZZYBUZZ("buzzybuzz", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_CALMMIND("calmmind", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_CAMOUFLAGE("camouflage", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_CAPTIVATE("captivate", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_CATASTROPIKA("catastropika", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_CEASELESSEDGE("ceaselessedge", ElementalTypes.INSTANCE.getDARK()),
-    STAR_CELEBRATE("celebrate", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_CHARGE("charge", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_CHARGEBEAM("chargebeam", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_CHARM("charm", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_CHATTER("chatter", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_CHILLINGWATER("chillingwater", ElementalTypes.INSTANCE.getWATER()),
-    STAR_CHILLYRECEPTION("chillyreception", ElementalTypes.INSTANCE.getICE()),
-    STAR_CHIPAWAY("chipaway", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_CHLOROBLAST("chloroblast", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_CIRCLETHROW("circlethrow", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_CLAMP("clamp", ElementalTypes.INSTANCE.getWATER()),
-    STAR_CLANGINGSCALES("clangingscales", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_CLANGOROUSSOUL("clangoroussoul", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_CLANGOROUSSOULBLAZE("clangoroussoulblaze", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_CLEARSMOG("clearsmog", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_CLOSECOMBAT("closecombat", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_COACHING("coaching", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_COIL("coil", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_COLLISIONCOURSE("collisioncourse", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_COMBATTORQUE("combattorque", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_COMETPUNCH("cometpunch", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_COMEUPPANCE("comeuppance", ElementalTypes.INSTANCE.getDARK()),
-    STAR_CONFIDE("confide", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_CONFUSERAY("confuseray", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_CONFUSION("confusion", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_CONSTRICT("constrict", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_CONTINENTALCRUSH("continentalcrush", ElementalTypes.INSTANCE.getROCK()),
-    STAR_CONVERSION("conversion", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_CONVERSION2("conversion2", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_COPYCAT("copycat", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_COREENFORCER("coreenforcer", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_CORKSCREWCRASH("corkscrewcrash", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_CORROSIVEGAS("corrosivegas", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_COSMICPOWER("cosmicpower", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_COTTONGUARD("cottonguard", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_COTTONSPORE("cottonspore", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_COUNTER("counter", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_COURTCHANGE("courtchange", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_COVET("covet", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_CRABHAMMER("crabhammer", ElementalTypes.INSTANCE.getWATER()),
-    STAR_CRAFTYSHIELD("craftyshield", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_CROSSCHOP("crosschop", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_CROSSPOISON("crosspoison", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_CRUNCH("crunch", ElementalTypes.INSTANCE.getDARK()),
-    STAR_CRUSHCLAW("crushclaw", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_CRUSHGRIP("crushgrip", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_CURSE("curse", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_CUT("cut", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_DARKESTLARIAT("darkestlariat", ElementalTypes.INSTANCE.getDARK()),
-    STAR_DARKPULSE("darkpulse", ElementalTypes.INSTANCE.getDARK()),
-    STAR_DARKVOID("darkvoid", ElementalTypes.INSTANCE.getDARK()),
-    STAR_DAZZLINGGLEAM("dazzlinggleam", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_DECORATE("decorate", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_DEFENDORDER("defendorder", ElementalTypes.INSTANCE.getBUG()),
-    STAR_DEFENSECURL("defensecurl", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_DEFOG("defog", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_DESTINYBOND("destinybond", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_DETECT("detect", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_DEVASTATINGDRAKE("devastatingdrake", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DIAMONDSTORM("diamondstorm", ElementalTypes.INSTANCE.getROCK()),
-    STAR_DIG("dig", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_DISABLE("disable", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_DISARMINGVOICE("disarmingvoice", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_DISCHARGE("discharge", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_DIRECLAW("direclaw", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_DIVE("dive", ElementalTypes.INSTANCE.getWATER()),
-    STAR_DIZZYPUNCH("dizzypunch", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_DOODLE("doodle", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_DOOMDESIRE("doomdesire", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_DOUBLEEDGE("doubleedge", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_DOUBLEHIT("doublehit", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_DOUBLEIRONBASH("doubleironbash", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_DOUBLEKICK("doublekick", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_DOUBLESHOCK("doubleshock", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_DOUBLESLAP("doubleslap", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_DOUBLETEAM("doubleteam", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_DRACOMETEOR("dracometeor", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DRAGONASCENT("dragonascent", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_DRAGONBREATH("dragonbreath", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DRAGONCLAW("dragonclaw", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DRAGONDANCE("dragondance", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DRAGONDARTS("dragondarts", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DRAGONENERGY("dragonenergy", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DRAGONHAMMER("dragonhammer", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DRAGONPULSE("dragonpulse", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DRAGONRAGE("dragonrage", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DRAGONRUSH("dragonrush", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DRAGONTAIL("dragontail", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DRAININGKISS("drainingkiss", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_DRAINPUNCH("drainpunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_DREAMEATER("dreameater", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_DRILLPECK("drillpeck", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_DRILLRUN("drillrun", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_DRUMBEATING("drumbeating", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_DUALCHOP("dualchop", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DUALWINGBEAT("dualwingbeat", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_DYNAMAXCANNON("dynamaxcannon", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_DYNAMICPUNCH("dynamicpunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_EARTHPOWER("earthpower", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_EARTHQUAKE("earthquake", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_ECHOEDVOICE("echoedvoice", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_EERIEIMPULSE("eerieimpulse", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_EERIESPELL("eeriespell", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_EGGBOMB("eggbomb", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_ELECTRICTERRAIN("electricterrain", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_ELECTRIFY("electrify", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_ELECTROBALL("electroball", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_ELECTRODRIFT("electrodrift", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_ELECTROWEB("electroweb", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_EMBARGO("embargo", ElementalTypes.INSTANCE.getDARK()),
-    STAR_EMBER("ember", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_ENCORE("encore", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_ENDEAVOR("endeavor", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_ENDURE("endure", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_ENERGYBALL("energyball", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_ENTRAINMENT("entrainment", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_ERUPTION("eruption", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_ESPERWING("esperwing", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_ETERNABEAM("eternabeam", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_EXPANDINGFORCE("expandingforce", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_EXPLOSION("explosion", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_EXTRASENSORY("extrasensory", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_EXTREMEEVOBOOST("extremeevoboost", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_EXTREMESPEED("extremespeed", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FACADE("facade", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FAIRYLOCK("fairylock", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_FAIRYWIND("fairywind", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_FAKEOUT("fakeout", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FAKETEARS("faketears", ElementalTypes.INSTANCE.getDARK()),
-    STAR_FALSESURRENDER("falsesurrender", ElementalTypes.INSTANCE.getDARK()),
-    STAR_FALSESWIPE("falseswipe", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FEATHERDANCE("featherdance", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_FEINT("feint", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FEINTATTACK("feintattack", ElementalTypes.INSTANCE.getDARK()),
-    STAR_FELLSTINGER("fellstinger", ElementalTypes.INSTANCE.getBUG()),
-    STAR_FIERYDANCE("fierydance", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_FIERYWRATH("fierywrath", ElementalTypes.INSTANCE.getDARK()),
-    STAR_FILLETAWAY("filletaway", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FINALGAMBIT("finalgambit", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_FIREBLAST("fireblast", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_FIREFANG("firefang", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_FIRELASH("firelash", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_FIREPLEDGE("firepledge", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_FIREPUNCH("firepunch", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_FIRESPIN("firespin", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_FIRSTIMPRESSION("firstimpression", ElementalTypes.INSTANCE.getBUG()),
-    STAR_FISHIOUSREND("fishiousrend", ElementalTypes.INSTANCE.getWATER()),
-    STAR_FISSURE("fissure", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_FLAIL("flail", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FLAMEBURST("flameburst", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_FLAMECHARGE("flamecharge", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_FLAMEWHEEL("flamewheel", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_FLAMETHROWER("flamethrower", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_FLAREBLITZ("flareblitz", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_FLASH("flash", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FLASHCANNON("flashcannon", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_FLATTER("flatter", ElementalTypes.INSTANCE.getDARK()),
-    STAR_FLEURCANNON("fleurcannon", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_FLING("fling", ElementalTypes.INSTANCE.getDARK()),
-    STAR_FLIPTURN("flipturn", ElementalTypes.INSTANCE.getWATER()),
-    STAR_FLOATYFALL("floatyfall", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_FLORALHEALING("floralhealing", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_FLOWERSHIELD("flowershield", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_FLOWERTRICK("flowertrick", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_FLY("fly", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_FLYINGPRESS("flyingpress", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_FOCUSBLAST("focusblast", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_FOCUSENERGY("focusenergy", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FOCUSPUNCH("focuspunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_FOLLOWME("followme", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FORCEPALM("forcepalm", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_FORESIGHT("foresight", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FORESTSCURSE("forestscurse", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_FOULPLAY("foulplay", ElementalTypes.INSTANCE.getDARK()),
-    STAR_FREEZEDRY("freezedry", ElementalTypes.INSTANCE.getICE()),
-    STAR_FREEZESHOCK("freezeshock", ElementalTypes.INSTANCE.getICE()),
-    STAR_FREEZINGGLARE("freezingglare", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_FREEZYFROST("freezyfrost", ElementalTypes.INSTANCE.getICE()),
-    STAR_FRENZYPLANT("frenzyplant", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_FROSTBREATH("frostbreath", ElementalTypes.INSTANCE.getICE()),
-    STAR_FRUSTRATION("frustration", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FURYATTACK("furyattack", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FURYCUTTER("furycutter", ElementalTypes.INSTANCE.getBUG()),
-    STAR_FURYSWIPES("furyswipes", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_FUSIONBOLT("fusionbolt", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_FUSIONFLARE("fusionflare", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_FUTURESIGHT("futuresight", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_GASTROACID("gastroacid", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_GEARGRIND("geargrind", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_GEARUP("gearup", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_GENESISSUPERNOVA("genesissupernova", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_GEOMANCY("geomancy", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_GIGADRAIN("gigadrain", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_GIGAIMPACT("gigaimpact", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_GIGATONHAMMER("gigatonhammer", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_GIGAVOLTHAVOC("gigavolthavoc", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_GLACIALLANCE("glaciallance", ElementalTypes.INSTANCE.getICE()),
-    STAR_GLACIATE("glaciate", ElementalTypes.INSTANCE.getICE()),
-    STAR_GLAIVERUSH("glaiverush", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_GLARE("glare", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_GLITZYGLOW("glitzyglow", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_GMAXBEFUDDLE("gmaxbefuddle", ElementalTypes.INSTANCE.getBUG()),
-    STAR_GMAXCANNONADE("gmaxcannonade", ElementalTypes.INSTANCE.getWATER()),
-    STAR_GMAXCENTIFERNO("gmaxcentiferno", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_GMAXCHISTRIKE("gmaxchistrike", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_GMAXCUDDLE("gmaxcuddle", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_GMAXDEPLETION("gmaxdepletion", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_GMAXDRUMSOLO("gmaxdrumsolo", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_GMAXFINALE("gmaxfinale", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_GMAXFIREBALL("gmaxfireball", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_GMAXFOAMBURST("gmaxfoamburst", ElementalTypes.INSTANCE.getWATER()),
-    STAR_GMAXGOLDRUSH("gmaxgoldrush", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_GMAXGRAVITAS("gmaxgravitas", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_GMAXHYDROSNIPE("gmaxhydrosnipe", ElementalTypes.INSTANCE.getWATER()),
-    STAR_GMAXMALODOR("gmaxmalodor", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_GMAXMELTDOWN("gmaxmeltdown", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_GMAXONEBLOW("gmaxoneblow", ElementalTypes.INSTANCE.getDARK()),
-    STAR_GMAXRAPIDFLOW("gmaxrapidflow", ElementalTypes.INSTANCE.getWATER()),
-    STAR_GMAXREPLENISH("gmaxreplenish", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_GMAXRESONANCE("gmaxresonance", ElementalTypes.INSTANCE.getICE()),
-    STAR_GMAXSANDBLAST("gmaxsandblast", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_GMAXSMITE("gmaxsmite", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_GMAXSNOOZE("gmaxsnooze", ElementalTypes.INSTANCE.getDARK()),
-    STAR_GMAXSTEELSURGE("gmaxsteelsurge", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_GMAXSTONESURGE("gmaxstonesurge", ElementalTypes.INSTANCE.getWATER()),
-    STAR_GMAXSTUNSHOCK("gmaxstunshock", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_GMAXSWEETNESS("gmaxsweetness", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_GMAXTARTNESS("gmaxtartness", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_GMAXTERROR("gmaxterror", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_GMAXVINELASH("gmaxvinelash", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_GMAXVOLCALITH("gmaxvolcalith", ElementalTypes.INSTANCE.getROCK()),
-    STAR_GMAXVOLTCRASH("gmaxvoltcrash", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_GMAXWILDFIRE("gmaxwildfire", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_GMAXWINDRAGE("gmaxwindrage", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_GRASSKNOT("grassknot", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_GRASSPLEDGE("grasspledge", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_GRASSWHISTLE("grasswhistle", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_GRASSYGLIDE("grassyglide", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_GRASSYTERRAIN("grassyterrain", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_GRAVAPPLE("gravapple", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_GRAVITY("gravity", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_GROWL("growl", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_GROWTH("growth", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_GRUDGE("grudge", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_GUARDIANOFALOLA("guardianofalola", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_GUARDSPLIT("guardsplit", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_GUARDSWAP("guardswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_GUILLOTINE("guillotine", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_GUNKSHOT("gunkshot", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_GUST("gust", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_GYROBALL("gyroball", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_HAIL("hail", ElementalTypes.INSTANCE.getICE()),
-    STAR_HAMMERARM("hammerarm", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_HAPPYHOUR("happyhour", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HARDEN("harden", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HAZE("haze", ElementalTypes.INSTANCE.getICE()),
-    STAR_HEADBUTT("headbutt", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HEADCHARGE("headcharge", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HEADLONGRUSH("headlongrush", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_HEADSMASH("headsmash", ElementalTypes.INSTANCE.getROCK()),
-    STAR_HEALBELL("healbell", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HEALBLOCK("healblock", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_HEALINGWISH("healingwish", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_HEALORDER("healorder", ElementalTypes.INSTANCE.getBUG()),
-    STAR_HEALPULSE("healpulse", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_HEARTSTAMP("heartstamp", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_HEARTSWAP("heartswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_HEATCRASH("heatcrash", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_HEATWAVE("heatwave", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_HEAVYSLAM("heavyslam", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_HELPINGHAND("helpinghand", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HEX("hex", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_HIDDENPOWER("hiddenpower", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HIGHHORSEPOWER("highhorsepower", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_HIGHJUMPKICK("highjumpkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_HOLDBACK("holdback", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HOLDHANDS("holdhands", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HONECLAWS("honeclaws", ElementalTypes.INSTANCE.getDARK()),
-    STAR_HORNATTACK("hornattack", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HORNDRILL("horndrill", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HORNLEECH("hornleech", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_HOWL("howl", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HURRICANE("hurricane", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_HYDROCANNON("hydrocannon", ElementalTypes.INSTANCE.getWATER()),
-    STAR_HYDROPUMP("hydropump", ElementalTypes.INSTANCE.getWATER()),
-    STAR_HYDROSTEAM("hydrosteam", ElementalTypes.INSTANCE.getWATER()),
-    STAR_HYDROVORTEX("hydrovortex", ElementalTypes.INSTANCE.getWATER()),
-    STAR_HYPERBEAM("hyperbeam", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HYPERDRILL("hyperdrill", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HYPERFANG("hyperfang", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HYPERSPACEFURY("hyperspacefury", ElementalTypes.INSTANCE.getDARK()),
-    STAR_HYPERSPACEHOLE("hyperspacehole", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_HYPERVOICE("hypervoice", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_HYPNOSIS("hypnosis", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_ICEBALL("iceball", ElementalTypes.INSTANCE.getICE()),
-    STAR_ICEBEAM("icebeam", ElementalTypes.INSTANCE.getICE()),
-    STAR_ICEBURN("iceburn", ElementalTypes.INSTANCE.getICE()),
-    STAR_ICEFANG("icefang", ElementalTypes.INSTANCE.getICE()),
-    STAR_ICEHAMMER("icehammer", ElementalTypes.INSTANCE.getICE()),
-    STAR_ICEPUNCH("icepunch", ElementalTypes.INSTANCE.getICE()),
-    STAR_ICESHARD("iceshard", ElementalTypes.INSTANCE.getICE()),
-    STAR_ICESPINNER("icespinner", ElementalTypes.INSTANCE.getICE()),
-    STAR_ICICLECRASH("iciclecrash", ElementalTypes.INSTANCE.getICE()),
-    STAR_ICICLESPEAR("iciclespear", ElementalTypes.INSTANCE.getICE()),
-    STAR_ICYWIND("icywind", ElementalTypes.INSTANCE.getICE()),
-    STAR_IMPRISON("imprison", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_INCINERATE("incinerate", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_INFERNALPARADE("infernalparade", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_INFERNO("inferno", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_INFERNOOVERDRIVE("infernooverdrive", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_INFESTATION("infestation", ElementalTypes.INSTANCE.getBUG()),
-    STAR_INGRAIN("ingrain", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_INSTRUCT("instruct", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_IONDELUGE("iondeluge", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_IRONDEFENSE("irondefense", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_IRONHEAD("ironhead", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_IRONTAIL("irontail", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_JAWLOCK("jawlock", ElementalTypes.INSTANCE.getDARK()),
-    STAR_JETPUNCH("jetpunch", ElementalTypes.INSTANCE.getWATER()),
-    STAR_JUDGMENT("judgment", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_JUMPKICK("jumpkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_JUNGLEHEALING("junglehealing", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_KARATECHOP("karatechop", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_KINESIS("kinesis", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_KINGSSHIELD("kingsshield", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_KNOCKOFF("knockoff", ElementalTypes.INSTANCE.getDARK()),
-    STAR_KOWTOWCLEAVE("kowtowcleave", ElementalTypes.INSTANCE.getDARK()),
-    STAR_LANDSWRATH("landswrath", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_LASERFOCUS("laserfocus", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_LASHOUT("lashout", ElementalTypes.INSTANCE.getDARK()),
-    STAR_LASTRESORT("lastresort", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_LASTRESPECTS("lastrespects", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_LAVAPLUME("lavaplume", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_LEAFAGE("leafage", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_LEAFBLADE("leafblade", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_LEAFSTORM("leafstorm", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_LEAFTORNADO("leaftornado", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_LEECHLIFE("leechlife", ElementalTypes.INSTANCE.getBUG()),
-    STAR_LEECHSEED("leechseed", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_LEER("leer", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_LETSSNUGGLEFOREVER("letssnuggleforever", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_LICK("lick", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_LIFEDEW("lifedew", ElementalTypes.INSTANCE.getWATER()),
-    STAR_LIGHTOFRUIN("lightofruin", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_LIGHTSCREEN("lightscreen", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_LIGHTTHATBURNSTHESKY("lightthatburnsthesky", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_LIQUIDATION("liquidation", ElementalTypes.INSTANCE.getWATER()),
-    STAR_LOCKON("lockon", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_LOVELYKISS("lovelykiss", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_LOWKICK("lowkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_LOWSWEEP("lowsweep", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_LUCKYCHANT("luckychant", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_LUMINACRASH("luminacrash", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_LUNARBLESSING("lunarblessing", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_LUNARDANCE("lunardance", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_LUNGE("lunge", ElementalTypes.INSTANCE.getBUG()),
-    STAR_LUSTERPURGE("lusterpurge", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_MACHPUNCH("machpunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_MAGICALLEAF("magicalleaf", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_MAGICALTORQUE("magicaltorque", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_MAGICCOAT("magiccoat", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_MAGICPOWDER("magicpowder", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_MAGICROOM("magicroom", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_MAGMASTORM("magmastorm", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_MAGNETBOMB("magnetbomb", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_MAGNETICFLUX("magneticflux", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_MAGNETRISE("magnetrise", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_MAGNITUDE("magnitude", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_MAKEITRAIN("makeitrain", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_MALICIOUSMOONSAULT("maliciousmoonsault", ElementalTypes.INSTANCE.getDARK()),
-    STAR_MATBLOCK("matblock", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_MAXAIRSTREAM("maxairstream", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_MAXDARKNESS("maxdarkness", ElementalTypes.INSTANCE.getDARK()),
-    STAR_MAXFLARE("maxflare", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_MAXFLUTTERBY("maxflutterby", ElementalTypes.INSTANCE.getBUG()),
-    STAR_MAXGEYSER("maxgeyser", ElementalTypes.INSTANCE.getWATER()),
-    STAR_MAXGUARD("maxguard", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_MAXHAILSTORM("maxhailstorm", ElementalTypes.INSTANCE.getICE()),
-    STAR_MAXKNUCKLE("maxknuckle", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_MAXLIGHTNING("maxlightning", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_MAXMINDSTORM("maxmindstorm", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_MAXOOZE("maxooze", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_MAXOVERGROWTH("maxovergrowth", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_MAXPHANTASM("maxphantasm", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_MAXQUAKE("maxquake", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_MAXROCKFALL("maxrockfall", ElementalTypes.INSTANCE.getROCK()),
-    STAR_MAXSTARFALL("maxstarfall", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_MAXSTEELSPIKE("maxsteelspike", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_MAXSTRIKE("maxstrike", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_MAXWYRMWIND("maxwyrmwind", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_MEANLOOK("meanlook", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_MEDITATE("meditate", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_MEFIRST("mefirst", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_MEGADRAIN("megadrain", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_MEGAHORN("megahorn", ElementalTypes.INSTANCE.getBUG()),
-    STAR_MEGAKICK("megakick", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_MEGAPUNCH("megapunch", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_MEMENTO("memento", ElementalTypes.INSTANCE.getDARK()),
-    STAR_MENACINGMOONRAZEMAELSTROM("menacingmoonrazemaelstrom", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_METALBURST("metalburst", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_METALCLAW("metalclaw", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_METALSOUND("metalsound", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_METEORASSAULT("meteorassault", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_METEORBEAM("meteorbeam", ElementalTypes.INSTANCE.getROCK()),
-    STAR_METEORMASH("meteormash", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_METRONOME("metronome", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_MILKDRINK("milkdrink", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_MIMIC("mimic", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_MINDBLOWN("mindblown", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_MINDREADER("mindreader", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_MINIMIZE("minimize", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_MIRACLEEYE("miracleeye", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_MIRRORCOAT("mirrorcoat", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_MIRRORMOVE("mirrormove", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_MIRRORSHOT("mirrorshot", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_MIST("mist", ElementalTypes.INSTANCE.getICE()),
-    STAR_MISTBALL("mistball", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_MISTYEXPLOSION("mistyexplosion", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_MISTYTERRAIN("mistyterrain", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_MOONBLAST("moonblast", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_MOONGEISTBEAM("moongeistbeam", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_MOONLIGHT("moonlight", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_MORNINGSUN("morningsun", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_MORTALSPIN("mortalspin", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_MOUNTAINGALE("mountaingale", ElementalTypes.INSTANCE.getICE()),
-    STAR_MUDBOMB("mudbomb", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_MUDSHOT("mudshot", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_MUDSLAP("mudslap", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_MUDSPORT("mudsport", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_MUDDYWATER("muddywater", ElementalTypes.INSTANCE.getWATER()),
-    STAR_MULTIATTACK("multiattack", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_MYSTICALFIRE("mysticalfire", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_MYSTICALPOWER("mysticalpower", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_NASTYPLOT("nastyplot", ElementalTypes.INSTANCE.getDARK()),
-    STAR_NATURALGIFT("naturalgift", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_NATUREPOWER("naturepower", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_NATURESMADNESS("naturesmadness", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_NEEDLEARM("needlearm", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_NEVERENDINGNIGHTMARE("neverendingnightmare", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_NIGHTDAZE("nightdaze", ElementalTypes.INSTANCE.getDARK()),
-    STAR_NIGHTMARE("nightmare", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_NIGHTSHADE("nightshade", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_NIGHTSLASH("nightslash", ElementalTypes.INSTANCE.getDARK()),
-    STAR_NOBLEROAR("nobleroar", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_NORETREAT("noretreat", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_NOXIOUSTORQUE("noxioustorque", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_NUZZLE("nuzzle", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_OBLIVIONWING("oblivionwing", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_OBSTRUCT("obstruct", ElementalTypes.INSTANCE.getDARK()),
-    STAR_OCEANICOPERETTA("oceanicoperetta", ElementalTypes.INSTANCE.getWATER()),
-    STAR_OCTAZOOKA("octazooka", ElementalTypes.INSTANCE.getWATER()),
-    STAR_OCTOLOCK("octolock", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_ODORSLEUTH("odorsleuth", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_OMINOUSWIND("ominouswind", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_ORDERUP("orderup", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_ORIGINPULSE("originpulse", ElementalTypes.INSTANCE.getWATER()),
-    STAR_OUTRAGE("outrage", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_OVERDRIVE("overdrive", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_OVERHEAT("overheat", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_PAINSPLIT("painsplit", ElementalTypes.INSTANCE.getNORMAL()),
-    //STAR_PALEOWAVE("paleowave", ElementalTypes.INSTANCE.getROCK()), // Signature move for Stratagem, Smogon's custom Pokémon
-    STAR_PARABOLICCHARGE("paraboliccharge", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_PARTINGSHOT("partingshot", ElementalTypes.INSTANCE.getDARK()),
-    STAR_PAYBACK("payback", ElementalTypes.INSTANCE.getDARK()),
-    STAR_PAYDAY("payday", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_PECK("peck", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_PERISHSONG("perishsong", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_PETALBLIZZARD("petalblizzard", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_PETALDANCE("petaldance", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_PHANTOMFORCE("phantomforce", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_PHOTONGEYSER("photongeyser", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PIKAPAPOW("pikapapow", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_PINMISSILE("pinmissile", ElementalTypes.INSTANCE.getBUG()),
-    STAR_PLASMAFISTS("plasmafists", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_PLAYNICE("playnice", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_PLAYROUGH("playrough", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_PLUCK("pluck", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_POISONFANG("poisonfang", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_POISONGAS("poisongas", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_POISONJAB("poisonjab", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_POISONPOWDER("poisonpowder", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_POISONSTING("poisonsting", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_POISONTAIL("poisontail", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_POLLENPUFF("pollenpuff", ElementalTypes.INSTANCE.getBUG()),
-    STAR_POLTERGEIST("poltergeist", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_POPULATIONBOMB("populationbomb", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_POUNCE("pounce", ElementalTypes.INSTANCE.getBUG()),
-    STAR_POUND("pound", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_POWDER("powder", ElementalTypes.INSTANCE.getBUG()),
-    STAR_POWDERSNOW("powdersnow", ElementalTypes.INSTANCE.getICE()),
-    STAR_POWERGEM("powergem", ElementalTypes.INSTANCE.getROCK()),
-    STAR_POWERSHIFT("powershift", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_POWERSPLIT("powersplit", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_POWERSWAP("powerswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_POWERTRICK("powertrick", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_POWERTRIP("powertrip", ElementalTypes.INSTANCE.getDARK()),
-    STAR_POWERUPPUNCH("poweruppunch", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_POWERWHIP("powerwhip", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_PRECIPICEBLADES("precipiceblades", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_PRESENT("present", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_PRISMATICLASER("prismaticlaser", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PROTECT("protect", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_PSYBEAM("psybeam", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PSYBLADE("psyblade", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PSYCHUP("psychup", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_PSYCHIC("psychic", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PSYCHICFANGS("psychicfangs", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PSYCHICTERRAIN("psychicterrain", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PSYCHOBOOST("psychoboost", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PSYCHOCUT("psychocut", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PSYCHOSHIFT("psychoshift", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PSYSHIELDBASH("psyshieldbash", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PSYSHOCK("psyshock", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PSYSTRIKE("psystrike", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PSYWAVE("psywave", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_PULVERIZINGPANCAKE("pulverizingpancake", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_PUNISHMENT("punishment", ElementalTypes.INSTANCE.getDARK()),
-    STAR_PURIFY("purify", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_PURSUIT("pursuit", ElementalTypes.INSTANCE.getDARK()),
-    STAR_PYROBALL("pyroball", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_QUASH("quash", ElementalTypes.INSTANCE.getDARK()),
-    STAR_QUICKATTACK("quickattack", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_QUICKGUARD("quickguard", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_QUIVERDANCE("quiverdance", ElementalTypes.INSTANCE.getBUG()),
-    STAR_RAGE("rage", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_RAGEFIST("ragefist", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_RAGEPOWDER("ragepowder", ElementalTypes.INSTANCE.getBUG()),
-    STAR_RAGINGBULL("ragingbull", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_RAGINGFURY("ragingfury", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_RAINDANCE("raindance", ElementalTypes.INSTANCE.getWATER()),
-    STAR_RAPIDSPIN("rapidspin", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_RAZORLEAF("razorleaf", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_RAZORSHELL("razorshell", ElementalTypes.INSTANCE.getWATER()),
-    STAR_RAZORWIND("razorwind", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_RECOVER("recover", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_RECYCLE("recycle", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_REFLECT("reflect", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_REFLECTTYPE("reflecttype", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_REFRESH("refresh", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_RELICSONG("relicsong", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_REST("rest", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_RETALIATE("retaliate", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_RETURN("return", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_REVELATIONDANCE("revelationdance", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_REVENGE("revenge", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_REVERSAL("reversal", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_REVIVALBLESSING("revivalblessing", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_RISINGVOLTAGE("risingvoltage", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_ROAR("roar", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_ROAROFTIME("roaroftime", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_ROCKBLAST("rockblast", ElementalTypes.INSTANCE.getROCK()),
-    STAR_ROCKCLIMB("rockclimb", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_ROCKPOLISH("rockpolish", ElementalTypes.INSTANCE.getROCK()),
-    STAR_ROCKSLIDE("rockslide", ElementalTypes.INSTANCE.getROCK()),
-    STAR_ROCKSMASH("rocksmash", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_ROCKTHROW("rockthrow", ElementalTypes.INSTANCE.getROCK()),
-    STAR_ROCKTOMB("rocktomb", ElementalTypes.INSTANCE.getROCK()),
-    STAR_ROCKWRECKER("rockwrecker", ElementalTypes.INSTANCE.getROCK()),
-    STAR_ROLEPLAY("roleplay", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_ROLLINGKICK("rollingkick", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_ROLLOUT("rollout", ElementalTypes.INSTANCE.getROCK()),
-    STAR_ROOST("roost", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_ROTOTILLER("rototiller", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_ROUND("round", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_RUINATION("ruination", ElementalTypes.INSTANCE.getDARK()),
-    STAR_SACREDFIRE("sacredfire", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_SACREDSWORD("sacredsword", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_SAFEGUARD("safeguard", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SALTCURE("saltcure", ElementalTypes.INSTANCE.getROCK()),
-    STAR_SANDATTACK("sandattack", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_SANDSEARSTORM("sandsearstorm", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_SANDSTORM("sandstorm", ElementalTypes.INSTANCE.getROCK()),
-    STAR_SANDTOMB("sandtomb", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_SAPPYSEED("sappyseed", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_SAVAGESPINOUT("savagespinout", ElementalTypes.INSTANCE.getBUG()),
-    STAR_SCALD("scald", ElementalTypes.INSTANCE.getWATER()),
-    STAR_SCALESHOT("scaleshot", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_SCARYFACE("scaryface", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SCORCHINGSANDS("scorchingsands", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_SCRATCH("scratch", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SCREECH("screech", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SEARINGSHOT("searingshot", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_SEARINGSUNRAZESMASH("searingsunrazesmash", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_SECRETPOWER("secretpower", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SECRETSWORD("secretsword", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_SEEDBOMB("seedbomb", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_SEEDFLARE("seedflare", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_SEISMICTOSS("seismictoss", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_SELFDESTRUCT("selfdestruct", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SHADOWBALL("shadowball", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_SHADOWBONE("shadowbone", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_SHADOWCLAW("shadowclaw", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_SHADOWFORCE("shadowforce", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_SHADOWPUNCH("shadowpunch", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_SHADOWSNEAK("shadowsneak", ElementalTypes.INSTANCE.getGHOST()),
-    //STAR_SHADOWSTRIKE("shadowstrike", ElementalTypes.INSTANCE.getGHOST()), // Signature move for Kitsunoh, Smogon's custom Pokémon
-    STAR_SHARPEN("sharpen", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SHATTEREDPSYCHE("shatteredpsyche", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_SHEDTAIL("shedtail", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SHEERCOLD("sheercold", ElementalTypes.INSTANCE.getICE()),
-    STAR_SHELLSIDEARM("shellsidearm", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_SHELLSMASH("shellsmash", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SHELLTRAP("shelltrap", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_SHELTER("shelter", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_SHIFTGEAR("shiftgear", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_SHOCKWAVE("shockwave", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_SHOREUP("shoreup", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_SIGNALBEAM("signalbeam", ElementalTypes.INSTANCE.getBUG()),
-    STAR_SILKTRAP("silktrap", ElementalTypes.INSTANCE.getBUG()),
-    STAR_SILVERWIND("silverwind", ElementalTypes.INSTANCE.getBUG()),
-    STAR_SIMPLEBEAM("simplebeam", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SING("sing", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SINISTERARROWRAID("sinisterarrowraid", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_SIZZLYSLIDE("sizzlyslide", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_SKETCH("sketch", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SKILLSWAP("skillswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_SKITTERSMACK("skittersmack", ElementalTypes.INSTANCE.getBUG()),
-    STAR_SKULLBASH("skullbash", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SKYATTACK("skyattack", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_SKYDROP("skydrop", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_SKYUPPERCUT("skyuppercut", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_SLACKOFF("slackoff", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SLAM("slam", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SLASH("slash", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SLEEPPOWDER("sleeppowder", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_SLEEPTALK("sleeptalk", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SLUDGE("sludge", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_SLUDGEBOMB("sludgebomb", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_SLUDGEWAVE("sludgewave", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_SMACKDOWN("smackdown", ElementalTypes.INSTANCE.getROCK()),
-    STAR_SMARTSTRIKE("smartstrike", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_SMELLINGSALTS("smellingsalts", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SMOG("smog", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_SMOKESCREEN("smokescreen", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SNAPTRAP("snaptrap", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_SNARL("snarl", ElementalTypes.INSTANCE.getDARK()),
-    STAR_SNATCH("snatch", ElementalTypes.INSTANCE.getDARK()),
-    STAR_SNIPESHOT("snipeshot", ElementalTypes.INSTANCE.getWATER()),
-    STAR_SNORE("snore", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SNOWSCAPE("snowscape", ElementalTypes.INSTANCE.getICE()),
-    STAR_SOAK("soak", ElementalTypes.INSTANCE.getWATER()),
-    STAR_SOFTBOILED("softboiled", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SOLARBEAM("solarbeam", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_SOLARBLADE("solarblade", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_SONICBOOM("sonicboom", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SOULSTEALING7STARSTRIKE("soulstealing7starstrike", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_SPACIALREND("spacialrend", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_SPARK("spark", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_SPARKLINGARIA("sparklingaria", ElementalTypes.INSTANCE.getWATER()),
-    STAR_SPARKLYSWIRL("sparklyswirl", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_SPECTRALTHIEF("spectralthief", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_SPEEDSWAP("speedswap", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_SPICYEXTRACT("spicyextract", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_SPIDERWEB("spiderweb", ElementalTypes.INSTANCE.getBUG()),
-    STAR_SPIKECANNON("spikecannon", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SPIKES("spikes", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_SPIKYSHIELD("spikyshield", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_SPINOUT("spinout", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_SPIRITBREAK("spiritbreak", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_SPIRITSHACKLE("spiritshackle", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_SPITUP("spitup", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SPITE("spite", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_SPLASH("splash", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SPLINTEREDSTORMSHARDS("splinteredstormshards", ElementalTypes.INSTANCE.getROCK()),
-    STAR_SPLISHYSPLASH("splishysplash", ElementalTypes.INSTANCE.getWATER()),
-    STAR_SPORE("spore", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_SPOTLIGHT("spotlight", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SPRINGTIDESTORM("springtidestorm", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_STEALTHROCK("stealthrock", ElementalTypes.INSTANCE.getROCK()),
-    STAR_STEAMERUPTION("steameruption", ElementalTypes.INSTANCE.getWATER()),
-    STAR_STEAMROLLER("steamroller", ElementalTypes.INSTANCE.getBUG()),
-    STAR_STEELBEAM("steelbeam", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_STEELROLLER("steelroller", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_STEELWING("steelwing", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_STICKYWEB("stickyweb", ElementalTypes.INSTANCE.getBUG()),
-    STAR_STOCKPILE("stockpile", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_STOKEDSPARKSURFER("stokedsparksurfer", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_STOMP("stomp", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_STOMPINGTANTRUM("stompingtantrum", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_STONEAXE("stoneaxe", ElementalTypes.INSTANCE.getROCK()),
-    STAR_STONEEDGE("stoneedge", ElementalTypes.INSTANCE.getROCK()),
-    STAR_STOREDPOWER("storedpower", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_STORMTHROW("stormthrow", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_STRANGESTEAM("strangesteam", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_STRENGTH("strength", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_STRENGTHSAP("strengthsap", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_STRINGSHOT("stringshot", ElementalTypes.INSTANCE.getBUG()),
-    STAR_STRUGGLE("struggle", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_STRUGGLEBUG("strugglebug", ElementalTypes.INSTANCE.getBUG()),
-    STAR_STUFFCHEEKS("stuffcheeks", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_STUNSPORE("stunspore", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_SUBMISSION("submission", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_SUBSTITUTE("substitute", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SUBZEROSLAMMER("subzeroslammer", ElementalTypes.INSTANCE.getICE()),
-    STAR_SUCKERPUNCH("suckerpunch", ElementalTypes.INSTANCE.getDARK()),
-    STAR_SUNNYDAY("sunnyday", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_SUNSTEELSTRIKE("sunsteelstrike", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_SUPERFANG("superfang", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SUPERPOWER("superpower", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_SUPERSONIC("supersonic", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SUPERSONICSKYSTRIKE("supersonicskystrike", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_SURF("surf", ElementalTypes.INSTANCE.getWATER()),
-    STAR_SURGINGSTRIKES("surgingstrikes", ElementalTypes.INSTANCE.getWATER()),
-    STAR_SWAGGER("swagger", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SWALLOW("swallow", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SWEETKISS("sweetkiss", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_SWEETSCENT("sweetscent", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SWIFT("swift", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SWITCHEROO("switcheroo", ElementalTypes.INSTANCE.getDARK()),
-    STAR_SWORDSDANCE("swordsdance", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_SYNCHRONOISE("synchronoise", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_SYNTHESIS("synthesis", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_TACKLE("tackle", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TAILGLOW("tailglow", ElementalTypes.INSTANCE.getBUG()),
-    STAR_TAILSLAP("tailslap", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TAILWHIP("tailwhip", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TAILWIND("tailwind", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_TAKEDOWN("takedown", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TAKEHEART("takeheart", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_TARSHOT("tarshot", ElementalTypes.INSTANCE.getROCK()),
-    STAR_TAUNT("taunt", ElementalTypes.INSTANCE.getDARK()),
-    STAR_TEARFULLOOK("tearfullook", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TEATIME("teatime", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TECHNOBLAST("technoblast", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TECTONICRAGE("tectonicrage", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_TEETERDANCE("teeterdance", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TELEKINESIS("telekinesis", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_TELEPORT("teleport", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_TERABLAST("terablast", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TERRAINPULSE("terrainpulse", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_THIEF("thief", ElementalTypes.INSTANCE.getDARK()),
-    STAR_THOUSANDARROWS("thousandarrows", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_THOUSANDWAVES("thousandwaves", ElementalTypes.INSTANCE.getGROUND()),
-    STAR_THRASH("thrash", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_THROATCHOP("throatchop", ElementalTypes.INSTANCE.getDARK()),
-    STAR_THUNDER("thunder", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_THUNDERBOLT("thunderbolt", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_THUNDERCAGE("thundercage", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_THUNDERFANG("thunderfang", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_THUNDEROUSKICK("thunderouskick", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_THUNDERPUNCH("thunderpunch", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_THUNDERSHOCK("thundershock", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_THUNDERWAVE("thunderwave", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_TICKLE("tickle", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TIDYUP("tidyup", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TOPSYTURVY("topsyturvy", ElementalTypes.INSTANCE.getDARK()),
-    STAR_TORCHSONG("torchsong", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_TORMENT("torment", ElementalTypes.INSTANCE.getDARK()),
-    STAR_TOXIC("toxic", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_TOXICSPIKES("toxicspikes", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_TOXICTHREAD("toxicthread", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_TRAILBLAZE("trailblaze", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_TRANSFORM("transform", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TRIATTACK("triattack", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TRICK("trick", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_TRICKORTREAT("trickortreat", ElementalTypes.INSTANCE.getGHOST()),
-    STAR_TRICKROOM("trickroom", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_TRIPLEARROWS("triplearrows", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_TRIPLEAXEL("tripleaxel", ElementalTypes.INSTANCE.getICE()),
-    STAR_TRIPLEDIVE("tripledive", ElementalTypes.INSTANCE.getWATER()),
-    STAR_TRIPLEKICK("triplekick", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_TROPKICK("tropkick", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_TRUMPCARD("trumpcard", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_TWINBEAM("twinbeam", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_TWINEEDLE("twineedle", ElementalTypes.INSTANCE.getBUG()),
-    STAR_TWINKLETACKLE("twinkletackle", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_TWISTER("twister", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_UTURN("uturn", ElementalTypes.INSTANCE.getBUG()),
-    STAR_UPROAR("uproar", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_VACUUMWAVE("vacuumwave", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_VCREATE("vcreate", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_VEEVEEVOLLEY("veeveevolley", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_VENOMDRENCH("venomdrench", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_VENOSHOCK("venoshock", ElementalTypes.INSTANCE.getPOISON()),
-    STAR_VICTORYDANCE("victorydance", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_VINEWHIP("vinewhip", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_VISEGRIP("visegrip", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_VITALTHROW("vitalthrow", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_VOLTSWITCH("voltswitch", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_VOLTTACKLE("volttackle", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_WAKEUPSLAP("wakeupslap", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_WATERFALL("waterfall", ElementalTypes.INSTANCE.getWATER()),
-    STAR_WATERGUN("watergun", ElementalTypes.INSTANCE.getWATER()),
-    STAR_WATERPLEDGE("waterpledge", ElementalTypes.INSTANCE.getWATER()),
-    STAR_WATERPULSE("waterpulse", ElementalTypes.INSTANCE.getWATER()),
-    STAR_WATERSHURIKEN("watershuriken", ElementalTypes.INSTANCE.getWATER()),
-    STAR_WATERSPORT("watersport", ElementalTypes.INSTANCE.getWATER()),
-    STAR_WATERSPOUT("waterspout", ElementalTypes.INSTANCE.getWATER()),
-    STAR_WAVECRASH("wavecrash", ElementalTypes.INSTANCE.getWATER()),
-    STAR_WEATHERBALL("weatherball", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_WHIRLPOOL("whirlpool", ElementalTypes.INSTANCE.getWATER()),
-    STAR_WHIRLWIND("whirlwind", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_WICKEDBLOW("wickedblow", ElementalTypes.INSTANCE.getDARK()),
-    STAR_WICKEDTORQUE("wickedtorque", ElementalTypes.INSTANCE.getDARK()),
-    STAR_WIDEGUARD("wideguard", ElementalTypes.INSTANCE.getROCK()),
-    STAR_WILDBOLTSTORM("wildboltstorm", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_WILDCHARGE("wildcharge", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_WILLOWISP("willowisp", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_WINGATTACK("wingattack", ElementalTypes.INSTANCE.getFLYING()),
-    STAR_WISH("wish", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_WITHDRAW("withdraw", ElementalTypes.INSTANCE.getWATER()),
-    STAR_WONDERROOM("wonderroom", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_WOODHAMMER("woodhammer", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_WORKUP("workup", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_WORRYSEED("worryseed", ElementalTypes.INSTANCE.getGRASS()),
-    STAR_WRAP("wrap", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_WRINGOUT("wringout", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_XSCISSOR("xscissor", ElementalTypes.INSTANCE.getBUG()),
-    STAR_YAWN("yawn", ElementalTypes.INSTANCE.getNORMAL()),
-    STAR_ZAPCANNON("zapcannon", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_ZENHEADBUTT("zenheadbutt", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_ZINGZAP("zingzap", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_ZIPPYZAP("zippyzap", ElementalTypes.INSTANCE.getELECTRIC()),
+import java.util.ArrayList;
+import java.util.List;
 
-    STAR_TEMPERFLARE("temperflare", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_SUPERCELLSLAM("supercellslam", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_HARDPRESS("hardpress", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_DRAGONCHEER("dragoncheer", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_ALLURINGVOICE("alluringvoice", ElementalTypes.INSTANCE.getFAIRY()),
-    STAR_PSYCHICNOISE("psychicnoise", ElementalTypes.INSTANCE.getPSYCHIC()),
-    STAR_UPPERHAND("upperhand", ElementalTypes.INSTANCE.getFIGHTING()),
-    STAR_ELECTROSHOT("electroshot", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_FICKLEBEAM("ficklebeam", ElementalTypes.INSTANCE.getDRAGON()),
-    STAR_BURNINGBULWARK("burningbulwark", ElementalTypes.INSTANCE.getFIRE()),
-    STAR_THUNDERCLAP("thunderclap", ElementalTypes.INSTANCE.getELECTRIC()),
-    STAR_MIGHTYCLEAVE("mightycleave", ElementalTypes.INSTANCE.getROCK()),
-    STAR_TACHYONCUTTER("tachyoncutter", ElementalTypes.INSTANCE.getSTEEL()),
-    STAR_TERASTARSTORM("terastarstorm", ElementalTypes.INSTANCE.getNORMAL());
+public class StarMoveItem {
+    private static final List<Item> all = new ArrayList<>();
 
-    private final Item item;
-    private final Identifier identifier;
+    public static final Item STAR_10000000VOLTTHUNDERBOLT = register("10000000voltthunderbolt", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_ABSORB = register("absorb", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_ACCELEROCK = register("accelerock", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_ACID = register("acid", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_ACIDARMOR = register("acidarmor", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_ACIDDOWNPOUR = register("aciddownpour", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_ACIDSPRAY = register("acidspray", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_ACROBATICS = register("acrobatics", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_ACUPRESSURE = register("acupressure", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_AERIALACE = register("aerialace", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_AEROBLAST = register("aeroblast", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_AFTERYOU = register("afteryou", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_AGILITY = register("agility", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_AIRCUTTER = register("aircutter", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_AIRSLASH = register("airslash", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_ALLOUTPUMMELING = register("alloutpummeling", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_ALLYSWITCH = register("allyswitch", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_AMNESIA = register("amnesia", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_ANCHORSHOT = register("anchorshot", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_ANCIENTPOWER = register("ancientpower", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_APPLEACID = register("appleacid", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_AQUACUTTER = register("aquacutter", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_AQUAJET = register("aquajet", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_AQUARING = register("aquaring", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_AQUASTEP = register("aquastep", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_AQUATAIL = register("aquatail", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_ARMORCANNON = register("armorcannon", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_ARMTHRUST = register("armthrust", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_AROMATHERAPY = register("aromatherapy", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_AROMATICMIST = register("aromaticmist", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_ASSIST = register("assist", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_ASSURANCE = register("assurance", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_ASTONISH = register("astonish", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_ASTRALBARRAGE = register("astralbarrage", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_ATTACKORDER = register("attackorder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_ATTRACT = register("attract", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_AURASPHERE = register("aurasphere", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_AURAWHEEL = register("aurawheel", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_AURORABEAM = register("aurorabeam", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_AURORAVEIL = register("auroraveil", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_AUTOTOMIZE = register("autotomize", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_AVALANCHE = register("avalanche", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_AXEKICK = register("axekick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_BABYDOLLEYES = register("babydolleyes", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_BADDYBAD = register("baddybad", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_BANEFULBUNKER = register("banefulbunker", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_BARBBARRAGE = register("barbbarrage", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_BARRAGE = register("barrage", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_BARRIER = register("barrier", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_BATONPASS = register("batonpass", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_BEAKBLAST = register("beakblast", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_BEATUP = register("beatup", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_BEHEMOTHBASH = register("behemothbash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_BEHEMOTHBLADE = register("behemothblade", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_BELCH = register("belch", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_BELLYDRUM = register("bellydrum", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_BESTOW = register("bestow", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_BIDE = register("bide", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_BIND = register("bind", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_BITE = register("bite", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_BITTERBLADE = register("bitterblade", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_BITTERMALICE = register("bittermalice", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_BLACKHOLEECLIPSE = register("blackholeeclipse", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_BLASTBURN = register("blastburn", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_BLAZEKICK = register("blazekick", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_BLAZINGTORQUE = register("blazingtorque", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_BLEAKWINDSTORM = register("bleakwindstorm", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_BLIZZARD = register("blizzard", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_BLOCK = register("block", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_BLOOMDOOM = register("bloomdoom", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_BLUEFLARE = register("blueflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_BODYPRESS = register("bodypress", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_BODYSLAM = register("bodyslam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_BOLTBEAK = register("boltbeak", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_BOLTSTRIKE = register("boltstrike", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_BONECLUB = register("boneclub", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_BONEMERANG = register("bonemerang", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_BONERUSH = register("bonerush", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_BOOMBURST = register("boomburst", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_BOUNCE = register("bounce", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_BOUNCYBUBBLE = register("bouncybubble", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_BRANCHPOKE = register("branchpoke", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_BRAVEBIRD = register("bravebird", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_BREAKINGSWIPE = register("breakingswipe", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_BREAKNECKBLITZ = register("breakneckblitz", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_BRICKBREAK = register("brickbreak", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_BRINE = register("brine", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_BRUTALSWING = register("brutalswing", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_BUBBLE = register("bubble", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_BUBBLEBEAM = register("bubblebeam", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_BUGBITE = register("bugbite", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_BUGBUZZ = register("bugbuzz", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_BULKUP = register("bulkup", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_BULLDOZE = register("bulldoze", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_BULLETPUNCH = register("bulletpunch", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_BULLETSEED = register("bulletseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_BURNINGJEALOUSY = register("burningjealousy", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_BURNUP = register("burnup", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_BUZZYBUZZ = register("buzzybuzz", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_CALMMIND = register("calmmind", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_CAMOUFLAGE = register("camouflage", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_CAPTIVATE = register("captivate", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_CATASTROPIKA = register("catastropika", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_CEASELESSEDGE = register("ceaselessedge", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_CELEBRATE = register("celebrate", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_CHARGE = register("charge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_CHARGEBEAM = register("chargebeam", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_CHARM = register("charm", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_CHATTER = register("chatter", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_CHILLINGWATER = register("chillingwater", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_CHILLYRECEPTION = register("chillyreception", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_CHIPAWAY = register("chipaway", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_CHLOROBLAST = register("chloroblast", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_CIRCLETHROW = register("circlethrow", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_CLAMP = register("clamp", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_CLANGINGSCALES = register("clangingscales", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_CLANGOROUSSOUL = register("clangoroussoul", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_CLANGOROUSSOULBLAZE = register("clangoroussoulblaze", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_CLEARSMOG = register("clearsmog", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_CLOSECOMBAT = register("closecombat", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_COACHING = register("coaching", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_COIL = register("coil", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_COLLISIONCOURSE = register("collisioncourse", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_COMBATTORQUE = register("combattorque", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_COMETPUNCH = register("cometpunch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_COMEUPPANCE = register("comeuppance", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_CONFIDE = register("confide", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_CONFUSERAY = register("confuseray", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_CONFUSION = register("confusion", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_CONSTRICT = register("constrict", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_CONTINENTALCRUSH = register("continentalcrush", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_CONVERSION = register("conversion", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_CONVERSION2 = register("conversion2", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_COPYCAT = register("copycat", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_COREENFORCER = register("coreenforcer", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_CORKSCREWCRASH = register("corkscrewcrash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_CORROSIVEGAS = register("corrosivegas", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_COSMICPOWER = register("cosmicpower", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_COTTONGUARD = register("cottonguard", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_COTTONSPORE = register("cottonspore", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_COUNTER = register("counter", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_COURTCHANGE = register("courtchange", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_COVET = register("covet", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_CRABHAMMER = register("crabhammer", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_CRAFTYSHIELD = register("craftyshield", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_CROSSCHOP = register("crosschop", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_CROSSPOISON = register("crosspoison", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_CRUNCH = register("crunch", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_CRUSHCLAW = register("crushclaw", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_CRUSHGRIP = register("crushgrip", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_CURSE = register("curse", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_CUT = register("cut", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_DARKESTLARIAT = register("darkestlariat", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_DARKPULSE = register("darkpulse", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_DARKVOID = register("darkvoid", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_DAZZLINGGLEAM = register("dazzlinggleam", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_DECORATE = register("decorate", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_DEFENDORDER = register("defendorder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_DEFENSECURL = register("defensecurl", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_DEFOG = register("defog", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_DESTINYBOND = register("destinybond", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_DETECT = register("detect", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_DEVASTATINGDRAKE = register("devastatingdrake", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DIAMONDSTORM = register("diamondstorm", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_DIG = register("dig", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_DISABLE = register("disable", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_DISARMINGVOICE = register("disarmingvoice", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_DISCHARGE = register("discharge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_DIRECLAW = register("direclaw", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_DIVE = register("dive", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_DIZZYPUNCH = register("dizzypunch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_DOODLE = register("doodle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_DOOMDESIRE = register("doomdesire", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_DOUBLEEDGE = register("doubleedge", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_DOUBLEHIT = register("doublehit", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_DOUBLEIRONBASH = register("doubleironbash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_DOUBLEKICK = register("doublekick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_DOUBLESHOCK = register("doubleshock", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_DOUBLESLAP = register("doubleslap", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_DOUBLETEAM = register("doubleteam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_DRACOMETEOR = register("dracometeor", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DRAGONASCENT = register("dragonascent", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_DRAGONBREATH = register("dragonbreath", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DRAGONCLAW = register("dragonclaw", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DRAGONDANCE = register("dragondance", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DRAGONDARTS = register("dragondarts", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DRAGONENERGY = register("dragonenergy", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DRAGONHAMMER = register("dragonhammer", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DRAGONPULSE = register("dragonpulse", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DRAGONRAGE = register("dragonrage", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DRAGONRUSH = register("dragonrush", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DRAGONTAIL = register("dragontail", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DRAININGKISS = register("drainingkiss", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_DRAINPUNCH = register("drainpunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_DREAMEATER = register("dreameater", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_DRILLPECK = register("drillpeck", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_DRILLRUN = register("drillrun", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_DRUMBEATING = register("drumbeating", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_DUALCHOP = register("dualchop", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DUALWINGBEAT = register("dualwingbeat", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_DYNAMAXCANNON = register("dynamaxcannon", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_DYNAMICPUNCH = register("dynamicpunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_EARTHPOWER = register("earthpower", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_EARTHQUAKE = register("earthquake", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_ECHOEDVOICE = register("echoedvoice", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_EERIEIMPULSE = register("eerieimpulse", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_EERIESPELL = register("eeriespell", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_EGGBOMB = register("eggbomb", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_ELECTRICTERRAIN = register("electricterrain", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_ELECTRIFY = register("electrify", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_ELECTROBALL = register("electroball", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_ELECTRODRIFT = register("electrodrift", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_ELECTROWEB = register("electroweb", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_EMBARGO = register("embargo", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_EMBER = register("ember", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_ENCORE = register("encore", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_ENDEAVOR = register("endeavor", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_ENDURE = register("endure", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_ENERGYBALL = register("energyball", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_ENTRAINMENT = register("entrainment", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_ERUPTION = register("eruption", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_ESPERWING = register("esperwing", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_ETERNABEAM = register("eternabeam", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_EXPANDINGFORCE = register("expandingforce", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_EXPLOSION = register("explosion", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_EXTRASENSORY = register("extrasensory", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_EXTREMEEVOBOOST = register("extremeevoboost", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_EXTREMESPEED = register("extremespeed", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FACADE = register("facade", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FAIRYLOCK = register("fairylock", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_FAIRYWIND = register("fairywind", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_FAKEOUT = register("fakeout", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FAKETEARS = register("faketears", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_FALSESURRENDER = register("falsesurrender", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_FALSESWIPE = register("falseswipe", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FEATHERDANCE = register("featherdance", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_FEINT = register("feint", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FEINTATTACK = register("feintattack", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_FELLSTINGER = register("fellstinger", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_FIERYDANCE = register("fierydance", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_FIERYWRATH = register("fierywrath", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_FILLETAWAY = register("filletaway", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FINALGAMBIT = register("finalgambit", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_FIREBLAST = register("fireblast", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_FIREFANG = register("firefang", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_FIRELASH = register("firelash", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_FIREPLEDGE = register("firepledge", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_FIREPUNCH = register("firepunch", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_FIRESPIN = register("firespin", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_FIRSTIMPRESSION = register("firstimpression", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_FISHIOUSREND = register("fishiousrend", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_FISSURE = register("fissure", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_FLAIL = register("flail", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FLAMEBURST = register("flameburst", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_FLAMECHARGE = register("flamecharge", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_FLAMEWHEEL = register("flamewheel", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_FLAMETHROWER = register("flamethrower", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_FLAREBLITZ = register("flareblitz", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_FLASH = register("flash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FLASHCANNON = register("flashcannon", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_FLATTER = register("flatter", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_FLEURCANNON = register("fleurcannon", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_FLING = register("fling", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_FLIPTURN = register("flipturn", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_FLOATYFALL = register("floatyfall", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_FLORALHEALING = register("floralhealing", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_FLOWERSHIELD = register("flowershield", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_FLOWERTRICK = register("flowertrick", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_FLY = register("fly", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_FLYINGPRESS = register("flyingpress", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_FOCUSBLAST = register("focusblast", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_FOCUSENERGY = register("focusenergy", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FOCUSPUNCH = register("focuspunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_FOLLOWME = register("followme", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FORCEPALM = register("forcepalm", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_FORESIGHT = register("foresight", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FORESTSCURSE = register("forestscurse", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_FOULPLAY = register("foulplay", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_FREEZEDRY = register("freezedry", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_FREEZESHOCK = register("freezeshock", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_FREEZINGGLARE = register("freezingglare", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_FREEZYFROST = register("freezyfrost", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_FRENZYPLANT = register("frenzyplant", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_FROSTBREATH = register("frostbreath", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_FRUSTRATION = register("frustration", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FURYATTACK = register("furyattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FURYCUTTER = register("furycutter", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_FURYSWIPES = register("furyswipes", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_FUSIONBOLT = register("fusionbolt", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_FUSIONFLARE = register("fusionflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_FUTURESIGHT = register("futuresight", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_GASTROACID = register("gastroacid", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_GEARGRIND = register("geargrind", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_GEARUP = register("gearup", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_GENESISSUPERNOVA = register("genesissupernova", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_GEOMANCY = register("geomancy", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_GIGADRAIN = register("gigadrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_GIGAIMPACT = register("gigaimpact", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_GIGATONHAMMER = register("gigatonhammer", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_GIGAVOLTHAVOC = register("gigavolthavoc", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_GLACIALLANCE = register("glaciallance", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_GLACIATE = register("glaciate", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_GLAIVERUSH = register("glaiverush", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_GLARE = register("glare", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_GLITZYGLOW = register("glitzyglow", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_GMAXBEFUDDLE = register("gmaxbefuddle", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_GMAXCANNONADE = register("gmaxcannonade", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_GMAXCENTIFERNO = register("gmaxcentiferno", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_GMAXCHISTRIKE = register("gmaxchistrike", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_GMAXCUDDLE = register("gmaxcuddle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_GMAXDEPLETION = register("gmaxdepletion", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_GMAXDRUMSOLO = register("gmaxdrumsolo", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_GMAXFINALE = register("gmaxfinale", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_GMAXFIREBALL = register("gmaxfireball", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_GMAXFOAMBURST = register("gmaxfoamburst", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_GMAXGOLDRUSH = register("gmaxgoldrush", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_GMAXGRAVITAS = register("gmaxgravitas", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_GMAXHYDROSNIPE = register("gmaxhydrosnipe", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_GMAXMALODOR = register("gmaxmalodor", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_GMAXMELTDOWN = register("gmaxmeltdown", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_GMAXONEBLOW = register("gmaxoneblow", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_GMAXRAPIDFLOW = register("gmaxrapidflow", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_GMAXREPLENISH = register("gmaxreplenish", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_GMAXRESONANCE = register("gmaxresonance", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_GMAXSANDBLAST = register("gmaxsandblast", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_GMAXSMITE = register("gmaxsmite", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_GMAXSNOOZE = register("gmaxsnooze", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_GMAXSTEELSURGE = register("gmaxsteelsurge", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_GMAXSTONESURGE = register("gmaxstonesurge", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_GMAXSTUNSHOCK = register("gmaxstunshock", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_GMAXSWEETNESS = register("gmaxsweetness", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_GMAXTARTNESS = register("gmaxtartness", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_GMAXTERROR = register("gmaxterror", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_GMAXVINELASH = register("gmaxvinelash", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_GMAXVOLCALITH = register("gmaxvolcalith", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_GMAXVOLTCRASH = register("gmaxvoltcrash", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_GMAXWILDFIRE = register("gmaxwildfire", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_GMAXWINDRAGE = register("gmaxwindrage", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_GRASSKNOT = register("grassknot", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_GRASSPLEDGE = register("grasspledge", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_GRASSWHISTLE = register("grasswhistle", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_GRASSYGLIDE = register("grassyglide", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_GRASSYTERRAIN = register("grassyterrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_GRAVAPPLE = register("gravapple", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_GRAVITY = register("gravity", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_GROWL = register("growl", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_GROWTH = register("growth", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_GRUDGE = register("grudge", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_GUARDIANOFALOLA = register("guardianofalola", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_GUARDSPLIT = register("guardsplit", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_GUARDSWAP = register("guardswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_GUILLOTINE = register("guillotine", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_GUNKSHOT = register("gunkshot", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_GUST = register("gust", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_GYROBALL = register("gyroball", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_HAIL = register("hail", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_HAMMERARM = register("hammerarm", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_HAPPYHOUR = register("happyhour", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HARDEN = register("harden", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HAZE = register("haze", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_HEADBUTT = register("headbutt", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HEADCHARGE = register("headcharge", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HEADLONGRUSH = register("headlongrush", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_HEADSMASH = register("headsmash", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_HEALBELL = register("healbell", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HEALBLOCK = register("healblock", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_HEALINGWISH = register("healingwish", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_HEALORDER = register("healorder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_HEALPULSE = register("healpulse", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_HEARTSTAMP = register("heartstamp", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_HEARTSWAP = register("heartswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_HEATCRASH = register("heatcrash", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_HEATWAVE = register("heatwave", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_HEAVYSLAM = register("heavyslam", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_HELPINGHAND = register("helpinghand", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HEX = register("hex", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_HIDDENPOWER = register("hiddenpower", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HIGHHORSEPOWER = register("highhorsepower", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_HIGHJUMPKICK = register("highjumpkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_HOLDBACK = register("holdback", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HOLDHANDS = register("holdhands", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HONECLAWS = register("honeclaws", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_HORNATTACK = register("hornattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HORNDRILL = register("horndrill", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HORNLEECH = register("hornleech", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_HOWL = register("howl", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HURRICANE = register("hurricane", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_HYDROCANNON = register("hydrocannon", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_HYDROPUMP = register("hydropump", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_HYDROSTEAM = register("hydrosteam", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_HYDROVORTEX = register("hydrovortex", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_HYPERBEAM = register("hyperbeam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HYPERDRILL = register("hyperdrill", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HYPERFANG = register("hyperfang", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HYPERSPACEFURY = register("hyperspacefury", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_HYPERSPACEHOLE = register("hyperspacehole", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_HYPERVOICE = register("hypervoice", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_HYPNOSIS = register("hypnosis", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_ICEBALL = register("iceball", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_ICEBEAM = register("icebeam", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_ICEBURN = register("iceburn", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_ICEFANG = register("icefang", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_ICEHAMMER = register("icehammer", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_ICEPUNCH = register("icepunch", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_ICESHARD = register("iceshard", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_ICESPINNER = register("icespinner", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_ICICLECRASH = register("iciclecrash", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_ICICLESPEAR = register("iciclespear", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_ICYWIND = register("icywind", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_IMPRISON = register("imprison", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_INCINERATE = register("incinerate", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_INFERNALPARADE = register("infernalparade", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_INFERNO = register("inferno", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_INFERNOOVERDRIVE = register("infernooverdrive", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_INFESTATION = register("infestation", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_INGRAIN = register("ingrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_INSTRUCT = register("instruct", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_IONDELUGE = register("iondeluge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_IRONDEFENSE = register("irondefense", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_IRONHEAD = register("ironhead", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_IRONTAIL = register("irontail", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_JAWLOCK = register("jawlock", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_JETPUNCH = register("jetpunch", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_JUDGMENT = register("judgment", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_JUMPKICK = register("jumpkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_JUNGLEHEALING = register("junglehealing", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_KARATECHOP = register("karatechop", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_KINESIS = register("kinesis", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_KINGSSHIELD = register("kingsshield", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_KNOCKOFF = register("knockoff", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_KOWTOWCLEAVE = register("kowtowcleave", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_LANDSWRATH = register("landswrath", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_LASERFOCUS = register("laserfocus", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_LASHOUT = register("lashout", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_LASTRESORT = register("lastresort", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_LASTRESPECTS = register("lastrespects", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_LAVAPLUME = register("lavaplume", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_LEAFAGE = register("leafage", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_LEAFBLADE = register("leafblade", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_LEAFSTORM = register("leafstorm", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_LEAFTORNADO = register("leaftornado", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_LEECHLIFE = register("leechlife", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_LEECHSEED = register("leechseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_LEER = register("leer", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_LETSSNUGGLEFOREVER = register("letssnuggleforever", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_LICK = register("lick", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_LIFEDEW = register("lifedew", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_LIGHTOFRUIN = register("lightofruin", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_LIGHTSCREEN = register("lightscreen", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_LIGHTTHATBURNSTHESKY = register("lightthatburnsthesky", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_LIQUIDATION = register("liquidation", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_LOCKON = register("lockon", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_LOVELYKISS = register("lovelykiss", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_LOWKICK = register("lowkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_LOWSWEEP = register("lowsweep", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_LUCKYCHANT = register("luckychant", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_LUMINACRASH = register("luminacrash", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_LUNARBLESSING = register("lunarblessing", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_LUNARDANCE = register("lunardance", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_LUNGE = register("lunge", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_LUSTERPURGE = register("lusterpurge", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_MACHPUNCH = register("machpunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_MAGICALLEAF = register("magicalleaf", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_MAGICALTORQUE = register("magicaltorque", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_MAGICCOAT = register("magiccoat", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_MAGICPOWDER = register("magicpowder", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_MAGICROOM = register("magicroom", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_MAGMASTORM = register("magmastorm", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_MAGNETBOMB = register("magnetbomb", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_MAGNETICFLUX = register("magneticflux", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_MAGNETRISE = register("magnetrise", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_MAGNITUDE = register("magnitude", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_MAKEITRAIN = register("makeitrain", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_MALICIOUSMOONSAULT = register("maliciousmoonsault", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_MATBLOCK = register("matblock", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_MAXAIRSTREAM = register("maxairstream", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_MAXDARKNESS = register("maxdarkness", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_MAXFLARE = register("maxflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_MAXFLUTTERBY = register("maxflutterby", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_MAXGEYSER = register("maxgeyser", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_MAXGUARD = register("maxguard", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_MAXHAILSTORM = register("maxhailstorm", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_MAXKNUCKLE = register("maxknuckle", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_MAXLIGHTNING = register("maxlightning", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_MAXMINDSTORM = register("maxmindstorm", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_MAXOOZE = register("maxooze", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_MAXOVERGROWTH = register("maxovergrowth", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_MAXPHANTASM = register("maxphantasm", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_MAXQUAKE = register("maxquake", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_MAXROCKFALL = register("maxrockfall", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_MAXSTARFALL = register("maxstarfall", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_MAXSTEELSPIKE = register("maxsteelspike", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_MAXSTRIKE = register("maxstrike", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_MAXWYRMWIND = register("maxwyrmwind", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_MEANLOOK = register("meanlook", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_MEDITATE = register("meditate", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_MEFIRST = register("mefirst", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_MEGADRAIN = register("megadrain", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_MEGAHORN = register("megahorn", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_MEGAKICK = register("megakick", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_MEGAPUNCH = register("megapunch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_MEMENTO = register("memento", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_MENACINGMOONRAZEMAELSTROM = register("menacingmoonrazemaelstrom", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_METALBURST = register("metalburst", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_METALCLAW = register("metalclaw", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_METALSOUND = register("metalsound", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_METEORASSAULT = register("meteorassault", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_METEORBEAM = register("meteorbeam", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_METEORMASH = register("meteormash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_METRONOME = register("metronome", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_MILKDRINK = register("milkdrink", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_MIMIC = register("mimic", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_MINDBLOWN = register("mindblown", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_MINDREADER = register("mindreader", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_MINIMIZE = register("minimize", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_MIRACLEEYE = register("miracleeye", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_MIRRORCOAT = register("mirrorcoat", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_MIRRORMOVE = register("mirrormove", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_MIRRORSHOT = register("mirrorshot", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_MIST = register("mist", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_MISTBALL = register("mistball", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_MISTYEXPLOSION = register("mistyexplosion", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_MISTYTERRAIN = register("mistyterrain", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_MOONBLAST = register("moonblast", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_MOONGEISTBEAM = register("moongeistbeam", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_MOONLIGHT = register("moonlight", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_MORNINGSUN = register("morningsun", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_MORTALSPIN = register("mortalspin", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_MOUNTAINGALE = register("mountaingale", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_MUDBOMB = register("mudbomb", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_MUDSHOT = register("mudshot", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_MUDSLAP = register("mudslap", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_MUDSPORT = register("mudsport", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_MUDDYWATER = register("muddywater", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_MULTIATTACK = register("multiattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_MYSTICALFIRE = register("mysticalfire", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_MYSTICALPOWER = register("mysticalpower", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_NASTYPLOT = register("nastyplot", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_NATURALGIFT = register("naturalgift", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_NATUREPOWER = register("naturepower", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_NATURESMADNESS = register("naturesmadness", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_NEEDLEARM = register("needlearm", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_NEVERENDINGNIGHTMARE = register("neverendingnightmare", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_NIGHTDAZE = register("nightdaze", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_NIGHTMARE = register("nightmare", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_NIGHTSHADE = register("nightshade", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_NIGHTSLASH = register("nightslash", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_NOBLEROAR = register("nobleroar", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_NORETREAT = register("noretreat", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_NOXIOUSTORQUE = register("noxioustorque", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_NUZZLE = register("nuzzle", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_OBLIVIONWING = register("oblivionwing", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_OBSTRUCT = register("obstruct", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_OCEANICOPERETTA = register("oceanicoperetta", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_OCTAZOOKA = register("octazooka", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_OCTOLOCK = register("octolock", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_ODORSLEUTH = register("odorsleuth", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_OMINOUSWIND = register("ominouswind", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_ORDERUP = register("orderup", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_ORIGINPULSE = register("originpulse", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_OUTRAGE = register("outrage", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_OVERDRIVE = register("overdrive", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_OVERHEAT = register("overheat", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_PAINSPLIT = register("painsplit", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_PARABOLICCHARGE = register("paraboliccharge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_PARTINGSHOT = register("partingshot", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_PAYBACK = register("payback", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_PAYDAY = register("payday", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_PECK = register("peck", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_PERISHSONG = register("perishsong", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_PETALBLIZZARD = register("petalblizzard", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_PETALDANCE = register("petaldance", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_PHANTOMFORCE = register("phantomforce", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_PHOTONGEYSER = register("photongeyser", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PIKAPAPOW = register("pikapapow", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_PINMISSILE = register("pinmissile", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_PLASMAFISTS = register("plasmafists", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_PLAYNICE = register("playnice", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_PLAYROUGH = register("playrough", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_PLUCK = register("pluck", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_POISONFANG = register("poisonfang", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_POISONGAS = register("poisongas", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_POISONJAB = register("poisonjab", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_POISONPOWDER = register("poisonpowder", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_POISONSTING = register("poisonsting", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_POISONTAIL = register("poisontail", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_POLLENPUFF = register("pollenpuff", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_POLTERGEIST = register("poltergeist", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_POPULATIONBOMB = register("populationbomb", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_POUNCE = register("pounce", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_POUND = register("pound", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_POWDER = register("powder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_POWDERSNOW = register("powdersnow", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_POWERGEM = register("powergem", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_POWERSHIFT = register("powershift", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_POWERSPLIT = register("powersplit", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_POWERSWAP = register("powerswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_POWERTRICK = register("powertrick", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_POWERTRIP = register("powertrip", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_POWERUPPUNCH = register("poweruppunch", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_POWERWHIP = register("powerwhip", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_PRECIPICEBLADES = register("precipiceblades", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_PRESENT = register("present", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_PRISMATICLASER = register("prismaticlaser", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PROTECT = register("protect", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_PSYBEAM = register("psybeam", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PSYBLADE = register("psyblade", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PSYCHUP = register("psychup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_PSYCHIC = register("psychic", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PSYCHICFANGS = register("psychicfangs", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PSYCHICTERRAIN = register("psychicterrain", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PSYCHOBOOST = register("psychoboost", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PSYCHOCUT = register("psychocut", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PSYCHOSHIFT = register("psychoshift", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PSYSHIELDBASH = register("psyshieldbash", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PSYSHOCK = register("psyshock", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PSYSTRIKE = register("psystrike", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PSYWAVE = register("psywave", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_PULVERIZINGPANCAKE = register("pulverizingpancake", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_PUNISHMENT = register("punishment", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_PURIFY = register("purify", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_PURSUIT = register("pursuit", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_PYROBALL = register("pyroball", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_QUASH = register("quash", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_QUICKATTACK = register("quickattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_QUICKGUARD = register("quickguard", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_QUIVERDANCE = register("quiverdance", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_RAGE = register("rage", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_RAGEFIST = register("ragefist", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_RAGEPOWDER = register("ragepowder", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_RAGINGBULL = register("ragingbull", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_RAGINGFURY = register("ragingfury", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_RAINDANCE = register("raindance", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_RAPIDSPIN = register("rapidspin", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_RAZORLEAF = register("razorleaf", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_RAZORSHELL = register("razorshell", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_RAZORWIND = register("razorwind", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_RECOVER = register("recover", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_RECYCLE = register("recycle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_REFLECT = register("reflect", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_REFLECTTYPE = register("reflecttype", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_REFRESH = register("refresh", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_RELICSONG = register("relicsong", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_REST = register("rest", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_RETALIATE = register("retaliate", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_RETURN = register("return", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_REVELATIONDANCE = register("revelationdance", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_REVENGE = register("revenge", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_REVERSAL = register("reversal", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_REVIVALBLESSING = register("revivalblessing", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_RISINGVOLTAGE = register("risingvoltage", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_ROAR = register("roar", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_ROAROFTIME = register("roaroftime", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_ROCKBLAST = register("rockblast", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_ROCKCLIMB = register("rockclimb", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_ROCKPOLISH = register("rockpolish", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_ROCKSLIDE = register("rockslide", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_ROCKSMASH = register("rocksmash", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_ROCKTHROW = register("rockthrow", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_ROCKTOMB = register("rocktomb", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_ROCKWRECKER = register("rockwrecker", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_ROLEPLAY = register("roleplay", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_ROLLINGKICK = register("rollingkick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_ROLLOUT = register("rollout", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_ROOST = register("roost", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_ROTOTILLER = register("rototiller", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_ROUND = register("round", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_RUINATION = register("ruination", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_SACREDFIRE = register("sacredfire", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_SACREDSWORD = register("sacredsword", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_SAFEGUARD = register("safeguard", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SALTCURE = register("saltcure", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_SANDATTACK = register("sandattack", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_SANDSEARSTORM = register("sandsearstorm", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_SANDSTORM = register("sandstorm", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_SANDTOMB = register("sandtomb", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_SAPPYSEED = register("sappyseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_SAVAGESPINOUT = register("savagespinout", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_SCALD = register("scald", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_SCALESHOT = register("scaleshot", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_SCARYFACE = register("scaryface", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SCORCHINGSANDS = register("scorchingsands", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_SCRATCH = register("scratch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SCREECH = register("screech", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SEARINGSHOT = register("searingshot", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_SEARINGSUNRAZESMASH = register("searingsunrazesmash", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_SECRETPOWER = register("secretpower", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SECRETSWORD = register("secretsword", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_SEEDBOMB = register("seedbomb", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_SEEDFLARE = register("seedflare", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_SEISMICTOSS = register("seismictoss", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_SELFDESTRUCT = register("selfdestruct", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SHADOWBALL = register("shadowball", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_SHADOWBONE = register("shadowbone", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_SHADOWCLAW = register("shadowclaw", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_SHADOWFORCE = register("shadowforce", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_SHADOWPUNCH = register("shadowpunch", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_SHADOWSNEAK = register("shadowsneak", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_SHARPEN = register("sharpen", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SHATTEREDPSYCHE = register("shatteredpsyche", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_SHEDTAIL = register("shedtail", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SHEERCOLD = register("sheercold", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_SHELLSIDEARM = register("shellsidearm", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_SHELLSMASH = register("shellsmash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SHELLTRAP = register("shelltrap", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_SHELTER = register("shelter", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_SHIFTGEAR = register("shiftgear", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_SHOCKWAVE = register("shockwave", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_SHOREUP = register("shoreup", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_SIGNALBEAM = register("signalbeam", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_SILKTRAP = register("silktrap", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_SILVERWIND = register("silverwind", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_SIMPLEBEAM = register("simplebeam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SING = register("sing", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SINISTERARROWRAID = register("sinisterarrowraid", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_SIZZLYSLIDE = register("sizzlyslide", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_SKETCH = register("sketch", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SKILLSWAP = register("skillswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_SKITTERSMACK = register("skittersmack", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_SKULLBASH = register("skullbash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SKYATTACK = register("skyattack", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_SKYDROP = register("skydrop", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_SKYUPPERCUT = register("skyuppercut", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_SLACKOFF = register("slackoff", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SLAM = register("slam", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SLASH = register("slash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SLEEPPOWDER = register("sleeppowder", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_SLEEPTALK = register("sleeptalk", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SLUDGE = register("sludge", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_SLUDGEBOMB = register("sludgebomb", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_SLUDGEWAVE = register("sludgewave", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_SMACKDOWN = register("smackdown", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_SMARTSTRIKE = register("smartstrike", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_SMELLINGSALTS = register("smellingsalts", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SMOG = register("smog", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_SMOKESCREEN = register("smokescreen", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SNAPTRAP = register("snaptrap", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_SNARL = register("snarl", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_SNATCH = register("snatch", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_SNIPESHOT = register("snipeshot", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_SNORE = register("snore", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SNOWSCAPE = register("snowscape", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_SOAK = register("soak", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_SOFTBOILED = register("softboiled", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SOLARBEAM = register("solarbeam", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_SOLARBLADE = register("solarblade", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_SONICBOOM = register("sonicboom", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SOULSTEALING7STARSTRIKE = register("soulstealing7starstrike", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_SPACIALREND = register("spacialrend", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_SPARK = register("spark", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_SPARKLINGARIA = register("sparklingaria", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_SPARKLYSWIRL = register("sparklyswirl", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_SPECTRALTHIEF = register("spectralthief", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_SPEEDSWAP = register("speedswap", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_SPICYEXTRACT = register("spicyextract", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_SPIDERWEB = register("spiderweb", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_SPIKECANNON = register("spikecannon", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SPIKES = register("spikes", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_SPIKYSHIELD = register("spikyshield", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_SPINOUT = register("spinout", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_SPIRITBREAK = register("spiritbreak", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_SPIRITSHACKLE = register("spiritshackle", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_SPITUP = register("spitup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SPITE = register("spite", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_SPLASH = register("splash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SPLINTEREDSTORMSHARDS = register("splinteredstormshards", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_SPLISHYSPLASH = register("splishysplash", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_SPORE = register("spore", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_SPOTLIGHT = register("spotlight", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SPRINGTIDESTORM = register("springtidestorm", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_STEALTHROCK = register("stealthrock", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_STEAMERUPTION = register("steameruption", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_STEAMROLLER = register("steamroller", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_STEELBEAM = register("steelbeam", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_STEELROLLER = register("steelroller", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_STEELWING = register("steelwing", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_STICKYWEB = register("stickyweb", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_STOCKPILE = register("stockpile", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_STOKEDSPARKSURFER = register("stokedsparksurfer", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_STOMP = register("stomp", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_STOMPINGTANTRUM = register("stompingtantrum", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_STONEAXE = register("stoneaxe", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_STONEEDGE = register("stoneedge", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_STOREDPOWER = register("storedpower", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_STORMTHROW = register("stormthrow", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_STRANGESTEAM = register("strangesteam", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_STRENGTH = register("strength", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_STRENGTHSAP = register("strengthsap", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_STRINGSHOT = register("stringshot", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_STRUGGLE = register("struggle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_STRUGGLEBUG = register("strugglebug", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_STUFFCHEEKS = register("stuffcheeks", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_STUNSPORE = register("stunspore", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_SUBMISSION = register("submission", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_SUBSTITUTE = register("substitute", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SUBZEROSLAMMER = register("subzeroslammer", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_SUCKERPUNCH = register("suckerpunch", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_SUNNYDAY = register("sunnyday", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_SUNSTEELSTRIKE = register("sunsteelstrike", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_SUPERFANG = register("superfang", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SUPERPOWER = register("superpower", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_SUPERSONIC = register("supersonic", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SUPERSONICSKYSTRIKE = register("supersonicskystrike", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_SURF = register("surf", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_SURGINGSTRIKES = register("surgingstrikes", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_SWAGGER = register("swagger", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SWALLOW = register("swallow", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SWEETKISS = register("sweetkiss", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_SWEETSCENT = register("sweetscent", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SWIFT = register("swift", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SWITCHEROO = register("switcheroo", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_SWORDSDANCE = register("swordsdance", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_SYNCHRONOISE = register("synchronoise", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_SYNTHESIS = register("synthesis", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_TACKLE = register("tackle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TAILGLOW = register("tailglow", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_TAILSLAP = register("tailslap", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TAILWHIP = register("tailwhip", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TAILWIND = register("tailwind", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_TAKEDOWN = register("takedown", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TAKEHEART = register("takeheart", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_TARSHOT = register("tarshot", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_TAUNT = register("taunt", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_TEARFULLOOK = register("tearfullook", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TEATIME = register("teatime", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TECHNOBLAST = register("technoblast", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TECTONICRAGE = register("tectonicrage", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_TEETERDANCE = register("teeterdance", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TELEKINESIS = register("telekinesis", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_TELEPORT = register("teleport", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_TERABLAST = register("terablast", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TERRAINPULSE = register("terrainpulse", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_THIEF = register("thief", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_THOUSANDARROWS = register("thousandarrows", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_THOUSANDWAVES = register("thousandwaves", ElementalTypes.INSTANCE.getGROUND());
+    public static final Item STAR_THRASH = register("thrash", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_THROATCHOP = register("throatchop", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_THUNDER = register("thunder", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_THUNDERBOLT = register("thunderbolt", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_THUNDERCAGE = register("thundercage", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_THUNDERFANG = register("thunderfang", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_THUNDEROUSKICK = register("thunderouskick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_THUNDERPUNCH = register("thunderpunch", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_THUNDERSHOCK = register("thundershock", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_THUNDERWAVE = register("thunderwave", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_TICKLE = register("tickle", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TIDYUP = register("tidyup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TOPSYTURVY = register("topsyturvy", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_TORCHSONG = register("torchsong", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_TORMENT = register("torment", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_TOXIC = register("toxic", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_TOXICSPIKES = register("toxicspikes", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_TOXICTHREAD = register("toxicthread", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_TRAILBLAZE = register("trailblaze", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_TRANSFORM = register("transform", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TRIATTACK = register("triattack", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TRICK = register("trick", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_TRICKORTREAT = register("trickortreat", ElementalTypes.INSTANCE.getGHOST());
+    public static final Item STAR_TRICKROOM = register("trickroom", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_TRIPLEARROWS = register("triplearrows", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_TRIPLEAXEL = register("tripleaxel", ElementalTypes.INSTANCE.getICE());
+    public static final Item STAR_TRIPLEDIVE = register("tripledive", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_TRIPLEKICK = register("triplekick", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_TROPKICK = register("tropkick", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_TRUMPCARD = register("trumpcard", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_TWINBEAM = register("twinbeam", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_TWINEEDLE = register("twineedle", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_TWINKLETACKLE = register("twinkletackle", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_TWISTER = register("twister", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_UTURN = register("uturn", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_UPROAR = register("uproar", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_VACUUMWAVE = register("vacuumwave", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_VCREATE = register("vcreate", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_VEEVEEVOLLEY = register("veeveevolley", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_VENOMDRENCH = register("venomdrench", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_VENOSHOCK = register("venoshock", ElementalTypes.INSTANCE.getPOISON());
+    public static final Item STAR_VICTORYDANCE = register("victorydance", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_VINEWHIP = register("vinewhip", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_VISEGRIP = register("visegrip", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_VITALTHROW = register("vitalthrow", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_VOLTSWITCH = register("voltswitch", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_VOLTTACKLE = register("volttackle", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_WAKEUPSLAP = register("wakeupslap", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_WATERFALL = register("waterfall", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_WATERGUN = register("watergun", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_WATERPLEDGE = register("waterpledge", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_WATERPULSE = register("waterpulse", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_WATERSHURIKEN = register("watershuriken", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_WATERSPORT = register("watersport", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_WATERSPOUT = register("waterspout", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_WAVECRASH = register("wavecrash", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_WEATHERBALL = register("weatherball", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_WHIRLPOOL = register("whirlpool", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_WHIRLWIND = register("whirlwind", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_WICKEDBLOW = register("wickedblow", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_WICKEDTORQUE = register("wickedtorque", ElementalTypes.INSTANCE.getDARK());
+    public static final Item STAR_WIDEGUARD = register("wideguard", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_WILDBOLTSTORM = register("wildboltstorm", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_WILDCHARGE = register("wildcharge", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_WILLOWISP = register("willowisp", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_WINGATTACK = register("wingattack", ElementalTypes.INSTANCE.getFLYING());
+    public static final Item STAR_WISH = register("wish", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_WITHDRAW = register("withdraw", ElementalTypes.INSTANCE.getWATER());
+    public static final Item STAR_WONDERROOM = register("wonderroom", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_WOODHAMMER = register("woodhammer", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_WORKUP = register("workup", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_WORRYSEED = register("worryseed", ElementalTypes.INSTANCE.getGRASS());
+    public static final Item STAR_WRAP = register("wrap", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_WRINGOUT = register("wringout", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_XSCISSOR = register("xscissor", ElementalTypes.INSTANCE.getBUG());
+    public static final Item STAR_YAWN = register("yawn", ElementalTypes.INSTANCE.getNORMAL());
+    public static final Item STAR_ZAPCANNON = register("zapcannon", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_ZENHEADBUTT = register("zenheadbutt", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_ZINGZAP = register("zingzap", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_ZIPPYZAP = register("zippyzap", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_TEMPERFLARE = register("temperflare", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_SUPERCELLSLAM = register("supercellslam", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_HARDPRESS = register("hardpress", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_DRAGONCHEER = register("dragoncheer", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_ALLURINGVOICE = register("alluringvoice", ElementalTypes.INSTANCE.getFAIRY());
+    public static final Item STAR_PSYCHICNOISE = register("psychicnoise", ElementalTypes.INSTANCE.getPSYCHIC());
+    public static final Item STAR_UPPERHAND = register("upperhand", ElementalTypes.INSTANCE.getFIGHTING());
+    public static final Item STAR_ELECTROSHOT = register("electroshot", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_FICKLEBEAM = register("ficklebeam", ElementalTypes.INSTANCE.getDRAGON());
+    public static final Item STAR_BURNINGBULWARK = register("burningbulwark", ElementalTypes.INSTANCE.getFIRE());
+    public static final Item STAR_THUNDERCLAP = register("thunderclap", ElementalTypes.INSTANCE.getELECTRIC());
+    public static final Item STAR_MIGHTYCLEAVE = register("mightycleave", ElementalTypes.INSTANCE.getROCK());
+    public static final Item STAR_TACHYONCUTTER = register("tachyoncutter", ElementalTypes.INSTANCE.getSTEEL());
+    public static final Item STAR_TERASTARSTORM = register("terastarstorm", ElementalTypes.INSTANCE.getNORMAL());
 
-    StarMoveItem(String name, ElementalType type) {
-        this.identifier = Identifier.of(TMCraft.MOD_ID, String.format("star_%s", name));
-        this.item = new StarMoveTeachingItem(name, type);
+    public static void initialize() {
+
     }
 
-    public Identifier getIdentifier() {
-        return identifier;
-    }
+    private static Item register(String name, ElementalType type) {
+        Identifier identifier = Identifier.of(TMCraft.MOD_ID, String.format("star_%s", name));
+        Item item = new StarMoveTeachingItem(name, type);
 
-    public Item getItem() {
+        Registry.register(Registries.ITEM, identifier, item);
+        all.add(item);
+
         return item;
+    }
+
+    public static List<Item> getAll() {
+        return new ArrayList<>(all);
     }
 }

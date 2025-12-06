@@ -1,7 +1,7 @@
 package kiwiapollo.tmcraft.datagen;
 
 import com.cobblemon.mod.common.CobblemonItems;
-import kiwiapollo.tmcraft.common.TypeGemFactory;
+import kiwiapollo.tmcraft.common.TypeGemMap;
 import kiwiapollo.tmcraft.item.misc.BlankDiscItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveTeachingItem;
 import kiwiapollo.tmcraft.item.tmmove.TMMoveItem;
@@ -15,158 +15,158 @@ import net.minecraft.registry.tag.ItemTags;
 
 import java.util.function.Consumer;
 
-public class DiamondTMRecipeGenerator implements RecipeGenerator {
+public class DiamondTMRecipeGenerator {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BLIZZARD.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BLIZZARD)
                 .input(Items.POWDER_SNOW_BUCKET)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FIREBLAST.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FIREBLAST)
                 .input(Items.TNT)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_THUNDER.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_THUNDER)
                 .input(Items.LIGHTNING_ROD)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HYDROPUMP.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HYDROPUMP)
                 .input(Items.WATER_BUCKET)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ICEBEAM.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ICEBEAM)
                 .input(Items.END_ROD)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FLAMETHROWER.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FLAMETHROWER)
                 .input(Items.DISPENSER)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_THUNDERBOLT.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_THUNDERBOLT)
                 .input(CobblemonItems.ELECTIRIZER)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SURF.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SURF)
                 .input(ItemTags.BOATS)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DREAMEATER.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DREAMEATER)
                 .input(ItemTags.BEDS)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_IRONTAIL.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_IRONTAIL)
                 .input(Items.TWISTING_VINES)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_WILDCHARGE.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_WILDCHARGE)
                 .input(Items.MINECART)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ENERGYBALL.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ENERGYBALL)
                 .input(Items.SLIME_BALL)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SLUDGEBOMB.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SLUDGEBOMB)
                 .input(Items.TNT)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FOULPLAY.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FOULPLAY)
                 .input(Items.TRIPWIRE_HOOK)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYCHIC.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PSYCHIC)
                 .input(CobblemonItems.TWISTED_SPOON)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SUPERCELLSLAM.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SUPERCELLSLAM)
                 .input(Items.DAMAGED_ANVIL)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_UPROAR.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_UPROAR)
                 .input(Items.BELL)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_MUDDYWATER.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_MUDDYWATER)
                 .input(Items.MUD)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FLY.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_FLY)
                 .input(Items.FEATHER)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_EARTHQUAKE.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_EARTHQUAKE)
                 .input(Items.CRYING_OBSIDIAN)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_STONEEDGE.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_STONEEDGE)
                 .input(Items.POINTED_DRIPSTONE)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PHANTOMFORCE.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PHANTOMFORCE)
                 .input(Items.PISTON)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HURRICANE.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HURRICANE)
                 .input(Items.FEATHER, 3)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PETALBLIZZARD.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PETALBLIZZARD)
                 .input(Items.PINK_PETALS, 3)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SLUDGEWAVE.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_SLUDGEWAVE)
                 .input(Items.WATER_BUCKET)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HEATWAVE.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HEATWAVE)
                 .input(Items.FEATHER, 3)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_POLLENPUFF.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_POLLENPUFF)
                 .input(ItemTags.FLOWERS)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HYPERVOICE.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HYPERVOICE)
                 .input(Items.SCULK_SHRIEKER)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_EARTHPOWER.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_EARTHPOWER)
                 .input(CobblemonItems.LIFE_ORB)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PLAYROUGH.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PLAYROUGH)
                 .input(CobblemonItems.ROCKY_HELMET)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BUGBUZZ.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BUGBUZZ)
                 .input(Items.BELL)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_POLTERGEIST.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_POLTERGEIST)
                 .input(CobblemonItems.SPELL_TAG)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_MISTYEXPLOSION.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_MISTYEXPLOSION)
                 .input(Items.TNT)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HIGHHORSEPOWER.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_HIGHHORSEPOWER)
                 .input(Items.SADDLE)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_TAKEDOWN.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_TAKEDOWN)
                 .input(CobblemonItems.EXPERT_BELT)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ROCKCLIMB.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_ROCKCLIMB)
                 .input(CobblemonItems.HEAVY_DUTY_BOOTS)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_EGGBOMB.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_EGGBOMB)
                 .input(Items.EGG)
                 .input(Items.TNT)
                 .offerTo(exporter);
 
-        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DYNAMICPUNCH.getItem())
+        DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_DYNAMICPUNCH)
                 .input(Items.PUFFERFISH)
                 .offerTo(exporter);
     }
@@ -178,9 +178,9 @@ public class DiamondTMRecipeGenerator implements RecipeGenerator {
 
         public static DiamondTMRecipeJsonBuilder create(TMMoveTeachingItem item) {
             return (DiamondTMRecipeJsonBuilder) new DiamondTMRecipeJsonBuilder(item)
-                    .input(BlankDiscItem.DIAMOND_BLANK_DISC.getItem())
-                    .input(new TypeGemFactory().create(item.getMoveType()))
-                    .criterion(FabricRecipeProvider.hasItem(BlankDiscItem.DIAMOND_BLANK_DISC.getItem()), FabricRecipeProvider.conditionsFromItem(BlankDiscItem.DIAMOND_BLANK_DISC.getItem()));
+                    .input(BlankDiscItem.DIAMOND_BLANK_DISC)
+                    .input(new TypeGemMap().get(item.getMoveType()))
+                    .criterion(FabricRecipeProvider.hasItem(BlankDiscItem.DIAMOND_BLANK_DISC), FabricRecipeProvider.conditionsFromItem(BlankDiscItem.DIAMOND_BLANK_DISC));
         }
     }
 }

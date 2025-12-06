@@ -6,13 +6,13 @@ import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.Registries;
 
 import java.util.function.Consumer;
 
-public class PokemonBreederTableRecipeGenerator implements RecipeGenerator {
-    @Override
+public class PokemonBreederTableRecipeGenerator {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlock.POKEMON_BREEDER_TABLE_BLOCK.getItem())
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlock.POKEMON_BREEDER_TABLE_BLOCK)
                 .pattern("EE")
                 .pattern("BB")
                 .pattern("GG")
@@ -20,6 +20,6 @@ public class PokemonBreederTableRecipeGenerator implements RecipeGenerator {
                 .input('B', Items.BLACK_STAINED_GLASS)
                 .input('G', Items.RED_CONCRETE)
                 .criterion(FabricRecipeProvider.hasItem(Items.EGG), FabricRecipeProvider.conditionsFromItem(Items.EGG))
-                .offerTo(exporter, ModBlock.POKEMON_BREEDER_TABLE_BLOCK.getIdentifier());
+                .offerTo(exporter, Registries.BLOCK.getId(ModBlock.POKEMON_BREEDER_TABLE_BLOCK));
     }
 }
