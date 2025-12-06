@@ -122,7 +122,7 @@ public class GoldTMRecipeGenerator implements RecipeGenerator {
                 .offerTo(exporter);
 
         GoldTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_TRIATTACK.getItem())
-                .input(ItemTags.FISHES)
+                .input(Items.ICE)
                 .input(Items.BLAZE_POWDER)
                 .input(Items.LIGHTNING_ROD)
                 .offerTo(exporter);
