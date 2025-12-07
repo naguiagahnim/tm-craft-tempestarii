@@ -8,8 +8,7 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
 
-public class PokemonBreederTableRecipeGenerator implements RecipeGenerator {
-    @Override
+public class PokemonBreederTableRecipeGenerator {
     public void generate(RecipeExporter exporter) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlock.POKEMON_BREEDER_TABLE_BLOCK)
                 .pattern("EE")

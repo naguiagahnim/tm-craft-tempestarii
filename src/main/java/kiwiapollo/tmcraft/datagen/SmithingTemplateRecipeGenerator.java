@@ -12,7 +12,6 @@ import net.minecraft.util.Identifier;
 import java.util.function.Consumer;
 
 public class SmithingTemplateRecipeGenerator {
-    @Override
     public void generate(RecipeExporter exporter) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModSmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE)
                 .pattern("GBG")

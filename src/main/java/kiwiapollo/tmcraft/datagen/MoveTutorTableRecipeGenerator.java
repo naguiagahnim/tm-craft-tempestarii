@@ -9,7 +9,6 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
 
 public class MoveTutorTableRecipeGenerator {
-    @Override
     public void generate(RecipeExporter exporter) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlock.MOVE_TUTOR_TABLE_BLOCK)
                 .pattern("II")

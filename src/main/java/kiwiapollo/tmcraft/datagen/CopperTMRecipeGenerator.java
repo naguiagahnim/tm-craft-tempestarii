@@ -14,7 +14,6 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 
 public class CopperTMRecipeGenerator {
-    @Override
     public void generate(RecipeExporter exporter) {
         CopperTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_PINMISSILE)
                 .input(Items.CACTUS)

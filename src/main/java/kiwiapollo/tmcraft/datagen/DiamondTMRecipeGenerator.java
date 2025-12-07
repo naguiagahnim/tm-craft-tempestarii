@@ -14,7 +14,6 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
 
 public class DiamondTMRecipeGenerator {
-    @Override
     public void generate(RecipeExporter exporter) {
         DiamondTMRecipeJsonBuilder.create((TMMoveTeachingItem) TMMoveItem.TM_BLIZZARD)
                 .input(Items.POWDER_SNOW_BUCKET)

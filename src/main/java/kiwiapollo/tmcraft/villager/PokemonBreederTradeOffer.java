@@ -13,11 +13,13 @@ import net.minecraft.item.Items;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradeOffers;
+import net.minecraft.village.TradedItem;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 public class PokemonBreederTradeOffer {
     public static void initialize() {
@@ -50,13 +52,13 @@ public class PokemonBreederTradeOffer {
         );
     }
 
-    private static ItemStack getEmeraldBuyItem(int count) {
-        return new ItemStack(Items.EMERALD, count);
+    private static TradedItem getEmeraldBuyItem(int count) {
+        return new TradedItem(Items.EMERALD, count);
     }
 
-    private static ItemStack getTypeGemBuyItem(Item move, int count) {
+    private static Optional<TradedItem> getTypeGemBuyItem(Item move, int count) {
         ElementalType type = ((EggMoveTeachingItem) move).getMoveType();
-        return new ItemStack(new TypeGemMap().get(type), count);
+        return Optional.of(new TradedItem(new TypeGemMap().get(type), count));
     }
 
     private static ItemStack getEggMoveSellItem(Item move) {
@@ -174,7 +176,7 @@ public class PokemonBreederTradeOffer {
         @Override
         public @Nullable TradeOffer create(Entity entity, Random random) {
             return new TradeOffer(
-                    new ItemStack(Items.EMERALD, EMERALD_COUNT),
+                    new TradedItem(Items.EMERALD, EMERALD_COUNT),
                     ModSmithingTemplateItem.MOVE_UPGRADE_SMITHING_TEMPLATE.getDefaultStack(),
                     10, 8, 0.05F
             );
