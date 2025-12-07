@@ -5,6 +5,7 @@ import kiwiapollo.tmcraft.common.TypeGemMap;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveTeachingItem;
 import kiwiapollo.tmcraft.item.misc.ModSmithingTemplateItem;
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItem;
+import kiwiapollo.tmcraft.item.tutormove.TutorMoveTeachingItem;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
@@ -55,7 +56,7 @@ public class MoveTutorTradeOffer {
     }
 
     private static ItemStack getTypeGemBuyItem(Item move, int count) {
-        ElementalType type = ((EggMoveTeachingItem) move).getMoveType();
+        ElementalType type = ((TutorMoveTeachingItem) move).getMoveType();
         return new ItemStack(new TypeGemMap().get(type), count);
     }
 
