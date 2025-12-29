@@ -2,7 +2,6 @@ package kiwiapollo.tmcraft.villager;
 
 import com.cobblemon.mod.common.api.types.ElementalType;
 import kiwiapollo.tmcraft.common.TypeGemMap;
-import kiwiapollo.tmcraft.item.eggmove.EggMoveTeachingItem;
 import kiwiapollo.tmcraft.item.misc.ModSmithingTemplateItem;
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveItem;
 import kiwiapollo.tmcraft.item.tutormove.TutorMoveTeachingItem;

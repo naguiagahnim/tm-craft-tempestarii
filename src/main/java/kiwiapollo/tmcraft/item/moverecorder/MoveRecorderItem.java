@@ -1,8 +1,6 @@
 package kiwiapollo.tmcraft.item.moverecorder;
 
-import com.cobblemon.mod.common.api.types.ElementalType;
 import kiwiapollo.tmcraft.TMCraft;
-import kiwiapollo.tmcraft.item.starmove.StarMoveTeachingItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;

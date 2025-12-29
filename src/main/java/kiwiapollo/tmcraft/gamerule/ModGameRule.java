@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
 import net.minecraft.world.GameRules;
 
 public class ModGameRule {
-    public static GameRules.Key<GameRules.BooleanRule> CONSUME_MOVE_ITEM_ON_USE = GameRuleRegistry.register("consumeMoveItemOnUse", GameRules.Category.MISC, GameRuleFactory.createBooleanRule(true));
+    public static final GameRules.Key<GameRules.BooleanRule> CONSUME_MOVE_ITEM_ON_USE = GameRuleRegistry.register("consumeMoveItemOnUse", GameRules.Category.MISC, GameRuleFactory.createBooleanRule(true));
 
     public static void initialize() {
 
