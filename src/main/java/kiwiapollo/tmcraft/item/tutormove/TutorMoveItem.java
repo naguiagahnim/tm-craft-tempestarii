@@ -971,6 +971,7 @@ public class TutorMoveItem {
   public static final Item TUTOR_QUICKSHOT = register("quickshot", ElementalTypes.INSTANCE.getSTEEL());
   public static final Item TUTOR_SHADOWSPLINTERS = register("shadowsplinters", ElementalTypes.INSTANCE.getGHOST());
   public static final Item TUTOR_NEEDLEICE = register("needleice", ElementalTypes.INSTANCE.getICE());
+  public static final Item TUTOR_VICIOUSIRE = register("viciousire", ElementalTypes.INSTANCE.getDARK());
 
   public static void initialize() {
 

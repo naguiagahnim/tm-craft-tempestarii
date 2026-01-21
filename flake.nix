@@ -13,7 +13,7 @@
   in {
     devShells."x86_64-linux".default = pkgs.mkShell {
       buildInputs = with pkgs; [
-        jdk17
+        jdk21
         maven
         gradle
       ];
@@ -22,9 +22,14 @@
       RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
 
       shellHook = ''
+                        java -version
+
         java -version
-        mvn -version
-        neovide &
+        echo $JAVA_HOME
+                        mvn -version
+                export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
+                export PATH=$JAVA_HOME/bin:$PATH
+                        neovide &
       '';
     };
   };
