@@ -15,6 +15,7 @@
       buildInputs = with pkgs; [
         jdk17
         maven
+        gradle
       ];
 
       JAVA_HOME = pkgs.jdk17.home;
